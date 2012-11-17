@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+<title>Tutorial - cpio</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="cpio">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Introduction.html#Introduction" title="Introduction">
+<link rel="next" href="Invoking-cpio.html#Invoking-cpio" title="Invoking cpio">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents GNU cpio (version 2.11, 12 February 2010).
+
+Copyright (C) 1995, 2001, 2002, 2004, 2010 Free Software
+Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual'', and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License''.
+
+     (a) The FSF's Back-Cover Text is: ``You have freedom to copy and
+     modify this GNU Manual, like GNU software.  Copies published by
+     the Free Software Foundation raise funds for GNU development.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Tutorial"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Invoking-cpio.html#Invoking-cpio">Invoking cpio</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Introduction.html#Introduction">Introduction</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<!-- node-name,  next,  previous,  up -->
+<h2 class="chapter">2 Tutorial</h2>
+
+<p><a name="index-creating-a-cpio-archive-1"></a><a name="index-extracting-a-cpio-archive-2"></a><a name="index-copying-directory-structures-3"></a><a name="index-passing-directory-structures-4"></a>
+
+   <p>GNU cpio performs three primary functions.  Copying files to an
+archive, Extracting files from an archive, and passing files to another
+directory tree.  An archive can be a file on disk, one or more floppy
+disks, or one or more tapes.
+
+   <p>When creating an archive, cpio takes the list of files to be processed
+from the standard input, and then sends the archive to the standard
+output, or to the device defined by the <samp><span class="option">-F</span></samp> option. 
+See <a href="Copy_002dout-mode.html#Copy_002dout-mode">Copy-out mode</a>.  Usually find or ls is used to provide this list
+to the standard input.  In the following example you can see the
+possibilities for archiving the contents of a single directory.
+
+<pre class="example">     <p><table class="cartouche" summary="cartouche" border="1"><tr><td>
+     % ls | cpio -ov &gt; directory.cpio
+     </td></tr></table>
+</pre>
+   <p>The <samp><span class="option">-o</span></samp> option creates the archive, and the <samp><span class="option">-v</span></samp> option
+prints the names of the files archived as they are added.  Notice that
+the options can be put together after a single <samp><span class="option">-</span></samp> or can be placed
+separately on the command line.  The &lsquo;<samp><span class="samp">&gt;</span></samp>&rsquo; redirects the cpio output
+to the file &lsquo;<samp><span class="samp">directory.cpio</span></samp>&rsquo;.
+
+   <p>If you wanted to archive an entire directory tree, the find command can
+provide the file list to cpio:
+
+<pre class="example">     <p><table class="cartouche" summary="cartouche" border="1"><tr><td>
+     % find . -print -depth | cpio -ov &gt; tree.cpio
+     </td></tr></table>
+</pre>
+   <p>This will take all the files in the current directory, the directories
+below and place them in the archive tree.cpio.  Again the <samp><span class="option">-o</span></samp>
+creates an archive, and the <samp><span class="option">-v</span></samp> option shows you the name of the
+files as they are archived.  See <a href="Copy_002dout-mode.html#Copy_002dout-mode">Copy-out mode</a>.  Using the &lsquo;<samp><span class="samp">.</span></samp>&rsquo; in the
+find statement will give you more flexibility when doing restores, as it
+will save file names with a relative path vice a hard wired, absolute
+path.  The <samp><span class="option">-depth</span></samp> option forces &lsquo;<samp><span class="samp">find</span></samp>&rsquo; to print of the
+entries in a directory before printing the directory itself.  This
+limits the effects of restrictive directory permissions by printing the
+directory entries in a directory before the directory name itself.
+
+   <p>Extracting an archive requires a bit more thought because cpio will not
+create directories by default.  Another characteristic, is it will not
+overwrite existing files unless you tell it to.
+
+<pre class="example">     <p><table class="cartouche" summary="cartouche" border="1"><tr><td>
+     % cpio -iv &lt; directory.cpio
+     </td></tr></table>
+</pre>
+   <p>This will retrieve the files archived in the file directory.cpio and
+place them in the present directory.  The <samp><span class="option">-i</span></samp> option extracts the
+archive and the <samp><span class="option">-v</span></samp> shows the file names as they are extracted. 
+If you are dealing with an archived directory tree, you need to use the
+<samp><span class="option">-d</span></samp> option to create directories as necessary, something like:
+
+<pre class="example">     <p><table class="cartouche" summary="cartouche" border="1"><tr><td>
+     % cpio -idv &lt; tree.cpio
+     </td></tr></table>
+</pre>
+   <p>This will take the contents of the archive tree.cpio and extract it to
+the current directory.  If you try to extract the files on top of files
+of the same name that already exist (and have the same or later
+modification time) cpio will not extract the file unless told to do so
+by the -u option.  See <a href="Copy_002din-mode.html#Copy_002din-mode">Copy-in mode</a>.
+
+   <p>In copy-pass mode, cpio copies files from one directory tree to another,
+combining the copy-out and copy-in steps without actually using an
+archive.  It reads the list of files to copy from the standard input;
+the directory into which it will copy them is given as a non-option
+argument.  See <a href="Copy_002dpass-mode.html#Copy_002dpass-mode">Copy-pass mode</a>.
+
+<pre class="example">     <p><table class="cartouche" summary="cartouche" border="1"><tr><td>
+     % find . -depth -print0 | cpio --null -pvd new-dir
+     </td></tr></table>
+</pre>
+   <p>The example shows copying the files of the present directory, and
+sub-directories to a new directory called new-dir.  Some new options are
+the <samp><span class="option">-print0</span></samp> available with GNU find, combined with the
+<samp><span class="option">--null</span></samp> option of cpio.  These two options act together to send
+file names between find and cpio, even if special characters are
+embedded in the file names.  Another is <samp><span class="option">-p</span></samp>, which tells cpio to
+pass the files it finds to the directory &lsquo;<samp><span class="samp">new-dir</span></samp>&rsquo;.
+
+   </body></html>
+

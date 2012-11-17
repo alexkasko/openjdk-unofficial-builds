@@ -1,0 +1,118 @@
+zip
+========================================================================
+Zip is a compression and file packaging/archive utility. Although highly
+compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and
+with Info-ZIP's own UnZip, our primary objectives have been portability
+and other-than-MSDOS functionality.
+
+Runtime requirements:
+  cygwin-1.7.0-51
+
+Build requirements:
+  cygwin-1.7.0-51
+  binutils-2.19.51-1
+  cygport-0.9.8.1
+  gcc-core-3.4.4-999
+  make-3.81-2
+
+Canonical website:
+  http://www.info-zip.org/
+
+Canonical download:
+  http://ftp.info-zip.org/pub/infozip/src/
+
+License:
+  Info-ZIP (Mostly BSD-ish)
+
+Language:
+  C
+ 
+========================================================================
+
+Build instructions:
+  unpack zip-3.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./zip-3.0-X.cygport all
+
+This will create:
+  /usr/src/zip-3.0-X-src.tar.bz2
+  /usr/src/zip-3.0-X.tar.bz2
+
+Or use 'cygport ./zip-3.0-X.cygport prep' to get a patched source directory
+
+To find out the files included in the binary distribution, you can
+use "cygcheck -l zip", or browse the listing for the appropriate
+version at <http://cygwin.com/packages/>.
+
+========================================================================
+
+Port Notes:
+
+---------- zip-3.0-11 -- 2009 Aug 04 -----------
+* Fix packaging bug
+* Use custom-built bzip2 library for better error handling
+  - update setup.hint to remove unnecessary requirements
+* Enable Unicode support.
+
+---------- zip-3.0-10 -- 2009 Mar 05 -----------
+* Fork for cygwin-1.7 development
+* Unicode file names are NOT supported in this release,
+  although it is hoped that it can be enabled soon.
+
+---------- zip-3.0-2 -- 2009 Mar 05 -----------
+* Upgrade to version 3.0.
+* Adds better large file support.
+* Note that Unicode file names are NOT supported by this release
+  and probably will not be supported by any zip package for
+  cygwin-1.5.
+* Adds bzip2 compression format. However, the current version
+  of unzip is unable to extract these archives; unzip-bzip2 support
+  is in the forthcoming unzip-6.0 release, currently in beta.
+
+---------- zip-3.0-1 --    n/a   -----------
+* (cygwin ports release)
+
+---------- zip-2.32-2 -- 2006 Oct 15 -----------
+Official version bump. Includes encryption support
+and patches dropped by 2.32-1.
+
+----- version 2.32-1 -----
+Unofficial version bump.  Encryption support is included.
+(cygwin ports release)
+
+----- version 2.3-6 -----
+Add encryption support, persuant to 
+  http://cygwin.com/ml/cygwin-apps/2004-02/msg00318.html
+
+----- version 2.3-5 -----
+This is the cygwin-1.5.2 FLAG DAY release.
+
+----- version 2.3-4 -----
+This is the cygwin-1.5.1 FLAG DAY release.
+
+----- version 2.3-3 -----
+This is the cygwin-1.5.0 FLAG DAY release.
+
+----- version 2.3-2 -----
+Update to new script-based packaging scheme.  Added the 
+dospath patch from Michael Schaap -- 
+  http://cygwin.com/ml/cygwin/2001-06/msg01722.html
+
+----- version 2.3-1 -----
+Initial release.
+* built as a unix app. Also, it is -mno-win32 clean;  using 
+  -mno-win32 or not makes no difference in the final .exe.
+* will accept DOS-like paths, but doesn't try to interpret them; 
+  just passes the entire string off to the cygwin dll
+* understands symlinks with the -y option
+* The binary does NOT contain encryption support.  If you
+  want to build zip with encryption support it should work;
+  just download the zcrypt29.zip package from 
+    ftp://ftp.info-zip.org/pub/infozip/src/zcrypt29.zip
+  and overwrite the dummy files crypt.c and crypt.h with
+  the ones in that package.
+
+Cygwin port maintained by: Charles Wilson  <cygwin@cygwin.com> 
+

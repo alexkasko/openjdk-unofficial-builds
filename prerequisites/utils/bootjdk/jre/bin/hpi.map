@@ -1,0 +1,331 @@
+ hpi
+
+ Timestamp is 4ecc57dd (Tue Nov 22 21:18:05 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00002160H .text                   CODE
+ 0002:00000000 00000150H .idata$5                DATA
+ 0002:00000150 000002f8H .rdata                  DATA
+ 0002:00000448 0000005cH .rdata$debug            DATA
+ 0002:000004b0 00000004H .rdata$sxdata           DATA
+ 0002:000004b4 00000004H .rtc$IAA                DATA
+ 0002:000004b8 00000004H .rtc$IZZ                DATA
+ 0002:000004bc 00000004H .rtc$TAA                DATA
+ 0002:000004c0 00000004H .rtc$TZZ                DATA
+ 0002:000004c4 00000028H .idata$2                DATA
+ 0002:000004ec 00000014H .idata$3                DATA
+ 0002:00000500 00000150H .idata$4                DATA
+ 0002:00000650 00000508H .idata$6                DATA
+ 0002:00000b60 00000049H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 000001c4H .data                   DATA
+ 0003:000001d8 00000178H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000308H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _sysBuildFunName           10001000 f   linker_md.obj
+ 0001:00000075       _sysBuildLibName           10001075 f   linker_md.obj
+ 0001:000000fe       _sysLoadLibrary            100010fe f   linker_md.obj
+ 0001:00000151       _sysUnloadLibrary          10001151 f   linker_md.obj
+ 0001:0000015c       _sysFindLibraryEntry       1000115c f   linker_md.obj
+ 0001:0000016b       _InitializeMem             1000116b f   memory_md.obj
+ 0001:00000185       _sysMapMem                 10001185 f   memory_md.obj
+ 0001:000001aa       _sysUnmapMem               100011aa f   memory_md.obj
+ 0001:000001d8       _sysCommitMem              100011d8 f   memory_md.obj
+ 0001:00000203       _sysDecommitMem            10001203 f   memory_md.obj
+ 0001:00000241       _sysAllocBlock             10001241 f   memory_md.obj
+ 0001:0000025b       _sysFreeBlock              1000125b f   memory_md.obj
+ 0001:0000026d       _sysMalloc                 1000126d f   memory_md.obj
+ 0001:00000284       _sysRealloc                10001284 f   memory_md.obj
+ 0001:0000028a       _sysFree                   1000128a f   memory_md.obj
+ 0001:00000298       _sysCalloc                 10001298 f   memory_md.obj
+ 0001:000002b9       _sysStrdup                 100012b9 f   memory_md.obj
+ 0001:000002bf       _sysMonitorInit            100012bf f   monitor_md.obj
+ 0001:00000305       _sysMonitorDestroy         10001305 f   monitor_md.obj
+ 0001:000003a9       _sysMonitorEnter           100013a9 f   monitor_md.obj
+ 0001:000003f4       _sysMonitorEntered         100013f4 f   monitor_md.obj
+ 0001:0000044b       _sysMonitorExit            1000144b f   monitor_md.obj
+ 0001:00000489       _sysMonitorNotify          10001489 f   monitor_md.obj
+ 0001:000004bb       _sysMonitorNotifyAll       100014bb f   monitor_md.obj
+ 0001:000004f2       _sysMonitorWait            100014f2 f   monitor_md.obj
+ 0001:00000618       _sysMonitorGetInfo         10001618 f   monitor_md.obj
+ 0001:00000686       _sysMonitorSizeof          10001686 f   monitor_md.obj
+ 0001:0000068a       _sysMonitorInUse           1000168a f   monitor_md.obj
+ 0001:000006ab       _sysMonitorOwner           100016ab f   monitor_md.obj
+ 0001:000006b3       _sysNativePath             100016b3 f   path_md.obj
+ 0001:000009c8       _sysListen                 100019c8 f   socket_md.obj
+ 0001:000009e5       _sysConnect                100019e5 f   socket_md.obj
+ 0001:00000a06       _sysBind                   10001a06 f   socket_md.obj
+ 0001:00000a27       _sysAccept                 10001a27 f   socket_md.obj
+ 0001:00000a48       _sysRecvFrom               10001a48 f   socket_md.obj
+ 0001:00000a73       _sysSendTo                 10001a73 f   socket_md.obj
+ 0001:00000a9e       _sysRecv                   10001a9e f   socket_md.obj
+ 0001:00000ac3       _sysSend                   10001ac3 f   socket_md.obj
+ 0001:00000ae8       _sysGetHostName            10001ae8 f   socket_md.obj
+ 0001:00000b05       _sysGetHostByAddr          10001b05 f   socket_md.obj
+ 0001:00000b26       _sysGetHostByName          10001b26 f   socket_md.obj
+ 0001:00000b3f       _sysSocket                 10001b3f f   socket_md.obj
+ 0001:00000b76       _sysSocketShutdown         10001b76 f   socket_md.obj
+ 0001:00000b9d       _sysTimeout                10001b9d f   socket_md.obj
+ 0001:00000bf9       _sysSocketAvailable        10001bf9 f   socket_md.obj
+ 0001:00000c1b       _sysGetSockName            10001c1b f   socket_md.obj
+ 0001:00000c3c       _sysGetSockOpt             10001c3c f   socket_md.obj
+ 0001:00000c8a       _sysSetSockOpt             10001c8a f   socket_md.obj
+ 0001:00000cd8       _sysGetProtoByName         10001cd8 f   socket_md.obj
+ 0001:00000cf1       _sysSocketClose            10001cf1 f   socket_md.obj
+ 0001:00000d59       _sysOpen                   10001d59 f   sys_api_md.obj
+ 0001:00000eb8       _sysSync                   10001eb8 f   sys_api_md.obj
+ 0001:00000ee0       _sysSetLength              10001ee0 f   sys_api_md.obj
+ 0001:00000f36       _sysFileSizeFD             10001f36 f   sys_api_md.obj
+ 0001:00000fdb       _sysFileType               10001fdb f   sys_api_md.obj
+ 0001:00001016       _sysRead                   10002016 f   sys_api_md.obj
+ 0001:0000101c       _sysWrite                  1000201c f   sys_api_md.obj
+ 0001:00001022       _sysClose                  10002022 f   sys_api_md.obj
+ 0001:00001028       _sysSeek                   10002028 f   sys_api_md.obj
+ 0001:00001042       _sysAvailable              10002042 f   sys_api_md.obj
+ 0001:000010fe       _sysSignalNotify           100020fe f   system_md.obj
+ 0001:00001132       _sysSignalWait             10002132 f   system_md.obj
+ 0001:00001185       _sysSignal                 10002185 f   system_md.obj
+ 0001:0000118b       _sysRaise                  1000218b f   system_md.obj
+ 0001:00001191       _sysThreadBootstrap        10002191 f   system_md.obj
+ 0001:00001206       _sysGetMilliTicks          10002206 f   system_md.obj
+ 0001:0000120c       _sysTimeMillis             1000220c f   system_md.obj
+ 0001:000012ab       _sysGetLastErrorString     100022ab f   system_md.obj
+ 0001:0000133e       _sysThreadStackPointer     1000233e f   threads_md.obj
+ 0001:00001467       _sysShutdown               10002467 f   system_md.obj
+ 0001:00001467       _sysThreadStackTop         10002467 f   threads_md.obj
+ 0001:0000146a       _sysThreadRegs             1000246a f   threads_md.obj
+ 0001:0000147c       _sysThreadYield            1000247c f   threads_md.obj
+ 0001:00001485       _sysThreadResume           10002485 f   threads_md.obj
+ 0001:000014ef       _sysThreadGetPriority      100024ef f   threads_md.obj
+ 0001:00001578       _sysThreadSetPriority      10002578 f   threads_md.obj
+ 0001:000015ea       _sysThreadSelf             100025ea f   threads_md.obj
+ 0001:000015ff       _sysThreadEnumerateOver    100025ff f   threads_md.obj
+ 0001:000016ee       _sysThreadSingle           100026ee f   threads_md.obj
+ 0001:0000171e       _sysThreadMulti            1000271e f   threads_md.obj
+ 0001:00001731       _sysThreadNativeID         10002731 f   threads_md.obj
+ 0001:00001739       _sysThreadCheckStack       10002739 f   threads_md.obj
+ 0001:0000173d       _sysThreadPostException    1000273d f   threads_md.obj
+ 0001:0000174b       _sysThreadInterrupt        1000274b f   threads_md.obj
+ 0001:00001766       _sysThreadIsInterrupted    10002766 f   threads_md.obj
+ 0001:0000178a       _sysGetSysInfo             1000278a f   threads_md.obj
+ 0001:000017c3       _sysThreadCPUTime          100027c3 f   threads_md.obj
+ 0001:00001821       _sysThreadGetStatus        10002821 f   threads_md.obj
+ 0001:0000188a       _sysAdjustTimeSlice        1000288a f   threads_md.obj
+ 0001:0000188e       _sysThreadProfSuspend      1000288e f   threads_md.obj
+ 0001:0000189b       _sysThreadProfResume       1000289b f   threads_md.obj
+ 0001:000018a8       _sysThreadIsRunning        100028a8 f   threads_md.obj
+ 0001:000018f5       _sysThreadInterruptEvent   100028f5 f   threads_md.obj
+ 0001:00001956       _sysThreadAlloc            10002956 f   threads_md.obj
+ 0001:000019f4       _threadBootstrapMD         100029f4 f   threads_md.obj
+ 0001:00001aad       _sysThreadFree             10002aad f   threads_md.obj
+ 0001:00001b33       _sysThreadSuspend          10002b33 f   threads_md.obj
+ 0001:00001be6       _sysThreadCreate           10002be6 f   threads_md.obj
+ 0001:00001c4f       _sysSetLoggingLevel        10002c4f f   hpi.obj
+ 0001:00001c5f       _sysSetMonitoringOn        10002c5f f   hpi.obj
+ 0001:00001c6f       _allocThreadBlock          10002c6f f   hpi.obj
+ 0001:00001c8f       _freeThreadBlock           10002c8f f   hpi.obj
+ 0001:00001d63       _DLL_Initialize@8          10002d63 f   hpi.obj
+ 0001:00001d7c       _strlen                    10002d7c f   MSVCRT:MSVCR71.dll
+ 0001:00001d82       _strcpy                    10002d82 f   MSVCRT:MSVCR71.dll
+ 0001:00001d88       _memset                    10002d88 f   MSVCRT:MSVCR71.dll
+ 0001:00001d90       __alldiv                   10002d90 f   MSVCRT:lldiv.obj
+ 0001:00001e40       __allmul                   10002e40 f   MSVCRT:llmul.obj
+ 0001:00001e74       _strcmp                    10002e74 f   MSVCRT:MSVCR71.dll
+ 0001:00001e7a       __CRT_INIT@12              10002e7a f   MSVCRT:crtdll.obj
+ 0001:00001f38       __DllMainCRTStartup@12     10002f38 f   MSVCRT:crtdll.obj
+ 0001:0000201c       __initterm                 1000301c f   MSVCRT:MSVCR71.dll
+ 0001:00002022       __onexit                   10003022 f   MSVCRT:atonexit.obj
+ 0001:00002048       _atexit                    10003048 f   MSVCRT:atonexit.obj
+ 0001:0000205a       __RTC_Initialize           1000305a f   MSVCRT:initsect.obj
+ 0001:0000209e       __RTC_Terminate            1000309e f   MSVCRT:initsect.obj
+ 0001:000020e2       ___CppXcptFilter           100030e2 f   MSVCRT:MSVCR71.dll
+ 0001:000020e8       _DllMain@12                100030e8 f   MSVCRT:dllmain.obj
+ 0001:00002108       __SEH_prolog               10003108 f   MSVCRT:sehprolg.obj
+ 0001:00002143       __SEH_epilog               10003143 f   MSVCRT:sehprolg.obj
+ 0001:00002154       __except_handler3          10003154 f   MSVCRT:MSVCR71.dll
+ 0001:0000215a       ___dllonexit               1000315a f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__EnterCriticalSection@4 10004000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__DisableThreadLibraryCalls@4 10004004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__TlsAlloc@0          10004008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetVersionExA@4     1000400c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__GetCurrentProcess@0 10004010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__GetCurrentThreadId@0 10004014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__DuplicateHandle@28  10004018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__TlsSetValue@8       1000401c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetCurrentThread@0  10004020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__GetThreadTimes@20   10004024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__SuspendThread@4     10004028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__TlsGetValue@4       1000402c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__SetThreadPriority@8 10004030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__GetThreadPriority@4 10004034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__ResumeThread@4      10004038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__GetThreadContext@8  1000403c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__VirtualQuery@12     10004040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__FormatMessageA@28   10004044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__Sleep@4             10004048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__SystemTimeToFileTime@8 1000404c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__GetSystemTime@4     10004050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__GetTickCount@0      10004054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__CreateEventA@16     10004058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__SetFilePointer@16   1000405c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__SetEndOfFile@4      10004060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__FlushFileBuffers@4  10004064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetStdHandle@4      10004068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__GetNumberOfConsoleInputEvents@8 1000406c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__PeekConsoleInputA@16 10004070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__PeekNamedPipe@24    10004074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__SetHandleInformation@12 10004078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__GetLastError@0      1000407c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__LoadLibraryA@4      10004080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__FreeLibrary@4       10004084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__GetProcAddress@8    10004088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__GetSystemInfo@4     1000408c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__VirtualAlloc@16     10004090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__VirtualFree@12      10004094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__InitializeCriticalSection@4 10004098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__CloseHandle@4       1000409c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__LeaveCriticalSection@4 100040a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__CreateSemaphoreA@16 100040a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__IsDBCSLeadByte@4    100040a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__WaitForSingleObject@8 100040ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__ReleaseSemaphore@12 100040b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__SetEvent@4          100040b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__ResetEvent@4        100040b8     kernel32:KERNEL32.dll
+ 0002:000000bc       \177KERNEL32_NULL_THUNK_DATA 100040bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp___onexit             100040c0     MSVCRT:MSVCR71.dll
+ 0002:000000c4       __imp____dllonexit         100040c4     MSVCRT:MSVCR71.dll
+ 0002:000000c8       __imp___except_handler3    100040c8     MSVCRT:MSVCR71.dll
+ 0002:000000cc       __imp____CppXcptFilter     100040cc     MSVCRT:MSVCR71.dll
+ 0002:000000d0       __imp___adjust_fdiv        100040d0     MSVCRT:MSVCR71.dll
+ 0002:000000d4       __imp___initterm           100040d4     MSVCRT:MSVCR71.dll
+ 0002:000000d8       __imp__strcmp              100040d8     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp___beginthreadex      100040dc     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp___endthreadex        100040e0     MSVCRT:MSVCR71.dll
+ 0002:000000e4       __imp__strerror            100040e4     MSVCRT:MSVCR71.dll
+ 0002:000000e8       __imp__memset              100040e8     MSVCRT:MSVCR71.dll
+ 0002:000000ec       __imp___setmode            100040ec     MSVCRT:MSVCR71.dll
+ 0002:000000f0       __imp___control87          100040f0     MSVCRT:MSVCR71.dll
+ 0002:000000f4       __imp__raise               100040f4     MSVCRT:MSVCR71.dll
+ 0002:000000f8       __imp__signal              100040f8     MSVCRT:MSVCR71.dll
+ 0002:000000fc       __imp___stati64            100040fc     MSVCRT:MSVCR71.dll
+ 0002:00000100       __imp___fstati64           10004100     MSVCRT:MSVCR71.dll
+ 0002:00000104       __imp___lseeki64           10004104     MSVCRT:MSVCR71.dll
+ 0002:00000108       __imp___get_osfhandle      10004108     MSVCRT:MSVCR71.dll
+ 0002:0000010c       __imp___errno              1000410c     MSVCRT:MSVCR71.dll
+ 0002:00000110       __imp__strcpy              10004110     MSVCRT:MSVCR71.dll
+ 0002:00000114       __imp___iob                10004114     MSVCRT:MSVCR71.dll
+ 0002:00000118       __imp__isalpha             10004118     MSVCRT:MSVCR71.dll
+ 0002:0000011c       __imp__calloc              1000411c     MSVCRT:MSVCR71.dll
+ 0002:00000120       __imp__free                10004120     MSVCRT:MSVCR71.dll
+ 0002:00000124       __imp__realloc             10004124     MSVCRT:MSVCR71.dll
+ 0002:00000128       __imp__malloc              10004128     MSVCRT:MSVCR71.dll
+ 0002:0000012c       __imp__strncpy             1000412c     MSVCRT:MSVCR71.dll
+ 0002:00000130       __imp__sprintf             10004130     MSVCRT:MSVCR71.dll
+ 0002:00000134       __imp__strlen              10004134     MSVCRT:MSVCR71.dll
+ 0002:00000138       __imp___strdup             10004138     MSVCRT:MSVCR71.dll
+ 0002:00000138       __imp__strdup              10004138     MSVCRT:MSVCR71.dll
+ 0002:0000013c       __imp___open               1000413c     MSVCRT:MSVCR71.dll
+ 0002:0000013c       __imp__open                1000413c     MSVCRT:MSVCR71.dll
+ 0002:00000140       __imp___read               10004140     MSVCRT:MSVCR71.dll
+ 0002:00000140       __imp__read                10004140     MSVCRT:MSVCR71.dll
+ 0002:00000144       __imp___write              10004144     MSVCRT:MSVCR71.dll
+ 0002:00000144       __imp__write               10004144     MSVCRT:MSVCR71.dll
+ 0002:00000148       __imp__close               10004148     MSVCRT:MSVCR71.dll
+ 0002:00000148       __imp___close              10004148     MSVCRT:MSVCR71.dll
+ 0002:0000014c       \177MSVCR71_NULL_THUNK_DATA 1000414c     MSVCRT:MSVCR71.dll
+ 0002:0000016c       ??_C@_02DKCKIIND@?$CFs?$AA@ 1000416c     linker_md.obj
+ 0002:00000170       ??_C@_03HKLIFCHG@?$EA?$CFd?$AA@ 10004170     linker_md.obj
+ 0002:00000174       ??_C@_08KBEMDEEE@?$CFs?$CFs?4dll?$AA@ 10004174     linker_md.obj
+ 0002:00000180       ??_C@_09CMKFMIAO@?$CFs?2?$CFs?4dll?$AA@ 10004180     linker_md.obj
+ 0002:0000018c       ??_C@_06DAJAKOAL@?$CFs?4dll?$AA@ 1000418c     linker_md.obj
+ 0002:00000194       ??_C@_0BP@KMBPCJLM@Can?8t?5find?5dependent?5libraries?$AA@ 10004194     linker_md.obj
+ 0002:000001b4       ??_C@_0M@PBPOCKDG@ioctlsocket?$AA@ 100041b4     socket_md.obj
+ 0002:000001c0       ??_C@_0BC@IELFHAHB@WSASendDisconnect?$AA@ 100041c0     socket_md.obj
+ 0002:000001d4       ??_C@_06HBELJPBO@socket?$AA@ 100041d4     socket_md.obj
+ 0002:000001dc       ??_C@_0M@ODFENJLC@getsockname?$AA@ 100041dc     socket_md.obj
+ 0002:000001e8       ??_C@_0P@EIFFMLFM@getprotobyname?$AA@ 100041e8     socket_md.obj
+ 0002:000001f8       ??_C@_0L@CKHNIFCM@setsockopt?$AA@ 100041f8     socket_md.obj
+ 0002:00000204       ??_C@_0L@DEFCDCGF@getsockopt?$AA@ 10004204     socket_md.obj
+ 0002:00000210       ??_C@_05JMFICPBP@ntohl?$AA@ 10004210     socket_md.obj
+ 0002:00000218       ??_C@_05FBACCBIB@ntohs?$AA@ 10004218     socket_md.obj
+ 0002:00000220       ??_C@_05EOIMLALA@htonl?$AA@ 10004220     socket_md.obj
+ 0002:00000228       ??_C@_05IDNGLOCO@htons?$AA@ 10004228     socket_md.obj
+ 0002:00000230       ??_C@_0O@BFBCKHPD@gethostbyname?$AA@ 10004230     socket_md.obj
+ 0002:00000240       ??_C@_0O@KKMOHPAJ@gethostbyaddr?$AA@ 10004240     socket_md.obj
+ 0002:00000250       ??_C@_0M@FIJPCJJO@gethostname?$AA@ 10004250     socket_md.obj
+ 0002:0000025c       ??_C@_08FIACBBDA@shutdown?$AA@ 1000425c     socket_md.obj
+ 0002:00000268       ??_C@_0M@ODDJDCDK@closesocket?$AA@ 10004268     socket_md.obj
+ 0002:00000274       ??_C@_07KAIBNCHO@connect?$AA@ 10004274     socket_md.obj
+ 0002:0000027c       ??_C@_06LGNCCACI@select?$AA@ 1000427c     socket_md.obj
+ 0002:00000284       ??_C@_06MEPBGKEC@sendto?$AA@ 10004284     socket_md.obj
+ 0002:0000028c       ??_C@_08HMBBGFHE@recvfrom?$AA@ 1000428c     socket_md.obj
+ 0002:00000298       ??_C@_06MPKMECK@accept?$AA@ 10004298     socket_md.obj
+ 0002:000002a0       ??_C@_04NPNJNMMP@bind?$AA@ 100042a0     socket_md.obj
+ 0002:000002a8       ??_C@_06OODDLKLE@listen?$AA@ 100042a8     socket_md.obj
+ 0002:000002b0       ??_C@_04MIIPNNEF@send?$AA@ 100042b0     socket_md.obj
+ 0002:000002b8       ??_C@_04IFMDBHHF@recv?$AA@ 100042b8     socket_md.obj
+ 0002:000002c0       ??_C@_0BO@CMPAOGOC@Could?5not?5initialize?5Winsock?6?$AA@ 100042c0     socket_md.obj
+ 0002:000002e0       ??_C@_0L@EEFLCHHA@WSAStartup?$AA@ 100042e0     socket_md.obj
+ 0002:000002ec       ??_C@_0CL@PEMBBHPK@Could?5not?5load?5Winsock?51?5or?52?5?$CIe@ 100042ec     socket_md.obj
+ 0002:00000318       ??_C@_0M@OJLCMFNP@wsock32?4dll?$AA@ 10004318     socket_md.obj
+ 0002:00000324       ??_C@_0L@EANHMAHB@ws2_32?4dll?$AA@ 10004324     socket_md.obj
+ 0002:00000330       ??_C@_0CI@EBGDAPAG@GetThreadContext?5failed?5?$CIerrcode@ 10004330     threads_md.obj
+ 0002:00000358       ??_C@_0P@LFIAEKMN@native?5threads?$AA@ 10004358     threads_md.obj
+ 0002:00000368       ??_C@_0BC@IMPEPPKJ@Thread?5queue?5lock?$AA@ 10004368     threads_md.obj
+ 0002:0000037c       ??_C@_0CA@EOADNEHH@TlsAlloc?5failed?5?$CIerrcode?5?$DN?5?$CFx?$CJ?6?$AA@ 1000437c     threads_md.obj
+ 0002:0000039c       ??_C@_06LOPGKGIC@Socket?$AA@ 1000439c     hpi.obj
+ 0002:000003a4       ??_C@_04PBAHLACE@File?$AA@ 100043a4     hpi.obj
+ 0002:000003ac       ??_C@_06JGMANLDI@Thread?$AA@ 100043ac     hpi.obj
+ 0002:000003b4       ??_C@_06JIODDOFH@System?$AA@ 100043b4     hpi.obj
+ 0002:000003bc       ??_C@_07BGPNANBL@Library?$AA@ 100043bc     hpi.obj
+ 0002:000003c4       ??_C@_06LEBJIAPJ@Memory?$AA@ 100043c4     hpi.obj
+ 0002:00000400       __load_config_used         10004400     MSVCRT:loadcfg.obj
+ 0002:000004b0       ___safe_se_handler_table   100044b0     <linker-defined>
+ 0002:000004b4       ___rtc_iaa                 100044b4     MSVCRT:initsect.obj
+ 0002:000004b8       ___rtc_izz                 100044b8     MSVCRT:initsect.obj
+ 0002:000004bc       ___rtc_taa                 100044bc     MSVCRT:initsect.obj
+ 0002:000004c0       ___rtc_tzz                 100044c0     MSVCRT:initsect.obj
+ 0002:000004c4       __IMPORT_DESCRIPTOR_MSVCR71 100044c4     MSVCRT:MSVCR71.dll
+ 0002:000004d8       __IMPORT_DESCRIPTOR_KERNEL32 100044d8     kernel32:KERNEL32.dll
+ 0002:000004ec       __NULL_IMPORT_DESCRIPTOR   100044ec     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10005000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10005004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10005008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000500c     MSVCRT:cinitexe.obj
+ 0003:000001d0       ___security_cookie         100051d0     MSVCRT:seccook.obj
+ 0003:00000318       _ThreadsInitialized        10005318     threads_md.obj
+ 0003:00000328       _logging_level             10005328     hpi.obj
+ 0003:0000032c       _profiler_on               1000532c     hpi.obj
+ 0003:00000330       _vm_calls                  10005330     hpi.obj
+ 0003:00000338       _nReservedBytes            10005338     <common>
+ 0003:0000033c       __sys_queue_lock           1000533c     <common>
+ 0003:00000340       __adjust_fdiv              10005340     <common>
+ 0003:00000344       ___onexitend               10005344     <common>
+ 0003:00000348       ___onexitbegin             10005348     <common>
+ 0003:0000034c       __pRawDllMain              1000534c     <common>
+
+ entry point at        0001:00001f38
+
+ Static symbols
+
+ 0001:00000315       _initializeSemaphore       10001315 f   monitor_md.obj
+ 0001:00000341       @sysMonitorEnter2@8        10001341 f   monitor_md.obj
+ 0001:00000405       @sysMonitorExit2@8         10001405 f   monitor_md.obj
+ 0001:000005ef       _findWaitersHelper         100015ef f   monitor_md.obj
+ 0001:000007bb       _initSockFnTable           100017bb f   socket_md.obj
+ 0001:00000db3       _nonSeekAvailable          10001db3 f   sys_api_md.obj
+ 0001:00000def       _stdinAvailable            10001def f   sys_api_md.obj
+ 0001:00001630       _threadSingleHelper        10002630 f   threads_md.obj
+ 0001:00001701       _threadMultiHelper         10002701 f   threads_md.obj
+ 0001:000018fe       _queueInsert               100028fe f   threads_md.obj
+ 0001:00001b93       __start@4                  10002b93 f   threads_md.obj
+ 0001:00001ca1       _GetInterface@12           10002ca1 f   hpi.obj

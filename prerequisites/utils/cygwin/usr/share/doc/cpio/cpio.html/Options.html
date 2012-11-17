@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+<title>Options - cpio</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="cpio">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Invoking-cpio.html#Invoking-cpio" title="Invoking cpio">
+<link rel="prev" href="Copy_002dpass-mode.html#Copy_002dpass-mode" title="Copy-pass mode">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents GNU cpio (version 2.11, 12 February 2010).
+
+Copyright (C) 1995, 2001, 2002, 2004, 2010 Free Software
+Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual'', and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License''.
+
+     (a) The FSF's Back-Cover Text is: ``You have freedom to copy and
+     modify this GNU Manual, like GNU software.  Copies published by
+     the Free Software Foundation raise funds for GNU development.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Options"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Copy_002dpass-mode.html#Copy_002dpass-mode">Copy-pass mode</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Invoking-cpio.html#Invoking-cpio">Invoking cpio</a>
+<hr>
+</div>
+
+<!-- node-name,  next,  previous,  up -->
+<h3 class="section">3.4 Options</h3>
+
+     <dl>
+<dt><code>-0</code><dt><code>--null</code><dd>Read a list of filenames terminated by a null character, instead of a
+newline, so that files whose names contain newlines can be archived. 
+GNU find is one way to produce a list of null-terminated filenames. 
+This option may be used in copy-out and copy-pass modes.
+
+     <br><dt><code>-a</code><dt><code>--reset-access-time</code><dd>Reset the access times of files after reading them, so
+that it does not look like they have just been read.
+
+     <br><dt><code>-A</code><dt><code>--append</code><dd>Append to an existing archive.  Only works in copy-out
+mode.  The archive must be a disk file specified with
+the <samp><span class="option">-O</span></samp> or <samp><span class="option">-F</span></samp> (<samp><span class="option">--file</span></samp>) option.
+
+     <br><dt><code>-b</code><dt><code>--swap</code><dd>Swap both halfwords of words and bytes of halfwords in the data. 
+Equivalent to -sS.  This option may be used in copy-in mode.  Use this
+option to convert 32-bit integers between big-endian and little-endian
+machines.
+
+     <br><dt><code>-B</code><dd>Set the I/O block size to 5120 bytes.  Initially the
+block size is 512 bytes.
+
+     <br><dt><code>--block-size=</code><var>block-size</var><dd>Set the I/O block size to <var>block-size</var> * 512 bytes.
+
+     <br><dt><code>-c</code><dd>Use the old portable (ASCII) archive format.
+
+     <br><dt><code>-C </code><var>io-size</var><dt><code>--io-size=</code><var>io-size</var><dd>Set the I/O block size to <var>io-size</var> bytes.
+
+     <br><dt><code>-d</code><dt><code>--make-directories</code><dd>Create leading directories where needed.
+
+     <br><dt><code>-E </code><var>file</var><dt><code>--pattern-file=</code><var>file</var><dd>Read additional patterns specifying filenames to extract or list from
+<var>file</var>.  The lines of <var>file</var> are treated as if they had been non-option
+arguments to cpio.  This option is used in copy-in mode,
+
+     <br><dt><code>-f</code><dt><code>--nonmatching</code><dd>Only copy files that do not match any of the given
+patterns.
+
+     <br><dt><code>-F </code><var>archive</var><dt><code>--file=</code><var>archive</var><dd>Archive filename to use instead of standard input or output.  To use a
+tape drive on another machine as the archive, use a filename that starts
+with &lsquo;<samp><var>hostname</var><span class="samp">:</span></samp>&rsquo;, where <var>hostname</var> is the name or IP
+address of the machine.  The hostname can be preceded by a username and an
+&lsquo;<samp><span class="samp">@</span></samp>&rsquo; to access the remote tape drive as that user, if you have
+permission to do so (typically an entry in that user's <samp><span class="file">~/.rhosts</span></samp>
+file).
+
+     <br><dt><code>--force-local</code><dd>With <samp><span class="option">-F</span></samp>, <samp><span class="option">-I</span></samp>, or <samp><span class="option">-O</span></samp>, take the archive file name to be a
+local file even if it contains a colon, which would
+ordinarily indicate a remote host name.
+
+     <br><dt><code>-H </code><var>format</var><dt><code>--format=</code><var>format</var><dd>Use archive format <var>format</var>.  The valid formats are listed below
+with file size limits for individual files in parentheses; the same
+names are also recognized in all-caps.  The default in copy-in mode is
+to automatically detect the archive format, and in copy-out mode is
+&lsquo;<samp><span class="samp">bin</span></samp>&rsquo;.
+
+          <dl>
+<dt>&lsquo;<samp><span class="samp">bin</span></samp>&rsquo;<dd>The obsolete binary format. (2147483647 bytes)
+
+          <br><dt>&lsquo;<samp><span class="samp">odc</span></samp>&rsquo;<dd>The old (POSIX.1) portable format. (8589934591 bytes)
+
+          <br><dt>&lsquo;<samp><span class="samp">newc</span></samp>&rsquo;<dd>The new (SVR4) portable format, which supports file systems having more
+than 65536 i-nodes. (4294967295 bytes)
+
+          <br><dt>&lsquo;<samp><span class="samp">crc</span></samp>&rsquo;<dd>The new (SVR4) portable format with a checksum added.
+
+          <br><dt>&lsquo;<samp><span class="samp">tar</span></samp>&rsquo;<dd>The old tar format. (8589934591 bytes)
+
+          <br><dt>&lsquo;<samp><span class="samp">ustar</span></samp>&rsquo;<dd>The POSIX.1 tar format.  Also recognizes GNU tar archives, which are
+similar but not identical. (8589934591 bytes)
+
+          <br><dt>&lsquo;<samp><span class="samp">hpbin</span></samp>&rsquo;<dd>The obsolete binary format used by HPUX's cpio (which stores device
+files differently).
+
+          <br><dt>&lsquo;<samp><span class="samp">hpodc</span></samp>&rsquo;<dd>The portable format used by HPUX's cpio (which stores device files
+differently). 
+</dl>
+
+     <br><dt><code>-i</code><dt><code>--extract</code><dd>Run in copy-in mode. 
+See <a href="Copy_002din-mode.html#Copy_002din-mode">Copy-in mode</a>.
+
+     <br><dt><code>-I </code><var>archive</var><dd>Archive filename to use instead of standard input.  To use a tape drive
+on another machine as the archive, use a filename that starts with
+&lsquo;<samp><var>hostname</var><span class="samp">:</span></samp>&rsquo;, where <var>hostname</var> is the name or IP address
+of the remote host.  The hostname can be preceded by a username and an &lsquo;<samp><span class="samp">@</span></samp>&rsquo; to
+access the remote tape drive as that user, if you have permission to do
+so (typically an entry in that user's <samp><span class="file">~/.rhosts</span></samp> file).
+
+     <br><dt><code>-k</code><dd>Ignored; for compatibility with other versions of cpio.
+
+     <br><dt><code>-l</code><dt><code>--link</code><dd>Link files instead of copying them, when possible.
+
+     <br><dt><code>-L</code><dt><code>--dereference</code><dd>Copy the file that a symbolic link points to, rather than the symbolic
+link itself.
+
+     <br><dt><code>-m</code><dt><code>--preserve-modification-time</code><dd>Retain previous file modification times when creating files.
+
+     <br><dt><code>-M </code><var>message</var><dt><code>--message=</code><var>message</var><dd>Print <var>message</var> when the end of a volume of the backup media (such as a
+tape or a floppy disk) is reached, to prompt the user to insert a new
+volume.  If <var>message</var> contains the string &lsquo;<samp><span class="samp">%d</span></samp>&rsquo;, it is replaced by the
+current volume number (starting at 1).
+
+     <br><dt><code>-n</code><dt><code>--numeric-uid-gid</code><dd>Show numeric UID and GID instead of translating them into names when using the
+<samp><span class="option">--verbose</span></samp> option.
+
+     <br><dt><code>--no-absolute-filenames</code><dd>Create all files relative to the current directory in copy-in mode, even
+if they have an absolute file name in the archive.
+
+     <br><dt><code>--no-preserve-owner</code><dd>Do not change the ownership of the files; leave them owned by the user
+extracting them.  This is the default for non-root users, so that users
+on System V don't inadvertantly give away files.  This option can be
+used in copy-in mode and copy-pass mode
+
+     <br><dt><code>-o</code><dt><code>--create</code><dd>Run in copy-out mode. 
+See <a href="Copy_002dout-mode.html#Copy_002dout-mode">Copy-out mode</a>.
+
+     <br><dt><code>-O </code><var>archive</var><dd>Archive filename to use instead of standard output.  To use a tape drive
+on another machine as the archive, use a filename that starts with
+&lsquo;<samp><var>hostname</var><span class="samp">:</span></samp>&rsquo;, where <var>hostname</var> is the name or IP address
+of the machine.  The hostname can be preceded by a username and an &lsquo;<samp><span class="samp">@</span></samp>&rsquo; to
+access the remote tape drive as that user, if you have permission to do
+so (typically an entry in that user's <samp><span class="file">~/.rhosts</span></samp> file).
+
+     <br><dt><code>--only-verify-crc</code><dd>Verify the CRC's of each file in the archive, when reading a CRC format
+archive. Don't actually extract the files.
+
+     <br><dt><code>-p</code><dt><code>--pass-through</code><dd>Run in copy-pass mode. 
+See <a href="Copy_002dpass-mode.html#Copy_002dpass-mode">Copy-pass mode</a>.
+
+     <br><dt><code>--quiet</code><dd>Do not print the number of blocks copied.
+
+     <br><dt><code>-r</code><dt><code>--rename</code><dd>Interactively rename files.
+
+     <br><dt><code>-R </code><var>owner</var><dt><code>--owner </code><var>owner</var><dd>
+In copy-in and copy-pass mode, set the ownership of all files created
+to the specified <var>owner</var> (this operation is allowed only for the
+super-user). In copy-out mode, store the supplied owner information in
+the archive.
+
+     <p>The argument can be either the user name or the user name
+and group name, separated by a dot or a colon, or the group name,
+preceeded by a dot or a colon, as shown in the examples below:
+
+     <pre class="smallexample">          cpio --owner smith
+          cpio --owner smith:
+          cpio --owner smith:users
+          cpio --owner :users
+</pre>
+     <p class="noindent">If the group is omitted but the &lsquo;<samp><span class="samp">:</span></samp>&rsquo; or &lsquo;<samp><span class="samp">.</span></samp>&rsquo; separator is
+given, as in the second example. the given user's login group will be
+used.
+
+     <br><dt><code>--rsh-command=</code><var>command</var><dd>Notifies cpio that is should use <var>command</var> to communicate with remote
+devices.
+
+     <br><dt><code>-s</code><dt><code>--swap-bytes</code><dd>Swap the bytes of each halfword (pair of bytes) in the files. This option
+can be used in copy-in mode.
+
+     <br><dt><code>-S</code><dt><code>--swap-halfwords</code><dd>Swap the halfwords of each word (4 bytes) in the files.  This option may
+be used in copy-in mode.
+
+     <br><dt><code>--sparse</code><dd>Write files with large blocks of zeros as sparse files.  This option is
+used in copy-in and copy-pass modes.
+
+     <br><dt><code>-t</code><dt><code>--list</code><dd>Print a table of contents of the input.
+
+     <br><dt><code>--to-stdout</code><dd>Extract files to standard output.  This option may be used in copy-in mode.
+
+     <br><dt><code>-u</code><dt><code>--unconditional</code><dd>Replace all files, without asking whether to replace
+existing newer files with older files.
+
+     <br><dt><code>-v</code><dt><code>--verbose</code><dd>List the files processed, or with <samp><span class="option">-t</span></samp>, give an &lsquo;<samp><span class="samp">ls -l</span></samp>&rsquo; style
+table of contents listing.  In a verbose table of contents of a ustar
+archive, user and group names in the archive that do not exist on the
+local system are replaced by the names that correspond locally to the
+numeric UID and GID stored in the archive.
+
+     <br><dt><code>-V</code><dt><code>--dot</code><dd>Print a &lsquo;<samp><span class="samp">.</span></samp>&rsquo; for each file processed.
+
+     <br><dt><code>--version</code><dd>Print the cpio program version number and exit. 
+</dl>
+
+   </body></html>
+

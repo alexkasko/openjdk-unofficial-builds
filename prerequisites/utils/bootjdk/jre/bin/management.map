@@ -1,0 +1,289 @@
+ management
+
+ Timestamp is 4ecc5d5c (Tue Nov 22 21:41:32 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000170cH .text                   CODE
+ 0002:00000000 000000a4H .idata$5                DATA
+ 0002:000000b0 00000708H .rdata                  DATA
+ 0002:000007b8 0000006fH .rdata$debug            DATA
+ 0002:00000830 00000004H .rdata$sxdata           DATA
+ 0002:00000834 00000004H .rtc$IAA                DATA
+ 0002:00000838 00000004H .rtc$IZZ                DATA
+ 0002:0000083c 00000004H .rtc$TAA                DATA
+ 0002:00000840 00000004H .rtc$TZZ                DATA
+ 0002:00000844 00000064H .idata$2                DATA
+ 0002:000008a8 00000014H .idata$3                DATA
+ 0002:000008bc 000000a4H .idata$4                DATA
+ 0002:00000960 00000330H .idata$6                DATA
+ 0002:00000c90 00001524H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000044H .data                   DATA
+ 0003:00000054 0000006cH .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000328H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0001:00000000       _Java_sun_management_ClassLoadingImpl_setVerboseClass@12 10001000 f   ClassLoadingImpl.obj
+ 0001:00000243       _Java_sun_management_FileSystemImpl_init0@8 10001243 f   FileSystemImpl.obj
+ 0001:00000328       _Java_sun_management_FileSystemImpl_isSecuritySupported0@12 10001328 f   FileSystemImpl.obj
+ 0001:0000037b       _Java_sun_management_FileSystemImpl_isAccessUserOnly0@12 1000137b f   FileSystemImpl.obj
+ 0001:00000418       _Java_sun_management_Flag_getInternalFlagCount@8 10001418 f   Flag.obj
+ 0001:0000042b       _Java_sun_management_Flag_getAllFlagNames@8 1000142b f   Flag.obj
+ 0001:00000460       _Java_sun_management_Flag_initialize@8 10001460 f   Flag.obj
+ 0001:000004df       _Java_sun_management_Flag_getFlags@20 100014df f   Flag.obj
+ 0001:000006b1       _Java_sun_management_Flag_setLongValue@20 100016b1 f   Flag.obj
+ 0001:000006cf       _Java_sun_management_Flag_setBooleanValue@16 100016cf f   Flag.obj
+ 0001:000006f5       _Java_sun_management_Flag_setStringValue@16 100016f5 f   Flag.obj
+ 0001:00000716       _Java_sun_management_GarbageCollectorImpl_getCollectionCount@8 10001716 f   GarbageCollectorImpl.obj
+ 0001:0000072b       _Java_sun_management_GarbageCollectorImpl_getCollectionTime@8 1000172b f   GarbageCollectorImpl.obj
+ 0001:00000740       _Java_sun_management_GcInfoBuilder_getNumGcExtAttributes@12 10001740 f   GcInfoBuilder.obj
+ 0001:00000771       _Java_sun_management_GcInfoBuilder_fillGcAttributeInfo@28 10001771 f   GcInfoBuilder.obj
+ 0001:000008ad       _Java_sun_management_GcInfoBuilder_getLastGcInfo0@32 100018ad f   GcInfoBuilder.obj
+ 0001:00000af4       _Java_sun_management_HotSpotDiagnostic_dumpHeap@16 10001af4 f   HotSpotDiagnostic.obj
+ 0001:00000b0b       _Java_sun_management_HotspotThread_getInternalThreadCount@8 10001b0b f   HotspotThread.obj
+ 0001:00000b1e       _Java_sun_management_HotspotThread_getInternalThreadTimes0@16 10001b1e f   HotspotThread.obj
+ 0001:00000b35       _Java_sun_management_MemoryImpl_setVerboseGC@12 10001b35 f   MemoryImpl.obj
+ 0001:00000b4a       _Java_sun_management_MemoryImpl_getMemoryPools0@8 10001b4a f   MemoryImpl.obj
+ 0001:00000b5b       _Java_sun_management_MemoryImpl_getMemoryManagers0@8 10001b5b f   MemoryImpl.obj
+ 0001:00000b6c       _Java_sun_management_MemoryImpl_getMemoryUsage0@12 10001b6c f   MemoryImpl.obj
+ 0001:00000b7f       _Java_sun_management_MemoryManagerImpl_getMemoryPools0@8 10001b7f f   MemoryManagerImpl.obj
+ 0001:00000baa       _Java_sun_management_MemoryPoolImpl_getMemoryManagers0@8 10001baa f   MemoryPoolImpl.obj
+ 0001:00000bd5       _Java_sun_management_MemoryPoolImpl_getUsage0@8 10001bd5 f   MemoryPoolImpl.obj
+ 0001:00000c00       _Java_sun_management_MemoryPoolImpl_getPeakUsage0@8 10001c00 f   MemoryPoolImpl.obj
+ 0001:00000c2b       _Java_sun_management_MemoryPoolImpl_setUsageThreshold0@24 10001c2b f   MemoryPoolImpl.obj
+ 0001:00000c90       _Java_sun_management_MemoryPoolImpl_setCollectionThreshold0@24 10001c90 f   MemoryPoolImpl.obj
+ 0001:00000cf5       _Java_sun_management_MemoryPoolImpl_resetPeakUsage0@8 10001cf5 f   MemoryPoolImpl.obj
+ 0001:00000d15       _Java_sun_management_MemoryPoolImpl_setPoolUsageSensor@12 10001d15 f   MemoryPoolImpl.obj
+ 0001:00000d31       _Java_sun_management_MemoryPoolImpl_setPoolCollectionSensor@12 10001d31 f   MemoryPoolImpl.obj
+ 0001:00000d4d       _Java_sun_management_MemoryPoolImpl_getCollectionUsage0@8 10001d4d f   MemoryPoolImpl.obj
+ 0001:00000d55       _Java_sun_management_ThreadImpl_setThreadContentionMonitoringEnabled0@12 10001d55 f   ThreadImpl.obj
+ 0001:00000d6a       _Java_sun_management_ThreadImpl_setThreadCpuTimeEnabled0@12 10001d6a f   ThreadImpl.obj
+ 0001:00000d7f       _Java_sun_management_ThreadImpl_getThreadInfo0@20 10001d7f f   ThreadImpl.obj
+ 0001:00000d9a       _Java_sun_management_ThreadImpl_getThreads@8 10001d9a f   ThreadImpl.obj
+ 0001:00000d9f       _Java_sun_management_ThreadImpl_getThreadTotalCpuTime0@16 10001d9f f   ThreadImpl.obj
+ 0001:00000db8       _Java_sun_management_ThreadImpl_getThreadUserCpuTime0@16 10001db8 f   ThreadImpl.obj
+ 0001:00000dd1       _Java_sun_management_ThreadImpl_findMonitorDeadlockedThreads0@8 10001dd1 f   ThreadImpl.obj
+ 0001:00000de0       _Java_sun_management_ThreadImpl_findDeadlockedThreads0@8 10001de0 f   ThreadImpl.obj
+ 0001:00000df1       _Java_sun_management_ThreadImpl_resetPeakThreadCount0@8 10001df1 f   ThreadImpl.obj
+ 0001:00000e10       _Java_sun_management_ThreadImpl_resetContentionTimes0@16 10001e10 f   ThreadImpl.obj
+ 0001:00000e2c       _Java_sun_management_ThreadImpl_dumpThreads0@20 10001e2c f   ThreadImpl.obj
+ 0001:00000e4a       _Java_sun_management_VMManagementImpl_getVersion0@8 10001e4a f   VMManagementImpl.obj
+ 0001:00000eb9       _Java_sun_management_VMManagementImpl_initOptionalSupportFields@8 10001eb9 f   VMManagementImpl.obj
+ 0001:00000f89       _Java_sun_management_VMManagementImpl_getVmArguments0@8 10001f89 f   VMManagementImpl.obj
+ 0001:00000f98       _Java_sun_management_VMManagementImpl_getTotalClassCount@8 10001f98 f   VMManagementImpl.obj
+ 0001:00000fab       _Java_sun_management_VMManagementImpl_getUnloadedClassCount@8 10001fab f   VMManagementImpl.obj
+ 0001:00000fbe       _Java_sun_management_VMManagementImpl_getVerboseGC@8 10001fbe f   VMManagementImpl.obj
+ 0001:00000fcf       _Java_sun_management_VMManagementImpl_getVerboseClass@8 10001fcf f   VMManagementImpl.obj
+ 0001:00000fe0       _Java_sun_management_VMManagementImpl_getTotalThreadCount@8 10001fe0 f   VMManagementImpl.obj
+ 0001:00000ff3       _Java_sun_management_VMManagementImpl_getLiveThreadCount@8 10001ff3 f   VMManagementImpl.obj
+ 0001:00001006       _Java_sun_management_VMManagementImpl_getPeakThreadCount@8 10002006 f   VMManagementImpl.obj
+ 0001:00001019       _Java_sun_management_VMManagementImpl_getDaemonThreadCount@8 10002019 f   VMManagementImpl.obj
+ 0001:0000102c       _Java_sun_management_VMManagementImpl_getTotalCompileTime@8 1000202c f   VMManagementImpl.obj
+ 0001:0000103f       _Java_sun_management_VMManagementImpl_getStartupTime@8 1000203f f   VMManagementImpl.obj
+ 0001:00001052       _Java_sun_management_VMManagementImpl_isThreadContentionMonitoringEnabled@8 10002052 f   VMManagementImpl.obj
+ 0001:00001063       _Java_sun_management_VMManagementImpl_isThreadCpuTimeEnabled@8 10002063 f   VMManagementImpl.obj
+ 0001:00001074       _Java_sun_management_VMManagementImpl_getProcessId@8 10002074 f   VMManagementImpl.obj
+ 0001:0000108a       _Java_sun_management_VMManagementImpl_getAvailableProcessors@8 1000208a f   VMManagementImpl.obj
+ 0001:00001092       _Java_sun_management_VMManagementImpl_getSafepointCount@8 10002092 f   VMManagementImpl.obj
+ 0001:000010a5       _Java_sun_management_VMManagementImpl_getTotalSafepointTime@8 100020a5 f   VMManagementImpl.obj
+ 0001:000010b8       _Java_sun_management_VMManagementImpl_getSafepointSyncTime@8 100020b8 f   VMManagementImpl.obj
+ 0001:000010cb       _Java_sun_management_VMManagementImpl_getTotalApplicationNonStoppedTime@8 100020cb f   VMManagementImpl.obj
+ 0001:000010de       _Java_sun_management_VMManagementImpl_getLoadedClassSize@8 100020de f   VMManagementImpl.obj
+ 0001:000010f1       _Java_sun_management_VMManagementImpl_getUnloadedClassSize@8 100020f1 f   VMManagementImpl.obj
+ 0001:00001104       _Java_sun_management_VMManagementImpl_getClassLoadingTime@8 10002104 f   VMManagementImpl.obj
+ 0001:00001117       _Java_sun_management_VMManagementImpl_getMethodDataSize@8 10002117 f   VMManagementImpl.obj
+ 0001:0000112a       _Java_sun_management_VMManagementImpl_getInitializedClassCount@8 1000212a f   VMManagementImpl.obj
+ 0001:0000113d       _Java_sun_management_VMManagementImpl_getClassInitializationTime@8 1000213d f   VMManagementImpl.obj
+ 0001:00001150       _Java_sun_management_VMManagementImpl_getClassVerificationTime@8 10002150 f   VMManagementImpl.obj
+ 0001:00001163       _JNI_OnLoad@8              10002163 f   management.obj
+ 0001:000011be       _throw_internal_error      100021be f   management.obj
+ 0001:000011f2       _Java_com_sun_management_OperatingSystem_initialize@8 100021f2 f   OperatingSystem_md.obj
+ 0001:0000124e       _Java_com_sun_management_OperatingSystem_getCommittedVirtualMemorySize0@8 1000224e f   OperatingSystem_md.obj
+ 0001:000012cc       _Java_com_sun_management_OperatingSystem_getTotalSwapSpaceSize@8 100022cc f   OperatingSystem_md.obj
+ 0001:000012e5       _Java_com_sun_management_OperatingSystem_getFreeSwapSpaceSize@8 100022e5 f   OperatingSystem_md.obj
+ 0001:000012fe       _Java_com_sun_management_OperatingSystem_getProcessCpuTime@8 100022fe f   OperatingSystem_md.obj
+ 0001:00001368       _Java_com_sun_management_OperatingSystem_getFreePhysicalMemorySize@8 10002368 f   OperatingSystem_md.obj
+ 0001:00001381       _Java_com_sun_management_OperatingSystem_getTotalPhysicalMemorySize@8 10002381 f   OperatingSystem_md.obj
+ 0001:0000139a       _JNU_ThrowIOExceptionWithLastError@8 1000239a f   java:java.dll
+ 0001:000013a0       _JNU_ThrowIOException@8    100023a0 f   java:java.dll
+ 0001:000013a6       _JNU_ThrowOutOfMemoryError@8 100023a6 f   java:java.dll
+ 0001:000013ac       _JNU_ThrowInternalError@8  100023ac f   java:java.dll
+ 0001:000013b2       _JNU_ReleaseStringPlatformChars@12 100023b2 f   java:java.dll
+ 0001:000013b8       _JNU_GetStringPlatformChars@12 100023b8 f   java:java.dll
+ 0001:000013be       _JNU_GetStaticFieldByName@20 100023be f   java:java.dll
+ 0001:000013c4       _JNU_NewObjectByName       100023c4 f   java:java.dll
+ 0001:000013ca       _JNU_ThrowIllegalArgumentException@8 100023ca f   java:java.dll
+ 0001:000013d0       _JNU_ThrowNullPointerException@8 100023d0 f   java:java.dll
+ 0001:000013d6       _JVM_GetAllThreads@8       100023d6 f   jvm:jvm.dll
+ 0001:000013dc       _JVM_ActiveProcessorCount@0 100023dc f   jvm:jvm.dll
+ 0001:000013e2       _JVM_GetManagement@4       100023e2 f   jvm:jvm.dll
+ 0001:000013f0       __allmul                   100023f0 f   MSVCRT:llmul.obj
+ 0001:00001424       __CRT_INIT@12              10002424 f   MSVCRT:crtdll.obj
+ 0001:000014e2       __DllMainCRTStartup@12     100024e2 f   MSVCRT:crtdll.obj
+ 0001:000015c6       __initterm                 100025c6 f   MSVCRT:MSVCR71.dll
+ 0001:000015cc       __onexit                   100025cc f   MSVCRT:atonexit.obj
+ 0001:000015f2       _atexit                    100025f2 f   MSVCRT:atonexit.obj
+ 0001:00001604       __RTC_Initialize           10002604 f   MSVCRT:initsect.obj
+ 0001:00001648       __RTC_Terminate            10002648 f   MSVCRT:initsect.obj
+ 0001:0000168c       ___CppXcptFilter           1000268c f   MSVCRT:MSVCR71.dll
+ 0001:00001692       _DllMain@12                10002692 f   MSVCRT:dllmain.obj
+ 0001:000016b4       __SEH_prolog               100026b4 f   MSVCRT:sehprolg.obj
+ 0001:000016ef       __SEH_epilog               100026ef f   MSVCRT:sehprolg.obj
+ 0001:00001700       __except_handler3          10002700 f   MSVCRT:MSVCR71.dll
+ 0001:00001706       ___dllonexit               10002706 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__EqualSid@8          10003000     advapi32:ADVAPI32.dll
+ 0002:00000004       \177ADVAPI32_NULL_THUNK_DATA 10003004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__DisableThreadLibraryCalls@4 10003008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetProcessTimes@20  1000300c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__GlobalMemoryStatus@4 10003010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__FreeLibrary@4       10003014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__GetVersionExA@4     10003018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__LoadLibraryA@4      1000301c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetProcAddress@8    10003020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__GetLastError@0      10003024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__GetVolumeInformationA@32 10003028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__GetCurrentProcess@0 1000302c     kernel32:KERNEL32.dll
+ 0002:00000030       \177KERNEL32_NULL_THUNK_DATA 10003030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp___onexit             10003034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__sprintf             10003038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp____dllonexit         1000303c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__free                10003040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__strchr              10003044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__malloc              10003048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__strdup              1000304c     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp___strdup             1000304c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp___errno              10003050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp___initterm           10003054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp___adjust_fdiv        10003058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp____CppXcptFilter     1000305c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp___except_handler3    10003060     MSVCRT:MSVCR71.dll
+ 0002:00000064       \177MSVCR71_NULL_THUNK_DATA 10003064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp__JNU_NewObjectByName 10003068     java:java.dll
+ 0002:0000006c       __imp__JNU_ThrowIOException@8 1000306c     java:java.dll
+ 0002:00000070       __imp__JNU_ThrowOutOfMemoryError@8 10003070     java:java.dll
+ 0002:00000074       __imp__JNU_ThrowInternalError@8 10003074     java:java.dll
+ 0002:00000078       __imp__JNU_ThrowNullPointerException@8 10003078     java:java.dll
+ 0002:0000007c       __imp__JNU_ThrowIllegalArgumentException@8 1000307c     java:java.dll
+ 0002:00000080       __imp__JNU_ThrowIOExceptionWithLastError@8 10003080     java:java.dll
+ 0002:00000084       __imp__JNU_GetStaticFieldByName@20 10003084     java:java.dll
+ 0002:00000088       __imp__JNU_GetStringPlatformChars@12 10003088     java:java.dll
+ 0002:0000008c       __imp__JNU_ReleaseStringPlatformChars@12 1000308c     java:java.dll
+ 0002:00000090       \177java_NULL_THUNK_DATA   10003090     java:java.dll
+ 0002:00000094       __imp__JVM_ActiveProcessorCount@0 10003094     jvm:jvm.dll
+ 0002:00000098       __imp__JVM_GetManagement@4 10003098     jvm:jvm.dll
+ 0002:0000009c       __imp__JVM_GetAllThreads@8 1000309c     jvm:jvm.dll
+ 0002:000000a0       \177jvm_NULL_THUNK_DATA    100030a0     jvm:jvm.dll
+ 0002:000000cc       ??_C@_0CA@CGFDCJE@Absolute?5filename?5not?5specified?$AA@ 100030cc     FileSystemImpl.obj
+ 0002:000000ec       ??_C@_0BM@JPGKFFDK@GetVolumeInformation?5failed?$AA@ 100030ec     FileSystemImpl.obj
+ 0002:00000108       ??_C@_0O@PNKFDMOJ@Malformed?5UNC?$AA@ 10003108     FileSystemImpl.obj
+ 0002:00000118       ??_C@_0BH@EKMPGKNN@GetFileSecurity?5failed?$AA@ 10003118     FileSystemImpl.obj
+ 0002:00000130       ??_C@_0CC@PLIGLKOL@GetSecurityDescriptorOwner?5faile@ 10003130     FileSystemImpl.obj
+ 0002:00000154       ??_C@_0CM@JFCPAEMB@Security?5descriptor?5does?5not?5con@ 10003154     FileSystemImpl.obj
+ 0002:00000180       ??_C@_0CB@EKBMIJAO@GetSecurityDescriptorDacl?5failed@ 10003180     FileSystemImpl.obj
+ 0002:000001a4       ??_C@_0O@HNKFIIOB@GetAce?5failed?$AA@ 100031a4     FileSystemImpl.obj
+ 0002:000001b4       ??_C@_0BJ@OEDGCHLN@GetAclInformation?5failed?$AA@ 100031b4     FileSystemImpl.obj
+ 0002:000001d0       ??_C@_0CM@GBIJGNOE@Unable?5to?5get?5address?5of?5securit@ 100031d0     FileSystemImpl.obj
+ 0002:000001fc       ??_C@_08FDBMHLGI@EqualSid?$AA@ 100031fc     FileSystemImpl.obj
+ 0002:00000208       ??_C@_06MGOHGGFD@GetAce?$AA@ 10003208     FileSystemImpl.obj
+ 0002:00000210       ??_C@_0BC@JNNADOPA@GetAclInformation?$AA@ 10003210     FileSystemImpl.obj
+ 0002:00000224       ??_C@_0BK@IDBLHDPI@GetSecurityDescriptorDacl?$AA@ 10003224     FileSystemImpl.obj
+ 0002:00000240       ??_C@_0BL@NGDAALJK@GetSecurityDescriptorOwner?$AA@ 10003240     FileSystemImpl.obj
+ 0002:0000025c       ??_C@_0BB@JIAOINHD@GetFileSecurityA?$AA@ 1000325c     FileSystemImpl.obj
+ 0002:00000270       ??_C@_0BM@NELLIENI@Unable?5to?5load?5ADVAPI32?4DLL?$AA@ 10003270     FileSystemImpl.obj
+ 0002:0000028c       ??_C@_0N@JJPEKNFO@ADVAPI32?4DLL?$AA@ 1000328c     FileSystemImpl.obj
+ 0002:0000029c       ??_C@_0CD@CEAHIHPC@com?1sun?1management?1VMOption$Orig@ 1000329c     Flag.obj
+ 0002:000002c0       ??_C@_0CF@MADHDJEK@Lcom?1sun?1management?1VMOption$Ori@ 100032c0     Flag.obj
+ 0002:000002e8       ??_C@_05NNNMIPMB@OTHER?$AA@ 100032e8     Flag.obj
+ 0002:000002f0       ??_C@_09ILMJHCBE@ERGONOMIC?$AA@ 100032f0     Flag.obj
+ 0002:000002fc       ??_C@_0M@CEBLKBIO@CONFIG_FILE?$AA@ 100032fc     Flag.obj
+ 0002:00000308       ??_C@_0M@FDANMCLI@ENVIRON_VAR?$AA@ 10003308     Flag.obj
+ 0002:00000314       ??_C@_0L@HNPILAMG@MANAGEMENT?$AA@ 10003314     Flag.obj
+ 0002:00000320       ??_C@_0M@BODHNBPF@VM_CREATION?$AA@ 10003320     Flag.obj
+ 0002:0000032c       ??_C@_07MGCPDNLD@DEFAULT?$AA@ 1000332c     Flag.obj
+ 0002:00000334       ??_C@_0BN@HIDEKMEK@Unsupported?5VMGlobal?5Type?5?$CFd?$AA@ 10003334     Flag.obj
+ 0002:00000354       ??_C@_0CJ@FEKHENIJ@Number?5of?5Flag?5objects?5created?5u@ 10003354     Flag.obj
+ 0002:00000380       ??_C@_0BE@DONNLBPM@sun?1management?1Flag?$AA@ 10003380     Flag.obj
+ 0002:00000398       ??_C@_0EO@OCMOFBBM@?$CILjava?1lang?1String?$DLLjava?1lang?1Ob@ 10003398     Flag.obj
+ 0002:000003e8       ??_C@_0BC@DDPBLLCP@java?1lang?1Boolean?$AA@ 100033e8     Flag.obj
+ 0002:000003fc       ??_C@_04LHKBAEFM@?$CIZ?$CJV?$AA@ 100033fc     Flag.obj
+ 0002:00000404       ??_C@_0P@MLLHBNNC@java?1lang?1Long?$AA@ 10003404     Flag.obj
+ 0002:00000414       ??_C@_04OHLIFDMD@?$CIJ?$CJV?$AA@ 10003414     Flag.obj
+ 0002:0000041c       ??_C@_04JKLABMEJ@?$CIC?$CJV?$AA@ 1000341c     GcInfoBuilder.obj
+ 0002:00000424       ??_C@_0BE@GKIHCGPM@java?1lang?1Character?$AA@ 10003424     GcInfoBuilder.obj
+ 0002:00000438       ??_C@_0BA@HJEPPKHG@java?1lang?1Float?$AA@ 10003438     GcInfoBuilder.obj
+ 0002:00000448       ??_C@_04HGHCEPA@?$CID?$CJV?$AA@ 10003448     GcInfoBuilder.obj
+ 0002:00000450       ??_C@_0BB@JKEOLFJD@java?1lang?1Double?$AA@ 10003450     GcInfoBuilder.obj
+ 0002:00000464       ??_C@_04MKKJELNG@?$CIS?$CJV?$AA@ 10003464     GcInfoBuilder.obj
+ 0002:0000046c       ??_C@_0BA@MBLENCLH@java?1lang?1Short?$AA@ 1000346c     GcInfoBuilder.obj
+ 0002:0000047c       ??_C@_04PFANPMCN@?$CII?$CJV?$AA@ 1000347c     GcInfoBuilder.obj
+ 0002:00000484       ??_C@_0BC@OHJKABOO@java?1lang?1Integer?$AA@ 10003484     GcInfoBuilder.obj
+ 0002:00000498       ??_C@_04CCAMHLCM@?$CIB?$CJV?$AA@ 10003498     GcInfoBuilder.obj
+ 0002:000004a0       ??_C@_0P@CCHCOPNE@java?1lang?1Byte?$AA@ 100034a0     GcInfoBuilder.obj
+ 0002:000004b0       ??_C@_0BO@EOMDLAMD@Invalid?5GarbageCollectorMBean?$AA@ 100034b0     GcInfoBuilder.obj
+ 0002:000004d0       ??_C@_0BK@KGMIKEPP@Unexpected?5num_attributes?$AA@ 100034d0     GcInfoBuilder.obj
+ 0002:000004ec       ??_C@_0BH@KCPAAINP@Invalid?5num_attributes?$AA@ 100034ec     GcInfoBuilder.obj
+ 0002:00000504       ??_C@_0BL@CHBGEDL@Unsupported?5attribute?5type?$AA@ 10003504     GcInfoBuilder.obj
+ 0002:00000520       ??_C@_0BK@LAMMNKDJ@com?1sun?1management?1GcInfo?$AA@ 10003520     GcInfoBuilder.obj
+ 0002:00000540       ??_C@_0HO@LPKEKFAJ@?$CILsun?1management?1GcInfoBuilder?$DLJ@ 10003540     GcInfoBuilder.obj
+ 0002:000005c0       ??_C@_0BJ@KKOPABNE@Memory?5Manager?5not?5found?$AA@ 100035c0     MemoryManagerImpl.obj
+ 0002:000005dc       ??_C@_0BG@EJKNNBCK@Memory?5Pool?5not?5found?$AA@ 100035dc     MemoryPoolImpl.obj
+ 0002:000005f4       ??_C@_05KBEOJPB@?$CFd?4?$CFd?$AA@ 100035f4     VMManagementImpl.obj
+ 0002:000005fc       ??_C@_01POHCFINO@Z?$AA@    100035fc     VMManagementImpl.obj
+ 0002:00000600       ??_C@_0BJ@NIOHCHFH@synchronizerUsageSupport?$AA@ 10003600     VMManagementImpl.obj
+ 0002:0000061c       ??_C@_0BK@EJFDBCBP@objectMonitorUsageSupport?$AA@ 1000361c     VMManagementImpl.obj
+ 0002:00000638       ??_C@_0BF@CHEGPANE@bootClassPathSupport?$AA@ 10003638     VMManagementImpl.obj
+ 0002:00000650       ??_C@_0BK@DMCEOMBH@otherThreadCpuTimeSupport?$AA@ 10003650     VMManagementImpl.obj
+ 0002:0000066c       ??_C@_0BM@GCPPCNJD@currentThreadCpuTimeSupport?$AA@ 1000366c     VMManagementImpl.obj
+ 0002:00000688       ??_C@_0CC@GDPMBOEP@threadContentionMonitoringSuppor@ 10003688     VMManagementImpl.obj
+ 0002:000006ac       ??_C@_0BK@DJAAMHIC@compTimeMonitoringSupport?$AA@ 100036ac     VMManagementImpl.obj
+ 0002:000006c8       ??_C@_0BP@KJIDAONK@Unsupported?5Management?5version?$AA@ 100036c8     management.obj
+ 0002:000006e8       ??_C@_0BF@CABGMAAE@errno?3?5?$CFd?5error?3?5?$CFs?6?$AA@ 100036e8     management.obj
+ 0002:00000700       ??_C@_0BF@DFNHNMPC@Unsupported?5Platform?$AA@ 10003700     OperatingSystem_md.obj
+ 0002:00000718       ??_C@_0BF@NDAFMACL@GetProcessMemoryInfo?$AA@ 10003718     OperatingSystem_md.obj
+ 0002:00000730       ??_C@_09EPMADGLA@PSAPI?4DLL?$AA@ 10003730     OperatingSystem_md.obj
+ 0002:00000770       __load_config_used         10003770     MSVCRT:loadcfg.obj
+ 0002:00000830       ___safe_se_handler_table   10003830     <linker-defined>
+ 0002:00000834       ___rtc_iaa                 10003834     MSVCRT:initsect.obj
+ 0002:00000838       ___rtc_izz                 10003838     MSVCRT:initsect.obj
+ 0002:0000083c       ___rtc_taa                 1000383c     MSVCRT:initsect.obj
+ 0002:00000840       ___rtc_tzz                 10003840     MSVCRT:initsect.obj
+ 0002:00000844       __IMPORT_DESCRIPTOR_java   10003844     java:java.dll
+ 0002:00000858       __IMPORT_DESCRIPTOR_jvm    10003858     jvm:jvm.dll
+ 0002:0000086c       __IMPORT_DESCRIPTOR_ADVAPI32 1000386c     advapi32:ADVAPI32.dll
+ 0002:00000880       __IMPORT_DESCRIPTOR_MSVCR71 10003880     MSVCRT:MSVCR71.dll
+ 0002:00000894       __IMPORT_DESCRIPTOR_KERNEL32 10003894     kernel32:KERNEL32.dll
+ 0002:000008a8       __NULL_IMPORT_DESCRIPTOR   100038a8     java:java.dll
+ 0003:00000000       ___xc_a                    10006000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10006004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10006008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000600c     MSVCRT:cinitexe.obj
+ 0003:00000050       ___security_cookie         10006050     MSVCRT:seccook.obj
+ 0003:0000008c       _jmm_interface             1000608c     management.obj
+ 0003:00000090       _jvm                       10006090     management.obj
+ 0003:00000094       _jmm_version               10006094     management.obj
+ 0003:000000b0       __adjust_fdiv              100060b0     <common>
+ 0003:000000b4       ___onexitend               100060b4     <common>
+ 0003:000000b8       ___onexitbegin             100060b8     <common>
+ 0003:000000bc       __pRawDllMain              100060bc     <common>
+
+ entry point at        0001:000014e2
+
+ Static symbols
+
+ 0001:00000015       _isSecuritySupported       10001015 f   FileSystemImpl.obj
+ 0001:000000dd       _getFileSecurityDescriptor 100010dd f   FileSystemImpl.obj
+ 0001:00000163       _getFileDACL               10001163 f   FileSystemImpl.obj
+ 0001:000001ad       _isAccessUserOnly          100011ad f   FileSystemImpl.obj
+ 0001:0000043a       _find_origin_constant      1000143a f   Flag.obj
+ 0001:00000e8c       _setStaticBooleanField     10001e8c f   VMManagementImpl.obj

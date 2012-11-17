@@ -1,0 +1,365 @@
+ verify
+
+ Timestamp is 4ecc58b2 (Tue Nov 22 21:21:38 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000046c0H .text                   CODE
+ 0002:00000000 000000e4H .idata$5                DATA
+ 0002:000000f0 000017e8H .rdata                  DATA
+ 0002:000018d8 00000052H .rdata$debug            DATA
+ 0002:00001930 00000004H .rdata$sxdata           DATA
+ 0002:00001934 00000004H .rtc$IAA                DATA
+ 0002:00001938 00000004H .rtc$IZZ                DATA
+ 0002:0000193c 00000004H .rtc$TAA                DATA
+ 0002:00001940 00000004H .rtc$TZZ                DATA
+ 0002:00001944 0000003cH .idata$2                DATA
+ 0002:00001980 00000014H .idata$3                DATA
+ 0002:00001994 000000e4H .idata$4                DATA
+ 0002:00001a78 00000514H .idata$6                DATA
+ 0002:00001f90 000000a5H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000004H .data                   DATA
+ 0003:00000014 00000018H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000318H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:000004e9       _initialize_class_hash     100014e9 f   check_code.obj
+ 0001:00003cb3       _VerifyClassForMajorVersion 10004cb3 f   check_code.obj
+ 0001:00003ffb       _VerifyClass               10004ffb f   check_code.obj
+ 0001:0000423d       _VerifyClassname           1000523d f   check_format.obj
+ 0001:0000428d       _VerifyFixClassname        1000528d f   check_format.obj
+ 0001:000042e8       _JVM_ReleaseUTF@4          100052e8 f   jvm:jvm.dll
+ 0001:000042ee       _jio_snprintf              100052ee f   jvm:jvm.dll
+ 0001:000042f4       _JVM_GetMethodIxSignatureUTF@12 100052f4 f   jvm:jvm.dll
+ 0001:000042fa       _JVM_GetMethodIxNameUTF@12 100052fa f   jvm:jvm.dll
+ 0001:00004300       _JVM_GetClassNameUTF@8     10005300 f   jvm:jvm.dll
+ 0001:00004306       _jio_vsnprintf             10005306 f   jvm:jvm.dll
+ 0001:0000430c       _JVM_FindClassFromClass@16 1000530c f   jvm:jvm.dll
+ 0001:00004312       _JVM_GetFieldIxModifiers@12 10005312 f   jvm:jvm.dll
+ 0001:00004318       _JVM_GetMethodIxByteCode@16 10005318 f   jvm:jvm.dll
+ 0001:0000431e       _JVM_GetMethodIxByteCodeLength@12 1000531e f   jvm:jvm.dll
+ 0001:00004324       _JVM_IsConstructorIx@12    10005324 f   jvm:jvm.dll
+ 0001:0000432a       _JVM_GetMethodIxModifiers@12 1000532a f   jvm:jvm.dll
+ 0001:00004330       _JVM_GetMethodIxArgsSize@12 10005330 f   jvm:jvm.dll
+ 0001:00004336       _JVM_GetCPClassNameUTF@12  10005336 f   jvm:jvm.dll
+ 0001:0000433c       _JVM_GetCPFieldClassNameUTF@12 1000533c f   jvm:jvm.dll
+ 0001:00004342       _JVM_GetCPMethodClassNameUTF@12 10005342 f   jvm:jvm.dll
+ 0001:00004348       _JVM_IsInterface@8         10005348 f   jvm:jvm.dll
+ 0001:0000434e       _JVM_IsSameClassPackage@12 1000534e f   jvm:jvm.dll
+ 0001:00004354       _JVM_GetCPMethodModifiers@16 10005354 f   jvm:jvm.dll
+ 0001:0000435a       _JVM_GetCPFieldModifiers@16 1000535a f   jvm:jvm.dll
+ 0001:00004360       _JVM_GetCPMethodSignatureUTF@12 10005360 f   jvm:jvm.dll
+ 0001:00004366       _JVM_GetCPFieldSignatureUTF@12 10005366 f   jvm:jvm.dll
+ 0001:0000436c       _JVM_GetMethodIxLocalsCount@12 1000536c f   jvm:jvm.dll
+ 0001:00004372       _JVM_GetCPMethodNameUTF@12 10005372 f   jvm:jvm.dll
+ 0001:00004378       _JVM_GetMethodIxExceptionTableEntry@20 10005378 f   jvm:jvm.dll
+ 0001:0000437e       _JVM_GetMethodIxExceptionTableLength@12 1000537e f   jvm:jvm.dll
+ 0001:00004384       _JVM_GetMethodIxMaxStack@12 10005384 f   jvm:jvm.dll
+ 0001:0000438a       _JVM_GetMethodIxExceptionIndexes@16 1000538a f   jvm:jvm.dll
+ 0001:00004390       _JVM_GetMethodIxExceptionsCount@12 10005390 f   jvm:jvm.dll
+ 0001:00004396       _JVM_GetClassMethodsCount@8 10005396 f   jvm:jvm.dll
+ 0001:0000439c       _JVM_GetClassFieldsCount@8 1000539c f   jvm:jvm.dll
+ 0001:000043a2       _JVM_GetClassCPTypes@12    100053a2 f   jvm:jvm.dll
+ 0001:000043a8       _JVM_GetClassCPEntriesCount@8 100053a8 f   jvm:jvm.dll
+ 0001:000043ae       _jio_fprintf               100053ae f   jvm:jvm.dll
+ 0001:000043b4       _strcpy                    100053b4 f   MSVCRT:MSVCR71.dll
+ 0001:000043ba       _strlen                    100053ba f   MSVCRT:MSVCR71.dll
+ 0001:000043c0       _strcmp                    100053c0 f   MSVCRT:MSVCR71.dll
+ 0001:000043c6       _memset                    100053c6 f   MSVCRT:MSVCR71.dll
+ 0001:000043cc       _memcpy                    100053cc f   MSVCRT:MSVCR71.dll
+ 0001:000043d2       __setjmp3                  100053d2 f   MSVCRT:MSVCR71.dll
+ 0001:000043d8       __CRT_INIT@12              100053d8 f   MSVCRT:crtdll.obj
+ 0001:00004496       __DllMainCRTStartup@12     10005496 f   MSVCRT:crtdll.obj
+ 0001:0000457a       __initterm                 1000557a f   MSVCRT:MSVCR71.dll
+ 0001:00004580       __onexit                   10005580 f   MSVCRT:atonexit.obj
+ 0001:000045a6       _atexit                    100055a6 f   MSVCRT:atonexit.obj
+ 0001:000045b8       __RTC_Initialize           100055b8 f   MSVCRT:initsect.obj
+ 0001:000045fc       __RTC_Terminate            100055fc f   MSVCRT:initsect.obj
+ 0001:00004640       ___CppXcptFilter           10005640 f   MSVCRT:MSVCR71.dll
+ 0001:00004646       _DllMain@12                10005646 f   MSVCRT:dllmain.obj
+ 0001:00004668       __SEH_prolog               10005668 f   MSVCRT:sehprolg.obj
+ 0001:000046a3       __SEH_epilog               100056a3 f   MSVCRT:sehprolg.obj
+ 0001:000046b4       __except_handler3          100056b4 f   MSVCRT:MSVCR71.dll
+ 0001:000046ba       ___dllonexit               100056ba f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 10006000     kernel32:KERNEL32.dll
+ 0002:00000004       \177KERNEL32_NULL_THUNK_DATA 10006004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp___onexit             10006008     MSVCRT:MSVCR71.dll
+ 0002:0000000c       __imp___except_handler3    1000600c     MSVCRT:MSVCR71.dll
+ 0002:00000010       __imp____CppXcptFilter     10006010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp___adjust_fdiv        10006014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp___initterm           10006018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp___iob                1000601c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp___setjmp3            10006020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__strchr              10006024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp__memcpy              10006028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__memset              1000602c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp__strcmp              10006030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp__strlen              10006034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__strcpy              10006038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp__calloc              1000603c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__malloc              10006040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__longjmp             10006044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__free                10006048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp___assert             1000604c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp____dllonexit         10006050     MSVCRT:MSVCR71.dll
+ 0002:00000054       \177MSVCR71_NULL_THUNK_DATA 10006054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp__JVM_GetMethodIxLocalsCount@12 10006058     jvm:jvm.dll
+ 0002:0000005c       __imp__JVM_GetCPMethodNameUTF@12 1000605c     jvm:jvm.dll
+ 0002:00000060       __imp__JVM_GetMethodIxExceptionTableEntry@20 10006060     jvm:jvm.dll
+ 0002:00000064       __imp__JVM_GetMethodIxExceptionTableLength@12 10006064     jvm:jvm.dll
+ 0002:00000068       __imp__JVM_GetMethodIxMaxStack@12 10006068     jvm:jvm.dll
+ 0002:0000006c       __imp__JVM_GetMethodIxExceptionIndexes@16 1000606c     jvm:jvm.dll
+ 0002:00000070       __imp__JVM_GetCPFieldSignatureUTF@12 10006070     jvm:jvm.dll
+ 0002:00000074       __imp__JVM_GetClassMethodsCount@8 10006074     jvm:jvm.dll
+ 0002:00000078       __imp__JVM_GetClassFieldsCount@8 10006078     jvm:jvm.dll
+ 0002:0000007c       __imp__JVM_GetClassCPTypes@12 1000607c     jvm:jvm.dll
+ 0002:00000080       __imp__JVM_GetClassCPEntriesCount@8 10006080     jvm:jvm.dll
+ 0002:00000084       __imp__jio_fprintf         10006084     jvm:jvm.dll
+ 0002:00000088       __imp__JVM_GetCPMethodSignatureUTF@12 10006088     jvm:jvm.dll
+ 0002:0000008c       __imp__JVM_GetCPFieldModifiers@16 1000608c     jvm:jvm.dll
+ 0002:00000090       __imp__JVM_GetCPMethodModifiers@16 10006090     jvm:jvm.dll
+ 0002:00000094       __imp__JVM_IsSameClassPackage@12 10006094     jvm:jvm.dll
+ 0002:00000098       __imp__JVM_IsInterface@8   10006098     jvm:jvm.dll
+ 0002:0000009c       __imp__JVM_GetCPMethodClassNameUTF@12 1000609c     jvm:jvm.dll
+ 0002:000000a0       __imp__JVM_GetCPFieldClassNameUTF@12 100060a0     jvm:jvm.dll
+ 0002:000000a4       __imp__JVM_GetCPClassNameUTF@12 100060a4     jvm:jvm.dll
+ 0002:000000a8       __imp__JVM_GetMethodIxArgsSize@12 100060a8     jvm:jvm.dll
+ 0002:000000ac       __imp__JVM_GetMethodIxModifiers@12 100060ac     jvm:jvm.dll
+ 0002:000000b0       __imp__JVM_IsConstructorIx@12 100060b0     jvm:jvm.dll
+ 0002:000000b4       __imp__JVM_GetMethodIxByteCodeLength@12 100060b4     jvm:jvm.dll
+ 0002:000000b8       __imp__JVM_GetMethodIxByteCode@16 100060b8     jvm:jvm.dll
+ 0002:000000bc       __imp__JVM_GetFieldIxModifiers@12 100060bc     jvm:jvm.dll
+ 0002:000000c0       __imp__JVM_FindClassFromClass@16 100060c0     jvm:jvm.dll
+ 0002:000000c4       __imp__jio_vsnprintf       100060c4     jvm:jvm.dll
+ 0002:000000c8       __imp__JVM_GetClassNameUTF@8 100060c8     jvm:jvm.dll
+ 0002:000000cc       __imp__JVM_GetMethodIxNameUTF@12 100060cc     jvm:jvm.dll
+ 0002:000000d0       __imp__jio_snprintf        100060d0     jvm:jvm.dll
+ 0002:000000d4       __imp__JVM_GetMethodIxSignatureUTF@12 100060d4     jvm:jvm.dll
+ 0002:000000d8       __imp__JVM_GetMethodIxExceptionsCount@12 100060d8     jvm:jvm.dll
+ 0002:000000dc       __imp__JVM_ReleaseUTF@4    100060dc     jvm:jvm.dll
+ 0002:000000e0       \177jvm_NULL_THUNK_DATA    100060e0     jvm:jvm.dll
+ 0002:00000110       _opcode_length             10006110     check_code.obj
+ 0002:00000310       _opcode_in_out             10006310     check_code.obj
+ 0002:00000a40       ??_C@_01IDAFKMJL@_?$AA@    10006a40     check_code.obj
+ 0002:00000a44       ??_C@_01MJMHLOMK@O?$AA@    10006a44     check_code.obj
+ 0002:00000a48       ??_C@_03OCJFCJPE@?$FL?$DP?$FN?$AA@ 10006a48     check_code.obj
+ 0002:00000a4c       ??_C@_01DGKLNCNG@R?$AA@    10006a4c     check_code.obj
+ 0002:00000a50       ??_C@_02JIIELPFO@AA?$AA@   10006a50     check_code.obj
+ 0002:00000a54       ??_C@_02FIIFKGAF@LI?$AA@   10006a54     check_code.obj
+ 0002:00000a58       ??_C@_02ODDIIJPA@DD?$AA@   10006a58     check_code.obj
+ 0002:00000a5c       ??_C@_02NCIKDPBM@FF?$AA@   10006a5c     check_code.obj
+ 0002:00000a60       ??_C@_02CFPCFCEA@LL?$AA@   10006a60     check_code.obj
+ 0002:00000a64       ??_C@_02FOEOGEOO@II?$AA@   10006a64     check_code.obj
+ 0002:00000a68       ??_C@_02MIGHPNDL@12?$AA@   10006a68     check_code.obj
+ 0002:00000a6c       ??_C@_06MFMEDPLH@214321?$AA@ 10006a6c     check_code.obj
+ 0002:00000a74       ??_C@_06BNDCAIPK@4?$CL32?$CL1?$AA@ 10006a74     check_code.obj
+ 0002:00000a7c       ??_C@_05JIOCAIMP@21321?$AA@ 10006a7c     check_code.obj
+ 0002:00000a84       ??_C@_04HHDLFECN@32?$CL1?$AA@ 10006a84     check_code.obj
+ 0002:00000a8c       ??_C@_04ELBJEKIM@2121?$AA@ 10006a8c     check_code.obj
+ 0002:00000a94       ??_C@_04KGLAPINH@1321?$AA@ 10006a94     check_code.obj
+ 0002:00000a9c       ??_C@_04EJNNNEMH@3?$CL21?$AA@ 10006a9c     check_code.obj
+ 0002:00000aa4       ??_C@_03HHJOIJGL@121?$AA@  10006aa4     check_code.obj
+ 0002:00000aa8       ??_C@_02OBAMBAKB@21?$AA@   10006aa8     check_code.obj
+ 0002:00000aac       ??_C@_02ODEKKOPI@11?$AA@   10006aac     check_code.obj
+ 0002:00000ab0       ??_C@_03HGNMLOHK@2?$CL1?$AA@ 10006ab0     check_code.obj
+ 0002:00000ab4       ??_C@_01HIHLOKLC@1?$AA@    10006ab4     check_code.obj
+ 0002:00000ab8       ??_C@_05DAFAIGAP@?$FLS?$FNII?$AA@ 10006ab8     check_code.obj
+ 0002:00000ac0       ??_C@_05FALABBIN@?$FLC?$FNII?$AA@ 10006ac0     check_code.obj
+ 0002:00000ac8       ??_C@_05GNNADIDN@?$FLB?$FNII?$AA@ 10006ac8     check_code.obj
+ 0002:00000ad0       ??_C@_05OCKJMIOF@?$FLA?$FNIA?$AA@ 10006ad0     check_code.obj
+ 0002:00000ad8       ??_C@_05FHDOLDNA@?$FLD?$FNID?$AA@ 10006ad8     check_code.obj
+ 0002:00000ae0       ??_C@_05BPMIICDC@?$FLF?$FNIF?$AA@ 10006ae0     check_code.obj
+ 0002:00000ae8       ??_C@_05KPJHHCBJ@?$FLL?$FNIL?$AA@ 10006ae8     check_code.obj
+ 0002:00000af0       ??_C@_05BKAAAJCM@?$FLI?$FNII?$AA@ 10006af0     check_code.obj
+ 0002:00000af8       ??_C@_04OKHJBPNL@?$FLS?$FNI?$AA@ 10006af8     check_code.obj
+ 0002:00000b00       ??_C@_04LKGAEIEE@?$FLC?$FNI?$AA@ 10006b00     check_code.obj
+ 0002:00000b08       ??_C@_04CNMCPCB@?$FLB?$FNI?$AA@ 10006b08     check_code.obj
+ 0002:00000b10       ??_C@_04BAGJIAMP@?$FLA?$FNI?$AA@ 10006b10     check_code.obj
+ 0002:00000b18       ??_C@_04CHLHHAPN@?$FLD?$FNI?$AA@ 10006b18     check_code.obj
+ 0002:00000b20       ??_C@_04INLOLIHG@?$FLF?$FNI?$AA@ 10006b20     check_code.obj
+ 0002:00000b28       ??_C@_04OCADFIBC@?$FLL?$FNI?$AA@ 10006b28     check_code.obj
+ 0002:00000b30       ??_C@_04NFNNKICA@?$FLI?$FNI?$AA@ 10006b30     check_code.obj
+ 0002:00000b38       ??_C@_01OGPIMHDM@?$DP?$AA@ 10006b38     check_code.obj
+ 0002:00000b3c       ??_C@_01CKDDGHAB@D?$AA@    10006b3c     check_code.obj
+ 0002:00000b40       ??_C@_01BIAFAFID@F?$AA@    10006b40     check_code.obj
+ 0002:00000b44       ??_C@_01OCOKONAJ@L?$AA@    10006b44     check_code.obj
+ 0002:00000b48       ??_C@_01JPJNBJEM@I?$AA@    10006b48     check_code.obj
+ 0002:00000b4c       ??_C@_01FHEEJDEE@A?$AA@    10006b4c     check_code.obj
+ 0002:00000b4e       ??_C@_00CNPNBAHC@?$AA@     10006b4e     check_code.obj
+ 0002:00000b50       ??_C@_0P@NPOJPIJG@bucket?5?$CB?$DN?5NULL?$AA@ 10006b50     check_code.obj
+ 0002:00000b60       ??_C@_0CO@NGJGJGDB@?4?4?1?4?4?1?4?4?1src?1share?1native?1common@ 10006b60     check_code.obj
+ 0002:00000b90       ??_C@_0N@BACMJECO@?$CIclass?3?5?$CFs?$CJ?5?$AA@ 10006b90     check_code.obj
+ 0002:00000ba0       ??_C@_0BI@GMLFNJMC@?$CIclass?3?5?$CFs?0?5field?3?5?$CFs?$CJ?5?$AA@ 10006ba0     check_code.obj
+ 0002:00000bb8       ??_C@_0CH@LMGKOHDK@?$CIclass?3?5?$CFs?0?5method?3?5?$CFs?5signature@ 10006bb8     check_code.obj
+ 0002:00000be0       ??_C@_0DE@HIGOLADN@Exceeded?5verifier?8s?5limit?5of?5655@ 10006be0     check_code.obj
+ 0002:00000c14       ??_C@_0BF@LJMGCLHE@Cannot?5find?5class?5?$CFs?$AA@ 10006c14     check_code.obj
+ 0002:00000c2c       ??_C@_0BN@OLKKJBFL@bucket?9?$DOloadable?5?$DN?$DN?5JNI_TRUE?$AA@ 10006c2c     check_code.obj
+ 0002:00000c4c       ??_C@_0BK@GOGHCOEH@Inconsistent?5access?5bits?4?$AA@ 10006c4c     check_code.obj
+ 0002:00000c68       ??_C@_0BO@MHHNPBFP@Illegal?5type?5in?5constant?5pool?$AA@ 10006c68     check_code.obj
+ 0002:00000c88       ??_C@_0BM@DCCFFOPK@Illegal?5constant?5pool?5index?$AA@ 10006c88     check_code.obj
+ 0002:00000ca4       ??_C@_0CI@FFLCDFOB@Register?5pair?5?$CFd?1?$CFd?5contains?5wro@ 10006ca4     check_code.obj
+ 0002:00000ccc       ??_C@_0CA@KEEKJMEB@Register?5?$CFd?5contains?5wrong?5type?$AA@ 10006ccc     check_code.obj
+ 0002:00000cec       ??_C@_0CM@NPHEFIF@Cannot?5load?5return?5address?5from?5@ 10006cec     check_code.obj
+ 0002:00000d18       ??_C@_0CP@OPMCNODN@Accessing?5value?5from?5uninitializ@ 10006d18     check_code.obj
+ 0002:00000d48       ??_C@_0DH@NBMNCDGB@Accessing?5value?5from?5uninitializ@ 10006d48     check_code.obj
+ 0002:00000d80       ??_C@_0BH@CJGPGAJD@Cannot?5return?5normally?$AA@ 10006d80     check_code.obj
+ 0002:00000d98       ??_C@_0CI@EGAONJHK@Constructor?5must?5call?5super?$CI?$CJ?5or@ 10006d98     check_code.obj
+ 0002:00000dc0       ??_C@_0BP@ODCOLLJF@Array?5with?5too?5many?5dimensions?$AA@ 10006dc0     check_code.obj
+ 0002:00000de0       ??_C@_0BC@KPLHNAK@Internal?5error?5?$CD5?$AA@ 10006de0     check_code.obj
+ 0002:00000df4       ??_C@_0BM@KHIDEPCC@Recursive?5call?5to?5jsr?5entry?$AA@ 10006df4     check_code.obj
+ 0002:00000e10       ??_C@_0BC@BDOAEMEL@Internal?5error?5?$CD4?$AA@ 10006e10     check_code.obj
+ 0002:00000e24       ??_C@_0P@LIBNGILO@full_info?5?$CB?$DN?50?$AA@ 10006e24     check_code.obj
+ 0002:00000e34       ??_C@_0BA@JJLOPNCP@java?1lang?1Class?$AA@ 10006e34     check_code.obj
+ 0002:00000e44       ??_C@_0BC@FMKBNKIM@Internal?5error?5?$CD3?$AA@ 10006e44     check_code.obj
+ 0002:00000e58       ??_C@_0CJ@EJBEHDO@Quick?5instructions?5shouldn?8t?5app@ 10006e58     check_code.obj
+ 0002:00000e84       ??_C@_0BO@IPLACFGP@Illegal?5local?5variable?5number?$AA@ 10006e84     check_code.obj
+ 0002:00000ea4       ??_C@_0CA@CLCEKHLE@Bad?5type?5passed?5to?5opc_newarray?$AA@ 10006ea4     check_code.obj
+ 0002:00000ec4       ??_C@_0CM@FONLGMBM@Illegal?5creation?5of?5multi?9dimens@ 10006ec4     check_code.obj
+ 0002:00000ef0       ??_C@_0BL@JFBHIPFA@Illegal?5dimension?5argument?$AA@ 10006ef0     check_code.obj
+ 0002:00000f0c       ??_C@_0N@LDCMPJDI@Illegal?5type?$AA@ 10006f0c     check_code.obj
+ 0002:00000f1c       ??_C@_0CI@JLGHJCBK@Illegal?5use?5of?5nonvirtual?5functi@ 10006f1c     check_code.obj
+ 0002:00000f44       ??_C@_0CA@IPAEHINF@Illegal?5call?5to?5internal?5method?$AA@ 10006f44     check_code.obj
+ 0002:00000f64       ??_C@_0DE@NNPMKFFA@Fourth?5operand?5byte?5of?5invokeint@ 10006f64     check_code.obj
+ 0002:00000f98       ??_C@_0CP@JFEJHIDK@Inconsistent?5args_size?5for?5opc_i@ 10006f98     check_code.obj
+ 0002:00000fc8       ??_C@_0CL@PDOJFDFJ@Must?5call?5initializers?5using?5inv@ 10006fc8     check_code.obj
+ 0002:00000ff4       ??_C@_06FALKBLGB@?$DMinit?$DO?$AA@ 10006ff4     check_code.obj
+ 0002:00000ffc       ??_C@_0CC@GAOMLCPM@Illegal?5branch?5in?5opc_tableswitc@ 10006ffc     check_code.obj
+ 0002:00001020       ??_C@_0CB@BKGPDLNL@Illegal?5default?5target?5in?5switch@ 10007020     check_code.obj
+ 0002:00001044       ??_C@_0BH@FEOHEHFA@Unsorted?5lookup?5switch?$AA@ 10007044     check_code.obj
+ 0002:0000105c       ??_C@_0CB@GILFIHLF@Non?5zero?5padding?5bytes?5in?5switch@ 1000705c     check_code.obj
+ 0002:00001080       ??_C@_0CB@FKJLIIBN@Illegal?5target?5of?5jump?5or?5branch@ 10007080     check_code.obj
+ 0002:000010a4       ??_C@_0CH@HJMOBBMF@catch_type?5not?5a?5subclass?5of?5Thr@ 100070a4     check_code.obj
+ 0002:000010cc       ??_C@_0CA@FFNGPAIA@Illegal?5exception?5table?5handler?$AA@ 100070cc     check_code.obj
+ 0002:000010ec       ??_C@_0BO@EMEKPNCP@Illegal?5exception?5table?5range?$AA@ 100070ec     check_code.obj
+ 0002:0000110c       ??_C@_0BF@ONJOHFJF@Stack?5size?5too?5large?$AA@ 1000710c     check_code.obj
+ 0002:00001124       ??_C@_0CC@PKKHICFB@Incompatible?5argument?5to?5functio@ 10007124     check_code.obj
+ 0002:00001148       ??_C@_05KFBJCHHJ@clone?$AA@ 10007148     check_code.obj
+ 0002:00001150       ??_C@_0CP@DFECJLLH@Incompatible?5object?5argument?5for@ 10007150     check_code.obj
+ 0002:00001180       ??_C@_0CP@IOILPFBI@Incompatible?5object?5argument?5for@ 10007180     check_code.obj
+ 0002:000011b0       ??_C@_0CE@MGMINFON@Call?5to?5wrong?5initialization?5met@ 100071b0     check_code.obj
+ 0002:000011d4       ??_C@_0DA@BPKIPKAJ@Uninitialized?5object?5on?5stack?5at@ 100071d4     check_code.obj
+ 0002:00001204       ??_C@_0CB@HDEBKOAL@Can?5only?5throw?5Throwable?5objects@ 10007204     check_code.obj
+ 0002:00001228       ??_C@_0BP@LEANFGC@Bad?5type?5in?5putfield?1putstatic?$AA@ 10007228     check_code.obj
+ 0002:00001248       ??_C@_0BN@FIPCNIKP@Bad?5access?5to?5protected?5data?$AA@ 10007248     check_code.obj
+ 0002:00001268       ??_C@_0CP@FLNEFDMF@Incompatible?5type?5for?5getting?5or@ 10007268     check_code.obj
+ 0002:00001298       ??_C@_0DO@OPGGFEPL@Component?5type?5of?5the?5array?5must@ 10007298     check_code.obj
+ 0002:000012d8       ??_C@_0DF@NBMNBMN@Expecting?5reference?5type?5on?5oper@ 100072d8     check_code.obj
+ 0002:00001310       ??_C@_0BO@LIKPGEIF@Wrong?5return?5type?5in?5function?$AA@ 10007310     check_code.obj
+ 0002:00001330       ??_C@_0CA@LKJHBGBC@Expecting?5to?5find?5long?5on?5stack?$AA@ 10007330     check_code.obj
+ 0002:00001350       ??_C@_0CC@GELLHINM@Expecting?5to?5find?5object?5on?5stac@ 10007350     check_code.obj
+ 0002:00001374       ??_C@_0CL@ICDAPAKP@Expecting?5to?5find?5array?5of?5float@ 10007374     check_code.obj
+ 0002:000013a0       ??_C@_0CJ@KKNNGPFD@Expecting?5to?5find?5array?5of?5ints?5@ 100073a0     check_code.obj
+ 0002:000013cc       ??_C@_0CK@PNKMEHAI@Expecting?5to?5find?5array?5of?5longs@ 100073cc     check_code.obj
+ 0002:000013f8       ??_C@_0CL@JNPPLMFA@Expecting?5to?5find?5array?5of?5short@ 100073f8     check_code.obj
+ 0002:00001424       ??_C@_0BC@GOJHLIAO@Internal?5error?5?$CD1?$AA@ 10007424     check_code.obj
+ 0002:00001438       ??_C@_0CM@MJJIIDDO@Expecting?5to?5find?5array?5of?5doubl@ 10007438     check_code.obj
+ 0002:00001464       ??_C@_0CB@NNMAOJIL@Expecting?5to?5find?5array?5on?5stack@ 10007464     check_code.obj
+ 0002:00001488       ??_C@_0DG@KCMJDOHN@Expecting?5to?5find?5array?5of?5objec@ 10007488     check_code.obj
+ 0002:000014c0       ??_C@_0CK@OMMMHGME@Expecting?5to?5find?5array?5of?5bytes@ 100074c0     check_code.obj
+ 0002:000014ec       ??_C@_0CK@HPCCGBIM@Expecting?5to?5find?5array?5of?5chars@ 100074ec     check_code.obj
+ 0002:00001518       ??_C@_0DB@CONIAHKL@Expecting?5to?5find?5object?0?5array?0@ 10007518     check_code.obj
+ 0002:0000154c       ??_C@_0BC@EFLKOLMN@Internal?5error?5?$CD2?$AA@ 1000754c     check_code.obj
+ 0002:00001560       ??_C@_0CD@JACGABBD@Expecting?5to?5find?5integer?5on?5sta@ 10007560     check_code.obj
+ 0002:00001584       ??_C@_0CN@PCPDMMDA@Attempt?5to?5split?5long?5or?5double?5@ 10007584     check_code.obj
+ 0002:000015b4       ??_C@_0CO@LOLMNPNF@Expecting?5to?5find?5unitialized?5ob@ 100075b4     check_code.obj
+ 0002:000015e4       ??_C@_0CI@JKLLHFAM@Expecting?5to?5find?5object?1array?5o@ 100075e4     check_code.obj
+ 0002:0000160c       ??_C@_0CC@JCNHCLNF@Expecting?5to?5find?5double?5on?5stac@ 1000760c     check_code.obj
+ 0002:00001630       ??_C@_0CB@NDFHAENO@Expecting?5to?5find?5float?5on?5stack@ 10007630     check_code.obj
+ 0002:00001654       ??_C@_0CJ@BONIFDHI@Unable?5to?5pop?5operand?5off?5an?5emp@ 10007654     check_code.obj
+ 0002:00001680       ??_C@_0CE@FBIHMBHO@Signature?5?$CFs?5has?5too?5many?5argume@ 10007680     check_code.obj
+ 0002:000016a4       ??_C@_0BH@DHJCKLFP@Mismatched?5stack?5types?$AA@ 100076a4     check_code.obj
+ 0002:000016bc       ??_C@_0CD@MGFACBCC@Inconsistent?5stack?5height?5?$CFd?5?$CB?$DN?5@ 100076bc     check_code.obj
+ 0002:000016e0       ??_C@_0BP@OFOGICAN@Illegal?5return?5from?5subroutine?$AA@ 100076e0     check_code.obj
+ 0002:00001700       ??_C@_0BP@FNHCNJPB@Multiple?5returns?5to?5single?5jsr?$AA@ 10007700     check_code.obj
+ 0002:00001720       ??_C@_0CA@OEMIIPMN@Falling?5off?5the?5end?5of?5the?5code?$AA@ 10007720     check_code.obj
+ 0002:00001740       ??_C@_0L@FLBIKONJ@Empty?5code?$AA@ 10007740     check_code.obj
+ 0002:0000174c       ??_C@_0DP@NHEDEPNH@Code?5stops?5in?5the?5middle?5of?5inst@ 1000774c     check_code.obj
+ 0002:0000178c       ??_C@_0CH@BFIAKBBO@Illegal?5instruction?5found?5at?5off@ 1000778c     check_code.obj
+ 0002:000017b4       ??_C@_0BF@KBKNMCMB@java?1io?1Serializable?$AA@ 100077b4     check_code.obj
+ 0002:000017cc       ??_C@_0BE@BMOODFFE@java?1lang?1Cloneable?$AA@ 100077cc     check_code.obj
+ 0002:000017e0       ??_C@_0BE@ILKHHCBH@java?1lang?1Throwable?$AA@ 100077e0     check_code.obj
+ 0002:000017f4       ??_C@_0BB@FLFAIHG@java?1lang?1String?$AA@ 100077f4     check_code.obj
+ 0002:00001808       ??_C@_0BB@DDFKOHA@java?1lang?1Object?$AA@ 10007808     check_code.obj
+ 0002:00001820       ??_C@_0EA@PJELFKCE@Warning?$CB?5An?5old?5version?5of?5jvm?5i@ 10007820     check_code.obj
+ 0002:00001890       __load_config_used         10007890     MSVCRT:loadcfg.obj
+ 0002:00001930       ___safe_se_handler_table   10007930     <linker-defined>
+ 0002:00001934       ___rtc_iaa                 10007934     MSVCRT:initsect.obj
+ 0002:00001938       ___rtc_izz                 10007938     MSVCRT:initsect.obj
+ 0002:0000193c       ___rtc_taa                 1000793c     MSVCRT:initsect.obj
+ 0002:00001940       ___rtc_tzz                 10007940     MSVCRT:initsect.obj
+ 0002:00001944       __IMPORT_DESCRIPTOR_jvm    10007944     jvm:jvm.dll
+ 0002:00001958       __IMPORT_DESCRIPTOR_MSVCR71 10007958     MSVCRT:MSVCR71.dll
+ 0002:0000196c       __IMPORT_DESCRIPTOR_KERNEL32 1000796c     kernel32:KERNEL32.dll
+ 0002:00001980       __NULL_IMPORT_DESCRIPTOR   10007980     jvm:jvm.dll
+ 0003:00000000       ___xc_a                    10009000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10009004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10009008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000900c     MSVCRT:cinitexe.obj
+ 0003:00000010       ___security_cookie         10009010     MSVCRT:seccook.obj
+ 0003:0000001c       __adjust_fdiv              1000901c     <common>
+ 0003:00000020       ___onexitend               10009020     <common>
+ 0003:00000024       ___onexitbegin             10009024     <common>
+ 0003:00000028       __pRawDllMain              10009028     <common>
+
+ entry point at        0001:00004496
+
+ Static symbols
+
+ 0001:00000000       _finalize_class_hash       10001000 f   check_code.obj
+ 0001:000000ae       _ntohl                     100010ae f   check_code.obj
+ 0001:000000d0       _instruction_length        100010d0 f   check_code.obj
+ 0001:00000196       _isLegalTarget             10001196 f   check_code.obj
+ 0001:000001b5       _merge_flags               100011b5 f   check_code.obj
+ 0001:000001f4       _print_CCerror_info        100011f4 f   check_code.obj
+ 0001:000002ee       _CCerror                   100012ee f   check_code.obj
+ 0001:0000032f       _CCout_of_memory           1000132f f   check_code.obj
+ 0001:0000034b       _CFerror                   1000134b f   check_code.obj
+ 0001:0000038c       _decrement_indirection     1000138c f   check_code.obj
+ 0001:000003c7       _check_and_push            100013c7 f   check_code.obj
+ 0001:0000041f       _pop_and_free              1000141f f   check_code.obj
+ 0001:00000469       _signature_to_args_size    10001469 f   check_code.obj
+ 0001:00000534       _new_bucket                10001534 f   check_code.obj
+ 0001:000005b8       _load_class_local          100015b8 f   check_code.obj
+ 0001:000005e8       _load_class_global         100015e8 f   check_code.obj
+ 0001:00000622       _class_to_ID               10001622 f   check_code.obj
+ 0001:0000078e       _class_name_to_ID          1000178e f   check_code.obj
+ 0001:000008b1       _make_class_info           100018b1 f   check_code.obj
+ 0001:000008c8       _make_class_info_from_name 100018c8 f   check_code.obj
+ 0001:000008e1       _read_all_code             100018e1 f   check_code.obj
+ 0001:00000978       _verify_constant_pool_type 10001978 f   check_code.obj
+ 0001:000009b5       _check_register_values     100019b5 f   check_code.obj
+ 0001:00000aa4       _CCinit                    10001aa4 f   check_code.obj
+ 0001:00000ae2       _CCalloc                   10001ae2 f   check_code.obj
+ 0001:00000b88       _signature_to_fieldtype    10001b88 f   check_code.obj
+ 0001:00000d0d       _object_fullinfo_to_classclass 10001d0d f   check_code.obj
+ 0001:00000d68       _initialize_dataflow       10001d68 f   check_code.obj
+ 0001:00000ec2       _copy_stack                10001ec2 f   check_code.obj
+ 0001:00000f11       _copy_masks                10001f11 f   check_code.obj
+ 0001:00000f96       _add_to_masks              10001f96 f   check_code.obj
+ 0001:00001054       _cp_index_to_class_fullinfo 10002054 f   check_code.obj
+ 0001:000010f2       _merge_fullinfo_types      100020f2 f   check_code.obj
+ 0001:0000149d       _set_protected             1000249d f   check_code.obj
+ 0001:00001589       _update_registers          10002589 f   check_code.obj
+ 0001:00001902       _push_stack                10002902 f   check_code.obj
+ 0001:00001c5d       _isAssignableTo            10002c5d f   check_code.obj
+ 0001:00001c7d       _verify_opcode_operands    10002c7d f   check_code.obj
+ 0001:00002498       _initialize_exception_table 10003498 f   check_code.obj
+ 0001:00002646       _pop_stack                 10003646 f   check_code.obj
+ 0001:00002f95       _merge_stack               10003f95 f   check_code.obj
+ 0001:00003083       _merge_registers           10004083 f   check_code.obj
+ 0001:00003363       _merge_into_one_successor  10004363 f   check_code.obj
+ 0001:000035f1       _merge_into_successors     100045f1 f   check_code.obj
+ 0001:000038ae       _run_dataflow              100048ae f   check_code.obj
+ 0001:00003a1d       _verify_method             10004a1d f   check_code.obj
+ 0001:0000403e       _isJvmIdentifier           1000503e f   check_format.obj
+ 0001:0000406f       _next_utf2unicode          1000506f f   check_format.obj
+ 0001:00004128       _skip_over_fieldname       10005128 f   check_format.obj
+ 0001:000041ba       _skip_over_field_signature 100051ba f   check_format.obj

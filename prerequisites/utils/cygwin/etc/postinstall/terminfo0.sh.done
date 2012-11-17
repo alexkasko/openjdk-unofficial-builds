@@ -1,0 +1,13 @@
+#!/bin/sh
+# ensure that all database files are readable
+prefix=/usr
+terminfodir=${prefix}/share/terminfo
+
+for d in ${terminfodir}/* ; do
+	if [ -d ${d} ]; then
+		(cd $d && chmod 644 *)
+		chmod 755 ${d}
+	fi
+done
+chmod 755 ${terminfodir}
+

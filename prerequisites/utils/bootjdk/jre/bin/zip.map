@@ -1,0 +1,351 @@
+ zip
+
+ Timestamp is 4ecc5a7a (Tue Nov 22 21:29:14 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00006dd4H .text                   CODE
+ 0002:00000000 000000bcH .idata$5                DATA
+ 0002:000000c0 000018d0H .rdata                  DATA
+ 0002:00001990 00000059H .rdata$debug            DATA
+ 0002:000019f0 00000004H .rdata$sxdata           DATA
+ 0002:000019f4 00000004H .rtc$IAA                DATA
+ 0002:000019f8 00000004H .rtc$IZZ                DATA
+ 0002:000019fc 00000004H .rtc$TAA                DATA
+ 0002:00001a00 00000004H .rtc$TZZ                DATA
+ 0002:00001a04 00000050H .idata$2                DATA
+ 0002:00001a54 00000014H .idata$3                DATA
+ 0002:00001a68 000000bcH .idata$4                DATA
+ 0002:00001b24 00000344H .idata$6                DATA
+ 0002:00001e70 00000816H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 000011c4H .data                   DATA
+ 0003:000011d8 00000278H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000308H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _Java_java_util_zip_CRC32_update@16 10001000 f   CRC32.obj
+ 0001:0000001e       _Java_java_util_zip_CRC32_updateBytes@24 1000101e f   CRC32.obj
+ 0001:00000069       _ZIP_CRC32                 10001069 f   CRC32.obj
+ 0001:0000006e       _Java_java_util_zip_Adler32_update@16 1000106e f   Adler32.obj
+ 0001:0000008c       _Java_java_util_zip_Adler32_updateBytes@24 1000108c f   Adler32.obj
+ 0001:000000d7       _Java_java_util_zip_Deflater_initIDs@8 100010d7 f   Deflater.obj
+ 0001:000001a8       _Java_java_util_zip_Deflater_init@20 100011a8 f   Deflater.obj
+ 0001:00000240       _Java_java_util_zip_Deflater_setDictionary@28 10001240 f   Deflater.obj
+ 0001:000002a8       _Java_java_util_zip_Deflater_deflateBytes@28 100012a8 f   Deflater.obj
+ 0001:0000051b       _Java_java_util_zip_Deflater_getBytesRead@16 1000151b f   Deflater.obj
+ 0001:0000051b       _Java_java_util_zip_Inflater_getBytesRead@16 1000151b f   Inflater.obj
+ 0001:00000527       _Java_java_util_zip_Deflater_getBytesWritten@16 10001527 f   Deflater.obj
+ 0001:00000527       _Java_java_util_zip_Inflater_getBytesWritten@16 10001527 f   Inflater.obj
+ 0001:00000533       _Java_java_util_zip_Deflater_reset@16 10001533 f   Deflater.obj
+ 0001:0000054f       _Java_java_util_zip_Deflater_end@16 1000154f f   Deflater.obj
+ 0001:00000579       _Java_java_util_zip_Inflater_initIDs@8 10001579 f   Inflater.obj
+ 0001:00000601       _Java_java_util_zip_Inflater_init@12 10001601 f   Inflater.obj
+ 0001:00000675       _Java_java_util_zip_Inflater_setDictionary@28 10001675 f   Inflater.obj
+ 0001:000006e6       _Java_java_util_zip_Inflater_inflateBytes@28 100016e6 f   Inflater.obj
+ 0001:000008a9       _Java_java_util_zip_Deflater_getAdler@16 100018a9 f   Deflater.obj
+ 0001:000008a9       _Java_java_util_zip_Inflater_getAdler@16 100018a9 f   Inflater.obj
+ 0001:000008b3       _Java_java_util_zip_Inflater_reset@16 100018b3 f   Inflater.obj
+ 0001:000008cf       _Java_java_util_zip_Inflater_end@16 100018cf f   Inflater.obj
+ 0001:000008f9       _Java_java_util_zip_ZipFile_initIDs@8 100018f9 f   ZipFile.obj
+ 0001:00000967       _Java_java_util_zip_ZipFile_open@24 10001967 f   ZipFile.obj
+ 0001:00000a46       _Java_java_util_zip_ZipFile_getTotal@16 10001a46 f   ZipFile.obj
+ 0001:00000a50       _Java_java_util_zip_ZipFile_close@16 10001a50 f   ZipFile.obj
+ 0001:00000a5c       _Java_java_util_zip_ZipFile_getEntry@24 10001a5c f   ZipFile.obj
+ 0001:00000aff       _Java_java_util_zip_ZipFile_freeEntry@24 10001aff f   ZipFile.obj
+ 0001:00000b11       _Java_java_util_zip_ZipFile_getNextEntry@20 10001b11 f   ZipFile.obj
+ 0001:00000b22       _Java_java_util_zip_ZipFile_getMethod@16 10001b22 f   ZipFile.obj
+ 0001:00000b38       _Java_java_util_zip_ZipFile_getCSize@16 10001b38 f   ZipFile.obj
+ 0001:00000b53       _Java_java_util_zip_ZipFile_getSize@16 10001b53 f   ZipFile.obj
+ 0001:00000b60       _Java_java_util_zip_ZipFile_read@44 10001b60 f   ZipFile.obj
+ 0001:00000c12       _Java_java_util_jar_JarFile_getMetaInfEntryNames@8 10001c12 f   ZipFile.obj
+ 0001:00000cd3       _Java_java_util_zip_ZipFile_getZipMessage@16 10001cd3 f   ZipFile.obj
+ 0001:00000ceb       _Java_java_util_zip_ZipEntry_initIDs@8 10001ceb f   ZipEntry.obj
+ 0001:00000db9       _Java_java_util_zip_ZipEntry_initFields@16 10001db9 f   ZipEntry.obj
+ 0001:00000f01       _adler32                   10001f01 f   zadler32.obj
+ 0001:0000101a       _crc32                     1000201a f   zcrc32.obj
+ 0001:00001109       _deflateSetDictionary      10002109 f   deflate.obj
+ 0001:0000125c       _deflate                   1000225c f   deflate.obj
+ 0001:00001492       _deflateEnd                10002492 f   deflate.obj
+ 0001:00001f91       _deflateReset              10002f91 f   deflate.obj
+ 0001:00001ffd       _deflateParams             10002ffd f   deflate.obj
+ 0001:000020ae       _deflateInit2_             100030ae f   deflate.obj
+ 0001:00003230       __tr_init                  10004230 f   trees.obj
+ 0001:00003544       __tr_stored_block          10004544 f   trees.obj
+ 0001:000035cf       __tr_align                 100045cf f   trees.obj
+ 0001:00003796       __tr_flush_block           10004796 f   trees.obj
+ 0001:00003962       _zcalloc                   10004962 f   zutil.obj
+ 0001:00003973       _zcfree                    10004973 f   zutil.obj
+ 0001:0000397f       _inflateReset              1000497f f   inflate.obj
+ 0001:000039be       _inflateEnd                100049be f   inflate.obj
+ 0001:000039fc       _inflateInit2_             100049fc f   inflate.obj
+ 0001:00003ae1       _inflate                   10004ae1 f   inflate.obj
+ 0001:00003e5c       _inflateSetDictionary      10004e5c f   inflate.obj
+ 0001:00003ed5       _inflate_blocks_reset      10004ed5 f   infblock.obj
+ 0001:00003f40       _inflate_blocks_new        10004f40 f   infblock.obj
+ 0001:00003fcd       _inflate_blocks            10004fcd f   infblock.obj
+ 0001:00004745       _inflate_blocks_free       10005745 f   infblock.obj
+ 0001:00004779       _inflate_set_dictionary    10005779 f   infblock.obj
+ 0001:00004b26       _inflate_trees_bits        10005b26 f   inftrees.obj
+ 0001:00004ba5       _inflate_trees_dynamic     10005ba5 f   inftrees.obj
+ 0001:00004ca8       _inflate_trees_fixed       10005ca8 f   inftrees.obj
+ 0001:00004cd7       _inflate_codes_new         10005cd7 f   infcodes.obj
+ 0001:00004d0b       _inflate_codes             10005d0b f   infcodes.obj
+ 0001:0000526f       _inflate_codes_free        1000626f f   infcodes.obj
+ 0001:00005280       _inflate_flush             10006280 f   infutil.obj
+ 0001:0000536c       _inflate_fast              1000636c f   inffast.obj
+ 0001:00005d47       _ZIP_Get_From_Cache        10006d47 f   zip_util.obj
+ 0001:000061a5       _ZIP_Lock                  100071a5 f   zip_util.obj
+ 0001:000061b2       _ZIP_Unlock                100071b2 f   zip_util.obj
+ 0001:000061bf       _ZIP_GetEntryDataOffset    100071bf f   zip_util.obj
+ 0001:00006285       _ZIP_Read                  10007285 f   zip_util.obj
+ 0001:0000637e       _InflateFully              1000737e f   zip_util.obj
+ 0001:000064d2       _ZIP_FreeEntry             100074d2 f   zip_util.obj
+ 0001:0000651c       _ZIP_GetEntry              1000751c f   zip_util.obj
+ 0001:0000661f       _ZIP_GetNextEntry@8        1000761f f   zip_util.obj
+ 0001:0000665f       _ZIP_FindEntry@16          1000765f f   zip_util.obj
+ 0001:00006695       _ZIP_ReadEntry@16          10007695 f   zip_util.obj
+ 0001:00006806       _ZIP_Put_In_Cache          10007806 f   zip_util.obj
+ 0001:00006941       _ZIP_Close@4               10007941 f   zip_util.obj
+ 0001:000069b0       _ZIP_Open_Generic          100079b0 f   zip_util.obj
+ 0001:000069fa       _ZIP_Open@8                100079fa f   zip_util.obj
+ 0001:00006a12       _JNU_ThrowOutOfMemoryError@8 10007a12 f   java:java.dll
+ 0001:00006a18       _JNU_ThrowIllegalArgumentException@8 10007a18 f   java:java.dll
+ 0001:00006a1e       _JNU_ThrowInternalError@8  10007a1e f   java:java.dll
+ 0001:00006a24       _JNU_ThrowByName@12        10007a24 f   java:java.dll
+ 0001:00006a2a       _JNU_NewObjectByName       10007a2a f   java:java.dll
+ 0001:00006a30       _JNU_NewStringPlatform@8   10007a30 f   java:java.dll
+ 0001:00006a36       _JNU_ReleaseStringPlatformChars@12 10007a36 f   java:java.dll
+ 0001:00006a3c       _winFileHandleOpen         10007a3c f   java:java.dll
+ 0001:00006a42       _JNU_GetStringPlatformChars@12 10007a42 f   java:java.dll
+ 0001:00006a48       _JNU_ThrowIOExceptionWithLastError@8 10007a48 f   java:java.dll
+ 0001:00006a4e       _handleLseek               10007a4e f   java:java.dll
+ 0001:00006a54       _handleRead                10007a54 f   java:java.dll
+ 0001:00006a5a       _jio_fprintf               10007a5a f   java:java.dll
+ 0001:00006a60       _JVM_RawMonitorCreate@0    10007a60 f   jvm:jvm.dll
+ 0001:00006a66       _JVM_RawMonitorExit@4      10007a66 f   jvm:jvm.dll
+ 0001:00006a6c       _JVM_RawMonitorEnter@4     10007a6c f   jvm:jvm.dll
+ 0001:00006a72       _JVM_NativePath@4          10007a72 f   jvm:jvm.dll
+ 0001:00006a78       _JVM_RawMonitorDestroy@4   10007a78 f   jvm:jvm.dll
+ 0001:00006a7e       _JVM_GetLastErrorString@8  10007a7e f   jvm:jvm.dll
+ 0001:00006a90       __alloca_probe             10007a90     MSVCRT:chkstk.obj
+ 0001:00006a90       __chkstk                   10007a90 f   MSVCRT:chkstk.obj
+ 0001:00006ace       _memcpy                    10007ace f   MSVCRT:MSVCR71.dll
+ 0001:00006ad4       _memset                    10007ad4 f   MSVCRT:MSVCR71.dll
+ 0001:00006ada       _strcmp                    10007ada f   MSVCRT:MSVCR71.dll
+ 0001:00006ae0       _strcpy                    10007ae0 f   MSVCRT:MSVCR71.dll
+ 0001:00006ae6       _strlen                    10007ae6 f   MSVCRT:MSVCR71.dll
+ 0001:00006aec       __CRT_INIT@12              10007aec f   MSVCRT:crtdll.obj
+ 0001:00006baa       __DllMainCRTStartup@12     10007baa f   MSVCRT:crtdll.obj
+ 0001:00006c8e       __initterm                 10007c8e f   MSVCRT:MSVCR71.dll
+ 0001:00006c94       __onexit                   10007c94 f   MSVCRT:atonexit.obj
+ 0001:00006cba       _atexit                    10007cba f   MSVCRT:atonexit.obj
+ 0001:00006ccc       __RTC_Initialize           10007ccc f   MSVCRT:initsect.obj
+ 0001:00006d10       __RTC_Terminate            10007d10 f   MSVCRT:initsect.obj
+ 0001:00006d54       ___CppXcptFilter           10007d54 f   MSVCRT:MSVCR71.dll
+ 0001:00006d5a       _DllMain@12                10007d5a f   MSVCRT:dllmain.obj
+ 0001:00006d7c       __SEH_prolog               10007d7c f   MSVCRT:sehprolg.obj
+ 0001:00006db7       __SEH_epilog               10007db7 f   MSVCRT:sehprolg.obj
+ 0001:00006dc8       __except_handler3          10007dc8 f   MSVCRT:MSVCR71.dll
+ 0001:00006dce       ___dllonexit               10007dce f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 10008000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__CloseHandle@4       10008004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__CreateFileA@28      10008008     kernel32:KERNEL32.dll
+ 0002:0000000c       \177KERNEL32_NULL_THUNK_DATA 1000800c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__malloc              10008010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp___onexit             10008014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp____dllonexit         10008018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp___except_handler3    1000801c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp____CppXcptFilter     10008020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp___adjust_fdiv        10008024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp___initterm           10008028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__strerror            1000802c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp___iob                10008030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp__strlen              10008034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__strcpy              10008038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp__strcmp              1000803c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__realloc             10008040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__memset              10008044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__memcpy              10008048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__sprintf             1000804c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp__free                10008050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__calloc              10008054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp__strdup              10008058     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp___strdup             10008058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp___assert             1000805c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp___errno              10008060     MSVCRT:MSVCR71.dll
+ 0002:00000064       \177MSVCR71_NULL_THUNK_DATA 10008064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp__handleLseek         10008068     java:java.dll
+ 0002:0000006c       __imp__JNU_ThrowIllegalArgumentException@8 1000806c     java:java.dll
+ 0002:00000070       __imp__JNU_ThrowInternalError@8 10008070     java:java.dll
+ 0002:00000074       __imp__JNU_ThrowByName@12  10008074     java:java.dll
+ 0002:00000078       __imp__JNU_NewObjectByName 10008078     java:java.dll
+ 0002:0000007c       __imp__JNU_NewStringPlatform@8 1000807c     java:java.dll
+ 0002:00000080       __imp__JNU_ReleaseStringPlatformChars@12 10008080     java:java.dll
+ 0002:00000084       __imp__jio_fprintf         10008084     java:java.dll
+ 0002:00000088       __imp__handleRead          10008088     java:java.dll
+ 0002:0000008c       __imp__JNU_ThrowOutOfMemoryError@8 1000808c     java:java.dll
+ 0002:00000090       __imp__JNU_ThrowIOExceptionWithLastError@8 10008090     java:java.dll
+ 0002:00000094       __imp__JNU_GetStringPlatformChars@12 10008094     java:java.dll
+ 0002:00000098       __imp__winFileHandleOpen   10008098     java:java.dll
+ 0002:0000009c       \177java_NULL_THUNK_DATA   1000809c     java:java.dll
+ 0002:000000a0       __imp__JVM_RawMonitorExit@4 100080a0     jvm:jvm.dll
+ 0002:000000a4       __imp__JVM_RawMonitorEnter@4 100080a4     jvm:jvm.dll
+ 0002:000000a8       __imp__JVM_NativePath@4    100080a8     jvm:jvm.dll
+ 0002:000000ac       __imp__JVM_RawMonitorDestroy@4 100080ac     jvm:jvm.dll
+ 0002:000000b0       __imp__JVM_GetLastErrorString@8 100080b0     jvm:jvm.dll
+ 0002:000000b4       __imp__JVM_RawMonitorCreate@0 100080b4     jvm:jvm.dll
+ 0002:000000b8       \177jvm_NULL_THUNK_DATA    100080b8     jvm:jvm.dll
+ 0002:000000dc       ??_C@_03BKCJCHLK@len?$AA@  100080dc     Deflater.obj
+ 0002:000000e0       ??_C@_03MCADLMAF@off?$AA@  100080e0     Deflater.obj
+ 0002:000000e4       ??_C@_03COAJHJPB@buf?$AA@  100080e4     Deflater.obj
+ 0002:000000e8       ??_C@_02KCBIMKDL@?$FLB?$AA@ 100080e8     Deflater.obj
+ 0002:000000ec       ??_C@_08CDECDFO@finished?$AA@ 100080ec     Deflater.obj
+ 0002:000000f8       ??_C@_06DOLBEBMP@finish?$AA@ 100080f8     Deflater.obj
+ 0002:00000100       ??_C@_09JLANJGFE@setParams?$AA@ 10008100     Deflater.obj
+ 0002:0000010c       ??_C@_01POHCFINO@Z?$AA@    1000810c     Deflater.obj
+ 0002:00000110       ??_C@_08PDFCMIPC@strategy?$AA@ 10008110     Deflater.obj
+ 0002:0000011c       ??_C@_05KJNJLLGA@level?$AA@ 1000811c     Deflater.obj
+ 0002:00000124       ??_C@_01JPJNBJEM@I?$AA@    10008124     Deflater.obj
+ 0002:00000128       ??_C@_0M@PMDOIAEH@1?41?43?4f?9jdk?$AA@ 10008128     Deflater.obj
+ 0002:00000134       ??_C@_08LFCILODN@needDict?$AA@ 10008134     Inflater.obj
+ 0002:00000140       ??_C@_0CC@MDBAKBOC@java?1util?1zip?1DataFormatExceptio@ 10008140     Inflater.obj
+ 0002:00000164       ??_C@_0O@FJANFDCJ@jzfileID?5?$CB?$DN?50?$AA@ 10008164     ZipFile.obj
+ 0002:00000174       ??_C@_0DC@JHBJKINE@?4?4?1?4?4?1?4?4?1src?1share?1native?1java?1u@ 10008174     ZipFile.obj
+ 0002:000001a8       ??_C@_06OOPHIKEP@jzfile?$AA@ 100081a8     ZipFile.obj
+ 0002:000001b0       ??_C@_01LELAEKIP@J?$AA@    100081b0     ZipFile.obj
+ 0002:000001b4       ??_C@_0BL@CKLGJBHG@java?1util?1zip?1ZipException?$AA@ 100081b4     ZipFile.obj
+ 0002:000001d0       ??_C@_0BG@IKDDPPGD@?$CILjava?1lang?1String?$DL?$CJV?$AA@ 100081d0     ZipFile.obj
+ 0002:000001e8       ??_C@_0BK@FHJMJMHP@error?5in?5opening?5zip?5file?$AA@ 100081e8     ZipFile.obj
+ 0002:00000204       ??_C@_0BG@FKCLIFOO@errno?3?5?$CFd?0?5error?3?5?$CFs?6?$AA@ 10008204     ZipFile.obj
+ 0002:0000021c       ??_C@_0BH@HDNEJMA@Error?5reading?5ZIP?5file?$AA@ 1000821c     ZipFile.obj
+ 0002:00000234       ??_C@_0BB@FLFAIHG@java?1lang?1String?$AA@ 10008234     ZipFile.obj
+ 0002:00000248       ??_C@_0CA@EJBFMCPI@java?1lang?1IllegalStateException?$AA@ 10008248     ZipFile.obj
+ 0002:00000268       ??_C@_0BA@HFGOOFGK@zip?5file?5closed?$AA@ 10008268     ZipFile.obj
+ 0002:00000278       ??_C@_07GJGNEJFD@comment?$AA@ 10008278     ZipEntry.obj
+ 0002:00000280       ??_C@_05BAGILKKI@extra?$AA@ 10008280     ZipEntry.obj
+ 0002:00000288       ??_C@_06GABBCIBA@method?$AA@ 10008288     ZipEntry.obj
+ 0002:00000290       ??_C@_05HJONHDFK@csize?$AA@ 10008290     ZipEntry.obj
+ 0002:00000298       ??_C@_04IAGNFIBA@size?$AA@ 10008298     ZipEntry.obj
+ 0002:000002a0       ??_C@_03OOINPMFE@crc?$AA@  100082a0     ZipEntry.obj
+ 0002:000002a4       ??_C@_04CLCEDBPF@time?$AA@ 100082a4     ZipEntry.obj
+ 0002:000002ac       ??_C@_04MEMAJGDJ@name?$AA@ 100082ac     ZipEntry.obj
+ 0002:000002b4       ??_C@_0BD@JFADHEFE@Ljava?1lang?1String?$DL?$AA@ 100082b4     ZipEntry.obj
+ 0002:000006c8       _deflate_copyright         100086c8     deflate.obj
+ 0002:00000dc8       __dist_code                10008dc8     trees.obj
+ 0002:00000fc8       __length_code              10008fc8     trees.obj
+ 0002:000011b8       ??_C@_0BF@CJFPCCEG@incompatible?5version?$AA@ 100091b8     zutil.obj
+ 0002:000011d0       ??_C@_0N@DFPGLBGC@buffer?5error?$AA@ 100091d0     zutil.obj
+ 0002:000011e0       ??_C@_0BE@OGGJBMCE@insufficient?5memory?$AA@ 100091e0     zutil.obj
+ 0002:000011f4       ??_C@_0L@HAHMBNLP@data?5error?$AA@ 100091f4     zutil.obj
+ 0002:00001200       ??_C@_0N@MKKNPMJD@stream?5error?$AA@ 10009200     zutil.obj
+ 0002:00001210       ??_C@_0L@KIJFAKBJ@file?5error?$AA@ 10009210     zutil.obj
+ 0002:0000121b       ??_C@_00CNPNBAHC@?$AA@     1000921b     zutil.obj
+ 0002:0000121c       ??_C@_0L@FNAOCBOG@stream?5end?$AA@ 1000921c     zutil.obj
+ 0002:00001228       ??_C@_0BA@MOKMMFOD@need?5dictionary?$AA@ 10009228     zutil.obj
+ 0002:0000123c       ??_C@_0BF@MEIGEHBE@incorrect?5data?5check?$AA@ 1000923c     inflate.obj
+ 0002:00001254       ??_C@_0BH@LIBMMIGA@incorrect?5header?5check?$AA@ 10009254     inflate.obj
+ 0002:0000126c       ??_C@_0BE@EMOGCLGO@invalid?5window?5size?$AA@ 1000926c     inflate.obj
+ 0002:00001280       ??_C@_0BL@IHKGDAEE@unknown?5compression?5method?$AA@ 10009280     inflate.obj
+ 0002:000012ec       ??_C@_0BK@BMMPFBBH@invalid?5bit?5length?5repeat?$AA@ 100092ec     infblock.obj
+ 0002:00001308       ??_C@_0CE@GMIGFPBB@too?5many?5length?5or?5distance?5symb@ 10009308     infblock.obj
+ 0002:0000132c       ??_C@_0BN@LGAADGOK@invalid?5stored?5block?5lengths?$AA@ 1000932c     infblock.obj
+ 0002:0000134c       ??_C@_0BD@PJCBIDD@invalid?5block?5type?$AA@ 1000934c     infblock.obj
+ 0002:00001360       _inflate_copyright         10009360     inftrees.obj
+ 0002:00001588       ??_C@_0CE@LOHAHEGK@incomplete?5dynamic?5bit?5lengths?5t@ 10009588     inftrees.obj
+ 0002:000015ac       ??_C@_0CI@CGMOPDPD@oversubscribed?5dynamic?5bit?5lengt@ 100095ac     inftrees.obj
+ 0002:000015d4       ??_C@_0BP@NEEEJJNA@incomplete?5literal?1length?5tree?$AA@ 100095d4     inftrees.obj
+ 0002:000015f4       ??_C@_0CD@GJIDGCKE@oversubscribed?5literal?1length?5tr@ 100095f4     inftrees.obj
+ 0002:00001618       ??_C@_0CB@KPKKKLFO@empty?5distance?5tree?5with?5lengths@ 10009618     inftrees.obj
+ 0002:0000163c       ??_C@_0BJ@CBCPDPJF@incomplete?5distance?5tree?$AA@ 1000963c     inftrees.obj
+ 0002:00001658       ??_C@_0BN@KBLCDIAI@oversubscribed?5distance?5tree?$AA@ 10009658     inftrees.obj
+ 0002:00001678       ??_C@_0BG@LBKINIKP@invalid?5distance?5code?$AA@ 10009678     infcodes.obj
+ 0002:00001690       ??_C@_0BM@FFFLPBBC@invalid?5literal?1length?5code?$AA@ 10009690     infcodes.obj
+ 0002:000016b8       ??_C@_09CDDFBEOB@META?9INF?1?$AA@ 100096b8     zip_util.obj
+ 0002:000016c4       ??_C@_0CM@OFBGAGKC@invalid?5CEN?5header?5?$CIbad?5compress@ 100096c4     zip_util.obj
+ 0002:000016f0       ??_C@_0CF@JMIBKLMP@invalid?5CEN?5header?5?$CIencrypted?5en@ 100096f0     zip_util.obj
+ 0002:00001718       ??_C@_0CD@OGNDFFDB@invalid?5CEN?5header?5?$CIbad?5signatur@ 10009718     zip_util.obj
+ 0002:0000173c       ??_C@_0CF@EDCPNMDL@invalid?5CEN?5header?5?$CIbad?5header?5s@ 1000973c     zip_util.obj
+ 0002:00001764       ??_C@_0DC@HNGNGCGO@invalid?5END?5header?5?$CIbad?5central?5@ 10009764     zip_util.obj
+ 0002:00001798       ??_C@_0DA@LDHLKKMA@invalid?5END?5header?5?$CIbad?5central?5@ 10009798     zip_util.obj
+ 0002:000017c8       ??_C@_0BH@LJLKODMB@zip?5file?5name?5too?5long?$AA@ 100097c8     zip_util.obj
+ 0002:000017e0       ??_C@_0CD@MENKOKKM@invalid?5LOC?5header?5?$CIbad?5signatur@ 100097e0     zip_util.obj
+ 0002:00001804       ??_C@_0BH@LBOCJMDB@error?5reading?5zip?5file?$AA@ 10009804     zip_util.obj
+ 0002:0000181c       ??_C@_0CI@IPMMKOEL@ZIP_Read?3?5specified?5offset?5out?5o@ 1000981c     zip_util.obj
+ 0002:00001844       ??_C@_0CB@CIEAIEG@ZIP_Read?3?5error?5reading?5zip?5file@ 10009844     zip_util.obj
+ 0002:00001868       ??_C@_0CP@NKNCEDJJ@ZIP_Read?3?5corrupt?5zip?5file?3?5inva@ 10009868     zip_util.obj
+ 0002:00001898       ??_C@_0CH@CEOIBOIL@inflateFully?3?5Unexpected?5end?5of?5@ 10009898     zip_util.obj
+ 0002:000018c0       ??_C@_0CF@CIDJLPNC@inflateFully?3?5Unexpected?5end?5of?5@ 100098c0     zip_util.obj
+ 0002:000018e8       ??_C@_0CD@NHPFPCNC@inflateFully?3?5entry?5not?5compress@ 100098e8     zip_util.obj
+ 0002:0000190c       ??_C@_07KJFPOMFC@?$CFs?3?5?$CFs?6?$AA@ 1000990c     zip_util.obj
+ 0002:00001948       __load_config_used         10009948     MSVCRT:loadcfg.obj
+ 0002:000019f0       ___safe_se_handler_table   100099f0     <linker-defined>
+ 0002:000019f4       ___rtc_iaa                 100099f4     MSVCRT:initsect.obj
+ 0002:000019f8       ___rtc_izz                 100099f8     MSVCRT:initsect.obj
+ 0002:000019fc       ___rtc_taa                 100099fc     MSVCRT:initsect.obj
+ 0002:00001a00       ___rtc_tzz                 10009a00     MSVCRT:initsect.obj
+ 0002:00001a04       __IMPORT_DESCRIPTOR_java   10009a04     java:java.dll
+ 0002:00001a18       __IMPORT_DESCRIPTOR_jvm    10009a18     jvm:jvm.dll
+ 0002:00001a2c       __IMPORT_DESCRIPTOR_MSVCR71 10009a2c     MSVCRT:MSVCR71.dll
+ 0002:00001a40       __IMPORT_DESCRIPTOR_KERNEL32 10009a40     kernel32:KERNEL32.dll
+ 0002:00001a54       __NULL_IMPORT_DESCRIPTOR   10009a54     java:java.dll
+ 0003:00000000       ___xc_a                    1000b000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1000b004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1000b008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000b00c     MSVCRT:cinitexe.obj
+ 0003:00000058       _z_errmsg                  1000b058     zutil.obj
+ 0003:00001188       _inflate_mask              1000c188     infutil.obj
+ 0003:000011d0       ___security_cookie         1000c1d0     MSVCRT:seccook.obj
+ 0003:00001440       __adjust_fdiv              1000c440     <common>
+ 0003:00001444       ___onexitend               1000c444     <common>
+ 0003:00001448       ___onexitbegin             1000c448     <common>
+ 0003:0000144c       __pRawDllMain              1000c44c     <common>
+
+ entry point at        0001:00006baa
+
+ Static symbols
+
+ 0001:00000935       _ThrowZipException         10001935 f   ZipFile.obj
+ 0001:000011ed       _putShortMSB               100021ed f   deflate.obj
+ 0001:0000120f       _flush_pending             1000220f f   deflate.obj
+ 0001:00001527       _lm_init                   10002527 f   deflate.obj
+ 0001:000015a2       _longest_match             100025a2 f   deflate.obj
+ 0001:000016ea       _fill_window               100026ea f   deflate.obj
+ 0001:0000183e       _deflate_stored            1000283e f   deflate.obj
+ 0001:00001966       _deflate_fast              10002966 f   deflate.obj
+ 0001:00001c16       _deflate_slow              10002c16 f   deflate.obj
+ 0001:00002295       _init_block                10003295 f   trees.obj
+ 0001:000022f3       _pqdownheap                100032f3 f   trees.obj
+ 0001:000023a3       _gen_bitlen                100033a3 f   trees.obj
+ 0001:0000255b       _scan_tree                 1000355b f   trees.obj
+ 0001:00002617       _send_tree                 10003617 f   trees.obj
+ 0001:00002ab4       _send_all_trees            10003ab4 f   trees.obj
+ 0001:00002ced       _compress_block            10003ced f   trees.obj
+ 0001:0000309f       _set_data_type             1000409f f   trees.obj
+ 0001:000030f4       _bi_flush                  100040f4 f   trees.obj
+ 0001:00003161       _bi_windup                 10004161 f   trees.obj
+ 0001:000031b8       _copy_block                100041b8 f   trees.obj
+ 0001:00003294       _gen_codes                 10004294 f   trees.obj
+ 0001:00003302       _build_tree                10004302 f   trees.obj
+ 0001:000034e7       _build_bl_tree             100044e7 f   trees.obj
+ 0001:000047a1       _huft_build                100057a1 f   inftrees.obj
+ 0001:00005621       _ZFILE_Open                10006621 f   zip_util.obj
+ 0001:0000569d       _readFully                 1000669d f   zip_util.obj
+ 0001:00005705       _readFullyAt               10006705 f   zip_util.obj
+ 0001:00005742       _findEND                   10006742 f   zip_util.obj
+ 0001:000058a6       _growMetaNames             100068a6 f   zip_util.obj
+ 0001:000058e7       _addMetaName               100068e7 f   zip_util.obj
+ 0001:00005965       _freeCEN                   10006965 f   zip_util.obj
+ 0001:000059aa       _countCENHeaders           100069aa f   zip_util.obj
+ 0001:000059f3       _readCEN                   100069f3 f   zip_util.obj
+ 0001:00005e21       _readCENHeader             10006e21 f   zip_util.obj
+ 0001:00005ee5       _sequentialAccessReadCENHeader 10006ee5 f   zip_util.obj
+ 0001:00005f9c       _newEntry                  10006f9c f   zip_util.obj
+ 0001:000067b8       _freeZip                   100077b8 f   zip_util.obj

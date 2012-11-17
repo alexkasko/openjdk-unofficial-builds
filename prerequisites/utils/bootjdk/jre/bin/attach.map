@@ -1,0 +1,174 @@
+ attach
+
+ Timestamp is 4ecc67a1 (Tue Nov 22 22:25:21 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000c84H .text                   CODE
+ 0002:00000000 000000bcH .idata$5                DATA
+ 0002:000000c0 00000388H .rdata                  DATA
+ 0002:00000448 00000066H .rdata$debug            DATA
+ 0002:000004b0 00000004H .rdata$sxdata           DATA
+ 0002:000004b4 00000004H .rtc$IAA                DATA
+ 0002:000004b8 00000004H .rtc$IZZ                DATA
+ 0002:000004bc 00000004H .rtc$TAA                DATA
+ 0002:000004c0 00000004H .rtc$TZZ                DATA
+ 0002:000004c4 00000050H .idata$2                DATA
+ 0002:00000514 00000014H .idata$3                DATA
+ 0002:00000528 000000bcH .idata$4                DATA
+ 0002:000005e4 00000368H .idata$6                DATA
+ 0002:00000950 00000412H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000004H .data                   DATA
+ 0003:00000014 0000002cH .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000318H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _Java_sun_tools_attach_WindowsAttachProvider_tempPath@8 10001000 f   WindowsAttachProvider.obj
+ 0001:0000007b       _Java_sun_tools_attach_WindowsAttachProvider_volumeFlags@12 1000107b f   WindowsAttachProvider.obj
+ 0001:000000d4       _Java_sun_tools_attach_WindowsAttachProvider_initializeProcessStatusHelper@8 100010d4 f   WindowsAttachProvider.obj
+ 0001:00000142       _Java_sun_tools_attach_WindowsAttachProvider_enumProcesses@16 10001142 f   WindowsAttachProvider.obj
+ 0001:00000198       _Java_sun_tools_attach_WindowsAttachProvider_isLibraryLoadedByProcess@16 10001198 f   WindowsAttachProvider.obj
+ 0001:000002e7       _Java_sun_tools_attach_WindowsVirtualMachine_init@8 100012e7 f   WindowsVirtualMachine.obj
+ 0001:0000034c       _Java_sun_tools_attach_WindowsVirtualMachine_generateStub@8 1000134c f   WindowsVirtualMachine.obj
+ 0001:00000387       _Java_sun_tools_attach_WindowsVirtualMachine_closeProcess@16 10001387 f   WindowsVirtualMachine.obj
+ 0001:00000387       _Java_sun_tools_attach_WindowsVirtualMachine_closePipe@16 10001387 f   WindowsVirtualMachine.obj
+ 0001:00000394       _Java_sun_tools_attach_WindowsVirtualMachine_connectPipe@16 10001394 f   WindowsVirtualMachine.obj
+ 0001:000003cc       _Java_sun_tools_attach_WindowsVirtualMachine_readPipe@28 100013cc f   WindowsVirtualMachine.obj
+ 0001:000005b9       _Java_sun_tools_attach_WindowsVirtualMachine_openProcess@12 100015b9 f   WindowsVirtualMachine.obj
+ 0001:00000670       _Java_sun_tools_attach_WindowsVirtualMachine_createPipe@12 10001670 f   WindowsVirtualMachine.obj
+ 0001:000006cc       _Java_sun_tools_attach_WindowsVirtualMachine_enqueue@32 100016cc f   WindowsVirtualMachine.obj
+ 0001:00000962       _JNU_NewStringPlatform@8   10001962 f   java:java.dll
+ 0001:00000968       _JNU_ReleaseStringPlatformChars@12 10001968 f   java:java.dll
+ 0001:0000096e       _JNU_GetStringPlatformChars@12 1000196e f   java:java.dll
+ 0001:00000974       _JNU_ThrowInternalError@8  10001974 f   java:java.dll
+ 0001:0000097a       _JNU_ThrowIOExceptionWithLastError@8 1000197a f   java:java.dll
+ 0001:00000980       _JNU_ThrowByName@12        10001980 f   java:java.dll
+ 0001:00000986       _JNU_ThrowIOException@8    10001986 f   java:java.dll
+ 0001:0000098c       _strcmp                    1000198c f   MSVCRT:MSVCR71.dll
+ 0001:00000992       _memset                    10001992 f   MSVCRT:MSVCR71.dll
+ 0001:00000998       _strcpy                    10001998 f   MSVCRT:MSVCR71.dll
+ 0001:0000099e       __CRT_INIT@12              1000199e f   MSVCRT:crtdll.obj
+ 0001:00000a5c       __DllMainCRTStartup@12     10001a5c f   MSVCRT:crtdll.obj
+ 0001:00000b40       __initterm                 10001b40 f   MSVCRT:MSVCR71.dll
+ 0001:00000b46       __onexit                   10001b46 f   MSVCRT:atonexit.obj
+ 0001:00000b6c       _atexit                    10001b6c f   MSVCRT:atonexit.obj
+ 0001:00000b7e       __RTC_Initialize           10001b7e f   MSVCRT:initsect.obj
+ 0001:00000bc2       __RTC_Terminate            10001bc2 f   MSVCRT:initsect.obj
+ 0001:00000c06       ___CppXcptFilter           10001c06 f   MSVCRT:MSVCR71.dll
+ 0001:00000c0c       _DllMain@12                10001c0c f   MSVCRT:dllmain.obj
+ 0001:00000c2c       __SEH_prolog               10001c2c f   MSVCRT:sehprolg.obj
+ 0001:00000c67       __SEH_epilog               10001c67 f   MSVCRT:sehprolg.obj
+ 0001:00000c78       __except_handler3          10001c78 f   MSVCRT:MSVCR71.dll
+ 0001:00000c7e       ___dllonexit               10001c7e f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__ImpersonateSelf@4   10002000     advapi32:ADVAPI32.dll
+ 0002:00000004       __imp__LookupPrivilegeValueA@12 10002004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__AdjustTokenPrivileges@24 10002008     advapi32:ADVAPI32.dll
+ 0002:0000000c       __imp__OpenThreadToken@16  1000200c     advapi32:ADVAPI32.dll
+ 0002:00000010       \177ADVAPI32_NULL_THUNK_DATA 10002010     advapi32:ADVAPI32.dll
+ 0002:00000014       __imp__VirtualFreeEx@16    10002014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__GetExitCodeThread@8 10002018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__WriteProcessMemory@20 1000201c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__VirtualAllocEx@20   10002020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__DisableThreadLibraryCalls@4 10002024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__WaitForSingleObject@8 10002028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__CreateRemoteThread@28 1000202c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__GetCurrentProcess@0 10002030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__GetCurrentThread@0  10002034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__SetLastError@4      10002038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__ReadFile@20         1000203c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__ConnectNamedPipe@8  10002040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__GetLastError@0      10002044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__CreateNamedPipeA@32 10002048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__OpenProcess@12      1000204c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__CloseHandle@4       10002050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__LoadLibraryA@4      10002054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GetProcAddress@8    10002058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__GetVolumeInformationA@32 1000205c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__GetTempPathA@8      10002060     kernel32:KERNEL32.dll
+ 0002:00000064       \177KERNEL32_NULL_THUNK_DATA 10002064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp___onexit             10002068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp____dllonexit         1000206c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp___except_handler3    10002070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp____CppXcptFilter     10002074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp___adjust_fdiv        10002078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp__strcpy              1000207c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp__strncpy             10002080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__memset              10002084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__strcmp              10002088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__malloc              1000208c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__free                10002090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp___initterm           10002094     MSVCRT:MSVCR71.dll
+ 0002:00000098       \177MSVCR71_NULL_THUNK_DATA 10002098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp__JNU_ThrowIOException@8 1000209c     java:java.dll
+ 0002:000000a0       __imp__JNU_ThrowByName@12  100020a0     java:java.dll
+ 0002:000000a4       __imp__JNU_ThrowIOExceptionWithLastError@8 100020a4     java:java.dll
+ 0002:000000a8       __imp__JNU_ThrowInternalError@8 100020a8     java:java.dll
+ 0002:000000ac       __imp__JNU_GetStringPlatformChars@12 100020ac     java:java.dll
+ 0002:000000b0       __imp__JNU_ReleaseStringPlatformChars@12 100020b0     java:java.dll
+ 0002:000000b4       __imp__JNU_NewStringPlatform@8 100020b4     java:java.dll
+ 0002:000000b8       \177java_NULL_THUNK_DATA   100020b8     java:java.dll
+ 0002:000000dc       ??_C@_0DD@BBMFKOAA@Unable?5to?5initialize?5process?5sta@ 100020dc     WindowsAttachProvider.obj
+ 0002:00000110       ??_C@_0BD@OMILCNII@GetModuleBaseNameA?$AA@ 10002110     WindowsAttachProvider.obj
+ 0002:00000124       ??_C@_0BD@FIEJBLME@EnumProcessModules?$AA@ 10002124     WindowsAttachProvider.obj
+ 0002:00000138       ??_C@_0O@DJPJEFJP@EnumProcesses?$AA@ 10002138     WindowsAttachProvider.obj
+ 0002:00000148       ??_C@_09EPMADGLA@PSAPI?4DLL?$AA@ 10002148     WindowsAttachProvider.obj
+ 0002:00000154       ??_C@_0DI@JKNBBNNA@Unable?5to?5get?5address?5of?5LoadLib@ 10002154     WindowsVirtualMachine.obj
+ 0002:0000018c       ??_C@_0P@LKABJJMO@IsWow64Process?$AA@ 1000218c     WindowsVirtualMachine.obj
+ 0002:0000019c       ??_C@_0P@DGIDOA@GetProcAddress?$AA@ 1000219c     WindowsVirtualMachine.obj
+ 0002:000001ac       ??_C@_0N@LOMLCOFC@LoadLibraryA?$AA@ 100021ac     WindowsVirtualMachine.obj
+ 0002:000001bc       ??_C@_08PNLNEKOB@kernel32?$AA@ 100021bc     WindowsVirtualMachine.obj
+ 0002:000001c8       ??_C@_0BI@BIDFBHOK@ConnectNamedPipe?5failed?$AA@ 100021c8     WindowsVirtualMachine.obj
+ 0002:000001e0       ??_C@_08KLCHJOKF@ReadFile?$AA@ 100021e0     WindowsVirtualMachine.obj
+ 0002:000001ec       ??_C@_0BB@ICFLKOPM@SeDebugPrivilege?$AA@ 100021ec     WindowsVirtualMachine.obj
+ 0002:00000200       ??_C@_0DB@EJHNPKJJ@com?1sun?1tools?1attach?1AttachNotSu@ 10002200     WindowsVirtualMachine.obj
+ 0002:00000234       ??_C@_0CD@DBCDIJLO@Unable?5to?5attach?5to?564?9bit?5proce@ 10002234     WindowsVirtualMachine.obj
+ 0002:00000258       ??_C@_0BD@CGDPMLB@OpenProcess?5failed?$AA@ 10002258     WindowsVirtualMachine.obj
+ 0002:0000026c       ??_C@_0BA@ENLPPKBN@no?5such?5process?$AA@ 1000226c     WindowsVirtualMachine.obj
+ 0002:0000027c       ??_C@_0BH@HBAPIBAL@CreateNamedPipe?5failed?$AA@ 1000227c     WindowsVirtualMachine.obj
+ 0002:00000294       ??_C@_0BK@FODHPPG@CreateRemoteThread?5failed?$AA@ 10002294     WindowsVirtualMachine.obj
+ 0002:000002b0       ??_C@_0CF@HNHEBLGO@jvm?4dll?5not?5loaded?5by?5target?5pro@ 100022b0     WindowsVirtualMachine.obj
+ 0002:000002d8       ??_C@_0EN@MDMJHHAL@Unable?5to?5enqueue?5operation?3?5the@ 100022d8     WindowsVirtualMachine.obj
+ 0002:00000328       ??_C@_0CI@LNCCHGNM@Remote?5thread?5failed?5for?5unknown@ 10002328     WindowsVirtualMachine.obj
+ 0002:00000350       ??_C@_0BL@GJDMIHJJ@WaitForSingleObject?5failed?$AA@ 10002350     WindowsVirtualMachine.obj
+ 0002:0000036c       ??_C@_0BG@NFBJGHNB@VirtualAllocEx?5failed?$AA@ 1000236c     WindowsVirtualMachine.obj
+ 0002:00000384       ??_C@_0BD@KIBEHICB@Too?5many?5arguments?$AA@ 10002384     WindowsVirtualMachine.obj
+ 0002:00000398       ??_C@_0BJ@JNPKEMFE@_JVM_EnqueueOperation?$EA20?$AA@ 10002398     WindowsVirtualMachine.obj
+ 0002:000003b4       ??_C@_0BF@GAHKIOOM@JVM_EnqueueOperation?$AA@ 100023b4     WindowsVirtualMachine.obj
+ 0002:000003cc       ??_C@_03KAPDGIM@jvm?$AA@   100023cc     WindowsVirtualMachine.obj
+ 0002:00000400       __load_config_used         10002400     MSVCRT:loadcfg.obj
+ 0002:000004b0       ___safe_se_handler_table   100024b0     <linker-defined>
+ 0002:000004b4       ___rtc_iaa                 100024b4     MSVCRT:initsect.obj
+ 0002:000004b8       ___rtc_izz                 100024b8     MSVCRT:initsect.obj
+ 0002:000004bc       ___rtc_taa                 100024bc     MSVCRT:initsect.obj
+ 0002:000004c0       ___rtc_tzz                 100024c0     MSVCRT:initsect.obj
+ 0002:000004c4       __IMPORT_DESCRIPTOR_java   100024c4     java:java.dll
+ 0002:000004d8       __IMPORT_DESCRIPTOR_ADVAPI32 100024d8     advapi32:ADVAPI32.dll
+ 0002:000004ec       __IMPORT_DESCRIPTOR_MSVCR71 100024ec     MSVCRT:MSVCR71.dll
+ 0002:00000500       __IMPORT_DESCRIPTOR_KERNEL32 10002500     kernel32:KERNEL32.dll
+ 0002:00000514       __NULL_IMPORT_DESCRIPTOR   10002514     java:java.dll
+ 0003:00000000       ___xc_a                    10003000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10003004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10003008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000300c     MSVCRT:cinitexe.obj
+ 0003:00000010       ___security_cookie         10003010     MSVCRT:seccook.obj
+ 0003:00000030       __adjust_fdiv              10003030     <common>
+ 0003:00000034       ___onexitend               10003034     <common>
+ 0003:00000038       ___onexitbegin             10003038     <common>
+ 0003:0000003c       __pRawDllMain              1000303c     <common>
+
+ entry point at        0001:00000a5c
+
+ Static symbols
+
+ 0001:00000281       _thread_func@4             10001281 f   WindowsVirtualMachine.obj
+ 0001:000002e6       _thread_end                100012e6 f   WindowsVirtualMachine.obj
+ 0001:00000446       _doPrivilegedOpenProcess   10001446 f   WindowsVirtualMachine.obj
+ 0001:00000572       _jstring_to_cstring        10001572 f   WindowsVirtualMachine.obj

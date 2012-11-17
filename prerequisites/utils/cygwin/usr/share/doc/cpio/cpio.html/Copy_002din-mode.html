@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+<title>Copy-in mode - cpio</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="cpio">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Invoking-cpio.html#Invoking-cpio" title="Invoking cpio">
+<link rel="prev" href="Copy_002dout-mode.html#Copy_002dout-mode" title="Copy-out mode">
+<link rel="next" href="Copy_002dpass-mode.html#Copy_002dpass-mode" title="Copy-pass mode">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual documents GNU cpio (version 2.11, 12 February 2010).
+
+Copyright (C) 1995, 2001, 2002, 2004, 2010 Free Software
+Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.2 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual'', and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License''.
+
+     (a) The FSF's Back-Cover Text is: ``You have freedom to copy and
+     modify this GNU Manual, like GNU software.  Copies published by
+     the Free Software Foundation raise funds for GNU development.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Copy-in-mode"></a>
+<a name="Copy_002din-mode"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Copy_002dpass-mode.html#Copy_002dpass-mode">Copy-pass mode</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Copy_002dout-mode.html#Copy_002dout-mode">Copy-out mode</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Invoking-cpio.html#Invoking-cpio">Invoking cpio</a>
+<hr>
+</div>
+
+<!-- node-name,  next,  previous,  up -->
+<h3 class="section">3.2 Copy-in mode</h3>
+
+<p>In copy-in mode, cpio copies files out of an archive or lists the
+archive contents.  It reads the archive from the standard input.  Any
+non-option command line arguments are shell globbing patterns; only
+files in the archive whose names match one or more of those patterns are
+copied from the archive.  Unlike in the shell, an initial &lsquo;<samp><span class="samp">.</span></samp>&rsquo; in a
+filename does match a wildcard at the start of a pattern, and a &lsquo;<samp><span class="samp">/</span></samp>&rsquo; in a
+filename can match wildcards.  If no patterns are given, all files are
+extracted.  See <a href="Options.html#Options">Options</a>.
+
+<pre class="example">     cpio {-i|--extract} [-bcdfmnrtsuvBSV] [-C bytes] [-E file]
+     [-H format] [-M message] [-R [user][:.][group]]
+     [-I [[user@]host:]archive] [-F [[user@]host:]archive]
+     [--file=[[user@]host:]archive] [--make-directories]
+     [--nonmatching] [--preserve-modification-time]
+     [--numeric-uid-gid] [--rename] [--list] [--swap-bytes] [--swap]
+     [--dot] [--unconditional] [--verbose] [--block-size=blocks]
+     [--swap-halfwords] [--io-size=bytes] [--pattern-file=file]
+     [--format=format] [--owner=[user][:.][group]]
+     [--no-preserve-owner] [--message=message] [--help] [--version]
+     [--no-absolute-filenames] [--sparse] [-only-verify-crc] [--to-stdout]
+     [-quiet] [--rsh-command=command] [pattern...] [&lt; archive]
+</pre>
+   </body></html>
+

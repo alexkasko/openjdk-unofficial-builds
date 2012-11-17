@@ -1,0 +1,411 @@
+ j2pkcs11
+
+ Timestamp is 4ecc6104 (Tue Nov 22 21:57:08 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000059dcH .text                   CODE
+ 0002:00000000 00000070H .idata$5                DATA
+ 0002:00000070 00000f50H .rdata                  DATA
+ 0002:00000fc0 00000069H .rdata$debug            DATA
+ 0002:00001030 00000004H .rdata$sxdata           DATA
+ 0002:00001034 00000004H .rtc$IAA                DATA
+ 0002:00001038 00000004H .rtc$IZZ                DATA
+ 0002:0000103c 00000004H .rtc$TAA                DATA
+ 0002:00001040 00000004H .rtc$TZZ                DATA
+ 0002:00001044 00000050H .idata$2                DATA
+ 0002:00001094 00000014H .idata$3                DATA
+ 0002:000010a8 00000070H .idata$4                DATA
+ 0002:00001118 000001b0H .idata$6                DATA
+ 0002:000012d0 000010d9H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000004H .data                   DATA
+ 0003:00000014 00000038H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000320H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _Java_sun_security_pkcs11_Secmod_nssVersionCheck@20 10001000 f   j2secmod.obj
+ 0001:00000056       _Java_sun_security_pkcs11_Secmod_nssInit@24 10001056 f   j2secmod.obj
+ 0001:000000d5       _Java_sun_security_pkcs11_Secmod_nssGetModuleList@16 100010d5 f   j2secmod.obj
+ 0001:000001fa       _findFunction              100011fa f   j2secmod_md.obj
+ 0001:00000243       _Java_sun_security_pkcs11_Secmod_nssGetLibraryHandle@12 10001243 f   j2secmod_md.obj
+ 0001:0000027b       _Java_sun_security_pkcs11_Secmod_nssLoadLibrary@12 1000127b f   j2secmod_md.obj
+ 0001:000002ee       _ckDatePtrToJDateObject    100012ee f   p11_convert.obj
+ 0001:00000387       _ckVersionPtrToJVersion    10001387 f   p11_convert.obj
+ 0001:000003d6       _ckSessionInfoPtrToJSessionInfo 100013d6 f   p11_convert.obj
+ 0001:00000445       _jVersionToCKVersionPtr    10001445 f   p11_convert.obj
+ 0001:000004bd       _jDateObjectPtrToCKDatePtr 100014bd f   p11_convert.obj
+ 0001:00000677       _jAttributeToCKAttribute   10001677 f   p11_convert.obj
+ 0001:000006fa       _jSsl3MasterKeyDeriveParamToCKSsl3MasterKeyDeriveParam 100016fa f   p11_convert.obj
+ 0001:000007eb       _jTlsPrfParamsToCKTlsPrfParam 100017eb f   p11_convert.obj
+ 0001:000008b2       _jSsl3KeyMatParamToCKSsl3KeyMatParam 100018b2 f   p11_convert.obj
+ 0001:00000abf       _ckAttributeValueToJObject 10001abf f   p11_convert.obj
+ 0001:00000c7d       _jRsaPkcsOaepParamToCKRsaPkcsOaepParam 10001c7d f   p11_convert.obj
+ 0001:00000d46       _jPbeParamToCKPbeParam     10001d46 f   p11_convert.obj
+ 0001:00000e27       _copyBackPBEInitializationVector 10001e27 f   p11_convert.obj
+ 0001:00000f17       _jPkcs5Pbkd2ParamToCKPkcs5Pbkd2Param 10001f17 f   p11_convert.obj
+ 0001:00001013       _jRsaPkcsPssParamToCKRsaPkcsPssParam 10002013 f   p11_convert.obj
+ 0001:000010a1       _jEcdh1DeriveParamToCKEcdh1DeriveParam 100020a1 f   p11_convert.obj
+ 0001:00001153       _jEcdh2DeriveParamToCKEcdh2DeriveParam 10002153 f   p11_convert.obj
+ 0001:00001280       _jX942Dh1DeriveParamToCKX942Dh1DeriveParam 10002280 f   p11_convert.obj
+ 0001:00001332       _jX942Dh2DeriveParamToCKX942Dh2DeriveParam 10002332 f   p11_convert.obj
+ 0001:0000145f       _ckAttributePtrToJAttribute 1000245f f   p11_convert.obj
+ 0001:000014c6       _jMechanismParameterToCKMechanismParameterSlow 100024c6 f   p11_convert.obj
+ 0001:000017f5       _jMechanismParameterToCKMechanismParameter 100027f5 f   p11_convert.obj
+ 0001:00001874       _jMechanismToCKMechanism   10002874 f   p11_convert.obj
+ 0001:000018ce       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1EncryptInit@28 100028ce f   p11_crypt.obj
+ 0001:00001929       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Encrypt@40 10002929 f   p11_crypt.obj
+ 0001:00001a0a       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1EncryptUpdate@56 10002a0a f   p11_crypt.obj
+ 0001:00001b2b       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1EncryptFinal@36 10002b2b f   p11_crypt.obj
+ 0001:00001bc8       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DecryptInit@28 10002bc8 f   p11_crypt.obj
+ 0001:00001c26       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Decrypt@40 10002c26 f   p11_crypt.obj
+ 0001:00001d0a       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DecryptUpdate@56 10002d0a f   p11_crypt.obj
+ 0001:00001e2e       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DecryptFinal@36 10002e2e f   p11_crypt.obj
+ 0001:00001ecb       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DigestInit@20 10002ecb f   p11_digest.obj
+ 0001:00001f26       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DigestSingle@44 10002f26 f   p11_digest.obj
+ 0001:0000203a       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DigestUpdate@36 1000303a f   p11_digest.obj
+ 0001:0000211e       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DigestKey@24 1000311e f   p11_digest.obj
+ 0001:0000214e       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DigestFinal@28 1000314e f   p11_digest.obj
+ 0001:000021b8       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SeedRandom@20 100031b8 f   p11_digest.obj
+ 0001:00002212       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GenerateRandom@20 10003212 f   p11_digest.obj
+ 0001:00002282       _JNI_OnLoad@8              10003282 f   p11_general.obj
+ 0001:0000228a       _fetchClass                1000328a f   p11_general.obj
+ 0001:000022a2       _prefetchFields            100032a2 f   p11_general.obj
+ 0001:00002328       _Java_sun_security_pkcs11_wrapper_PKCS11_finalizeLibrary@8 10003328 f   p11_general.obj
+ 0001:0000232b       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Initialize@12 1000332b f   p11_general.obj
+ 0001:00002378       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Finalize@12 10003378 f   p11_general.obj
+ 0001:000023a2       _ckInfoPtrToJInfo          100033a2 f   p11_general.obj
+ 0001:00002460       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetSlotList@12 10003460 f   p11_general.obj
+ 0001:000024ea       _ckSlotInfoPtrToJSlotInfo  100034ea f   p11_general.obj
+ 0001:000025a8       _ckTokenInfoPtrToJTokenInfo 100035a8 f   p11_general.obj
+ 0001:000027b5       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetMechanismList@16 100037b5 f   p11_general.obj
+ 0001:00002835       _ckMechanismInfoPtrToJMechanismInfo 10003835 f   p11_general.obj
+ 0001:00002899       _Java_sun_security_pkcs11_wrapper_PKCS11_initializeLibrary@8 10003899 f   p11_general.obj
+ 0001:000028c3       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetInfo@8 100038c3 f   p11_general.obj
+ 0001:00002907       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetSlotInfo@16 10003907 f   p11_general.obj
+ 0001:0000294e       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetTokenInfo@16 1000394e f   p11_general.obj
+ 0001:0000299e       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetMechanismInfo@24 1000399e f   p11_general.obj
+ 0001:000029e8       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GenerateKey@24 100039e8 f   p11_keymgmt.obj
+ 0001:00002ade       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GenerateKeyPair@28 10003ade f   p11_keymgmt.obj
+ 0001:00002c02       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1WrapKey@36 10003c02 f   p11_keymgmt.obj
+ 0001:00002cd9       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1UnwrapKey@36 10003cd9 f   p11_keymgmt.obj
+ 0001:00002dc0       _freeMasterKeyDeriveParams 10003dc0 f   p11_keymgmt.obj
+ 0001:00002df6       _freeEcdh1DeriveParams     10003df6 f   p11_keymgmt.obj
+ 0001:00002e22       _copyBackTLSPrfParams      10003e22 f   p11_keymgmt.obj
+ 0001:00002f4f       _copyBackClientVersion     10003f4f f   p11_keymgmt.obj
+ 0001:0000305e       _copyBackSSLKeyMatParams   1000405e f   p11_keymgmt.obj
+ 0001:000032e4       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DeriveKey@32 100042e4 f   p11_keymgmt.obj
+ 0001:00003457       _callJCreateMutex          10004457 f   p11_mutex.obj
+ 0001:0000359d       _callJDestroyMutex         1000459d f   p11_mutex.obj
+ 0001:000036e3       _callJLockMutex            100046e3 f   p11_mutex.obj
+ 0001:0000381d       _callJUnlockMutex          1000481d f   p11_mutex.obj
+ 0001:00003957       _makeCKInitArgsAdapter     10004957 f   p11_mutex.obj
+ 0001:00003ade       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1CreateObject@20 10004ade f   p11_objmgmt.obj
+ 0001:00003b80       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1CopyObject@28 10004b80 f   p11_objmgmt.obj
+ 0001:00003c25       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1DestroyObject@24 10004c25 f   p11_objmgmt.obj
+ 0001:00003c52       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetAttributeValue@28 10004c52 f   p11_objmgmt.obj
+ 0001:00003db4       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SetAttributeValue@28 10004db4 f   p11_objmgmt.obj
+ 0001:00003e3a       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1FindObjectsInit@20 10004e3a f   p11_objmgmt.obj
+ 0001:00003ebd       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1FindObjects@24 10004ebd f   p11_objmgmt.obj
+ 0001:00003f27       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1FindObjectsFinal@16 10004f27 f   p11_objmgmt.obj
+ 0001:00003f51       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1GetSessionInfo@16 10004f51 f   p11_sessmgmt.obj
+ 0001:00003f98       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Login@28 10004f98 f   p11_sessmgmt.obj
+ 0001:00003ff2       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Logout@16 10004ff2 f   p11_sessmgmt.obj
+ 0001:0000401c       _putNotifyEntry            1000501c f   p11_sessmgmt.obj
+ 0001:00004080       _removeNotifyEntry         10005080 f   p11_sessmgmt.obj
+ 0001:000040f3       _notifyCallback            100050f3 f   p11_sessmgmt.obj
+ 0001:00004203       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1OpenSession@32 10005203 f   p11_sessmgmt.obj
+ 0001:00004298       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1CloseSession@16 10005298 f   p11_sessmgmt.obj
+ 0001:000042f8       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SignInit@28 100052f8 f   p11_sign.obj
+ 0001:00004356       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Sign@20 10005356 f   p11_sign.obj
+ 0001:0000440c       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SignUpdate@36 1000540c f   p11_sign.obj
+ 0001:000044f0       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SignFinal@20 100054f0 f   p11_sign.obj
+ 0001:000045a6       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SignRecoverInit@28 100055a6 f   p11_sign.obj
+ 0001:00004604       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1SignRecover@40 10005604 f   p11_sign.obj
+ 0001:00004709       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1VerifyInit@28 10005709 f   p11_sign.obj
+ 0001:00004767       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1Verify@24 10005767 f   p11_sign.obj
+ 0001:000047e5       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1VerifyUpdate@36 100057e5 f   p11_sign.obj
+ 0001:000048c9       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1VerifyFinal@20 100058c9 f   p11_sign.obj
+ 0001:00004923       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1VerifyRecoverInit@28 10005923 f   p11_sign.obj
+ 0001:00004981       _Java_sun_security_pkcs11_wrapper_PKCS11_C_1VerifyRecover@40 10005981 f   p11_sign.obj
+ 0001:00004a86       _createLockObject          10005a86 f   p11_util.obj
+ 0001:00004ac2       _putModuleEntry            10005ac2 f   p11_util.obj
+ 0001:00004aee       _getModuleEntry            10005aee f   p11_util.obj
+ 0001:00004b10       _removeModuleEntry         10005b10 f   p11_util.obj
+ 0001:00004b44       _ckAssertReturnValueOK     10005b44 f   p11_util.obj
+ 0001:00004b9b       _throwIOException          10005b9b f   p11_util.obj
+ 0001:00004bb8       _throwPKCS11RuntimeException 10005bb8 f   p11_util.obj
+ 0001:00004c1e       _throwDisconnectedRuntimeException 10005c1e f   p11_util.obj
+ 0001:00004c3c       _jBooleanArrayToCKBBoolArray 10005c3c f   p11_util.obj
+ 0001:00004cbb       _jByteArrayToCKByteArray   10005cbb f   p11_util.obj
+ 0001:00004d0d       _jLongArrayToCKULongArray  10005d0d f   p11_util.obj
+ 0001:00004d8f       _jCharArrayToCKUTF8CharArray 10005d8f f   p11_util.obj
+ 0001:00004d8f       _jCharArrayToCKCharArray   10005d8f f   p11_util.obj
+ 0001:00004e0c       _jStringToCKUTF8CharArray  10005e0c f   p11_util.obj
+ 0001:00004e6d       _jAttributeArrayToCKAttributeArray 10005e6d f   p11_util.obj
+ 0001:00004efa       _ckByteArrayToJByteArray   10005efa f   p11_util.obj
+ 0001:00004f28       _ckULongArrayToJLongArray  10005f28 f   p11_util.obj
+ 0001:00004f87       _ckCharArrayToJCharArray   10005f87 f   p11_util.obj
+ 0001:00004f87       _ckUTF8CharArrayToJCharArray 10005f87 f   p11_util.obj
+ 0001:00004fe2       _ckBBoolPtrToJBooleanObject 10005fe2 f   p11_util.obj
+ 0001:00005025       _ckULongPtrToJLongObject   10006025 f   p11_util.obj
+ 0001:00005066       _jBooleanObjectToCKBBoolPtr 10006066 f   p11_util.obj
+ 0001:000050b1       _jByteObjectToCKBytePtr    100060b1 f   p11_util.obj
+ 0001:000050f6       _jIntegerObjectToCKULongPtr 100060f6 f   p11_util.obj
+ 0001:00005139       _jLongObjectToCKULongPtr   10006139 f   p11_util.obj
+ 0001:00005183       _jCharObjectToCKCharPtr    10006183 f   p11_util.obj
+ 0001:000051c8       _jObjectToPrimitiveCKObjectPtrPtr 100061c8 f   p11_util.obj
+ 0001:00005508       _getFunctionList           10006508 f   p11_util.obj
+ 0001:0000552c       _Java_sun_security_pkcs11_wrapper_PKCS11_connect@16 1000652c f   p11_md.obj
+ 0001:00005664       _Java_sun_security_pkcs11_wrapper_PKCS11_disconnect@8 10006664 f   p11_md.obj
+ 0001:0000568e       _JNU_ThrowNullPointerException@8 1000668e f   java:java.dll
+ 0001:00005694       _JNU_ThrowIOException@8    10006694 f   java:java.dll
+ 0001:000056a0       __chkstk                   100066a0 f   MSVCRT:chkstk.obj
+ 0001:000056a0       __alloca_probe             100066a0     MSVCRT:chkstk.obj
+ 0001:000056de       _memcpy                    100066de f   MSVCRT:MSVCR71.dll
+ 0001:000056e4       _strcpy                    100066e4 f   MSVCRT:MSVCR71.dll
+ 0001:000056ea       _strlen                    100066ea f   MSVCRT:MSVCR71.dll
+ 0001:000056f0       _strcat                    100066f0 f   MSVCRT:MSVCR71.dll
+ 0001:000056f6       __CRT_INIT@12              100066f6 f   MSVCRT:crtdll.obj
+ 0001:000057b4       __DllMainCRTStartup@12     100067b4 f   MSVCRT:crtdll.obj
+ 0001:00005898       __initterm                 10006898 f   MSVCRT:MSVCR71.dll
+ 0001:0000589e       __onexit                   1000689e f   MSVCRT:atonexit.obj
+ 0001:000058c4       _atexit                    100068c4 f   MSVCRT:atonexit.obj
+ 0001:000058d6       __RTC_Initialize           100068d6 f   MSVCRT:initsect.obj
+ 0001:0000591a       __RTC_Terminate            1000691a f   MSVCRT:initsect.obj
+ 0001:0000595e       ___CppXcptFilter           1000695e f   MSVCRT:MSVCR71.dll
+ 0001:00005964       _DllMain@12                10006964 f   MSVCRT:dllmain.obj
+ 0001:00005984       __SEH_prolog               10006984 f   MSVCRT:sehprolg.obj
+ 0001:000059bf       __SEH_epilog               100069bf f   MSVCRT:sehprolg.obj
+ 0001:000059d0       __except_handler3          100069d0 f   MSVCRT:MSVCR71.dll
+ 0001:000059d6       ___dllonexit               100069d6 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 10007000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__FreeLibrary@4       10007004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__LoadLibraryA@4      10007008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetLastError@0      1000700c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__LocalFree@4         10007010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__GetModuleHandleA@4  10007014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__GetProcAddress@8    10007018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__FormatMessageA@28   1000701c     kernel32:KERNEL32.dll
+ 0002:00000020       \177KERNEL32_NULL_THUNK_DATA 10007020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__strcpy              10007024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp__strlen              10007028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__memcpy              1000702c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp___initterm           10007030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp___adjust_fdiv        10007034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp____CppXcptFilter     10007038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp___except_handler3    1000703c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp____dllonexit         10007040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp___onexit             10007044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__free                10007048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__malloc              1000704c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp___snprintf           10007050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__strcat              10007054     MSVCRT:MSVCR71.dll
+ 0002:00000058       \177MSVCR71_NULL_THUNK_DATA 10007058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp__JNU_ThrowIOException@8 1000705c     java:java.dll
+ 0002:00000060       __imp__JNU_ThrowNullPointerException@8 10007060     java:java.dll
+ 0002:00000064       \177java_NULL_THUNK_DATA   10007064     java:java.dll
+ 0002:00000068       __imp__JNI_GetCreatedJavaVMs@12 10007068     jvm:jvm.dll
+ 0002:0000006c       \177jvm_NULL_THUNK_DATA    1000706c     jvm:jvm.dll
+ 0002:0000008c       ??_C@_0BB@EFFKAOLB@NSS_VersionCheck?$AA@ 1000708c     j2secmod.obj
+ 0002:000000a0       ??_C@_0CK@MGALBJEC@?$CILjava?1lang?1String?$DLLjava?1lang?1St@ 100070a0     j2secmod.obj
+ 0002:000000cc       ??_C@_0CC@KDFBHMNN@sun?1security?1pkcs11?1Secmod$Modul@ 100070cc     j2secmod.obj
+ 0002:000000f0       ??_C@_03BDGOHNNK@add?$AA@  100070f0     j2secmod.obj
+ 0002:000000f4       ??_C@_0BG@DHOOFEJE@?$CILjava?1lang?1Object?$DL?$CJZ?$AA@ 100070f4     j2secmod.obj
+ 0002:0000010c       ??_C@_06FALKBLGB@?$DMinit?$DO?$AA@ 1000710c     j2secmod.obj
+ 0002:00000114       ??_C@_03GAEACAIP@?$CI?$CJV?$AA@ 10007114     j2secmod.obj
+ 0002:00000118       ??_C@_0BE@GPOIDJOH@java?1util?1ArrayList?$AA@ 10007118     j2secmod.obj
+ 0002:0000012c       ??_C@_0BM@FOILBMDH@SECMOD_GetDefaultModuleList?$AA@ 1000712c     j2secmod.obj
+ 0002:00000148       ??_C@_0BF@BNLKGCGH@Symbol?5not?5found?3?5?$CFs?$AA@ 10007148     j2secmod_md.obj
+ 0002:00000160       ??_C@_09KCOLIFDD@?$CI?$FLC?$FLC?$FLC?$CJV?$AA@ 10007160     p11_convert.obj
+ 0002:0000016c       ??_C@_0CE@BDNBALGO@sun?1security?1pkcs11?1wrapper?1CK_D@ 1000716c     p11_convert.obj
+ 0002:00000190       ??_C@_05MNEAHDDF@?$CIII?$CJV?$AA@ 10007190     p11_convert.obj
+ 0002:00000198       ??_C@_0CH@FAGBPBAL@sun?1security?1pkcs11?1wrapper?1CK_V@ 10007198     p11_convert.obj
+ 0002:000001c0       ??_C@_07MDGBCFEE@?$CIJJJJ?$CJV?$AA@ 100071c0     p11_convert.obj
+ 0002:000001c8       ??_C@_0CM@LGADNNOP@sun?1security?1pkcs11?1wrapper?1CK_S@ 100071c8     p11_convert.obj
+ 0002:000001f4       ??_C@_05OLAOEALN@minor?$AA@ 100071f4     p11_convert.obj
+ 0002:000001fc       ??_C@_05FEBMJMCL@major?$AA@ 100071fc     p11_convert.obj
+ 0002:00000204       ??_C@_01HMGJMAIH@B?$AA@    10007204     p11_convert.obj
+ 0002:00000208       ??_C@_03NNBHCDBP@day?$AA@  10007208     p11_convert.obj
+ 0002:0000020c       ??_C@_05MEBAADFH@month?$AA@ 1000720c     p11_convert.obj
+ 0002:00000214       ??_C@_04JFPLDHAO@year?$AA@ 10007214     p11_convert.obj
+ 0002:0000021c       ??_C@_02LLADPLHK@?$FLC?$AA@ 1000721c     p11_convert.obj
+ 0002:00000220       ??_C@_06MLDODIFP@pValue?$AA@ 10007220     p11_convert.obj
+ 0002:00000228       ??_C@_0BD@HMGGFBMH@Ljava?1lang?1Object?$DL?$AA@ 10007228     p11_convert.obj
+ 0002:0000023c       ??_C@_04GPMDFGEJ@type?$AA@ 1000723c     p11_convert.obj
+ 0002:00000244       ??_C@_01LELAEKIP@J?$AA@    10007244     p11_convert.obj
+ 0002:00000248       ??_C@_08KFNBPFOP@pVersion?$AA@ 10007248     p11_convert.obj
+ 0002:00000254       ??_C@_0CJ@KHCANOHB@Lsun?1security?1pkcs11?1wrapper?1CK_@ 10007254     p11_convert.obj
+ 0002:00000280       ??_C@_0O@BDHOCNNP@pServerRandom?$AA@ 10007280     p11_convert.obj
+ 0002:00000290       ??_C@_0O@DPKEFPKK@pClientRandom?$AA@ 10007290     p11_convert.obj
+ 0002:000002a0       ??_C@_02KCBIMKDL@?$FLB?$AA@ 100072a0     p11_convert.obj
+ 0002:000002a4       ??_C@_0L@KDDOOLLF@RandomInfo?$AA@ 100072a4     p11_convert.obj
+ 0002:000002b0       ??_C@_0DC@HGPFDFFP@Lsun?1security?1pkcs11?1wrapper?1CK_@ 100072b0     p11_convert.obj
+ 0002:000002e4       ??_C@_0DA@MGBKDFKC@sun?1security?1pkcs11?1wrapper?1CK_S@ 100072e4     p11_convert.obj
+ 0002:00000314       ??_C@_0DN@HBKDAKMN@sun?1security?1pkcs11?1wrapper?1CK_S@ 10007314     p11_convert.obj
+ 0002:00000354       ??_C@_07KBCFNIDO@pOutput?$AA@ 10007354     p11_convert.obj
+ 0002:0000035c       ??_C@_06EEEIHGKI@pLabel?$AA@ 1000735c     p11_convert.obj
+ 0002:00000364       ??_C@_05HJNJEGNP@pSeed?$AA@ 10007364     p11_convert.obj
+ 0002:0000036c       ??_C@_0CO@DCJBCFCB@sun?1security?1pkcs11?1wrapper?1CK_T@ 1000736c     p11_convert.obj
+ 0002:0000039c       ??_C@_09NPBDGOJP@pIVServer?$AA@ 1000739c     p11_convert.obj
+ 0002:000003a8       ??_C@_09JAFBLFBM@pIVClient?$AA@ 100073a8     p11_convert.obj
+ 0002:000003b4       ??_C@_0BF@ODGIPGLB@pReturnedKeyMaterial?$AA@ 100073b4     p11_convert.obj
+ 0002:000003cc       ??_C@_0DC@BBMMCKLB@Lsun?1security?1pkcs11?1wrapper?1CK_@ 100073cc     p11_convert.obj
+ 0002:00000400       ??_C@_0DA@CCEPBHDJ@sun?1security?1pkcs11?1wrapper?1CK_S@ 10007400     p11_convert.obj
+ 0002:00000430       ??_C@_09OOHKLCMP@bIsExport?$AA@ 10007430     p11_convert.obj
+ 0002:0000043c       ??_C@_01POHCFINO@Z?$AA@    1000743c     p11_convert.obj
+ 0002:00000440       ??_C@_0P@LDDDJGAG@ulIVSizeInBits?$AA@ 10007440     p11_convert.obj
+ 0002:00000450       ??_C@_0BA@PELMFMAE@ulKeySizeInBits?$AA@ 10007450     p11_convert.obj
+ 0002:00000460       ??_C@_0BA@CKOIHILJ@ulMacSizeInBits?$AA@ 10007460     p11_convert.obj
+ 0002:00000470       ??_C@_0DD@IELHHAPM@sun?1security?1pkcs11?1wrapper?1CK_S@ 10007470     p11_convert.obj
+ 0002:000004a4       ??_C@_0M@NGABHANP@pSourceData?$AA@ 100074a4     p11_convert.obj
+ 0002:000004b0       ??_C@_06OEKOLKIL@source?$AA@ 100074b0     p11_convert.obj
+ 0002:000004b8       ??_C@_03GJMIBOLJ@mgf?$AA@  100074b8     p11_convert.obj
+ 0002:000004bc       ??_C@_07NIDPGPFG@hashAlg?$AA@ 100074bc     p11_convert.obj
+ 0002:000004c4       ??_C@_0DE@FNJOAKHM@sun?1security?1pkcs11?1wrapper?1CK_R@ 100074c4     p11_convert.obj
+ 0002:000004f8       ??_C@_0M@HPDAPCKI@ulIteration?$AA@ 100074f8     p11_convert.obj
+ 0002:00000504       ??_C@_05LDKIPIFG@pSalt?$AA@ 10007504     p11_convert.obj
+ 0002:0000050c       ??_C@_09KKEKIPIM@pPassword?$AA@ 1000750c     p11_convert.obj
+ 0002:00000518       ??_C@_0M@GGOAOMAD@pInitVector?$AA@ 10007518     p11_convert.obj
+ 0002:00000524       ??_C@_0CK@JAAGIPM@sun?1security?1pkcs11?1wrapper?1CK_P@ 10007524     p11_convert.obj
+ 0002:00000550       ??_C@_0M@FGJAKHMC@pInitVektor?$AA@ 10007550     p11_convert.obj
+ 0002:0000055c       ??_C@_0L@JBCBPDO@pParameter?$AA@ 1000755c     p11_convert.obj
+ 0002:00000568       ??_C@_09ONMFBHMB@mechanism?$AA@ 10007568     p11_convert.obj
+ 0002:00000574       ??_C@_0CJ@EEABPKHL@sun?1security?1pkcs11?1wrapper?1CK_M@ 10007574     p11_convert.obj
+ 0002:000005a0       ??_C@_08BINOACIC@pPrfData?$AA@ 100075a0     p11_convert.obj
+ 0002:000005ac       ??_C@_03NBFGPAGA@prf?$AA@  100075ac     p11_convert.obj
+ 0002:000005b0       ??_C@_0L@LEIMKHLK@iterations?$AA@ 100075b0     p11_convert.obj
+ 0002:000005bc       ??_C@_0BA@IHHAPGDC@pSaltSourceData?$AA@ 100075bc     p11_convert.obj
+ 0002:000005cc       ??_C@_0L@BGFAFLOD@saltSource?$AA@ 100075cc     p11_convert.obj
+ 0002:000005d8       ??_C@_0DC@OALCDCIB@sun?1security?1pkcs11?1wrapper?1CK_P@ 100075d8     p11_convert.obj
+ 0002:0000060c       ??_C@_04ODAPDKJK@sLen?$AA@ 1000760c     p11_convert.obj
+ 0002:00000614       ??_C@_0DD@JKKJEEHE@sun?1security?1pkcs11?1wrapper?1CK_R@ 10007614     p11_convert.obj
+ 0002:00000648       ??_C@_0M@KMNGLHAN@pPublicData?$AA@ 10007648     p11_convert.obj
+ 0002:00000654       ??_C@_0M@GNHNJOEE@pSharedData?$AA@ 10007654     p11_convert.obj
+ 0002:00000660       ??_C@_03EOOFPPDM@kdf?$AA@  10007660     p11_convert.obj
+ 0002:00000664       ??_C@_0DD@BKPMIPL@sun?1security?1pkcs11?1wrapper?1CK_E@ 10007664     p11_convert.obj
+ 0002:00000698       ??_C@_0N@JDGNPOHL@pPublicData2?$AA@ 10007698     p11_convert.obj
+ 0002:000006a8       ??_C@_0N@MNKNKKOE@hPrivateData?$AA@ 100076a8     p11_convert.obj
+ 0002:000006b8       ??_C@_0BB@FHLLIPHA@ulPrivateDataLen?$AA@ 100076b8     p11_convert.obj
+ 0002:000006cc       ??_C@_0DD@CIGHHMAJ@sun?1security?1pkcs11?1wrapper?1CK_E@ 100076cc     p11_convert.obj
+ 0002:00000700       ??_C@_0L@BEOLNMGA@pOtherInfo?$AA@ 10007700     p11_convert.obj
+ 0002:0000070c       ??_C@_0DH@KLOKCPBP@sun?1security?1pkcs11?1wrapper?1CK_X@ 1000770c     p11_convert.obj
+ 0002:00000744       ??_C@_0DH@ICCCJLON@sun?1security?1pkcs11?1wrapper?1CK_X@ 10007744     p11_convert.obj
+ 0002:0000077c       ??_C@_0BH@CPAPLJAG@?$CIJLjava?1lang?1Object?$DL?$CJV?$AA@ 1000777c     p11_convert.obj
+ 0002:00000794       ??_C@_0CJ@KOKMKMLD@sun?1security?1pkcs11?1wrapper?1CK_A@ 10007794     p11_convert.obj
+ 0002:000007c0       ??_C@_0P@MLLHBNNC@java?1lang?1Long?$AA@ 100077c0     p11_general.obj
+ 0002:000007d0       ??_C@_0M@KOOGEDPH@pNativeData?$AA@ 100077d0     p11_general.obj
+ 0002:000007e0       ??_C@_0FJ@PCBLKCL@?$CILsun?1security?1pkcs11?1wrapper?1CK@ 100077e0     p11_general.obj
+ 0002:0000083c       ??_C@_0CE@FGGPEABN@sun?1security?1pkcs11?1wrapper?1CK_I@ 1000783c     p11_general.obj
+ 0002:00000860       ??_C@_0FJ@OBILFDMI@?$CI?$FLC?$FLCJLsun?1security?1pkcs11?1wrapp@ 10007860     p11_general.obj
+ 0002:000008bc       ??_C@_0CJ@BIOEJKNF@sun?1security?1pkcs11?1wrapper?1CK_S@ 100078bc     p11_general.obj
+ 0002:000008e8       ??_C@_0GJ@FDGHLOMM@?$CI?$FLC?$FLC?$FLC?$FLCJJJJJJJJJJJLsun?1securit@ 100078e8     p11_general.obj
+ 0002:00000954       ??_C@_0CK@MCNCOGLO@sun?1security?1pkcs11?1wrapper?1CK_T@ 10007954     p11_general.obj
+ 0002:00000980       ??_C@_06NJFABHM@?$CIJJJ?$CJV?$AA@ 10007980     p11_general.obj
+ 0002:00000988       ??_C@_0CO@CCAIMKIH@sun?1security?1pkcs11?1wrapper?1CK_M@ 10007988     p11_general.obj
+ 0002:000009b8       ??_C@_0L@HMKKIKDM@hServerKey?$AA@ 100079b8     p11_keymgmt.obj
+ 0002:000009c4       ??_C@_0L@GFMHBDMC@hClientKey?$AA@ 100079c4     p11_keymgmt.obj
+ 0002:000009d0       ??_C@_0BB@BKLFLGGI@hServerMacSecret?$AA@ 100079d0     p11_keymgmt.obj
+ 0002:000009e4       ??_C@_0BB@DDIADMEB@hClientMacSecret?$AA@ 100079e4     p11_keymgmt.obj
+ 0002:000009f8       ??_C@_0N@CFOEEHFM@getErrorCode?$AA@ 100079f8     p11_mutex.obj
+ 0002:00000a08       ??_C@_03IGDHHNNC@?$CI?$CJJ?$AA@ 10007a08     p11_mutex.obj
+ 0002:00000a0c       ??_C@_0CM@EDGLGECO@sun?1security?1pkcs11?1wrapper?1PKCS@ 10007a0c     p11_mutex.obj
+ 0002:00000a38       ??_C@_0P@MBLCOHGI@CK_CREATEMUTEX?$AA@ 10007a38     p11_mutex.obj
+ 0002:00000a48       ??_C@_0BF@LHBAMMHC@?$CI?$CJLjava?1lang?1Object?$DL?$AA@ 10007a48     p11_mutex.obj
+ 0002:00000a60       ??_C@_0M@CHIIKKKK@CreateMutex?$AA@ 10007a60     p11_mutex.obj
+ 0002:00000a6c       ??_C@_0CN@MIBMAGA@Lsun?1security?1pkcs11?1wrapper?1CK_@ 10007a6c     p11_mutex.obj
+ 0002:00000a9c       ??_C@_0DB@KELDKOFM@sun?1security?1pkcs11?1wrapper?1CK_C@ 10007a9c     p11_mutex.obj
+ 0002:00000ad0       ??_C@_0CL@FFENGHBF@sun?1security?1pkcs11?1wrapper?1CK_C@ 10007ad0     p11_mutex.obj
+ 0002:00000afc       ??_C@_0BA@OMAILONO@CK_DESTROYMUTEX?$AA@ 10007afc     p11_mutex.obj
+ 0002:00000b0c       ??_C@_0BG@JLFLBLJI@?$CILjava?1lang?1Object?$DL?$CJV?$AA@ 10007b0c     p11_mutex.obj
+ 0002:00000b24       ??_C@_0N@MEBBDPAH@DestroyMutex?$AA@ 10007b24     p11_mutex.obj
+ 0002:00000b34       ??_C@_0CO@KLPPKFHK@Lsun?1security?1pkcs11?1wrapper?1CK_@ 10007b34     p11_mutex.obj
+ 0002:00000b64       ??_C@_0CM@MCCIEMNP@sun?1security?1pkcs11?1wrapper?1CK_D@ 10007b64     p11_mutex.obj
+ 0002:00000b90       ??_C@_0N@DNKBOIPK@CK_LOCKMUTEX?$AA@ 10007b90     p11_mutex.obj
+ 0002:00000ba0       ??_C@_09DKPDKGG@LockMutex?$AA@ 10007ba0     p11_mutex.obj
+ 0002:00000bac       ??_C@_0CL@LBHOKNDM@Lsun?1security?1pkcs11?1wrapper?1CK_@ 10007bac     p11_mutex.obj
+ 0002:00000bd8       ??_C@_0CJ@OCJKNBDK@sun?1security?1pkcs11?1wrapper?1CK_L@ 10007bd8     p11_mutex.obj
+ 0002:00000c04       ??_C@_0P@JEONEKEP@CK_UNLOCKMUTEX?$AA@ 10007c04     p11_mutex.obj
+ 0002:00000c14       ??_C@_0M@HCNHAHIN@UnlockMutex?$AA@ 10007c14     p11_mutex.obj
+ 0002:00000c20       ??_C@_0CN@KJNOCKKG@Lsun?1security?1pkcs11?1wrapper?1CK_@ 10007c20     p11_mutex.obj
+ 0002:00000c50       ??_C@_0CL@BCMKDC@sun?1security?1pkcs11?1wrapper?1CK_U@ 10007c50     p11_mutex.obj
+ 0002:00000c7c       ??_C@_09CJOBGKOG@pReserved?$AA@ 10007c7c     p11_mutex.obj
+ 0002:00000c88       ??_C@_05GECEPKB@flags?$AA@ 10007c88     p11_mutex.obj
+ 0002:00000c90       ??_C@_09GHOCIINE@CK_NOTIFY?$AA@ 10007c90     p11_sessmgmt.obj
+ 0002:00000c9c       ??_C@_0BI@DIAMFDOH@?$CIJJLjava?1lang?1Object?$DL?$CJV?$AA@ 10007c9c     p11_sessmgmt.obj
+ 0002:00000cb4       ??_C@_0CG@KHGOBKJJ@sun?1security?1pkcs11?1wrapper?1CK_N@ 10007cb4     p11_sessmgmt.obj
+ 0002:00000cdc       ??_C@_0BB@DDFKOHA@java?1lang?1Object?$AA@ 10007cdc     p11_util.obj
+ 0002:00000cf0       ??_C@_04OHLIFDMD@?$CIJ?$CJV?$AA@ 10007cf0     p11_util.obj
+ 0002:00000cf8       ??_C@_0BG@IKDDPPGD@?$CILjava?1lang?1String?$DL?$CJV?$AA@ 10007cf8     p11_util.obj
+ 0002:00000d10       ??_C@_0BE@EBAPEBGJ@java?1io?1IOException?$AA@ 10007d10     p11_util.obj
+ 0002:00000d24       ??_C@_0DD@DEDAKGI@sun?1security?1pkcs11?1wrapper?1PKCS@ 10007d24     p11_util.obj
+ 0002:00000d58       ??_C@_0CK@GAEPNKCI@This?5object?5is?5not?5connected?5to?5@ 10007d58     p11_util.obj
+ 0002:00000d84       ??_C@_04LHKBAEFM@?$CIZ?$CJV?$AA@ 10007d84     p11_util.obj
+ 0002:00000d8c       ??_C@_0BC@DDPBLLCP@java?1lang?1Boolean?$AA@ 10007d8c     p11_util.obj
+ 0002:00000da0       ??_C@_0N@FIOMDIJC@booleanValue?$AA@ 10007da0     p11_util.obj
+ 0002:00000db0       ??_C@_03MMPFGPID@?$CI?$CJZ?$AA@ 10007db0     p11_util.obj
+ 0002:00000db4       ??_C@_09CBDGACJH@byteValue?$AA@ 10007db4     p11_util.obj
+ 0002:00000dc0       ??_C@_03EOOOPHNK@?$CI?$CJB?$AA@ 10007dc0     p11_util.obj
+ 0002:00000dc4       ??_C@_0P@CCHCOPNE@java?1lang?1Byte?$AA@ 10007dc4     p11_util.obj
+ 0002:00000dd4       ??_C@_08HBLFFCOK@intValue?$AA@ 10007dd4     p11_util.obj
+ 0002:00000de0       ??_C@_03KNBKCOBB@?$CI?$CJI?$AA@ 10007de0     p11_util.obj
+ 0002:00000de4       ??_C@_0BC@OHJKABOO@java?1lang?1Integer?$AA@ 10007de4     p11_util.obj
+ 0002:00000df8       ??_C@_09JKMBDFBF@longValue?$AA@ 10007df8     p11_util.obj
+ 0002:00000e04       ??_C@_09ODGNKCJE@charValue?$AA@ 10007e04     p11_util.obj
+ 0002:00000e10       ??_C@_03FHPFMGJL@?$CI?$CJC?$AA@ 10007e10     p11_util.obj
+ 0002:00000e14       ??_C@_0P@OINJBDJD@java?1lang?1Char?$AA@ 10007e14     p11_util.obj
+ 0002:00000e24       ??_C@_06PCICMFGG@append?$AA@ 10007e24     p11_util.obj
+ 0002:00000e2c       ??_C@_0CN@NMBDGMGK@?$CILjava?1lang?1String?$DL?$CJLjava?1lang?1S@ 10007e2c     p11_util.obj
+ 0002:00000e60       ??_C@_0EH@CMCPFLGF@Java?5object?5of?5this?5class?5cannot@ 10007e60     p11_util.obj
+ 0002:00000ea8       ??_C@_07DFBCBEHO@getName?$AA@ 10007ea8     p11_util.obj
+ 0002:00000eb0       ??_C@_0BF@FOHFOJOB@?$CI?$CJLjava?1lang?1String?$DL?$AA@ 10007eb0     p11_util.obj
+ 0002:00000ec8       ??_C@_08KFOJNDAP@getClass?$AA@ 10007ec8     p11_util.obj
+ 0002:00000ed4       ??_C@_0BE@IIFEGCLG@?$CI?$CJLjava?1lang?1Class?$DL?$AA@ 10007ed4     p11_util.obj
+ 0002:00000ee8       ??_C@_02GKMBEADD@?$FLJ?$AA@ 10007ee8     p11_util.obj
+ 0002:00000eec       ??_C@_02EBOMBDPA@?$FLI?$AA@ 10007eec     p11_util.obj
+ 0002:00000ef0       ??_C@_02CAADFCGC@?$FLZ?$AA@ 10007ef0     p11_util.obj
+ 0002:00000ef4       ??_C@_0BH@BCDNBJPB@java?1lang?1StringBuffer?$AA@ 10007ef4     p11_util.obj
+ 0002:00000f0c       ??_C@_0BB@FLFAIHG@java?1lang?1String?$AA@ 10007f0c     p11_util.obj
+ 0002:00000f20       ??_C@_0BA@JJLOPNCP@java?1lang?1Class?$AA@ 10007f20     p11_util.obj
+ 0002:00000f30       ??_C@_0BE@GKIHCGPM@java?1lang?1Character?$AA@ 10007f30     p11_util.obj
+ 0002:00000f78       __load_config_used         10007f78     MSVCRT:loadcfg.obj
+ 0002:00001030       ___safe_se_handler_table   10008030     <linker-defined>
+ 0002:00001034       ___rtc_iaa                 10008034     MSVCRT:initsect.obj
+ 0002:00001038       ___rtc_izz                 10008038     MSVCRT:initsect.obj
+ 0002:0000103c       ___rtc_taa                 1000803c     MSVCRT:initsect.obj
+ 0002:00001040       ___rtc_tzz                 10008040     MSVCRT:initsect.obj
+ 0002:00001044       __IMPORT_DESCRIPTOR_java   10008044     java:java.dll
+ 0002:00001058       __IMPORT_DESCRIPTOR_jvm    10008058     jvm:jvm.dll
+ 0002:0000106c       __IMPORT_DESCRIPTOR_MSVCR71 1000806c     MSVCRT:MSVCR71.dll
+ 0002:00001080       __IMPORT_DESCRIPTOR_KERNEL32 10008080     kernel32:KERNEL32.dll
+ 0002:00001094       __NULL_IMPORT_DESCRIPTOR   10008094     java:java.dll
+ 0003:00000000       ___xc_a                    1000a000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1000a004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1000a008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000a00c     MSVCRT:cinitexe.obj
+ 0003:00000010       ___security_cookie         1000a010     MSVCRT:seccook.obj
+ 0003:00000014       _notifyListHead            1000a014     p11_sessmgmt.obj
+ 0003:00000018       _notifyListLock            1000a018     p11_sessmgmt.obj
+ 0003:00000020       _ckpGlobalInitArgs         1000a020     <common>
+ 0003:00000024       _jInitArgsObject           1000a024     <common>
+ 0003:00000028       _jByteArrayClass           1000a028     <common>
+ 0003:0000002c       _mech_pParameterID         1000a02c     <common>
+ 0003:00000030       _mech_mechanismID          1000a030     <common>
+ 0003:00000034       _pNativeDataID             1000a034     <common>
+ 0003:00000038       _jLongClass                1000a038     <common>
+ 0003:0000003c       __adjust_fdiv              1000a03c     <common>
+ 0003:00000040       ___onexitend               1000a040     <common>
+ 0003:00000044       ___onexitbegin             1000a044     <common>
+ 0003:00000048       __pRawDllMain              1000a048     <common>
+
+ entry point at        0001:000057b4
+
+ Static symbols
+

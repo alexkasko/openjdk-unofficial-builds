@@ -1,0 +1,251 @@
+ dt_socket
+
+ Timestamp is 4ecc685f (Tue Nov 22 22:28:31 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00001400H .text                   CODE
+ 0002:00000000 000000d4H .idata$5                DATA
+ 0002:000000e0 00000aa0H .rdata                  DATA
+ 0002:00000b80 00000058H .rdata$debug            DATA
+ 0002:00000be0 00000004H .rdata$sxdata           DATA
+ 0002:00000be4 00000004H .rtc$IAA                DATA
+ 0002:00000be8 00000004H .rtc$IZZ                DATA
+ 0002:00000bec 00000004H .rtc$TAA                DATA
+ 0002:00000bf0 00000004H .rtc$TZZ                DATA
+ 0002:00000bf4 0000003cH .idata$2                DATA
+ 0002:00000c30 00000014H .idata$3                DATA
+ 0002:00000c44 000000d4H .idata$4                DATA
+ 0002:00000d18 00000178H .idata$6                DATA
+ 0002:00000e90 00000055H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 0000000cH .data                   DATA
+ 0003:0000001c 00000058H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000320H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000bb7       _jdwpTransport_OnLoad@16   10001bb7 f   socketTransport.obj
+ 0001:00000c6c       _DllMain@12                10001c6c f   socket_md.obj
+ 0001:00000ca7       _dbgsysListen              10001ca7 f   socket_md.obj
+ 0001:00000cb6       _dbgsysConnect             10001cb6 f   socket_md.obj
+ 0001:00000cf5       _dbgsysFinishConnect       10001cf5 f   socket_md.obj
+ 0001:00000d6f       _dbgsysAccept              10001d6f f   socket_md.obj
+ 0001:00000d82       _dbgsysRecv                10001d82 f   socket_md.obj
+ 0001:00000d99       _dbgsysSend                10001d99 f   socket_md.obj
+ 0001:00000db0       _dbgsysGetHostByName       10001db0 f   socket_md.obj
+ 0001:00000dbb       _dbgsysHostToNetworkShort  10001dbb f   socket_md.obj
+ 0001:00000dc6       _dbgsysSocket              10001dc6 f   socket_md.obj
+ 0001:00000def       _dbgsysSocketClose         10001def f   socket_md.obj
+ 0001:00000e35       _dbgsysBind                10001e35 f   socket_md.obj
+ 0001:00000e48       _dbgsysInetAddr            10001e48 f   socket_md.obj
+ 0001:00000e53       _dbgsysHostToNetworkLong   10001e53 f   socket_md.obj
+ 0001:00000e5e       _dbgsysNetworkToHostShort  10001e5e f   socket_md.obj
+ 0001:00000e69       _dbgsysGetSocketName       10001e69 f   socket_md.obj
+ 0001:00000e7c       _dbgsysNetworkToHostLong   10001e7c f   socket_md.obj
+ 0001:00000e87       _dbgsysSetSocketOption     10001e87 f   socket_md.obj
+ 0001:00000f60       _dbgsysConfigureBlocking   10001f60 f   socket_md.obj
+ 0001:00000f8d       _dbgsysPoll                10001f8d f   socket_md.obj
+ 0001:0000103d       _dbgsysGetLastIOError      1000203d f   socket_md.obj
+ 0001:00001083       _dbgsysTlsAlloc            10002083 f   socket_md.obj
+ 0001:00001089       _dbgsysTlsPut              10002089 f   socket_md.obj
+ 0001:00001098       _dbgsysTlsGet              10002098 f   socket_md.obj
+ 0001:000010a3       _dbgsysCurrentTimeMillis   100020a3 f   socket_md.obj
+ 0001:00001116       ___WSAFDIsSet@8            10002116 f   ws2_32:WS2_32.dll
+ 0001:0000111c       _strcat                    1000211c f   MSVCRT:MSVCR71.dll
+ 0001:00001122       _strcpy                    10002122 f   MSVCRT:MSVCR71.dll
+ 0001:00001128       _strlen                    10002128 f   MSVCRT:MSVCR71.dll
+ 0001:0000112e       _memcpy                    1000212e f   MSVCRT:MSVCR71.dll
+ 0001:00001134       _memset                    10002134 f   MSVCRT:MSVCR71.dll
+ 0001:0000113a       __CRT_INIT@12              1000213a f   MSVCRT:crtdll.obj
+ 0001:000011f8       __DllMainCRTStartup@12     100021f8 f   MSVCRT:crtdll.obj
+ 0001:000012dc       __initterm                 100022dc f   MSVCRT:MSVCR71.dll
+ 0001:000012e2       __onexit                   100022e2 f   MSVCRT:atonexit.obj
+ 0001:00001308       _atexit                    10002308 f   MSVCRT:atonexit.obj
+ 0001:0000131a       __RTC_Initialize           1000231a f   MSVCRT:initsect.obj
+ 0001:0000135e       __RTC_Terminate            1000235e f   MSVCRT:initsect.obj
+ 0001:000013a2       ___CppXcptFilter           100023a2 f   MSVCRT:MSVCR71.dll
+ 0001:000013a8       __SEH_prolog               100023a8 f   MSVCRT:sehprolg.obj
+ 0001:000013e3       __SEH_epilog               100023e3 f   MSVCRT:sehprolg.obj
+ 0001:000013f4       __except_handler3          100023f4 f   MSVCRT:MSVCR71.dll
+ 0001:000013fa       ___dllonexit               100023fa f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__SystemTimeToFileTime@8 10003000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__GetSystemTime@4     10003004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__TlsGetValue@4       10003008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__TlsSetValue@8       1000300c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__TlsAlloc@0          10003010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__SetHandleInformation@12 10003014     kernel32:KERNEL32.dll
+ 0002:00000018       \177KERNEL32_NULL_THUNK_DATA 10003018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp___onexit             1000301c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp____dllonexit         10003020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp___except_handler3    10003024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp____CppXcptFilter     10003028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp___adjust_fdiv        1000302c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp__malloc              10003030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp___initterm           10003034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__free                10003038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp___iob                1000303c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__fprintf             10003040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__memset              10003044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__strchr              10003048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__atoi                1000304c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp__memcpy              10003050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__strncmp             10003054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp__sprintf             10003058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp__strlen              1000305c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp__strcpy              10003060     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp__strcat              10003064     MSVCRT:MSVCR71.dll
+ 0002:00000068       \177MSVCR71_NULL_THUNK_DATA 10003068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp__ioctlsocket@12      1000306c     ws2_32:WS2_32.dll
+ 0002:00000070       __imp__getprotobyname@4    10003070     ws2_32:WS2_32.dll
+ 0002:00000074       __imp__setsockopt@20       10003074     ws2_32:WS2_32.dll
+ 0002:00000078       __imp__ntohl@4             10003078     ws2_32:WS2_32.dll
+ 0002:0000007c       __imp__getsockname@12      1000307c     ws2_32:WS2_32.dll
+ 0002:00000080       __imp__ntohs@4             10003080     ws2_32:WS2_32.dll
+ 0002:00000084       __imp__htonl@4             10003084     ws2_32:WS2_32.dll
+ 0002:00000088       __imp__inet_addr@4         10003088     ws2_32:WS2_32.dll
+ 0002:0000008c       __imp__bind@12             1000308c     ws2_32:WS2_32.dll
+ 0002:00000090       __imp__getsockopt@20       10003090     ws2_32:WS2_32.dll
+ 0002:00000094       __imp__WSASendDisconnect@8 10003094     ws2_32:WS2_32.dll
+ 0002:00000098       __imp__closesocket@4       10003098     ws2_32:WS2_32.dll
+ 0002:0000009c       __imp__socket@12           1000309c     ws2_32:WS2_32.dll
+ 0002:000000a0       __imp__htons@4             100030a0     ws2_32:WS2_32.dll
+ 0002:000000a4       __imp__gethostbyname@4     100030a4     ws2_32:WS2_32.dll
+ 0002:000000a8       __imp__send@16             100030a8     ws2_32:WS2_32.dll
+ 0002:000000ac       __imp__recv@16             100030ac     ws2_32:WS2_32.dll
+ 0002:000000b0       __imp__accept@12           100030b0     ws2_32:WS2_32.dll
+ 0002:000000b4       __imp__select@20           100030b4     ws2_32:WS2_32.dll
+ 0002:000000b8       __imp____WSAFDIsSet@8      100030b8     ws2_32:WS2_32.dll
+ 0002:000000bc       __imp__connect@12          100030bc     ws2_32:WS2_32.dll
+ 0002:000000c0       __imp__WSAGetLastError@0   100030c0     ws2_32:WS2_32.dll
+ 0002:000000c4       __imp__listen@8            100030c4     ws2_32:WS2_32.dll
+ 0002:000000c8       __imp__WSAStartup@8        100030c8     ws2_32:WS2_32.dll
+ 0002:000000cc       __imp__WSACleanup@0        100030cc     ws2_32:WS2_32.dll
+ 0002:000000d0       \177WS2_32_NULL_THUNK_DATA 100030d0     ws2_32:WS2_32.dll
+ 0002:000000fc       ??_C@_02LMMGGCAJ@?3?5?$AA@ 100030fc     socketTransport.obj
+ 0002:00000100       ??_C@_0BN@KHJBBJDI@setsockopt?5TCPNODELAY?5failed?$AA@ 10003100     socketTransport.obj
+ 0002:00000120       ??_C@_0BP@DIBLKMHJ@setsockopt?5SO_REUSEADDR?5failed?$AA@ 10003120     socketTransport.obj
+ 0002:00000140       ??_C@_0BN@MCHFOAHG@send?5failed?5during?5handshake?$AA@ 10003140     socketTransport.obj
+ 0002:00000160       ??_C@_0BN@NDCFIPML@recv?5failed?5during?5handshake?$AA@ 10003160     socketTransport.obj
+ 0002:00000180       ??_C@_0DC@PHHFHFJN@handshake?5failed?5?9?5connection?5pr@ 10003180     socketTransport.obj
+ 0002:000001b4       ??_C@_0BJ@GINIINMB@timeout?5during?5handshake?$AA@ 100031b4     socketTransport.obj
+ 0002:000001d0       ??_C@_0DB@KBPJCIBD@handshake?5failed?5?9?5received?5?$DO?$CFs?$DM@ 100031d0     socketTransport.obj
+ 0002:00000204       ??_C@_0P@FPMMELAG@JDWP?9Handshake?$AA@ 10003204     socketTransport.obj
+ 0002:00000214       ??_C@_0BM@NGLOKOFN@gethostbyname?3?5unknown?5host?$AA@ 10003214     socketTransport.obj
+ 0002:00000230       ??_C@_0O@BNNCBLEN@out?5of?5memory?$AA@ 10003230     socketTransport.obj
+ 0002:00000240       ??_C@_02DPKJAMEF@?$CFd?$AA@ 10003240     socketTransport.obj
+ 0002:00000244       ??_C@_0O@MHKNJCGE@listen?5failed?$AA@ 10003244     socketTransport.obj
+ 0002:00000254       ??_C@_0M@NNJMLKEI@bind?5failed?$AA@ 10003254     socketTransport.obj
+ 0002:00000260       ??_C@_0BH@HKLPKFAI@socket?5creation?5failed?$AA@ 10003260     socketTransport.obj
+ 0002:00000278       ??_C@_01GBGANLPD@0?$AA@    10003278     socketTransport.obj
+ 0002:0000027c       ??_C@_0CI@IHMKOBEI@timeout?5waiting?5for?5debugger?5to?5@ 1000327c     socketTransport.obj
+ 0002:000002a4       ??_C@_0CB@LPJGLJKP@timed?5out?5waiting?5for?5connection@ 100032a4     socketTransport.obj
+ 0002:000002c8       ??_C@_0M@GKCHHBEN@poll?5failed?$AA@ 100032c8     socketTransport.obj
+ 0002:000002d4       ??_C@_0BP@FADEKCPP@Debugger?5failed?5to?5attach?3?5?$CFs?6?$AA@ 100032d4     socketTransport.obj
+ 0002:000002f4       ??_C@_0O@NBABPAKN@accept?5failed?$AA@ 100032f4     socketTransport.obj
+ 0002:00000304       ??_C@_0N@NOKLILHD@close?5failed?$AA@ 10003304     socketTransport.obj
+ 0002:00000314       ??_C@_0BE@KOKKGIKP@connection?5not?5open?$AA@ 10003314     socketTransport.obj
+ 0002:00000328       ??_C@_0BD@CJKAJNDH@address?5is?5missing?$AA@ 10003328     socketTransport.obj
+ 0002:0000033c       ??_C@_0P@FKKLKLOM@connect?5failed?$AA@ 1000333c     socketTransport.obj
+ 0002:0000034c       ??_C@_0BC@DJFNFCAI@connect?5timed?5out?$AA@ 1000334c     socketTransport.obj
+ 0002:00000360       ??_C@_0BI@PPNDHPPD@unable?5to?5create?5socket?$AA@ 10003360     socketTransport.obj
+ 0002:00000378       ??_C@_0M@EADLIJBM@send?5failed?$AA@ 10003378     socketTransport.obj
+ 0002:00000384       ??_C@_0P@BHAFPBHF@invalid?5length?$AA@ 10003384     socketTransport.obj
+ 0002:00000394       ??_C@_0P@KCFPLCED@packet?5is?5NULL?$AA@ 10003394     socketTransport.obj
+ 0002:000003a4       ??_C@_0CO@MNFHICJC@Badly?5formed?5packet?5received?5?9?5i@ 100033a4     socketTransport.obj
+ 0002:000003d4       ??_C@_0O@NBMIKEGI@premature?5EOF?$AA@ 100033d4     socketTransport.obj
+ 0002:000003e4       ??_C@_0L@IBALKEMH@recv?5error?$AA@ 100033e4     socketTransport.obj
+ 0002:000003f0       ??_C@_0P@GOGFFADL@packet?5is?5null?$AA@ 100033f0     socketTransport.obj
+ 0002:00000570       ??_C@_0BN@KGMIDOOK@Overlapped?5operation?5aborted?$AA@ 10003570     socket_md.obj
+ 0002:00000590       ??_C@_0BO@ILFFGILJ@Graceful?5shutdown?5in?5progress?$AA@ 10003590     socket_md.obj
+ 0002:000005b0       ??_C@_0CB@GHMLGJBG@Winsock?4dll?5version?5out?5of?5range@ 100035b0     socket_md.obj
+ 0002:000005d4       ??_C@_0CA@DOKOCCFB@Nonauthoritative?5host?5not?5found?$AA@ 100035d4     socket_md.obj
+ 0002:000005f4       ??_C@_0CB@PLJNFILF@Network?5subsystem?5is?5unavailable@ 100035f4     socket_md.obj
+ 0002:00000618       ??_C@_0BP@BOOHLDLA@This?5is?5a?5nonrecoverable?5error?$AA@ 10003618     socket_md.obj
+ 0002:00000638       ??_C@_0CN@KFPNHBIN@Valid?5name?0?5no?5data?5record?5of?5re@ 10003638     socket_md.obj
+ 0002:00000668       ??_C@_0CI@CFJNLLNI@Successful?5WSAStartup?5not?5yet?5pe@ 10003668     socket_md.obj
+ 0002:00000690       ??_C@_0BO@GICNLCFB@Insufficient?5memory?5available?$AA@ 10003690     socket_md.obj
+ 0002:000006b0       ??_C@_0P@CAFMJNJH@Host?5not?5found?$AA@ 100036b0     socket_md.obj
+ 0002:000006c0       ??_C@_0CB@EPFKGNAK@Resource?5temporarily?5unavailable@ 100036c0     socket_md.obj
+ 0002:000006e4       ??_C@_0BF@EHICFGGJ@Class?5type?5not?5found?$AA@ 100036e4     socket_md.obj
+ 0002:000006fc       ??_C@_0BF@IBBHAGLD@Connection?5timed?5out?$AA@ 100036fc     socket_md.obj
+ 0002:00000714       ??_C@_0BK@LMAIHBL@Socket?5type?5not?5supported?$AA@ 10003714     socket_md.obj
+ 0002:00000730       ??_C@_0CC@DAIJOIKC@Cannot?5send?5after?5socket?5shutdow@ 10003730     socket_md.obj
+ 0002:00000754       ??_C@_0BP@PDKJLOAE@Protocol?5wrong?5type?5for?5socket?$AA@ 10003754     socket_md.obj
+ 0002:00000774       ??_C@_0BH@JNBKLLAJ@Protocol?5not?5supported?$AA@ 10003774     socket_md.obj
+ 0002:0000078c       ??_C@_0BD@LPHIGPM@Too?5many?5processes?$AA@ 1000378c     socket_md.obj
+ 0002:000007a0       ??_C@_0BO@EBCCBLCJ@Protocol?5family?5not?5supported?$AA@ 100037a0     socket_md.obj
+ 0002:000007c0       ??_C@_0BI@EDJAHLMH@Operation?5not?5supported?$AA@ 100037c0     socket_md.obj
+ 0002:000007d8       ??_C@_0BO@PFGGHOGH@Socket?5operation?5on?5nonsocket?$AA@ 100037d8     socket_md.obj
+ 0002:000007f8       ??_C@_0BI@ILAOGBJJ@Socket?5is?5not?5connected?$AA@ 100037f8     socket_md.obj
+ 0002:00000810       ??_C@_0BE@NEGCDJON@Bad?5protocol?5option?$AA@ 10003810     socket_md.obj
+ 0002:00000824       ??_C@_0DJ@FJOKEEBP@No?5buffer?5space?5available?5?$CImaxim@ 10003824     socket_md.obj
+ 0002:00000860       ??_C@_0BH@CIEOBPFM@Network?5is?5unreachable?$AA@ 10003860     socket_md.obj
+ 0002:00000878       ??_C@_0CE@JHDCOCF@Network?5dropped?5connection?5on?5re@ 10003878     socket_md.obj
+ 0002:0000089c       ??_C@_0BA@LPIEBGEK@Network?5is?5down?$AA@ 1000389c     socket_md.obj
+ 0002:000008b0       ??_C@_0EN@MMGGBIMI@The?5message?5is?5larger?5than?5the?5m@ 100038b0     socket_md.obj
+ 0002:00000900       ??_C@_0BE@INBJMKGG@Too?5many?5open?5files?$AA@ 10003900     socket_md.obj
+ 0002:00000914       ??_C@_0BM@CCONNCKE@Socket?5is?5already?5connected?$AA@ 10003914     socket_md.obj
+ 0002:00000930       ??_C@_0BB@HMGGCEBG@Invalid?5argument?$AA@ 10003930     socket_md.obj
+ 0002:00000944       ??_C@_0BK@FJBOAFDK@Interrupted?5function?5call?$AA@ 10003944     socket_md.obj
+ 0002:00000960       ??_C@_0BK@LBMNDGCG@Operation?5now?5in?5progress?$AA@ 10003960     socket_md.obj
+ 0002:0000097c       ??_C@_0BB@PFBILCPA@No?5route?5to?5host?$AA@ 1000397c     socket_md.obj
+ 0002:00000990       ??_C@_0N@OHOPOBEF@Host?5is?5down?$AA@ 10003990     socket_md.obj
+ 0002:000009a0       ??_C@_0M@LOEHLCJD@Bad?5address?$AA@ 100039a0     socket_md.obj
+ 0002:000009ac       ??_C@_0BN@HFCIEIME@Destination?5address?5required?$AA@ 100039ac     socket_md.obj
+ 0002:000009cc       ??_C@_0BJ@FJAMCHKE@Connection?5reset?5by?5peer?$AA@ 100039cc     socket_md.obj
+ 0002:000009e8       ??_C@_0BD@NPDMPPFP@Connection?5refused?$AA@ 100039e8     socket_md.obj
+ 0002:000009fc       ??_C@_0CB@DJAOADN@Software?5caused?5connection?5abort@ 100039fc     socket_md.obj
+ 0002:00000a20       ??_C@_0BO@BMABNIPB@Operation?5already?5in?5progress?$AA@ 10003a20     socket_md.obj
+ 0002:00000a40       ??_C@_0DA@KDGLCJJO@Address?5family?5not?5supported?5by?5@ 10003a40     socket_md.obj
+ 0002:00000a70       ??_C@_0CA@NBHADPNL@Cannot?5assign?5requested?5address?$AA@ 10003a70     socket_md.obj
+ 0002:00000a90       ??_C@_0BH@LOKACPE@Address?5already?5in?5use?$AA@ 10003a90     socket_md.obj
+ 0002:00000aa8       ??_C@_0BC@HFNFNKAI@Permission?5denied?$AA@ 10003aa8     socket_md.obj
+ 0002:00000abc       ??_C@_0DE@NDGANADE@Provider?5initialization?5failed?5?$CI@ 10003abc     socket_md.obj
+ 0002:00000af0       ??_C@_03FCLDNGNL@TCP?$AA@  10003af0     socket_md.obj
+ 0002:00000af4       ??_C@_0BB@IDELEPKG@winsock?5error?5?$CFd?$AA@ 10003af4     socket_md.obj
+ 0002:00000b38       __load_config_used         10003b38     MSVCRT:loadcfg.obj
+ 0002:00000be0       ___safe_se_handler_table   10003be0     <linker-defined>
+ 0002:00000be4       ___rtc_iaa                 10003be4     MSVCRT:initsect.obj
+ 0002:00000be8       ___rtc_izz                 10003be8     MSVCRT:initsect.obj
+ 0002:00000bec       ___rtc_taa                 10003bec     MSVCRT:initsect.obj
+ 0002:00000bf0       ___rtc_tzz                 10003bf0     MSVCRT:initsect.obj
+ 0002:00000bf4       __IMPORT_DESCRIPTOR_WS2_32 10003bf4     ws2_32:WS2_32.dll
+ 0002:00000c08       __IMPORT_DESCRIPTOR_MSVCR71 10003c08     MSVCRT:MSVCR71.dll
+ 0002:00000c1c       __IMPORT_DESCRIPTOR_KERNEL32 10003c1c     kernel32:KERNEL32.dll
+ 0002:00000c30       __NULL_IMPORT_DESCRIPTOR   10003c30     ws2_32:WS2_32.dll
+ 0003:00000000       ___xc_a                    10004000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10004004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10004008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000400c     MSVCRT:cinitexe.obj
+ 0003:00000018       ___security_cookie         10004018     MSVCRT:seccook.obj
+ 0003:00000064       __adjust_fdiv              10004064     <common>
+ 0003:00000068       ___onexitend               10004068     <common>
+ 0003:0000006c       ___onexitbegin             1000406c     <common>
+ 0003:00000070       __pRawDllMain              10004070     <common>
+
+ entry point at        0001:000011f8
+
+ Static symbols
+
+ 0001:00000000       _setLastError              10001000 f   socketTransport.obj
+ 0001:000000cf       _setOptions                100010cf f   socketTransport.obj
+ 0001:00000128       _handshake                 10001128 f   socketTransport.obj
+ 0001:00000255       _parseAddress              10001255 f   socketTransport.obj
+ 0001:00000357       _socketTransport_getCapabilities@8 10001357 f   socketTransport.obj
+ 0001:0000037c       _socketTransport_startListening@12 1000137c f   socketTransport.obj
+ 0001:000004a7       _socketTransport_accept@20 100014a7 f   socketTransport.obj
+ 0001:00000651       _socketTransport_stopListening@4 10001651 f   socketTransport.obj
+ 0001:00000696       _socketTransport_attach@24 10001696 f   socketTransport.obj
+ 0001:000007ee       _socketTransport_isOpen@4  100017ee f   socketTransport.obj
+ 0001:000007fb       _socketTransport_close@4   100017fb f   socketTransport.obj
+ 0001:00000834       _socketTransport_writePacket@8 10001834 f   socketTransport.obj
+ 0001:000009a3       _recv_fully                100019a3 f   socketTransport.obj
+ 0001:000009d9       _socketTransport_readPacket@8 100019d9 f   socketTransport.obj
+ 0001:00000b6e       _socketTransport_getLastError@8 10001b6e f   socketTransport.obj

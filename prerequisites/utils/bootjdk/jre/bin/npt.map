@@ -1,0 +1,134 @@
+ npt
+
+ Timestamp is 4ecc5aa4 (Tue Nov 22 21:29:56 2011)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000cd4H .text                   CODE
+ 0002:00000000 00000060H .idata$5                DATA
+ 0002:00000060 000002c0H .rdata                  DATA
+ 0002:00000320 0000004bH .rdata$debug            DATA
+ 0002:00000370 00000004H .rdata$sxdata           DATA
+ 0002:00000374 00000004H .rtc$IAA                DATA
+ 0002:00000378 00000004H .rtc$IZZ                DATA
+ 0002:0000037c 00000004H .rtc$TAA                DATA
+ 0002:00000380 00000004H .rtc$TZZ                DATA
+ 0002:00000384 00000028H .idata$2                DATA
+ 0002:000003ac 00000014H .idata$3                DATA
+ 0002:000003c0 00000060H .idata$4                DATA
+ 0002:00000420 00000148H .idata$6                DATA
+ 0002:00000570 0000005fH .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000024H .data                   DATA
+ 0003:00000034 00000014H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000308H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _nptInitialize@12          10001000 f   npt.obj
+ 0001:000000c9       _nptTerminate@8            100010c9 f   npt.obj
+ 0001:000000e9       _utfError                  100010e9 f   utf.obj
+ 0001:00000112       _utf8ToUtf16@20            10001112 f   utf.obj
+ 0001:000001d6       _utf16ToUtf8m@20           100011d6 f   utf.obj
+ 0001:000002ab       _utf16ToUtf8s@20           100012ab f   utf.obj
+ 0001:000002b1       _utf8sToUtf8mLength@12     100012b1 f   utf.obj
+ 0001:000003b6       _utf8sToUtf8m@20           100013b6 f   utf.obj
+ 0001:000004e6       _utf8mToUtf8sLength@12     100014e6 f   utf.obj
+ 0001:00000613       _utf8mToUtf8s@20           10001613 f   utf.obj
+ 0001:000007af       _utfInitialize@4           100017af f   utf_md.obj
+ 0001:000007fe       _utfTerminate@8            100017fe f   utf_md.obj
+ 0001:00000889       _utf8ToPlatform@20         10001889 f   utf_md.obj
+ 0001:00000919       _utf8FromPlatform@20       10001919 f   utf_md.obj
+ 0001:000009aa       _strcmp                    100019aa f   MSVCRT:MSVCR71.dll
+ 0001:000009b0       __chkstk                   100019b0 f   MSVCRT:chkstk.obj
+ 0001:000009b0       __alloca_probe             100019b0     MSVCRT:chkstk.obj
+ 0001:000009ed       __CRT_INIT@12              100019ed f   MSVCRT:crtdll.obj
+ 0001:00000aab       __DllMainCRTStartup@12     10001aab f   MSVCRT:crtdll.obj
+ 0001:00000b90       __initterm                 10001b90 f   MSVCRT:MSVCR71.dll
+ 0001:00000b96       __onexit                   10001b96 f   MSVCRT:atonexit.obj
+ 0001:00000bbc       _atexit                    10001bbc f   MSVCRT:atonexit.obj
+ 0001:00000bce       __RTC_Initialize           10001bce f   MSVCRT:initsect.obj
+ 0001:00000c12       __RTC_Terminate            10001c12 f   MSVCRT:initsect.obj
+ 0001:00000c56       ___CppXcptFilter           10001c56 f   MSVCRT:MSVCR71.dll
+ 0001:00000c5c       _DllMain@12                10001c5c f   MSVCRT:dllmain.obj
+ 0001:00000c7c       __SEH_prolog               10001c7c f   MSVCRT:sehprolg.obj
+ 0001:00000cb7       __SEH_epilog               10001cb7 f   MSVCRT:sehprolg.obj
+ 0001:00000cc8       __except_handler3          10001cc8 f   MSVCRT:MSVCR71.dll
+ 0001:00000cce       ___dllonexit               10001cce f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__WideCharToMultiByte@32 10002000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__MultiByteToWideChar@24 10002004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__GetUserDefaultLCID@0 10002008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetLocaleInfoA@16   1000200c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__GetACP@0            10002010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__DisableThreadLibraryCalls@4 10002014     kernel32:KERNEL32.dll
+ 0002:00000018       \177KERNEL32_NULL_THUNK_DATA 10002018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__atoi                1000201c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp__malloc              10002020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__abort               10002024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp___adjust_fdiv        10002028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp____CppXcptFilter     1000202c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp___except_handler3    10002030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp____dllonexit         10002034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp___onexit             10002038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp__free                1000203c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__calloc              10002040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp___iob                10002044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__fprintf             10002048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__exit                1000204c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp___initterm           10002050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__strcmp              10002054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp___strdup             10002058     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp__strdup              10002058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       \177MSVCR71_NULL_THUNK_DATA 1000205c     MSVCRT:MSVCR71.dll
+ 0002:0000007c       ??_C@_05CJAIGNCM@0?40?40?$AA@ 1000207c     npt.obj
+ 0002:00000084       ??_C@_0P@KEJEBKCF@NPT?5ERROR?3?5?$CFs?6?$AA@ 10002084     npt.obj
+ 0002:00000094       ??_C@_0CJ@CPPDLDHE@Cannot?5allocate?5calloc?5space?5for@ 10002094     npt.obj
+ 0002:000000c0       ??_C@_0BK@LLKHEIF@NPT?5version?5doesn?8t?5match?$AA@ 100020c0     npt.obj
+ 0002:000000dc       ??_C@_0BF@GALNMPBK@?$CB?$EA?$CD$?$CF?$FO?$CG?$CK?$CI?$CJ_?$CL?$DN?9?$HL?$HN?$FL?$FN?3?$DL?$AA@ 100020dc     utf.obj
+ 0002:000000f4       ??_C@_0L@FPFMPDDA@0123456789?$AA@ 100020f4     utf.obj
+ 0002:00000100       ??_C@_0BL@JIGBPIBD@abcdefghijklmnopqrstuvwxyz?$AA@ 10002100     utf.obj
+ 0002:0000011c       ??_C@_0L@MKHPBEDE@characters?$AA@ 1000211c     utf.obj
+ 0002:00000128       ??_C@_0BJ@NDKKCKOJ@UTF?5ERROR?5?$FL?$CC?$CFs?$CC?3?$CFd?$FN?3?5?$CFs?6?$AA@ 10002128     utf.obj
+ 0002:00000144       ??_C@_0BN@HAIHCBKB@?4?4?1?4?4?1?4?4?1src?1share?1npt?1utf?4c?$AA@ 10002144     utf.obj
+ 0002:00000164       ??_C@_0BM@BJKMEOOG@ASSERT?5ERROR?5outputMaxLen?$DO0?$AA@ 10002164     utf.obj
+ 0002:00000180       ??_C@_0BE@MONHEHKE@ASSERT?5ERROR?5output?$AA@ 10002180     utf.obj
+ 0002:00000194       ??_C@_0BE@EHOOKJPG@ASSERT?5ERROR?5len?$DO?$DN0?$AA@ 10002194     utf.obj
+ 0002:000001a8       ??_C@_0BC@FAJHJFKN@ASSERT?5ERROR?5utf8?$AA@ 100021a8     utf.obj
+ 0002:000001bc       ??_C@_0BD@COPKOCDK@ASSERT?5ERROR?5utf16?$AA@ 100021bc     utf.obj
+ 0002:000001d0       ??_C@_0BK@HADMOKCE@ASSERT?5ERROR?5j?$DN?$DNnewLength?$AA@ 100021d0     utf.obj
+ 0002:000001ec       ??_C@_0BH@PGKNPGMC@ASSERT?5ERROR?5i?$DN?$DNlength?$AA@ 100021ec     utf.obj
+ 0002:00000204       ??_C@_0CC@NNKEHKJN@?4?4?1?4?4?1?4?4?1src?1windows?1npt?1utf_md?4@ 10002204     utf_md.obj
+ 0002:00000228       ??_C@_0BG@OELEGHKP@Can?8t?5get?5WIDE?5string?$AA@ 10002228     utf_md.obj
+ 0002:00000240       ??_C@_0BJ@LFBNLHDK@Can?8t?5malloc?$CI?$CJ?5any?5space?$AA@ 10002240     utf_md.obj
+ 0002:0000025c       ??_C@_0BN@ILDOBJEF@Can?8t?5get?5WIDE?5string?5length?$AA@ 1000225c     utf_md.obj
+ 0002:0000027c       ??_C@_0CI@EJHCPIBO@Can?8t?5convert?5WIDE?5string?5to?5mul@ 1000227c     utf_md.obj
+ 0002:000002d8       __load_config_used         100022d8     MSVCRT:loadcfg.obj
+ 0002:00000370       ___safe_se_handler_table   10002370     <linker-defined>
+ 0002:00000374       ___rtc_iaa                 10002374     MSVCRT:initsect.obj
+ 0002:00000378       ___rtc_izz                 10002378     MSVCRT:initsect.obj
+ 0002:0000037c       ___rtc_taa                 1000237c     MSVCRT:initsect.obj
+ 0002:00000380       ___rtc_tzz                 10002380     MSVCRT:initsect.obj
+ 0002:00000384       __IMPORT_DESCRIPTOR_MSVCR71 10002384     MSVCRT:MSVCR71.dll
+ 0002:00000398       __IMPORT_DESCRIPTOR_KERNEL32 10002398     kernel32:KERNEL32.dll
+ 0002:000003ac       __NULL_IMPORT_DESCRIPTOR   100023ac     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10003000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10003004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10003008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000300c     MSVCRT:cinitexe.obj
+ 0003:00000030       ___security_cookie         10003030     MSVCRT:seccook.obj
+ 0003:00000038       __adjust_fdiv              10003038     <common>
+ 0003:0000003c       ___onexitend               1000303c     <common>
+ 0003:00000040       ___onexitbegin             10003040     <common>
+ 0003:00000044       __pRawDllMain              10003044     <common>
+
+ entry point at        0001:00000aab
+
+ Static symbols
+
+ 0001:0000080c       _getWideString             1000180c f   utf_md.obj

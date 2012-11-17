@@ -1,0 +1,12 @@
+===============================================
+Microsoft Layer for Unicode on Windows 95/98/ME
+===============================================
+
+In addition to the rights granted in Section 1 of the Agreement ("Agreement"), with 
+respect to UNICOWS.DLL, you have the following non-exclusive, royalty free 
+rights subject to the Distribution Requirements detailed in Sections 1 and 3 of 
+the Agreement: 
+
+(1)	You may distribute UNICOWS.DLL with the following: Windows 95, Windows 98, 
+Windows 98 Second Edition, Windows Millennium, Windows NT4, Windows 2000, Windows XP, 
+and Windows Server 2003.

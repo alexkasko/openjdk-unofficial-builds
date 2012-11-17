@@ -1,0 +1,152 @@
+unzip
+========================================================================
+UnZip is an extraction utility for archives compressed in .zip format
+(also called 'zipfiles'). Although highly compatible both with PKWARE's
+PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own Zip
+program, our primary objectives have been portability and other-than-
+MSDOS functionality.
+
+Runtime requirements (these, or newer):
+  cygwin-1.7.0-51
+
+Build requirements (these, or newer):
+  cygwin-1.7.0-51
+  gcc-core-3.4.4-999
+  binutils-2.19.51-1
+  cygport-0.9.8.1
+  make-3.81-2
+
+Canonical homepage:
+  http://www.info-zip.org/
+
+Canonical download:
+  ftp://ftp.info-zip.org/pub/infozip/src/
+
+License:
+  Info-ZIP (Mostly BSD-ish)
+
+Language:
+  C
+ 
+========================================================================
+
+Build instructions:
+  unpack unzip-6.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./unzip-6.0-X.cygport all
+
+This will create:
+  /usr/src/unzip-6.0-X.tar.bz2
+  /usr/src/unzip-6.0-X-src.tar.bz2
+
+To find out the files included in the binary distribution, you can
+use "cygcheck -l unzip", or browse the listing for the appropriate version
+at <http://cygwin.com/packages/>.
+
+========================================================================
+
+Port Notes:
+
+---------- unzip-6.0-10 -- 2009 Aug 04 -----------
+* Update to latest release. Upstream changes:
+  = UnZip 6.0 finally supports nowadays "large" files of sizes > 2 GiB!
+  = This is the first release containing support for the PKWARE Zip64
+    enhancements.
+  = Major changes are:
+     - Support PKWARE ZIP64 extensions, allowing Zip archives and Zip archive
+       entries larger than 4 GiBytes and more than 65536 entries within a single
+       Zip archive. This support is currently only available for Unix,
+       OpenVMS and Win32/Win64.
+     - Support for bzip2 compression method.
+     - Support for UTF-8 encoded entry names, both through PKWARE's "General
+       Purpose Flags Bit 11" indicator and Info-ZIP's new "up" unicode path
+       extra field.  (Currently, on Windows the UTF-8 handling is limited to
+       the character subset contained in the configured non-unicode "system
+       code page".)
+     - Fixed "Time of Creation/Time of Use" vulnerability when setting attributes
+       of extracted files, for Unix and Unix-like ports.
+     - Fixed memory leak when processing invalid deflated data.
+     - Fixed long-standing bug in unshrink (partial_clear), added boundary checks
+       against invalid compressed data.
+     - On Unix, keep inherited SGID attribute bit for extracted directories
+       unless restoration of owner/group id or SUID/SGID/Tacky attributes was
+       requested.
+     - On Unix, allow extracted filenames to contain embedded control characters
+       when explicitly requested by specifying the new command line option "-^".
+     - On Unix, support restoration of symbolic link attributes.
+     - On Unix, support restoration of 32-bit UID/GID data using the new "ux"
+       IZUNIX3 extra field introduced with Zip 3.0.
+     - Support for ODS5 extended filename syntax on new OpenVMS systems.
+     - Support symbolic links zipped up on VMS.
+     - New -D option to suppress restoration of timestamps for extracted
+       directory entries (on those ports that support setting of directory
+       timestamps).  By specifying "-DD", this new option also allows to suppress
+       timestamp restoration for ALL extracted files on all UnZip ports which
+       support restoration of timestamps.
+     - On OS/2, Win32, and Unix, the (previously optional) feature UNIXBACKUP
+       to allow saving backup copies of overwritten files on extraction is now
+       enabled by default.
+* Bring in debian patches from (sid) 6.0-1
+
+
+---------- unzip-5.52-10 -- 2009 Mar 05 -----------
+* Fork for cygwin-1.7 development
+
+---------- unzip-5.52-3 -- 2009 Mar 05 -----------
+* Bring in debian patch 5.52-12
+  - fixes CAN-2005-2475
+  - fixes CVE-2005-4667
+  - fixes CVE-2008-0888
+* Enable -W and -B options (see man page)
+* Enable large file support. But, be warned, this is still
+  quite limited in unzip-5.52. "Real" large file support is
+  forthcoming in unzip-6.0 (currently in beta).
+
+---------- unzip-5.52-2 -- 2006 Oct 14 -----------
+* Identical to 5.52-1 below but converted to cygports.
+
+---------- unzip-5.52-1 -- 2006 May 07 -----------
+* routine update. Some of our cygwin-specific fixes have been 
+  incorporated, but not all.  This version was released as
+  a test version only, and never promoted to active.
+
+  (cygports also released an unofficial version of this package,
+   ALSO named "unzip-5.52-1".  It included encryption support
+   but NONE of the bugfixes the cygwin-official version had,
+   which had not been absorbed by the infozip release)
+
+----- version 5.50-5 -----
+This is the cygwin-1.5.2 FLAG DAY release.
+
+----- version 5.50-4 -----
+This is the cygwin-1.5.1 FLAG DAY release.
+Moved doc files to /usr/share/*
+Fixed serious bug with lseek (Thanks, Dave Rothenberger)
+
+----- version 5.50-3 -----
+This is the cygwin-1.5.0 FLAG DAY release.
+
+----- version 5.50-2 -----
+Add fix for obscure directory traversal security problem.
+See unix/unix.c for more info.
+
+----- version 5.50-1 -----
+Update to version 5.50, and use new script-driven build
+scheme.
+
+----- version 5.41-1 -----
+Initial release. 
+* built as a unix app. Also, it is -mno-win32 clean;  using 
+  -mno-win32 or not makes no difference in the final .exe.
+* understands symlinks 
+* The binary contains full decryption support. (Note that
+  the cygwin zip binary, however, does NOT contain ENcryption 
+  support.  Blame US crypto export laws).
+
+
+Cygwin port maintained by: Charles Wilson <cygwin@cygwin.com>
+
+Please address all questions to the Cygwin mailing list at <cygwin@cygwin.com>
+
