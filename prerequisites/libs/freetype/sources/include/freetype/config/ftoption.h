@@ -92,7 +92,7 @@ FT_BEGIN_HEADER
   /* This is done to allow FreeType clients to run unmodified, forcing     */
   /* them to display normal gray-level anti-aliased glyphs.                */
   /*                                                                       */
-/* #define FT_CONFIG_OPTION_SUBPIXEL_RENDERING */
+#define FT_CONFIG_OPTION_SUBPIXEL_RENDERING
 
 
   /*************************************************************************/
@@ -252,8 +252,8 @@ FT_BEGIN_HEADER
   /*   Do not #undef these macros here since the build system might define */
   /*   them for certain configurations only.                               */
   /*                                                                       */
-/* #define FT_EXPORT(x)      extern x */
-/* #define FT_EXPORT_DEF(x)  x */
+#define FT_EXPORT(x) __declspec(dllexport) x
+#define FT_EXPORT_DEF(x) __declspec(dllexport) x
 
 
   /*************************************************************************/

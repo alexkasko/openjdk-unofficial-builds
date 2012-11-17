@@ -1,267 +1,175 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8.00"
+	Version="7.10"
 	Name="freetype"
-	ProjectGUID="{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}"
-	>
+	ProjectGUID="{78B079BD-9FC7-4B9E-B4A6-96DA0F00248B}">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory=".\..\..\..\objs\release"
 			IntermediateDirectory=".\..\..\..\objs\release"
-			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			ConfigurationType="2"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\..\..\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;FT2_BUILD_LIBRARY"
-				StringPooling="true"
+				StringPooling="TRUE"
 				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
-				DisableLanguageExtensions="true"
+				EnableFunctionLevelLinking="TRUE"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\release/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\release/"
 				ObjectFile=".\..\..\..\objs\release/"
 				ProgramDataBaseFileName=".\..\..\..\objs\release/"
 				WarningLevel="4"
 				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
+				Culture="1033"/>
 			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCWebServiceProxyGeneratorTool"/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\freetype2410.lib"
-				SuppressStartupBanner="true"
-			/>
+				Name="VCXMLDataGeneratorTool"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCWebDeploymentTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCManagedWrapperGeneratorTool"/>
 			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Release Multithreaded|Win32"
 			OutputDirectory=".\..\..\..\objs\release_mt"
 			IntermediateDirectory=".\..\..\..\objs\release_mt"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\..\..\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;FT2_BUILD_LIBRARY"
-				StringPooling="true"
+				StringPooling="TRUE"
 				RuntimeLibrary="0"
-				EnableFunctionLevelLinking="true"
-				DisableLanguageExtensions="true"
+				EnableFunctionLevelLinking="TRUE"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\release_mt/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\release_mt/"
 				ObjectFile=".\..\..\..\objs\release_mt/"
 				ProgramDataBaseFileName=".\..\..\..\objs\release_mt/"
 				WarningLevel="4"
 				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
+				Culture="1033"/>
 			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCWebServiceProxyGeneratorTool"/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\freetype2410MT.lib"
-				SuppressStartupBanner="true"
-			/>
+				Name="VCXMLDataGeneratorTool"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCManagedWrapperGeneratorTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Release Singlethreaded|Win32"
 			OutputDirectory=".\..\..\..\objs\release_st"
 			IntermediateDirectory=".\..\..\..\objs\release_st"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="..\..\..\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;FT2_BUILD_LIBRARY"
-				StringPooling="true"
+				StringPooling="TRUE"
 				RuntimeLibrary="0"
-				EnableFunctionLevelLinking="true"
-				DisableLanguageExtensions="true"
+				EnableFunctionLevelLinking="TRUE"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\release_st/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\release_st/"
 				ObjectFile=".\..\..\..\objs\release_st/"
 				ProgramDataBaseFileName=".\..\..\..\objs\release_st/"
 				WarningLevel="4"
 				DebugInformationFormat="0"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\..\objs\freetype2410ST.lib"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
 				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"
-			/>
+				Culture="1033"/>
 			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCWebServiceProxyGeneratorTool"/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\freetype2410ST.lib"
-			/>
+				Name="VCXMLDataGeneratorTool"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCManagedWrapperGeneratorTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory=".\..\..\..\objs\debug"
 			IntermediateDirectory=".\..\..\..\objs\debug"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
@@ -269,72 +177,49 @@
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				DisableLanguageExtensions="true"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\debug/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\debug/"
 				ObjectFile=".\..\..\..\objs\debug/"
 				ProgramDataBaseFileName=".\..\..\..\objs\debug/"
 				WarningLevel="4"
 				DebugInformationFormat="3"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLibrarianTool"
 				OutputFile="..\..\..\objs\freetype2410_D.lib"
-				SuppressStartupBanner="true"
-			/>
+				SuppressStartupBanner="TRUE"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Debug Singlethreaded|Win32"
 			OutputDirectory=".\..\..\..\objs\debug_st"
 			IntermediateDirectory=".\..\..\..\objs\debug_st"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
@@ -342,72 +227,49 @@
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
-				DisableLanguageExtensions="true"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\debug_st/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\debug_st/"
 				ObjectFile=".\..\..\..\objs\debug_st/"
 				ProgramDataBaseFileName=".\..\..\..\objs\debug_st/"
 				WarningLevel="4"
 				DebugInformationFormat="3"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLibrarianTool"
 				OutputFile="..\..\..\objs\freetype2410ST_D.lib"
-				SuppressStartupBanner="true"
-			/>
+				SuppressStartupBanner="TRUE"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 		<Configuration
 			Name="Debug Multithreaded|Win32"
 			OutputDirectory=".\..\..\..\objs\debug_mt"
 			IntermediateDirectory=".\..\..\..\objs\debug_mt"
 			ConfigurationType="4"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
-			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
@@ -416,46 +278,40 @@
 				GeneratePreprocessedFile="0"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
-				DisableLanguageExtensions="true"
+				DisableLanguageExtensions="TRUE"
 				PrecompiledHeaderFile=".\..\..\..\objs\debug_mt/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\debug_mt/"
 				ObjectFile=".\..\..\..\objs\debug_mt/"
 				ProgramDataBaseFileName=".\..\..\..\objs\debug_mt/"
 				WarningLevel="4"
 				DebugInformationFormat="3"
-				CompileAs="0"
-			/>
+				CompileAs="0"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLibrarianTool"
 				OutputFile="..\..\..\objs\freetype2410MT_D.lib"
-				SuppressStartupBanner="true"
-			/>
+				SuppressStartupBanner="TRUE"/>
 			<Tool
-				Name="VCALinkTool"
-			/>
+				Name="VCMIDLTool"/>
 			<Tool
-				Name="VCXDCMakeTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
-				Name="VCBscMakeTool"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCFxCopTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
 		</Configuration>
 	</Configurations>
 	<References>
@@ -463,1714 +319,1378 @@
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
-			>
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
 			<File
-				RelativePath="..\..\..\src\autofit\autofit.c"
-				>
+				RelativePath="..\..\..\src\autofit\autofit.c">
 			</File>
 			<File
-				RelativePath="..\..\..\src\bdf\bdf.c"
-				>
+				RelativePath="..\..\..\src\bdf\bdf.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\cff\cff.c"
-				>
+				RelativePath="..\..\..\src\cff\cff.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftbase.c"
-				>
+				RelativePath="..\..\..\src\base\ftbase.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftbitmap.c"
-				>
+				RelativePath="..\..\..\src\base\ftbitmap.c">
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftfstype.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\src\base\ftgasp.c"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\src\cache\ftcache.c"
-				>
+				RelativePath="..\..\..\src\cache\ftcache.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\ftdebug.c"
-				>
+				RelativePath="..\ftdebug.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
 						BasicRuntimeChecks="3"
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
 						BasicRuntimeChecks="3"
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
 						BasicRuntimeChecks="3"
-						DisableLanguageExtensions="false"
-					/>
+						DisableLanguageExtensions="FALSE"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftglyph.c"
-				>
+				RelativePath="..\..\..\src\base\ftfstype.c">
+			</File>
+			<File
+				RelativePath="..\..\..\src\base\ftgasp.c">
+			</File>
+			<File
+				RelativePath="..\..\..\src\base\ftglyph.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\gzip\ftgzip.c"
-				>
+				RelativePath="..\..\..\src\gzip\ftgzip.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftinit.c"
-				>
+				RelativePath="..\..\..\src\base\ftinit.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\lzw\ftlzw.c"
-				>
+				RelativePath="..\..\..\src\lzw\ftlzw.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftstroke.c"
-				>
+				RelativePath="..\..\..\src\base\ftstroke.c">
 			</File>
 			<File
-				RelativePath="..\..\..\src\base\ftsystem.c"
-				>
+				RelativePath="..\..\..\src\base\ftsystem.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\src\smooth\smooth.c"
-				>
+				RelativePath="..\..\..\src\smooth\smooth.c">
 				<FileConfiguration
-					Name="Release|Win32"
-					>
+					Name="Release|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Multithreaded|Win32"
-					>
+					Name="Release Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release Singlethreaded|Win32"
-					>
+					Name="Release Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="2"
 						AdditionalIncludeDirectories=""
-						PreprocessorDefinitions=""
-					/>
+						PreprocessorDefinitions=""/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug|Win32"
-					>
+					Name="Debug|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Singlethreaded|Win32"
-					>
+					Name="Debug Singlethreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Debug Multithreaded|Win32"
-					>
+					Name="Debug Multithreaded|Win32">
 					<Tool
 						Name="VCCLCompilerTool"
 						Optimization="0"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-					/>
+						BasicRuntimeChecks="3"/>
 				</FileConfiguration>
 			</File>
 			<Filter
-				Name="FT_MODULES"
-				>
+				Name="FT_MODULES">
 				<File
-					RelativePath="..\..\..\src\base\ftbbox.c"
-					>
+					RelativePath="..\..\..\src\base\ftbbox.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftmm.c"
-					>
+					RelativePath="..\..\..\src\base\ftgxval.c">
+				</File>
+				<File
+					RelativePath="..\..\..\src\base\ftlcdfil.c">
+				</File>
+				<File
+					RelativePath="..\..\..\src\base\ftmm.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftpfr.c"
-					>
+					RelativePath="..\..\..\src\base\ftotval.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftsynth.c"
-					>
+					RelativePath="..\..\..\src\base\ftpatent.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\fttype1.c"
-					>
+					RelativePath="..\..\..\src\base\ftpfr.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftwinfnt.c"
-					>
+					RelativePath="..\..\..\src\base\ftsynth.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftxf86.c"
-					>
+					RelativePath="..\..\..\src\base\fttype1.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftlcdfil.c"
-					>
+					RelativePath="..\..\..\src\base\ftwinfnt.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftgxval.c"
-					>
+					RelativePath="..\..\..\src\base\ftxf86.c">
 				</File>
 				<File
-					RelativePath="..\..\..\src\base\ftotval.c"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\src\base\ftpatent.c"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\src\pcf\pcf.c"
-					>
+					RelativePath="..\..\..\src\pcf\pcf.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\pfr\pfr.c"
-					>
+					RelativePath="..\..\..\src\pfr\pfr.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\psaux\psaux.c"
-					>
+					RelativePath="..\..\..\src\psaux\psaux.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\pshinter\pshinter.c"
-					>
+					RelativePath="..\..\..\src\pshinter\pshinter.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\psnames\psmodule.c"
-					>
+					RelativePath="..\..\..\src\psnames\psmodule.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\raster\raster.c"
-					>
+					RelativePath="..\..\..\src\raster\raster.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\sfnt\sfnt.c"
-					>
+					RelativePath="..\..\..\src\sfnt\sfnt.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\truetype\truetype.c"
-					>
+					RelativePath="..\..\..\src\truetype\truetype.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\type1\type1.c"
-					>
+					RelativePath="..\..\..\src\type1\type1.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\cid\type1cid.c"
-					>
+					RelativePath="..\..\..\src\cid\type1cid.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\type42\type42.c"
-					>
+					RelativePath="..\..\..\src\type42\type42.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 				<File
-					RelativePath="..\..\..\src\winfonts\winfnt.c"
-					>
+					RelativePath="..\..\..\src\winfonts\winfnt.c">
 					<FileConfiguration
-						Name="Release|Win32"
-						>
+						Name="Release|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Multithreaded|Win32"
-						>
+						Name="Release Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release Singlethreaded|Win32"
-						>
+						Name="Release Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="2"
 							AdditionalIncludeDirectories=""
-							PreprocessorDefinitions=""
-						/>
+							PreprocessorDefinitions=""/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug|Win32"
-						>
+						Name="Debug|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Singlethreaded|Win32"
-						>
+						Name="Debug Singlethreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Debug Multithreaded|Win32"
-						>
+						Name="Debug Multithreaded|Win32">
 						<Tool
 							Name="VCCLCompilerTool"
 							Optimization="0"
 							AdditionalIncludeDirectories=""
 							PreprocessorDefinitions=""
-							BasicRuntimeChecks="3"
-						/>
+							BasicRuntimeChecks="3"/>
 					</FileConfiguration>
 				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl"
-			>
+			Filter="h;hpp;hxx;hm;inl">
 			<File
-				RelativePath="..\..\..\include\ft2build.h"
-				>
+				RelativePath="..\..\..\include\ft2build.h">
 			</File>
 			<File
-				RelativePath="..\..\..\include\freetype\config\ftconfig.h"
-				>
+				RelativePath="..\..\..\include\freetype\config\ftconfig.h">
 			</File>
 			<File
-				RelativePath="..\..\..\include\freetype\config\ftheader.h"
-				>
+				RelativePath="..\..\..\include\freetype\config\ftheader.h">
 			</File>
 			<File
-				RelativePath="..\..\..\include\freetype\config\ftmodule.h"
-				>
+				RelativePath="..\..\..\include\freetype\config\ftmodule.h">
 			</File>
 			<File
-				RelativePath="..\..\..\include\freetype\config\ftoption.h"
-				>
+				RelativePath="..\..\..\include\freetype\config\ftoption.h">
 			</File>
 			<File
-				RelativePath="..\..\..\include\freetype\config\ftstdlib.h"
-				>
+				RelativePath="..\..\..\include\freetype\config\ftstdlib.h">
 			</File>
 		</Filter>
 	</Files>
