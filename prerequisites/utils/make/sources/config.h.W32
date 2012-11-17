@@ -502,7 +502,7 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
  * Define if you have the Cygnus "Cygwin" GNU Windows32 tool set.
  * Do NOT define BATCH_MODE_ONLY_SHELL if you define HAVE_CYGWIN_SHELL
  */
-/*#define HAVE_CYGWIN_SHELL 1 */
+#define HAVE_CYGWIN_SHELL 1 
 
 /*
  * Define if you have the MKS tool set or shell. Do NOT define
