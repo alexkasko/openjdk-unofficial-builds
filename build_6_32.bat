@@ -19,7 +19,7 @@ set BOOTJDK_HOME=%PRQ%/utils/bootjdk
 set ANT_HOME=%PRQ%/utils/ant
 
 rem path 
-set PATH=C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%FIND_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin
+set PATH=%FIND_HOME%;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin
 
 rem ALT_* varibles
 set ALT_BOOTDIR=%BOOTJDK_HOME%
