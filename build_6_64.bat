@@ -13,13 +13,13 @@ set PSDK=c:/Program Files/Microsoft Platform SDK
 
 rem utils in path
 set MAKE_HOME=%PRQ%/utils/make/dist
-set FIND_HOME=%PRQ%/utils/find
+set PATH_PREPEND=%PRQ%/utils/path_prepend
 set CYGWIN_HOME=%PRQ%/utils/cygwin
 set BOOTJDK_HOME=%PRQ%/utils/bootjdk
 set ANT_HOME=%PRQ%/utils/ant
 
 rem path 
-set PATH=%FIND_HOME%;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin
+set PATH=%PATH_PREPEND%;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin
 
 rem ALT_* varibles
 set ALT_BOOTDIR=%BOOTJDK_HOME%
