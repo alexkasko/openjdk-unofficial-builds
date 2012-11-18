@@ -5,8 +5,10 @@ set LD_LIBRARY_PATH=
 set CLASSPATH=
 set JAVA_HOME=
 
-rem shortcuts
-set PRQ=v:/openjdkbuild/prerequisites
+rem shortcuts from script directory
+set BAD_SLASH_SCRIPT_DIR=%~dp0
+set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
+set PRQ=%SCRIPT_DIR%prerequisites
 set PSDK=c:/Program Files/Microsoft Platform SDK
 
 rem utils in path
