@@ -32,8 +32,8 @@ set ALT_UNICOWS_DLL_PATH=%PRQ%/libs/unicows
 set ALT_MSVCRT_DLL_PATH=%PRQ%/libs/msvcr/6_64
 set ALT_DXSDK_PATH=%PRQ%/libs/directx
 set ALT_DROPS_DIR=%PRQ%/jdk6_drops
-rem set ALT_PARALLEL_COMPILE_JOBS=1
-rem set HOTSPOT_BUILD_JOBS=1
+set ALT_PARALLEL_COMPILE_JOBS=1
+set HOTSPOT_BUILD_JOBS=1
 set ALT_CACERTS_FILE=%PRQ%/libs/cacerts/cacerts
 
 rem other openjdk variables
