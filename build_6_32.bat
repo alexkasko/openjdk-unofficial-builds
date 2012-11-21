@@ -12,7 +12,7 @@ set PRQ=%SCRIPT_DIR%prerequisites
 set VC=c:/Program Files/Microsoft Visual Studio .NET 2003
 
 rem utils in path
-set MAKE_HOME=%PRQ%/utils/make/dist
+set MAKE_HOME=%PRQ%/utils/make
 set PATH_PREPEND=%PRQ%/utils/path_prepend
 set CYGWIN_HOME=%PRQ%/utils/cygwin
 set BOOTJDK_HOME=%PRQ%/utils/bootjdk
@@ -44,8 +44,8 @@ rem set NO_DOCS=true
 
 rem other variables
 set CYGWIN=nodosfilewarning
-set MILESTONE=unofficial
-set BUILD_NUMBER=b27
+set MILESTONE=b27
+set BUILD_NUMBER=unofficial
 
 rem set compiler environment
 call "%VC%/Common7/Tools/vsvars32.bat"

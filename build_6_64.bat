@@ -12,9 +12,9 @@ set PRQ=%SCRIPT_DIR%prerequisites
 set PSDK=c:/Program Files/Microsoft Platform SDK
 
 rem utils in path
-set MAKE_HOME=%PRQ%/utils/make/dist
+set MAKE_HOME=%PRQ%/utils/make
 set PATH_PREPEND=%PRQ%/utils/path_prepend
-set CYGWIN_HOME=%PRQ%/utils/cygwin
+set CYGWIN_HOME=c:/cygwin
 set BOOTJDK_HOME=%PRQ%/utils/bootjdk
 set ANT_HOME=%PRQ%/utils/ant
 
@@ -32,8 +32,8 @@ set ALT_UNICOWS_DLL_PATH=%PRQ%/libs/unicows
 set ALT_MSVCRT_DLL_PATH=%PRQ%/libs/msvcr/6_64
 set ALT_DXSDK_PATH=%PRQ%/libs/directx
 set ALT_DROPS_DIR=%PRQ%/jdk6_drops
-set ALT_PARALLEL_COMPILE_JOBS=1
-set HOTSPOT_BUILD_JOBS=1
+rem set ALT_PARALLEL_COMPILE_JOBS=1
+rem set HOTSPOT_BUILD_JOBS=1
 set ALT_CACERTS_FILE=%PRQ%/libs/cacerts/cacerts
 
 rem other openjdk variables
@@ -43,8 +43,8 @@ rem set NO_DOCS=true
 
 rem other variables
 set CYGWIN=nodosfilewarning
-set MILESTONE=unofficial
-set BUILD_NUMBER=b27
+set MILESTONE=b27
+set BUILD_NUMBER=unofficial
 
 rem set compiler environment
 call "%PSDK%"/SetEnv.cmd /X64 /RETAIL
