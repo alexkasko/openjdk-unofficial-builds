@@ -40,19 +40,19 @@ rem set HOTSPOT_BUILD_JOBS=1
 
 rem other openjdk variables
 set ALLOW_DOWNLOADS=false
-rem set UNLIMITED_CRYPTO=true
 rem set NO_DOCS=true
 
 rem other variables
 set CYGWIN=nodosfilewarning
-set MILESTONE=b27
-set BUILD_NUMBER=unofficial
+set MILESTONE=unofficial
+set BUILD_NUMBER=b27
 
 rem set compiler environment
 call "%PSDK%"/SetEnv.cmd /X64 /RETAIL
 
 echo OpenJDK build environment is ready
 echo To start build go to sources root and type 'make' 
+echo JDK binaries will be placed into '<sources_root>\build\windows-amd64\j2sdk-image'
 bash
 
 echo Press any key to close window ...
