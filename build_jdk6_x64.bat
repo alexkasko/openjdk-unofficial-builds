@@ -51,8 +51,8 @@ rem set compiler environment
 call "%PSDK%"/SetEnv.cmd /X64 /RETAIL
 
 echo OpenJDK build environment is ready
-echo To start build go to sources root and type 'make' 
-echo JDK binaries will be placed into '<sources_root>\build\windows-amd64\j2sdk-image'
+echo To start build go to sources root and type "make" 
+echo JDK binaries will be placed into "<sources_root>\build\windows-amd64\j2sdk-image"
 bash
 
 echo Press any key to close window ...

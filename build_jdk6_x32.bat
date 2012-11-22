@@ -52,8 +52,8 @@ rem set compiler environment
 call "%VC%/Common7/Tools/vsvars32.bat"
 
 echo OpenJDK build environment is ready
-echo To start build go to sources root and type 'make' 
-echo JDK binaries will be placed into '<sources_root>\build\windows-i585\j2sdk-image'
+echo To start build go to sources root and type "make" 
+echo JDK binaries will be placed into "<sources_root>\build\windows-i585\j2sdk-image"
 bash
 
 echo Press any key to close window ...
