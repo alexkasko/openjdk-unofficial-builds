@@ -8,9 +8,9 @@ set JAVA_HOME=
 rem shortcuts from script directory
 set BAD_SLASH_SCRIPT_DIR=%~dp0
 set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
-set DROPS_DIR=%SCRIPT_DIR%drops                                                                                        
-set UTILS_DIR=%SCRIPT_DIR%utils                                                                                        
-set LIBS_DIR=%SCRIPT_DIR%libs 
+set DROPS_DIR=%SCRIPT_DIR%drops
+set UTILS_DIR=%SCRIPT_DIR%utils
+set LIBS_DIR=%SCRIPT_DIR%libs
 set VC=c:/Program Files/Microsoft Visual Studio .NET 2003
 
 rem utils in path
