@@ -10,8 +10,8 @@ set BAD_SLASH_SCRIPT_DIR=%~dp0
 set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
 set UTILS_DIR=%SCRIPT_DIR%utils
 set LIBS_DIR=%SCRIPT_DIR%libs
-set VC=c:/Program Files/Microsoft Visual Studio 10.0
-set WINSDK=c:/Program Files/Microsoft SDKs/Windows/v7.0A
+set VS=%UTILS_DIR%/winsdk71/vs2010e
+set WINSDK=%UTILS_DIR%/winsdk71/sdk
 
 rem utils in path
 set MAKE_HOME=%UTILS_DIR%/make
@@ -20,12 +20,9 @@ set CYGWIN_HOME=%UTILS_DIR%/cygwin
 set BOOTJDK_HOME=%UTILS_DIR%/bootjdk
 set ANT_HOME=%UTILS_DIR%/ant
 
-rem path 
-set PATH=%PATH_PREPEND%;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin
-
 rem ALT_* varibles
 set ALT_BOOTDIR=%BOOTJDK_HOME%
-set ALT_COMPILER_PATH=%VC%/VC/Bin
+set ALT_COMPILER_PATH=%VS%/VC/Bin
 set ALT_WINDOWSSDKDIR=%WINSDK%
 set ALT_FREETYPE_LIB_PATH=%LIBS_DIR%/freetype/dist/7_32
 set ALT_FREETYPE_HEADERS_PATH=%LIBS_DIR%/freetype/include
@@ -44,8 +41,24 @@ set CYGWIN=nodosfilewarning
 set MILESTONE=u6-unofficial
 set BUILD_NUMBER=b24
 
-rem set compiler environment
-call "%VC%/Common7/Tools/vsvars32.bat"
+rem set compiler environment manually
+set WINDOWSSDKDIR=%WINSDK%
+set VS100COMNTOOLS=%VS%/Common7/Tools
+set Configuration=Release
+set WindowsSDKVersionOverride=v7.1
+set ToolsVersion=4.0
+set TARGET_CPU=x86
+set CURRENT_CPU=x86
+set PlatformToolset=Windows7.1SDK
+set TARGET_PLATFORM=XP
+rem set PROCESSOR_ARCHITECTURE=x86
+rem set PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
+rem set APPVER=5.01
+rem set CommandPromptType=Native
+set LIB=%VS%/VC/Lib;%WINSDK%/Lib
+set LIBPATH=%VS%/VC/Lib
+set PATH=%PATH_PREPEND%;%VS%/Common7/IDE;%VS%/Common7/Tools;%VS%/VC/Bin;%VS%/VC/Bin/VCPackages;%WINSDK%/Bin;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin;%LIBS_DIR%/msvcr/7_32
+set INCLUDE=%VS%/VC/INCLUDE;%WINSDK%/INCLUDE;%WINSDK%/INCLUDE/gl;
 
 echo OpenJDK build environment is ready
 echo To start build go to sources root and type "make" 
