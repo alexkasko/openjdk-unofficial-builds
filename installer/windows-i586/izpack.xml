@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 6 unofficial windows-i586</appname>
-        <appversion>build 27</appversion>
+        <appname>OpenJDK 7 update 6 unofficial windows-i586</appname>
+        <appversion>build 24</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
