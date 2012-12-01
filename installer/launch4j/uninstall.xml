@@ -1,0 +1,14 @@
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>uninstall.jar</jar>
+  <!--outfile>uninstall</outfile-->
+  <outfile>uninstall.exe</outfile>
+  <icon>uninstall.ico</icon>
+  <jre>
+    <path>../jre</path>
+    <minVersion>1.6.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>jreOnly</jdkPreference>
+  </jre>
+</launch4jConfig>
