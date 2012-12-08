@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 6 unofficial linux-amd64</appname>
-        <appversion>build 27</appversion>
+        <appname>OpenJDK 7 update 6 unofficial linux-amd64</appname>
+        <appversion>build 24</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
@@ -46,47 +46,49 @@
             <description>OpenJDK Runtime Environment installation files</description>
             <file src="jre" targetdir="$INSTALL_PATH"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/java" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/bin/unpack200" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/keytool" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/bin/orbd" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/bin/pack200" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/policytool" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/bin/rmid" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/rmiregistry" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/bin/rmid" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/bin/unpack200" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/bin/pack200" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/bin/orbd" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/servertool" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/bin/tnameserv" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/native_threads/libhpi.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/server/libjvm.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libsaproc.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/server/libjvm.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjsig.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libverify.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjava.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/jli/libjli.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libzip.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libnpt.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjava_crw_demo.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libhprof.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libnet.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libnio.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libmanagement.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libnpt.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjava_crw_demo.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libhprof.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libinstrument.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjsound.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjsoundalsa.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libj2pcsc.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libsunec.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libj2pkcs11.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libj2gss.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libj2pcsc.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libmlib_image.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libawt.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libsplashscreen.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/xawt/libmawt.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/headless/libmawt.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjawt.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libfontmanager.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjpeg.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/liblcms.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/librmi.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjawt.so" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjaas_unix.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjsdt.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libunpack.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjaas_unix.so" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/amd64/libsctp.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libattach.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libjdwp.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/amd64/libdt_socket.so" os="unix" stage="never" failure="warn" keep="true"/>
@@ -99,7 +101,13 @@
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
 <executable targetfile="$INSTALL_PATH/lib/jexec" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/java" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/keytool" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/policytool" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/java-rmi.cgi" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/rmiregistry" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/rmid" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/unpack200" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/pack200" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/appletviewer" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/apt" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/extcheck" os="unix" stage="never" failure="warn" keep="true"/>
@@ -110,6 +118,7 @@
 <executable targetfile="$INSTALL_PATH/bin/javadoc" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/javah" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/javap" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/jcmd" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/jconsole" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/jdb" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/jhat" os="unix" stage="never" failure="warn" keep="true"/>
@@ -121,21 +130,16 @@
 <executable targetfile="$INSTALL_PATH/bin/jstack" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/jstat" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/jstatd" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/keytool" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/native2ascii" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/orbd" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/pack200" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/policytool" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/rmic" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/rmid" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/rmiregistry" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/schemagen" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/serialver" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/servertool" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/tnameserv" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/xjc" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/wsgen" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/wsimport" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/bin/xjc" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/orbd" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/servertool" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/bin/tnameserv" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/demo/jvmti/versionCheck/lib/libversionCheck.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/demo/jvmti/compiledMethodLoad/lib/libcompiledMethodLoad.so" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/demo/jvmti/gctest/lib/libgctest.so" os="unix" stage="never" failure="warn" keep="true"/>
