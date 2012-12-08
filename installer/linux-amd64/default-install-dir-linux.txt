@@ -1,0 +1,1 @@
+$USER_HOME/openjdk6_b27_x64
