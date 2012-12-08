@@ -1,8 +1,6 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
-**Downloads**:
-
 Windows:
 
  * OpenJDK 6 build 27:
@@ -59,7 +57,7 @@ Build environments used for these binaries:
 
 ###FreeType
 
-On Linux and Mac OS X system prebuilt freetype libraries are used. On windows, [libraries](https://github.com/alexkasko/openjdk-unofficial-builds/tree/master/libs/freetype/dist) (`.dll` and `.lib`) built as release-multithreaded using the same compilers as openjdk itself.
+On Linux and Mac OS X system prebuilt freetype libraries are used. On windows, [libraries](https://github.com/alexkasko/openjdk-unofficial-builds/tree/master/libs/freetype/dist) (`.dll` and `.lib`) were built as release-multithreaded using the same compilers as openjdk itself.
 
 Simple [header patch](https://github.com/alexkasko/openjdk-unofficial-builds/commit/b468582cceecaadb77d4070660474d1d408b2fbf#L2R91) was applied for all builds.
 
@@ -101,6 +99,7 @@ Build process on Windows
 ------------------------
 
 *Note 1: I'm not an OpenJDK developer, I won't be able to help with Makefiles/code issues, use [openjdk build-dev maillist](http://mail.openjdk.java.net/mailman/listinfo/build-dev) for support instead*
+
 *Note 2: Cygwin is used for windows builds, it may not work properly with [some soft](http://cygwin.com/faq/faq.using.html#faq.using.bloda)*
 
 Windows builds are the main reason for this project's existence. OpenJDK build needs unix environment on Windows, but at the same time uses Microsoft compilers. This discrepancy crates many problems, [example](http://openjdk.5641.n7.nabble.com/Is-anyone-able-to-build-on-Win-7-td81697.html).
