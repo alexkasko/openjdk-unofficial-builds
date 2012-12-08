@@ -1,0 +1,30 @@
+#include <winuser.h>
+
+// icon
+100 ICON "build/install.ico"
+// version info
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Alex Kasko (alexkasko.com)"
+            VALUE "FileDescription", "Java Installer Launcher Application"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "install"
+            VALUE "LegalCopyright", "Alex Kasko (alexkasko.com)"
+            VALUE "OriginalFilename", "install.exe"
+            VALUE "ProductName", "Java Installer Launcher"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04E4
+    END
+END
+// manifest
+1 RT_MANIFEST "resources/launcher.exe.manifest"

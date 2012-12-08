@@ -23,8 +23,10 @@ elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
     PLATFORM=windows-amd64
 elif [ -d "$SRC_DIR"/build/linux-i586 ] ; then
     PLATFORM=linux-i586
+    USE_TAR_GZ="true"
 elif [ -d "$SRC_DIR"/build/linux-amd64 ] ; then
     PLATFORM=linux-amd64
+    USE_TAR_GZ="true"
 elif [ -d "$SRC_DIR"/build/macosx-x86_64 ] ; then
     PLATFORM=macosx-x86_64
 else
@@ -81,13 +83,19 @@ rm -rf "$INSTALLER_PLATFORM"/j2sdk-image
 # create installer archive
 CURDIR=`pwd`
 pushd "$INSTALLER_DIR"/target > /dev/null
-zip -rq "$BUNDLE_NAME".zip "$BUNDLE_NAME"
-mv "$BUNDLE_NAME".zip "$CURDIR"
+if [ -z "$USE_TAR_GZ" ] ; then
+    zip -rq "$BUNDLE_NAME".zip "$BUNDLE_NAME"
+    ARCHIVE_NAME="$BUNDLE_NAME".zip
+else
+    tar czf "$BUNDLE_NAME".tar.gz "$BUNDLE_NAME"
+    ARCHIVE_NAME="$BUNDLE_NAME".tar.gz
+fi
+mv "$ARCHIVE_NAME" "$CURDIR"
 popd > /dev/null
 
 # clean target
 rm -rf "$INSTALLER_TARGET"
 
-echo "Installer packed successfully: $BUNDLE_NAME.zip"
+echo "Installer packed successfully: $ARCHIVE_NAME"
 
 exit 0

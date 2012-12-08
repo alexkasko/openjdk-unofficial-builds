@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 7 update 6 unofficial windows-amd64</appname>
-        <appversion>build 24</appversion>
+        <appname>OpenJDK 6 unofficial windows-amd64</appname>
+        <appversion>build 27</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
@@ -34,7 +34,8 @@
 
     <resources>
         <res id="customicons.xml" src="customicons.xml"/>
-        <res id="JFrameIcon.png" src="duke.png"/>
+        <res id="JFrameIcon.png" src="install.png"/>
+        <res id="host.png" src="duke.png"/>
         <res id="HTMLLicencePanel.licence" src="license.txt"/>
         <res id="TargetPanel.dir.windows" src="default-install-dir-win.txt"/>
     </resources>
