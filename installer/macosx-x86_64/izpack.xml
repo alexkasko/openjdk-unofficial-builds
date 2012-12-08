@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<installation version="1.0">
+    <info>
+        <appname>OpenJDK 7 update 6 unofficial macosx-x86_64</appname>
+        <appversion>build 24</appversion>
+        <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
+    </info>
+
+    <guiprefs width="640" height="480" resizable="no">
+        <laf name="looks">
+            <os family="windows"/>
+        </laf>
+        <modifier key="useHeadingPanel" value="yes"/>
+        <modifier key="useHeadingForSummary" value="yes"/>
+        <modifier key="headingLineCount" value="2"/>
+        <modifier key="headingFontSize" value="1.5"/>
+        <modifier key="headingBackgroundColor" value="0x00ffffff"/>
+        <modifier key="headingPanelCounter" value="text"/>
+        <modifier key="headingPanelCounterPos" value="inHeading"/>
+    </guiprefs>
+
+    <locale>
+        <langpack iso3="eng"/>
+    </locale>
+
+    <panels>
+        <panel classname="HelloPanel"/>
+        <panel classname="HTMLLicencePanel"/>
+        <panel classname="TargetPanel"/>
+        <panel classname="PacksPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+
+    <resources>
+        <res id="customicons.xml" src="customicons.xml"/>
+        <res id="JFrameIcon.png" src="install.png"/>
+        <res id="host.png" src="duke.png"/>
+        <res id="HTMLLicencePanel.licence" src="license.txt"/>
+        <res id="TargetPanel.dir.macosx" src="default-install-dir-macosx.txt"/>
+    </resources>
+
+    <packs>
+        <pack name="OpenJDK Runtime Environment installation files" required="yes" loose="true">
+            <description>OpenJDK Runtime Environment installation files</description>
+            <file src="jre" targetdir="$INSTALL_PATH"/>
+        </pack>
+        <pack name="OpenJDK Development Kit installation files" required="no">
+            <description>OpenJDK Development Kit installation files</description>
+            <fileset dir="j2sdk-image" targetdir="$INSTALL_PATH"/>
+            <file src="uninstall" targetdir="$INSTALL_PATH"/>
+        </pack>
+        <pack name="OpenJDK uninstaller files" required="yes">
+            <description>OpenJDK uninstaller files</description>
+            <file src="uninstall" targetdir="$INSTALL_PATH"/>
+        </pack>
+    </packs>
+</installation>
