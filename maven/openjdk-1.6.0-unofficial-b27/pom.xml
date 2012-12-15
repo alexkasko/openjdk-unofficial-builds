@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <groupId>com.alexkasko</groupId>
+    <artifactId>openjdk</artifactId>
+    <version>1.6.0-unofficial-b27</version>
+    <packaging>jar</packaging>
+    <name>Unofficial OpenJDK build</name>
+    <description>
+        Unofficial OpenJDK build
+    </description>
+    <url>https://github.com/alexkasko/openjdk-unofficial-builds</url>
+    <licenses>
+        <license>
+            <name>GNU GPL v. 2 with classpath exception</name>
+            <url>http://hg.openjdk.java.net/jdk7u/jdk7u/raw-file/da55264ff2fb/LICENSE</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/alexkasko/openjdk-unofficial-builds</url>
+        <connection>scm:git:https://github.com/alexkasko/openjdk-unofficial-builds.git</connection>
+        <developerConnection>scm:git:https://github.com/alexkasko/openjdk-unofficial-builds.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>Alex Kasko</name>
+            <email>alex.kasko.mail@gmail.com</email>
+            <url>http://alexkasko.com</url>
+        </developer>
+    </developers>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <passphrase>nopwd</passphrase>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
