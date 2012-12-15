@@ -1,38 +1,46 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
-Windows:
+###Windows downloads
 
- * OpenJDK 6 build 27:
+ * **OpenJDK 6 build 27:**
   * [i586 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-windows-i586.zip), sha1: `3333818dcdfb2ca352d16db0fdf0fee12fa3f1a9`
   * [i586 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-windows-i586-image.zip), sha1: `9086e424bb2ab4e4dbdf0527b8b0426a9672dda5`
   * [amd64 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-windows-amd64.zip), sha1: `e3d81f85282724b1239346922b9b60cf3fb24477`
   * [amd64 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-windows-amd64-image.zip), sha1: `80ca8e04fe518c54fe7d20d412429621b31975ee`
- * OpenJDK 7 update 6 build 24:
+ * **OpenJDK 7 update 6 build 24:**
   * [i586 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-windows-i586.zip), sha1: `c6bfea90a555aa2379c462462439010886b623e0`
   * [i586 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-windows-i586-image.zip), sha1: `c6d6610f1cb76d725a88194959e91134db1064d8`
   * [amd64 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-windows-amd64.zip), sha1: `893bca878a5ae2e85f98e1db1207c546d50b2137`
   * [amd64 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-windows-amd64-image.zip), sha1: `f2591ededff2d4133a1b4990837c32183cc8dc3e`
 
-Mac OS X:
+###Mac OS X downloads
 
- * OpenJDK 7 update 6 build 24:
+ * **OpenJDK 7 update 6 build 24:**
   * [amd64 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-macosx-x86_64.zip), sha1: `ca10f8d15e16b61185b28375ddbfb02ca1857757`
   * [amd64 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-macosx-x86_64-image.zip), sha1: `d8935284bd9977ea558cc1ba18cfeb10f21b4ba9`
 
-Linux:
- * OpenJDK 6 build 27:
+###Linux downloads
+ * **OpenJDK 6 build 27:**
   * [i586 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-linux-i586.zip), sha1: `8c9a03767c7a46cc7eb076939b62e060b9be46b7`
   * [i586 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-linux-i586-image.zip), sha1: `552d4fe523d972992a431fe74c0362b21e3b84df`
   * [amd64 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-linux-amd64.zip), sha1: `5585aeb36e890e99cf1acf999b737455144bb3b0`
   * [amd64 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.6.0-unofficial-b27-linux-amd64-image.zip), sha1: `4617e7c3252492f110c90f85a332452a537dfbeb`
- * OpenJDK 7 update 6 build 24:
+ * **OpenJDK 7 update 6 build 24:**
   * [i586 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-i586.zip), sha1: `2e1bf4f2bd2081caa420f491f159637ebea53a70`
   * [i586 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-i586-image.zip), sha1: `28e5cdf1aebcb8ce86f19a2760be45150bc93482`
   * [amd64 installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-amd64.zip), sha1: `17309c97774182e160124af733b623384dafd161`
   * [amd64 zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-amd64-image.zip), sha1: `8f2dafad7ee4202df70b2a3d357ac213ecdc2616`
 
-This project is not the only one with unofficial OpenJDK builds, see also [OpenSCG installers](http://openscg.com/se/openjdk/archive.jsp) (windows OpenSCG build is used as a bootstrap JDK in this project) and [obuildfactory github project](https://github.com/hgomez/obuildfactory/wiki).
+###Maven artifacts
+
+Binaries without installers are also available in [maven central](http://repo1.maven.org/maven2/com/alexkasko/openjdk/). 
+
+###Other OpenJDK builds
+
+ * [OpenSCG installers](http://openscg.com/se/openjdk/archive.jsp) (windows build [is used in this project](https://github.com/alexkasko/openjdk-unofficial-builds/tree/master/utils/bootjdk) as a bootstrap JDK)
+ * [obuildfactory github project](https://github.com/hgomez/obuildfactory/wiki)
+ * [tidalwave build for Mac OS X](http://repo1.maven.org/maven2/it/tidalwave/blueargyle/it-tidalwave-openjdk7/b222-20111220-1/)
 
 Downloads description
 ---------------------
