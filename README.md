@@ -153,7 +153,8 @@ Both `i586` and `amd64` versions of OpenJDK7 may be built using the same Windows
 ###Run build
 
  * launch `build_jdk7_xNN.bat`
- * cd to openjdk7 sources root
+ * `cd` to openjdk7 sources root
+ * run `chmod -R 777 .` to fix source files permissions (not always required, see [this thread](http://mail.openjdk.java.net/pipermail/build-infra-dev/2012-November/002414.html))
  * run `make`
  
 ###Create installer  
