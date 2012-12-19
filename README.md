@@ -77,6 +77,10 @@ OpenJDK source code ships with empty `cacerts` file, that may create troubles wo
 
 OpenJDK build supports unlimited cryptography; it's enabled using `UNLIMITED_CRYPTO=true` environment variable, see [this patch](http://mail.openjdk.java.net/pipermail/build-dev/2012-September/006798.html). But those changes weren't backported to OpenJDK6 and were added to OpenJDK7 after current stable source bundle (update6) was released. Unlimited cryptography will be enabled in this project builds for subsequent OpenJDK7 releases.
 
+###Debug symbols
+
+By default, all binaries contain debug symbols. They may be disabled using `FULL_DEBUG_SYMBOLS=0` environment variable, see [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info.
+
 ###Installers
 
 Installers were built using [IzPack](http://izpack.org/) installer. Installers contain JDK files (JRE may be installed separately) and uninstallers. Installers only copy files and don't need administrator's priviliges.
