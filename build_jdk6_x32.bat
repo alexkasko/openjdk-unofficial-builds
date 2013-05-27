@@ -44,16 +44,17 @@ set ALLOW_DOWNLOADS=false
 rem set NO_DOCS=true
 
 rem other variables
+set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b27
+set BUILD_NUMBER=b27p2
 
 rem set compiler environment
 call "%VC%/Common7/Tools/vsvars32.bat"
 
 echo OpenJDK build environment is ready
 echo To start build go to sources root and type "make" 
-echo JDK binaries will be placed into "<sources_root>\build\windows-i585\j2sdk-image"
+echo JDK binaries will be placed into "<sources_root>\build\windows-i586\j2sdk-image"
 bash
 
 echo Press any key to close window ...

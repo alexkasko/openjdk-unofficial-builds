@@ -43,9 +43,10 @@ set ALLOW_DOWNLOADS=false
 rem set NO_DOCS=true
 
 rem other variables
+set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b27
+set BUILD_NUMBER=b27p2
 
 rem set compiler environment
 call "%PSDK%"/SetEnv.cmd /X64 /RETAIL
