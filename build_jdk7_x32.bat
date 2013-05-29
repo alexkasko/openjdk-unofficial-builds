@@ -43,8 +43,8 @@ set MILESTONE=u40-unofficial
 set BUILD_NUMBER=b26
 
 rem debug settings
-#export DEBUG_CLASSFILES=true
-#export FULL_DEBUG_SYMBOLS=0
+rem set DEBUG_CLASSFILES=true
+rem set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%
