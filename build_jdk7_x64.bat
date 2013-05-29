@@ -37,9 +37,14 @@ rem set ALLOW_DOWNLOADS=true
 rem set NO_DOCS=true
 
 rem other variables
+set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
-set MILESTONE=u6-unofficial
-set BUILD_NUMBER=b24
+set MILESTONE=u40-unofficial
+set BUILD_NUMBER=b26
+
+rem debug settings
+#export DEBUG_CLASSFILES=true
+#export FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%
