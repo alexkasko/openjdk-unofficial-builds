@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 7 update 6 unofficial windows-i586</appname>
-        <appversion>build 24</appversion>
+        <appname>OpenJDK 6 unofficial windows-i586</appname>
+        <appversion>(IcedTea 1.12.6)</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
@@ -53,6 +53,224 @@
         <pack name="OpenJDK uninstaller files" required="yes">
             <description>OpenJDK uninstaller files</description>
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
+        </pack>
+        <pack name="Set environment variables (user settings)" required="no">
+            <description>
+Add "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/jre/bin" to "PATH" variable. All changes will be done to user (local) environment variables and should not require administrator privileges.
+Note: on uninstallation "JAVA_HOME", "OPENJDK_JDK_BIN" and "OPENJDK_JRE_BIN" variables will be cleared, but "PATH" variable will not be cleared, so multiple installations/uninstallations will cause duplicate entries in "PATH" variable.
+            </description>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="JAVA_HOME"/>
+                    <arg value="&quot;$INSTALL_PATH&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="JAVA_HOME"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+            <!-- no uninstall action for this entry -->
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="PATH"/>
+                    <arg value="%OPENJDK_JDK_BIN%;%OPENJDK_JRE_BIN%;%PATH%"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="OPENJDK_JDK_BIN"/>
+                    <arg value="&quot;$INSTALL_PATH/bin&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="OPENJDK_JDK_BIN"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="OPENJDK_JRE_BIN"/>
+                    <arg value="&quot;$INSTALL_PATH/jre/bin&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="OPENJDK_JRE_BIN"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+        </pack>
+        <pack name="Set environment variables (global settings)" 
+              required="no"
+              preselected="no">
+            <description>
+Add "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/jre/bin" to "PATH" variable. All changes will be done to global environment variables and may require administrator privileges.
+Note: on uninstallation "JAVA_HOME", "OPENJDK_JDK_BIN" and "OPENJDK_JRE_BIN" variables will be cleared, but "PATH" variable will not be cleared, so multiple installations/uninstallations will cause duplicate entries in "PATH" variable.
+            </description>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="JAVA_HOME"/>
+                    <arg value="&quot;$INSTALL_PATH&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="JAVA_HOME"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+            <!-- no uninstall action for this entry -->
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="PATH"/>
+                    <arg value="%OPENJDK_JDK_BIN%;%OPENJDK_JRE_BIN%;%PATH%"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="OPENJDK_JDK_BIN"/>
+                    <arg value="&quot;$INSTALL_PATH/bin&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="OPENJDK_JDK_BIN"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="OPENJDK_JRE_BIN"/>
+                    <arg value="&quot;$INSTALL_PATH/jre/bin&quot;"/>
+                </args>
+            </executable>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="\/m"/>
+                    <arg value="OPENJDK_JRE_BIN"/>
+                    <arg value="&quot;&quot;"/>
+                </args>
+            </executable>
+        </pack>
+        <pack name="Add registry keys (global settings)" 
+              required="no"
+              preselected="no">
+              <description>
+Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0" with indofmation about this installation. These entries may be used by java application launchers (e.g. launch4j). Key will be added to global registry branch and may require administrator privileges. On uninstallation registry values under this key will be cleared, but key itself will be left intact.
+Note: installing i586 OpenJDK on amd64 Windows, registry entries will be added instead to "HKEY_LOCAL_MACHINE/Software/Wow6432Node/JavaSoft/Java Runtime Environment/1.6.0" path due to registry redirection.
+            </description>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="add"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="JavaHome"/>
+                    <arg value="\/t"/>
+                    <arg value="reg_sz"/>
+                    <arg value="\/d"/>
+                    <arg value="$INSTALL_PATH/jre"/>
+                </args>
+            </executable>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="delete"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="JavaHome"/>
+                    <arg value="\/f"/>
+                </args>
+            </executable>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="add"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="RuntimeLib"/>
+                    <arg value="\/t"/>
+                    <arg value="reg_sz"/>
+                    <arg value="\/d"/>
+                    <arg value="$INSTALL_PATH/jre/bin/server/jvm.dll"/>
+                </args>
+            </executable>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="delete"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="RuntimeLib"/>
+                    <arg value="\/f"/>
+                </args>
+            </executable>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="postinstall"
+                        keep="true">
+                <args>
+                    <arg value="add"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="MicroVersion"/>
+                    <arg value="\/t"/>
+                    <arg value="reg_dword"/>
+                    <arg value="\/d"/>
+                    <arg value="27"/>
+                </args>
+            </executable>
+            <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
+                        stage="uninstall"
+                        keep="true">
+                <args>
+                    <arg value="delete"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="\/v"/>
+                    <arg value="MicroVersion"/>
+                    <arg value="\/f"/>
+                </args>
+            </executable>
         </pack>
     </packs>
 </installation>

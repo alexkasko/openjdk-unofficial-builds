@@ -11,7 +11,7 @@ set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
 set DROPS_DIR=%SCRIPT_DIR%drops
 set UTILS_DIR=%SCRIPT_DIR%utils
 set LIBS_DIR=%SCRIPT_DIR%libs
-set PSDK=c:/Program Files/Microsoft Platform SDK
+set VC=c:/Program Files/Microsoft Visual Studio .NET 2003
 
 rem utils in path
 set MAKE_HOME=%UTILS_DIR%/make
@@ -25,16 +25,18 @@ set PATH=%PATH_PREPEND%;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;
 
 rem ALT_* varibles
 set ALT_BOOTDIR=%BOOTJDK_HOME%
-set ALT_COMPILER_PATH=%PSDK%/Bin/win64/x86/AMD64
-set ALT_MSDEVTOOLS_PATH=%PSDK%/Bin
-set ALT_FREETYPE_LIB_PATH=%LIBS_DIR%/freetype/dist/6_64
+set ALT_COMPILER_PATH=%VC%/VC7/Bin
+set ALT_MSDEVTOOLS_PATH=%VC%/Common7/Tools/Bin
+set ALT_FREETYPE_LIB_PATH=%LIBS_DIR%/freetype/dist/6_32
 set ALT_FREETYPE_HEADERS_PATH=%LIBS_DIR%/freetype/include
 set ALT_UNICOWS_LIB_PATH=%LIBS_DIR%/unicows
 set ALT_UNICOWS_DLL_PATH=%LIBS_DIR%/unicows
-set ALT_MSVCRT_DLL_PATH=%LIBS_DIR%/msvcr/6_64
+set ALT_MSVCRT_DLL_PATH=%LIBS_DIR%/msvcr/6_32
+set ALT_MSVCR71_DLL_PATH=%LIBS_DIR%/msvcr/6_32
 set ALT_DXSDK_PATH=%LIBS_DIR%/directx
 set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
 set ALT_DROPS_DIR=%DROPS_DIR%
+set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk6.jar
 rem set ALT_PARALLEL_COMPILE_JOBS=1
 rem set HOTSPOT_BUILD_JOBS=1
 
@@ -43,18 +45,22 @@ set ALLOW_DOWNLOADS=false
 rem set NO_DOCS=true
 
 rem other variables
-set UNLIMITED_CRYPTO=true
+rem set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b27p2
+set BUILD_NUMBER=1.12.6
+set STATIC_CXX=true
 
 rem set compiler environment
-call "%PSDK%"/SetEnv.cmd /X64 /RETAIL
+call "%VC%/Common7/Tools/vsvars32.bat"
 
-echo OpenJDK build environment is ready
-echo To start build go to sources root and type "make" 
-echo JDK binaries will be placed into "<sources_root>\build\windows-amd64\j2sdk-image"
-bash
+rem uncomment next lines for interactive build
+rem echo OpenJDK build environment is ready
+rem echo To start build go to sources root and type "make" 
+rem echo JDK binaries will be placed into "<sources_root>\build\windows-i586\j2sdk-image"
+rem bash
+rem echo Press any key to close window ...
+rem pause > nul
 
-echo Press any key to close window ...
-pause > nul
+rem start obf build
+bash %SCRIPT_DIR%/make-and-bundle.sh
