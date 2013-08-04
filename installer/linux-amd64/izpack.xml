@@ -155,5 +155,14 @@
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
             <executable targetfile="$INSTALL_PATH/uninstall/uninstall" os="unix" stage="never" failure="warn" keep="true"/>
         </pack>
+        <pack name="Set environment variables (user settings)" required="no" preselected="no">
+            <description>Set "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/jre/bin" to "PATH" environment variable through "~/.bashrc" file</description>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/append_bashrc.sh"
+                        stage="postinstall"
+                        keep="true"/>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/clear_bashrc.sh"
+                        stage="uninstall"
+                        keep="true"/>
+        </pack>
     </packs>
 </installation>
