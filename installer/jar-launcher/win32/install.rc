@@ -13,12 +13,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Alex Kasko (alexkasko.com)"
             VALUE "FileDescription", "Java Installer Launcher Application"
-            VALUE "FileVersion", "1.0"
+            VALUE "FileVersion", "1.0.1"
             VALUE "InternalName", "install"
             VALUE "LegalCopyright", "Alex Kasko (alexkasko.com)"
             VALUE "OriginalFilename", "install.exe"
             VALUE "ProductName", "Java Installer Launcher"
-            VALUE "ProductVersion", "1.0"
+            VALUE "ProductVersion", "1.0.1"
         END
     END
     BLOCK "VarFileInfo"
