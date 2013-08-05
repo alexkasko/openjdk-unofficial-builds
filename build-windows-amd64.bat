@@ -8,7 +8,7 @@ set JAVA_HOME=
 rem shortcuts from script directory
 set BAD_SLASH_SCRIPT_DIR=%~dp0
 set SCRIPT_DIR=%BAD_SLASH_SCRIPT_DIR:\=/%
-set DROPS_DIR=%SCRIPT_DIR%drops
+rem set DROPS_DIR=%SCRIPT_DIR%drops
 set UTILS_DIR=%SCRIPT_DIR%utils
 set LIBS_DIR=%SCRIPT_DIR%libs
 set PSDK=c:/Program Files/Microsoft Platform SDK
@@ -34,7 +34,8 @@ set ALT_UNICOWS_DLL_PATH=%LIBS_DIR%/unicows
 set ALT_MSVCRT_DLL_PATH=%LIBS_DIR%/msvcr/6_64
 set ALT_DXSDK_PATH=%LIBS_DIR%/directx
 set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
-set ALT_DROPS_DIR=%DROPS_DIR%
+rem set ALT_DROPS_DIR=%DROPS_DIR%
+set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk6.jar
 rem set ALT_PARALLEL_COMPILE_JOBS=1
 rem set HOTSPOT_BUILD_JOBS=1
 
@@ -43,10 +44,10 @@ set ALLOW_DOWNLOADS=false
 rem set NO_DOCS=true
 
 rem other variables
-set UNLIMITED_CRYPTO=true
+rem set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=1.12.6
+set BUILD_NUMBER=b6
 set STATIC_CXX=true
 
 rem set compiler environment
