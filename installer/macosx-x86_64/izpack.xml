@@ -69,14 +69,14 @@
 <executable targetfile="$INSTALL_PATH/jre/lib/libjaas_unix.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjava.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjava_crw_demo.dylib" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/libjavajpeg.dylib" os="unix" stage="never" failure="warn" keep="true"/>
+<executable targetfile="$INSTALL_PATH/jre/lib/libjavalcms.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjawt.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjdwp.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libJObjC.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/libjpeg.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjsdt.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjsig.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libjsound.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/liblcms.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libmanagement.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libmlib_image.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libnet.dylib" os="unix" stage="never" failure="warn" keep="true"/>
@@ -86,23 +86,19 @@
 <executable targetfile="$INSTALL_PATH/jre/lib/libosxapp.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libosxkrb5.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libosxui.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/librmi.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libsaproc.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libsplashscreen.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/libsunec.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libunpack.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libverify.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/libzip.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/lwawt/liblwawt.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/jre/lib/security/cacerts" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/server/libjsig.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/server/libjvm.dylib" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/jre/lib/xawt/libmawt.dylib" os="unix" stage="never" failure="warn" keep="true"/>
         </pack>
         <pack name="OpenJDK Development Kit installation files" required="no">
             <description>OpenJDK Development Kit installation files</description>
-            <fileset dir="j2sdk-image" targetdir="$INSTALL_PATH"/>
-            <file src="uninstall" targetdir="$INSTALL_PATH"/>
+            <fileset dir="j2sdk-server-image" targetdir="$INSTALL_PATH"/>
 <executable targetfile="$INSTALL_PATH/bin/appletviewer" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/apt" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/extcheck" os="unix" stage="never" failure="warn" keep="true"/>
@@ -142,20 +138,20 @@
 <executable targetfile="$INSTALL_PATH/bin/wsgen" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/wsimport" os="unix" stage="never" failure="warn" keep="true"/>
 <executable targetfile="$INSTALL_PATH/bin/xjc" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/compiledMethodLoad/lib/libcompiledMethodLoad.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/gctest/lib/libgctest.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/heapTracker/lib/libheapTracker.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/heapViewer/lib/libheapViewer.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/hprof/lib/libhprof.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/minst/lib/libminst.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/mtrace/lib/libmtrace.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/versionCheck/lib/libversionCheck.dylib" os="unix" stage="never" failure="warn" keep="true"/>
-<executable targetfile="$INSTALL_PATH/demo/jvmti/waiters/lib/libwaiters.dylib" os="unix" stage="never" failure="warn" keep="true"/>
         </pack>
         <pack name="OpenJDK uninstaller files" required="yes">
             <description>OpenJDK uninstaller files</description>
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
             <executable targetfile="$INSTALL_PATH/uninstall/uninstall" os="unix" stage="never" failure="warn" keep="true"/>
+        </pack>
+        <pack name="Set environment variables (user settings)" required="no" preselected="no">
+            <description>Set "JAVA_HOME" environment variable through "~/.bash_profile" file</description>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/append_bash_profile.sh"
+                        stage="postinstall"
+                        keep="true"/>
+            <executable targetfile="$INSTALL_PATH/uninstall/tools/clear_bash_profile.sh"
+                        stage="uninstall"
+                        keep="true"/>
         </pack>
     </packs>
 </installation>

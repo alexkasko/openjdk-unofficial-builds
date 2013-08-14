@@ -3,6 +3,7 @@ set -e
 
 # get installer builder dir
 IMAGE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+OBF_DIR="$( dirname "$IMAGE_DIR" )"
 
 # check argument
 SRC_DIR_RELATIVE=$1
@@ -17,23 +18,32 @@ popd > /dev/null
 # search for jdk image
 if [ -d "$SRC_DIR"/build/windows-i586 ] ; then
     PLATFORM=windows-i586
+    ZIP=""$OBF_DIR"/zip/zip -qr"
 elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
     PLATFORM=windows-amd64
-elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
-    PLATFORM=windows-amd64
+    ZIP=""$OBF_DIR"/zip/zip -qr"
 elif [ -d "$SRC_DIR"/build/linux-i586 ] ; then
     PLATFORM=linux-i586
+    ZIP="zip -qry"
 elif [ -d "$SRC_DIR"/build/linux-amd64 ] ; then
     PLATFORM=linux-amd64
+    ZIP="zip -qry"
 elif [ -d "$SRC_DIR"/build/macosx-x86_64 ] ; then
     PLATFORM=macosx-x86_64
+    ZIP="zip -qry"
+    if [ ! -d "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image ] ; then
+        # prepare server image
+        cp -r "$SRC_DIR"/build/"$PLATFORM"/j2sdk-image "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
+        rm -rf "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image/demo
+        rm -rf "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image/sample
+    fi
 else
     echo "Error: OpenJDK binaries not found in $SRC_DIR/build"
     exit 1
 fi
 
 # extract version
-JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-image
+JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
 
 echo "Packing OpenJDK image: $JDK_IMAGE"
 
@@ -45,22 +55,36 @@ if [ -z "$VERSION" ] ; then
 fi
 
 # pack image 
-BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"-image
+IMAGE_NAME=openjdk-"$VERSION"-"$PLATFORM"-image
 WORK_DIR="$IMAGE_DIR"/target
-if [ ! -d "$DIRECTORY" ]; then
+if [ ! -d "$WORK_DIR" ]; then
     mkdir "$WORK_DIR"
 fi
 CURDIR=`pwd`
 pushd "$WORK_DIR" > /dev/null
 cp -r "$JDK_IMAGE" .
-mv j2sdk-image $BUNDLE_NAME
-zip -rq "$BUNDLE_NAME".zip "$BUNDLE_NAME"
-mv "$BUNDLE_NAME".zip "$CURDIR"
+mv j2sdk-server-image "$IMAGE_NAME"
+$ZIP "$IMAGE_NAME".zip "$IMAGE_NAME"
+mv "$IMAGE_NAME".zip "$CURDIR"
 popd > /dev/null
+
+if [ "macosx-x86_64" == "$PLATFORM" ] ; then 
+    # pack bundle
+    JDK_BUNDLE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-bundle
+    BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"-bundle
+    CURDIR=`pwd`
+    pushd "$WORK_DIR" > /dev/null
+    cp -r "$JDK_BUNDLE" .
+    mv j2sdk-server-bundle "$BUNDLE_NAME"
+    cp "$OBF_DIR"/installer/macosx-x86_64/install_bundle.sh "$BUNDLE_NAME"
+    $ZIP "$BUNDLE_NAME".zip "$BUNDLE_NAME" 
+    mv "$BUNDLE_NAME".zip "$CURDIR"
+    popd > /dev/null
+fi
 
 # clean target
 rm -rf "$WORK_DIR"
 
-echo "Image packed successfully: $BUNDLE_NAME.zip"
+echo "Image packed successfully: $IMAGE_NAME.zip"
 
 exit 0

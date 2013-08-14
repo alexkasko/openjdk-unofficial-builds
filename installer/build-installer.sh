@@ -3,6 +3,7 @@ set -e
 
 # get installer builder dir
 INSTALLER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+OBF_DIR="$( dirname "$IMAGE_DIR" )"
 
 # check argument
 SRC_DIR_RELATIVE=$1
@@ -17,16 +18,19 @@ popd > /dev/null
 # search for jdk image
 if [ -d "$SRC_DIR"/build/windows-i586 ] ; then
     PLATFORM=windows-i586
+    ZIP=""$OBF_DIR"/zip/zip -qr"
 elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
     PLATFORM=windows-amd64
-elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
-    PLATFORM=windows-amd64
+    ZIP=""$OBF_DIR"/zip/zip -qr"
 elif [ -d "$SRC_DIR"/build/linux-i586 ] ; then
     PLATFORM=linux-i586
+    ZIP="zip -qry"
 elif [ -d "$SRC_DIR"/build/linux-amd64 ] ; then
     PLATFORM=linux-amd64
+    ZIP="zip -qry"
 elif [ -d "$SRC_DIR"/build/macosx-x86_64 ] ; then
     PLATFORM=macosx-x86_64
+    ZIP="zip -qry"
 else
     echo "Error: OpenJDK binaries not found in $SRC_DIR/build"
     exit 1
@@ -40,7 +44,7 @@ if [ ! -d "$INSTALLER_PLATFORM"  ] ; then
 fi
 
 # extract version
-JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-image
+JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
 
 echo "Building installer for OpenJDK image: $JDK_IMAGE"
 
@@ -52,13 +56,13 @@ if [ -z "$VERSION" ] ; then
 fi
 
 # copy 
-rm -rf "$INSTALLER_PLATFORM"/j2sdk-image
+rm -rf "$INSTALLER_PLATFORM"/j2sdk-server-image
 rm -rf "$INSTALLER_PLATFORM"/jre
 cp -r "$JDK_IMAGE" "$INSTALLER_PLATFORM"
-mv "$INSTALLER_PLATFORM"/j2sdk-image/jre "$INSTALLER_PLATFORM"
+mv "$INSTALLER_PLATFORM"/j2sdk-server-image/jre "$INSTALLER_PLATFORM"
 
 # launch izpack
-BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"
+BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"-installer
 INSTALLER_TARGET="$INSTALLER_DIR"/target/"$BUNDLE_NAME"
 rm -rf "$INSTALLER_TARGET"
 pushd "$INSTALLER_DIR" > /dev/null
@@ -76,12 +80,12 @@ else
 fi
 cp "$INSTALLER_LAUNCHER" "$INSTALLER_TARGET"
 mv "$INSTALLER_PLATFORM"/jre "$INSTALLER_TARGET"
-rm -rf "$INSTALLER_PLATFORM"/j2sdk-image
+rm -rf "$INSTALLER_PLATFORM"/j2sdk-server-image
 
 # create installer archive
 CURDIR=`pwd`
 pushd "$INSTALLER_DIR"/target > /dev/null
-zip -rq "$BUNDLE_NAME".zip "$BUNDLE_NAME"
+$ZIP "$BUNDLE_NAME".zip "$BUNDLE_NAME"
 mv "$BUNDLE_NAME".zip "$CURDIR"
 popd > /dev/null
 
