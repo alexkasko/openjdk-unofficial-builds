@@ -4,6 +4,7 @@ set -e
 # get installer builder dir
 INSTALLER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 OBF_DIR="$( dirname "$IMAGE_DIR" )"
+NEED_EXEC=false
 
 # check argument
 SRC_DIR_RELATIVE=$1
@@ -25,12 +26,15 @@ elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
 elif [ -d "$SRC_DIR"/build/linux-i586 ] ; then
     PLATFORM=linux-i586
     ZIP="zip -qry"
+    NEED_EXEC=true
 elif [ -d "$SRC_DIR"/build/linux-amd64 ] ; then
     PLATFORM=linux-amd64
     ZIP="zip -qry"
+    NEED_EXEC=true
 elif [ -d "$SRC_DIR"/build/macosx-x86_64 ] ; then
     PLATFORM=macosx-x86_64
     ZIP="zip -qry"
+    NEED_EXEC=true
 else
     echo "Error: OpenJDK binaries not found in $SRC_DIR/build"
     exit 1
@@ -60,6 +64,18 @@ rm -rf "$INSTALLER_PLATFORM"/j2sdk-server-image
 rm -rf "$INSTALLER_PLATFORM"/jre
 cp -r "$JDK_IMAGE" "$INSTALLER_PLATFORM"
 mv "$INSTALLER_PLATFORM"/j2sdk-server-image/jre "$INSTALLER_PLATFORM"
+if [ "true" == "$NEED_EXEC" ] ; then
+    pushd "$INSTALLER_PLATFORM"/j2sdk-server-image > /dev/null
+    JDK_EXEC_LIST="$( "$INSTALLER_DIR"/genexec.sh jdk | tr '\n' ' ' )"
+    awk -v jeln="$JDK_EXEC_LIST" '/\${JDK_EXECUTABLES}/ { $1=jeln }1' "$INSTALLER_PLATFORM"/izpack.xml > "$INSTALLER_PLATFORM"/izpack.xml_tmp
+    mv "$INSTALLER_PLATFORM"/izpack.xml_tmp "$INSTALLER_PLATFORM"/izpack.xml
+    popd > /dev/null
+    pushd "$INSTALLER_PLATFORM"/jre > /dev/null
+    JRE_EXEC_LIST="$( "$INSTALLER_DIR"/genexec.sh jre | tr '\n' ' ' )"
+    awk -v jeln="$JRE_EXEC_LIST" '/\${JRE_EXECUTABLES}/ { $1=jeln }1' "$INSTALLER_PLATFORM"/izpack.xml > "$INSTALLER_PLATFORM"/izpack.xml_tmp
+    mv "$INSTALLER_PLATFORM"/izpack.xml_tmp "$INSTALLER_PLATFORM"/izpack.xml
+    popd > /dev/null
+fi
 
 # launch izpack
 BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"-installer
