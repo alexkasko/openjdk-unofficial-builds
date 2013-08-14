@@ -17,7 +17,7 @@ rem utils in path
 set MAKE_HOME=%UTILS_DIR%/make
 set PATH_PREPEND=%UTILS_DIR%/path_prepend
 set CYGWIN_HOME=%UTILS_DIR%/cygwin
-set BOOTJDK_HOME=%UTILS_DIR%/bootjdk
+set BOOTJDK_HOME=%SCRIPT_DIR%/../jdk7
 set ANT_HOME=%UTILS_DIR%/ant
 
 rem ALT_* varibles
@@ -39,13 +39,13 @@ rem set NO_DOCS=true
 rem other variables
 set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
-set MILESTONE=unofficial
-set BUILD_NUMBER=b5
+set MILESTONE=u40-unofficial
+set BUILD_NUMBER=b1
 
 rem icedtea specific
 set USE_SYSTEM_GCONF=true
 set USE_SYSTEM_GIO=true
-set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk6.jar
+set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk7.jar
 set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
 set DISABLE_INTREE_EC=true 
 

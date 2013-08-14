@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 6 unofficial windows-amd64</appname>
-        <appversion>(IcedTea 1.12.6)</appversion>
+        <appname>OpenJDK 7 u40 unofficial windows-amd64</appname>
+        <appversion>(IcedTea 2.4.1)</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
@@ -231,7 +231,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                     <arg value="\/t"/>
                     <arg value="reg_dword"/>
                     <arg value="\/d"/>
-                    <arg value="27"/>
+                    <arg value="40"/>
                 </args>
             </executable>
             <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
