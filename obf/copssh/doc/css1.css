@@ -1,0 +1,33 @@
+A:hover {
+	color : Maroon;
+}
+
+BODY  {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12;
+	color : #000080;
+	background-color : #FFFF99;
+}
+
+TABLE {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 12;
+	color : #000080;
+}
+
+H1 {
+	font : bold 16px;
+	color : Maroon;
+}
+
+H2 {
+	font : bold 14px;
+	color : Maroon;
+}
+
+H3 {
+	font : 12px;
+	color : Maroon;
+}
+
+

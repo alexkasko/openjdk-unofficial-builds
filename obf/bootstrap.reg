@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\obf_build\Parameters]
+"Application"="C:\\obf\\run2.bat"

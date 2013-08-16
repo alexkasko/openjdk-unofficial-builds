@@ -1,0 +1,526 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SCP</TITLE>
+</HEAD><BODY>
+<H1>SCP</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>scp</B>
+
+ - secure copy (remote file copy program)
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>scp</B>
+
+-words
+
+[-<B>1246BCpqrv</B>
+
+]
+
+[-<B>c </B><I>cipher</I>
+
+
+
+]
+
+[-<B>F </B><I>ssh_config</I>
+
+
+
+]
+
+[-<B>i </B><I>identity_file</I>
+
+
+
+]
+
+[-<B>l </B><I>limit</I>
+
+
+
+]
+
+[-<B>o </B><I>ssh_option</I>
+
+
+
+]
+
+[-<B>P </B><I>port</I>
+
+
+
+]
+
+[-<B>S </B><I>program</I>
+
+
+
+]
+
+
+[[<I>user </I><B>@</B>
+
+
+
+]
+
+
+<I>host1 </I><B>:</B>
+
+
+
+<B></B><I>file1</I>
+
+
+
+]
+
+<I>...</I>
+
+
+[[<I>user </I><B>@</B>
+
+
+
+]
+
+
+<I>host2 </I><B>:</B>
+
+
+
+<I>file2</I>
+
+]
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+
+
+<B>scp</B>
+
+
+copies files between hosts on a network.
+It uses
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+for data transfer, and uses the same authentication and provides the
+same security as
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+Unlike
+<A HREF="http://localhost/cgi-bin/man/man2html?1+rcp">rcp</A>(1),
+
+
+<B>scp</B>
+
+
+will ask for passwords or passphrases if they are needed for
+authentication.
+<P>
+
+File names may contain a user and host specification to indicate
+that the file is to be copied to/from that host.
+Local file names can be made explicit using absolute or relative pathnames
+to avoid
+<B>scp</B>
+
+
+treating file names containing
+`:'
+
+as host specifiers.
+Copies between two remote hosts are also permitted.
+<P>
+
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-1</B>
+
+
+<DD>
+Forces
+<B>scp</B>
+
+
+to use protocol 1.
+<DT><B>-2</B>
+
+
+<DD>
+Forces
+<B>scp</B>
+
+
+to use protocol 2.
+<DT><B>-4</B>
+
+
+<DD>
+Forces
+<B>scp</B>
+
+
+to use IPv4 addresses only.
+<DT><B>-6</B>
+
+
+<DD>
+Forces
+<B>scp</B>
+
+
+to use IPv6 addresses only.
+<DT><B>-B</B>
+
+
+<DD>
+Selects batch mode (prevents asking for passwords or passphrases).
+<DT><B>-C</B>
+
+
+<DD>
+Compression enable.
+Passes the
+-<B>C</B>
+
+flag to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+to enable compression.
+<DT><B>-c </B><I>cipher</I>
+
+
+
+
+<DD>
+Selects the cipher to use for encrypting the data transfer.
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-F </B><I>ssh_config</I>
+
+
+
+
+<DD>
+Specifies an alternative
+per-user configuration file for
+<B>ssh</B>
+
+ 
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-i </B><I>identity_file</I>
+
+
+
+
+<DD>
+Selects the file from which the identity (private key) for public key
+authentication is read.
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-l </B><I>limit</I>
+
+
+
+
+<DD>
+Limits the used bandwidth, specified in Kbit/s.
+<DT><B>-o </B><I>ssh_option</I>
+
+
+
+
+<DD>
+Can be used to pass options to
+<B>ssh</B>
+
+in the format used in
+ssh_config5.
+
+
+This is useful for specifying options
+for which there is no separate
+<B>scp</B>
+
+command-line flag.
+For full details of the options listed below, and their possible values, see
+ssh_config5.
+
+
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>AddressFamily</B>
+<DD>
+<DT><B>BatchMode</B>
+<DD>
+<DT><B>BindAddress</B>
+<DD>
+<DT><B>ChallengeResponseAuthentication</B>
+<DD>
+<DT><B>CheckHostIP</B>
+<DD>
+<DT><B>Cipher</B>
+<DD>
+<DT><B>Ciphers</B>
+<DD>
+<DT><B>Compression</B>
+<DD>
+<DT><B>CompressionLevel</B>
+<DD>
+<DT><B>ConnectionAttempts</B>
+<DD>
+<DT><B>ConnectTimeout</B>
+<DD>
+<DT><B>ControlMaster</B>
+<DD>
+<DT><B>ControlPath</B>
+<DD>
+<DT><B>GlobalKnownHostsFile</B>
+<DD>
+<DT><B>GSSAPIAuthentication</B>
+<DD>
+<DT><B>GSSAPIDelegateCredentials</B>
+<DD>
+<DT><B>HashKnownHosts</B>
+<DD>
+<DT><B>Host</B>
+<DD>
+<DT><B>HostbasedAuthentication</B>
+<DD>
+<DT><B>HostKeyAlgorithms</B>
+<DD>
+<DT><B>HostKeyAlias</B>
+<DD>
+<DT><B>HostName</B>
+<DD>
+<DT><B>IdentityFile</B>
+<DD>
+<DT><B>IdentitiesOnly</B>
+<DD>
+<DT><B>KbdInteractiveDevices</B>
+<DD>
+<DT><B>LogLevel</B>
+<DD>
+<DT><B>MACs </B><DT><B>NoHostAuthenticationForLocalhost</B>
+<DD>
+
+
+
+<DD>
+<DT><B>NumberOfPasswordPrompts</B>
+<DD>
+<DT><B>PasswordAuthentication</B>
+<DD>
+<DT><B>PKCS11Provider</B>
+<DD>
+<DT><B>Port</B>
+<DD>
+<DT><B>PreferredAuthentications</B>
+<DD>
+<DT><B>Protocol</B>
+<DD>
+<DT><B>ProxyCommand</B>
+<DD>
+<DT><B>PubkeyAuthentication</B>
+<DD>
+<DT><B>RekeyLimit</B>
+<DD>
+<DT><B>RhostsRSAAuthentication</B>
+<DD>
+<DT><B>RSAAuthentication</B>
+<DD>
+<DT><B>SendEnv</B>
+<DD>
+<DT><B>ServerAliveInterval</B>
+<DD>
+<DT><B>ServerAliveCountMax</B>
+<DD>
+<DT><B>StrictHostKeyChecking</B>
+<DD>
+<DT><B>TCPKeepAlive</B>
+<DD>
+<DT><B>UsePrivilegedPort</B>
+<DD>
+<DT><B>User</B>
+<DD>
+<DT><B>UserKnownHostsFile</B>
+<DD>
+<DT><B>VerifyHostKeyDNS</B>
+<DD>
+</DL>
+<P>
+
+<DT><B>-P </B><I>port</I>
+
+
+
+
+<DD>
+Specifies the port to connect to on the remote host.
+Note that this option is written with a capital
+`P'
+
+ 
+because
+-<B>p</B>
+
+is already reserved for preserving the times and modes of the file in
+<A HREF="http://localhost/cgi-bin/man/man2html?1+rcp">rcp</A>(1).
+
+
+<DT><B>-p</B>
+
+
+<DD>
+Preserves modification times, access times, and modes from the
+original file.
+<DT><B>-q</B>
+
+
+<DD>
+Quiet mode: disables the progress meter as well as warning and diagnostic
+messages from
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-r</B>
+
+
+<DD>
+Recursively copy entire directories.
+Note that
+<B>scp</B>
+
+
+follows symbolic links encountered in the tree traversal.
+<DT><B>-S </B><I>program</I>
+
+
+
+
+<DD>
+Name of
+<I>program</I>
+
+to use for the encrypted connection.
+The program must understand
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+options.
+<DT><B>-v</B>
+
+
+<DD>
+Verbose mode.
+Causes
+<B>scp</B>
+
+
+and
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+to print debugging messages about their progress.
+This is helpful in
+debugging connection, authentication, and configuration problems.
+</DL>
+<P>
+
+<P>
+
+Ex -std scp
+
+<A NAME="lbAE">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+rcp">rcp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sftp">sftp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+ssh-add1,
+
+
+ssh-agent1,
+
+
+ssh-keygen1,
+
+
+ssh_config5,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>HISTORY</H2>
+
+<B>scp</B>
+
+
+is based on the
+<A HREF="http://localhost/cgi-bin/man/man2html?1+rcp">rcp</A>(1)
+
+
+program in BSD source code from the Regents of the University of
+California.
+<A NAME="lbAG">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+An Timo Rinne Aq <A HREF="mailto:tri@iki.fi">tri@iki.fi</A>
+
+An Tatu Ylonen Aq <A HREF="mailto:ylo@cs.hut.fi">ylo@cs.hut.fi</A>
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">SEE ALSO</A><DD>
+<DT><A HREF="#lbAF">HISTORY</A><DD>
+<DT><A HREF="#lbAG">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:43 GMT, March 09, 2010
+</BODY>
+</HTML>

@@ -1,0 +1,345 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSH-ADD</TITLE>
+</HEAD><BODY>
+<H1>SSH-ADD</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>ssh-add</B>
+
+ - adds RSA or DSA identities to the authentication agent
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>ssh-add</B>
+
+[-<B>cDdLlXx </B>[-<B>t </B><I>life</I>
+
+
+
+]
+
+
+
+
+
+]
+
+[<I>file ...</I>
+
+]
+
+<BR><B>ssh-add</B>
+
+-<B>s </B><I>pkcs11</I>
+
+
+
+<BR><B>ssh-add</B>
+
+-<B>e </B><I>pkcs11</I>
+
+
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>ssh-add</B>
+
+
+adds RSA or DSA identities to the authentication agent,
+ssh-agent1.
+
+
+When run without arguments, it adds the files
+~/.ssh/id_rsa
+
+ 
+~/.ssh/id_dsa
+
+and
+~/.ssh/identity
+
+ 
+After loading a private key,
+<B>ssh-add</B>
+
+
+will try to load corresponding certificate information from the
+filename obtained by appending
+-cert.pub
+
+to the name of the private key file.
+Alternative file names can be given on the command line.
+<P>
+
+If any file requires a passphrase,
+<B>ssh-add</B>
+
+
+asks for the passphrase from the user.
+The passphrase is read from the user's tty.
+<B>ssh-add</B>
+
+
+retries the last passphrase if multiple identity files are given.
+<P>
+
+The authentication agent must be running and the
+<B>SSH_AUTH_SOCK</B>
+
+environment variable must contain the name of its socket for
+<B>ssh-add</B>
+
+
+to work.
+<P>
+
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-c</B>
+
+
+<DD>
+Indicates that added identities should be subject to confirmation before
+being used for authentication.
+Confirmation is performed by the
+<B>SSH_ASKPASS</B>
+
+program mentioned below.
+Successful confirmation is signaled by a zero exit status from the
+<B>SSH_ASKPASS</B>
+
+program, rather than text entered into the requester.
+<DT><B>-D</B>
+
+
+<DD>
+Deletes all identities from the agent.
+<DT><B>-d</B>
+
+
+<DD>
+Instead of adding identities, removes identities from the agent.
+If
+<B>ssh-add</B>
+
+
+has been run without arguments, the keys for the default identities will
+be removed.
+Otherwise, the argument list will be interpreted as a list of paths to
+public key files and matching keys will be removed from the agent.
+If no public key is found at a given path,
+<B>ssh-add</B>
+
+
+will append
+.pub
+
+and retry.
+<DT><B>-e </B><I>pkcs11</I>
+
+
+
+
+<DD>
+Remove keys provided by the PKCS#11 shared library
+<I>pkcs11</I>
+
+ 
+<DT><B>-L</B>
+
+
+<DD>
+Lists public key parameters of all identities currently represented
+by the agent.
+<DT><B>-l</B>
+
+
+<DD>
+Lists fingerprints of all identities currently represented by the agent.
+<DT><B>-s </B><I>pkcs11</I>
+
+
+
+
+<DD>
+Add keys provided by the PKCS#11 shared library
+<I>pkcs11</I>
+
+ 
+<DT><B>-t </B><I>life</I>
+
+
+
+
+<DD>
+Set a maximum lifetime when adding identities to an agent.
+The lifetime may be specified in seconds or in a time format
+specified in
+sshd_config5.
+
+
+<DT><B>-X</B>
+
+
+<DD>
+Unlock the agent.
+<DT><B>-x</B>
+
+
+<DD>
+Lock the agent with a password.
+</DL>
+<P>
+
+<A NAME="lbAE">&nbsp;</A>
+<H2>ENVIRONMENT</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>DISPLAY and SSH_ASKPASS</B>
+
+
+<DD>
+If
+<B>ssh-add</B>
+
+
+needs a passphrase, it will read the passphrase from the current
+terminal if it was run from a terminal.
+If
+<B>ssh-add</B>
+
+
+does not have a terminal associated with it but
+<B>DISPLAY</B>
+
+and
+<B>SSH_ASKPASS</B>
+
+are set, it will execute the program specified by
+<B>SSH_ASKPASS</B>
+
+and open an X11 window to read the passphrase.
+This is particularly useful when calling
+<B>ssh-add</B>
+
+
+from a
+.xsession
+
+or related script.
+(Note that on some machines it
+may be necessary to redirect the input from
+/dev/null
+
+to make this work.)
+<DT><B>SSH_AUTH_SOCK</B>
+
+
+<DD>
+Identifies the path of a
+UNIX
+socket used to communicate with the agent.
+</DL>
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>~/.ssh/identity
+
+</B>
+<DD>
+Contains the protocol version 1 RSA authentication identity of the user.
+<DT><B>~/.ssh/id_dsa
+
+</B>
+<DD>
+Contains the protocol version 2 DSA authentication identity of the user.
+<DT><B>~/.ssh/id_rsa
+
+</B>
+<DD>
+Contains the protocol version 2 RSA authentication identity of the user.
+</DL>
+<P>
+
+<P>
+
+Identity files should not be readable by anyone but the user.
+Note that
+<B>ssh-add</B>
+
+
+ignores identity files if they are accessible by others.
+<A NAME="lbAG">&nbsp;</A>
+<H2>DIAGNOSTICS</H2>
+
+Exit status is 0 on success, 1 if the specified command fails,
+and 2 if
+<B>ssh-add</B>
+
+
+is unable to contact the authentication agent.
+<A NAME="lbAH">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+ssh-agent1,
+
+
+ssh-keygen1,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAI">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by Tatu Ylonen.
+Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
+Theo de Raadt and Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+Markus Friedl contributed the support for SSH
+protocol versions 1.5 and 2.0.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">ENVIRONMENT</A><DD>
+<DT><A HREF="#lbAF">FILES</A><DD>
+<DT><A HREF="#lbAG">DIAGNOSTICS</A><DD>
+<DT><A HREF="#lbAH">SEE ALSO</A><DD>
+<DT><A HREF="#lbAI">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

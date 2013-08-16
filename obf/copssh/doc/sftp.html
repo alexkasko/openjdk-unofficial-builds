@@ -1,0 +1,1216 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SFTP</TITLE>
+</HEAD><BODY>
+<H1>SFTP</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>sftp</B>
+
+ - secure file transfer program
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>sftp</B>
+
+-words
+
+[-<B>1246Cpqrv</B>
+
+]
+
+[-<B>B </B><I>buffer_size</I>
+
+
+
+]
+
+[-<B>b </B><I>batchfile</I>
+
+
+
+]
+
+[-<B>c </B><I>cipher</I>
+
+
+
+]
+
+[-<B>D </B><I>sftp_server_path</I>
+
+
+
+]
+
+[-<B>F </B><I>ssh_config</I>
+
+
+
+]
+
+[-<B>i </B><I>identity_file</I>
+
+
+
+]
+
+[-<B>o </B><I>ssh_option</I>
+
+
+
+]
+
+[-<B>P </B><I>port</I>
+
+
+
+]
+
+[-<B>R </B><I>num_requests</I>
+
+
+
+]
+
+[-<B>S </B><I>program</I>
+
+
+
+]
+
+[-<B>s </B><I>subsystem | sftp_server</I>
+
+
+
+]
+
+<I>host</I>
+
+<BR><B>sftp</B>
+
+
+
+[<I>user </I><B>@ </B><I>host </I><B></B>[: <B></B><I>file ...</I>
+
+
+
+]
+
+
+
+
+
+
+
+]
+
+
+
+
+
+<BR><B>sftp</B>
+
+[<I>user </I><B>@ </B><I>host </I><B></B>[: <B></B><I>dir </I><B></B>[<I>/ </I>]
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+<BR><B>sftp</B>
+
+-<B>b </B><I>batchfile</I>
+
+
+
+[<I>user </I><B>@ </B><I>host</I>
+
+
+
+]
+
+
+
+
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>sftp</B>
+
+
+is an interactive file transfer program, similar to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ftp">ftp</A>(1),
+
+
+which performs all operations over an encrypted
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+transport.
+It may also use many features of ssh, such as public key authentication and
+compression.
+<B>sftp</B>
+
+
+connects and logs into the specified
+<I>host</I>
+
+ 
+then enters an interactive command mode.
+<P>
+
+The second usage format will retrieve files automatically if a non-interactive
+authentication method is used; otherwise it will do so after
+successful interactive authentication.
+<P>
+
+The third usage format allows
+<B>sftp</B>
+
+
+to start in a remote directory.
+<P>
+
+The final usage format allows for automated sessions using the
+-<B>b</B>
+
+option.
+In such cases, it is necessary to configure non-interactive authentication
+to obviate the need to enter a password at connection time (see
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+and
+ssh-keygen1
+
+
+for details).
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-1</B>
+
+
+<DD>
+Specify the use of protocol version 1.
+<DT><B>-2</B>
+
+
+<DD>
+Specify the use of protocol version 2.
+<DT><B>-4</B>
+
+
+<DD>
+Forces
+<B>sftp</B>
+
+
+to use IPv4 addresses only.
+<DT><B>-6</B>
+
+
+<DD>
+Forces
+<B>sftp</B>
+
+
+to use IPv6 addresses only.
+<DT><B>-B </B><I>buffer_size</I>
+
+
+
+
+<DD>
+Specify the size of the buffer that
+<B>sftp</B>
+
+
+uses when transferring files.
+Larger buffers require fewer round trips at the cost of higher
+memory consumption.
+The default is 32768 bytes.
+<DT><B>-b </B><I>batchfile</I>
+
+
+
+
+<DD>
+Batch mode reads a series of commands from an input
+<I>batchfile</I>
+
+instead of
+<I>stdin</I>
+
+ 
+Since it lacks user interaction it should be used in conjunction with
+non-interactive authentication.
+A
+<I>batchfile</I>
+
+of
+`-'
+
+may be used to indicate standard input.
+<B>sftp</B>
+
+
+will abort if any of the following
+commands fail:
+<B>get , put , rename , ln</B>
+
+ 
+<B>rm , mkdir , chdir , ls</B>
+
+ 
+<B>lchdir , chmod , chown</B>
+
+ 
+<B>chgrp , lpwd , df</B>
+
+ 
+and
+<B>lmkdir</B>
+
+ 
+Termination on error can be suppressed on a command by command basis by
+prefixing the command with a
+`-'
+
+character (for example,
+<B>-rm /tmp/blah* )</B>
+
+ 
+<DT><B>-C</B>
+
+
+<DD>
+Enables compression (via ssh's
+-<B>C</B>
+
+flag).
+<DT><B>-c </B><I>cipher</I>
+
+
+
+
+<DD>
+Selects the cipher to use for encrypting the data transfers.
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-D </B><I>sftp_server_path</I>
+
+
+
+
+<DD>
+Connect directly to a local sftp server
+(rather than via
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)).
+
+
+This option may be useful in debugging the client and server.
+<DT><B>-F </B><I>ssh_config</I>
+
+
+
+
+<DD>
+Specifies an alternative
+per-user configuration file for
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-i </B><I>identity_file</I>
+
+
+
+
+<DD>
+Selects the file from which the identity (private key) for public key
+authentication is read.
+This option is directly passed to
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-o </B><I>ssh_option</I>
+
+
+
+
+<DD>
+Can be used to pass options to
+<B>ssh</B>
+
+in the format used in
+ssh_config5.
+
+
+This is useful for specifying options
+for which there is no separate
+<B>sftp</B>
+
+command-line flag.
+For example, to specify an alternate port use:
+<B>sftp -oPort=24</B>
+
+ 
+For full details of the options listed below, and their possible values, see
+ssh_config5.
+
+
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>AddressFamily</B>
+<DD>
+<DT><B>BatchMode</B>
+<DD>
+<DT><B>BindAddress</B>
+<DD>
+<DT><B>ChallengeResponseAuthentication</B>
+<DD>
+<DT><B>CheckHostIP</B>
+<DD>
+<DT><B>Cipher</B>
+<DD>
+<DT><B>Ciphers</B>
+<DD>
+<DT><B>Compression</B>
+<DD>
+<DT><B>CompressionLevel</B>
+<DD>
+<DT><B>ConnectionAttempts</B>
+<DD>
+<DT><B>ConnectTimeout</B>
+<DD>
+<DT><B>ControlMaster</B>
+<DD>
+<DT><B>ControlPath</B>
+<DD>
+<DT><B>GlobalKnownHostsFile</B>
+<DD>
+<DT><B>GSSAPIAuthentication</B>
+<DD>
+<DT><B>GSSAPIDelegateCredentials</B>
+<DD>
+<DT><B>HashKnownHosts</B>
+<DD>
+<DT><B>Host</B>
+<DD>
+<DT><B>HostbasedAuthentication</B>
+<DD>
+<DT><B>HostKeyAlgorithms</B>
+<DD>
+<DT><B>HostKeyAlias</B>
+<DD>
+<DT><B>HostName</B>
+<DD>
+<DT><B>IdentityFile</B>
+<DD>
+<DT><B>IdentitiesOnly</B>
+<DD>
+<DT><B>KbdInteractiveDevices</B>
+<DD>
+<DT><B>LogLevel</B>
+<DD>
+<DT><B>MACs </B><DT><B>NoHostAuthenticationForLocalhost</B>
+<DD>
+
+
+
+<DD>
+<DT><B>NumberOfPasswordPrompts</B>
+<DD>
+<DT><B>PasswordAuthentication</B>
+<DD>
+<DT><B>PKCS11Provider</B>
+<DD>
+<DT><B>Port</B>
+<DD>
+<DT><B>PreferredAuthentications</B>
+<DD>
+<DT><B>Protocol</B>
+<DD>
+<DT><B>ProxyCommand</B>
+<DD>
+<DT><B>PubkeyAuthentication</B>
+<DD>
+<DT><B>RekeyLimit</B>
+<DD>
+<DT><B>RhostsRSAAuthentication</B>
+<DD>
+<DT><B>RSAAuthentication</B>
+<DD>
+<DT><B>SendEnv</B>
+<DD>
+<DT><B>ServerAliveInterval</B>
+<DD>
+<DT><B>ServerAliveCountMax</B>
+<DD>
+<DT><B>StrictHostKeyChecking</B>
+<DD>
+<DT><B>TCPKeepAlive</B>
+<DD>
+<DT><B>UsePrivilegedPort</B>
+<DD>
+<DT><B>User</B>
+<DD>
+<DT><B>UserKnownHostsFile</B>
+<DD>
+<DT><B>VerifyHostKeyDNS</B>
+<DD>
+</DL>
+<P>
+
+<DT><B>-P </B><I>port</I>
+
+
+
+
+<DD>
+Specifies the port to connect to on the remote host.
+<DT><B>-p</B>
+
+
+<DD>
+Preserves modification times, access times, and modes from the
+original files transferred.
+<DT><B>-q</B>
+
+
+<DD>
+Quiet mode: disables the progress meter as well as warning and
+diagnostic messages from
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<DT><B>-R </B><I>num_requests</I>
+
+
+
+
+<DD>
+Specify how many requests may be outstanding at any one time.
+Increasing this may slightly improve file transfer speed
+but will increase memory usage.
+The default is 64 outstanding requests.
+<DT><B>-r</B>
+
+
+<DD>
+Recursively copy entire directories when uploading and downloading.
+Note that
+<B>sftp</B>
+
+
+does not follow symbolic links encountered in the tree traversal.
+<DT><B>-S </B><I>program</I>
+
+
+
+
+<DD>
+Name of the
+<I>program</I>
+
+to use for the encrypted connection.
+The program must understand
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+options.
+<DT><B>-s </B><I>subsystem | sftp_server</I>
+
+
+
+
+<DD>
+Specifies the SSH2 subsystem or the path for an sftp server
+on the remote host.
+A path is useful for using
+<B>sftp</B>
+
+
+over protocol version 1, or when the remote
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+does not have an sftp subsystem configured.
+<DT><B>-v</B>
+
+
+<DD>
+Raise logging level.
+This option is also passed to ssh.
+</DL>
+<P>
+
+<A NAME="lbAE">&nbsp;</A>
+<H2>INTERACTIVE COMMANDS</H2>
+
+Once in interactive mode,
+<B>sftp</B>
+
+
+understands a set of commands similar to those of
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ftp">ftp</A>(1).
+
+
+Commands are case insensitive.
+Pathnames that contain spaces must be enclosed in quotes.
+Any special characters contained within pathnames that are recognized by
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+must be escaped with backslashes
+(`\'
+
+)
+
+ 
+<DL COMPACT>
+<P>
+
+<DT><B>bye</B>
+
+
+<DD>
+Quit
+<B>sftp</B>
+
+ 
+<DT><B>cd </B><I>path</I>
+
+
+
+
+<DD>
+Change remote directory to
+<I>path</I>
+
+ 
+<DT><B>chgrp </B><I>grp path</I>
+
+
+
+
+
+
+<DD>
+Change group of file
+<I>path</I>
+
+to
+<I>grp</I>
+
+ 
+<I>path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+<I>grp</I>
+
+must be a numeric GID.
+<DT><B>chmod </B><I>mode path</I>
+
+
+
+
+
+
+<DD>
+Change permissions of file
+<I>path</I>
+
+to
+<I>mode</I>
+
+ 
+<I>path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+<DT><B>chown </B><I>own path</I>
+
+
+
+
+
+
+<DD>
+Change owner of file
+<I>path</I>
+
+to
+<I>own</I>
+
+ 
+<I>path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+<I>own</I>
+
+must be a numeric UID.
+<DT><B>
+df</B>
+
+
+
+[-<B>hi</B>
+
+]
+
+[<I>path</I>
+
+]
+
+<DD>
+
+<DD>Display usage information for the filesystem holding the current directory
+(or
+<I>path</I>
+
+if specified).
+If the
+-<B>h</B>
+
+flag is specified, the capacity information will be displayed using
+&quot;human-readable&quot; suffixes.
+The
+-<B>i</B>
+
+flag requests display of inode information in addition to capacity information.
+This command is only supported on servers that implement the
+``<A HREF="mailto:statvfs@openssh.com">statvfs@openssh.com</A>''
+
+extension.
+<DT><B>exit</B>
+
+
+<DD>
+Quit
+<B>sftp</B>
+
+ 
+<DT><B>
+get</B>
+
+
+
+[-<B>Ppr</B>
+
+]
+
+<I>remote-path</I>
+
+[<I>local-path</I>
+
+]
+
+<DD>
+
+<DD>Retrieve the
+<I>remote-path</I>
+
+and store it on the local machine.
+If the local
+path name is not specified, it is given the same name it has on the
+remote machine.
+<I>remote-path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+If it does and
+<I>local-path</I>
+
+is specified, then
+<I>local-path</I>
+
+must specify a directory.
+<P>
+
+If either the
+-<B>P</B>
+
+or
+-<B>p</B>
+
+flag is specified, then full file permissions and access times are
+copied too.
+<P>
+
+If the
+-<B>r</B>
+
+flag is specified then directories will be copied recursively.
+Note that
+<B>sftp</B>
+
+
+does not follow symbolic links when performing recursive transfers.
+<DT><B>help</B>
+
+
+<DD>
+Display help text.
+<DT><B>lcd </B><I>path</I>
+
+
+
+
+<DD>
+Change local directory to
+<I>path</I>
+
+ 
+<DT><B>lls </B>[<I>ls-options </I>[<I>path</I>
+
+]
+
+
+
+]
+
+
+
+
+<DD>
+Display local directory listing of either
+<I>path</I>
+
+or current directory if
+<I>path</I>
+
+is not specified.
+<I>ls-options</I>
+
+may contain any flags supported by the local system's
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ls">ls</A>(1)
+
+
+command.
+<I>path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+<DT><B>lmkdir </B><I>path</I>
+
+
+
+
+<DD>
+Create local directory specified by
+<I>path</I>
+
+ 
+<DT><B>ln </B><I>oldpath newpath</I>
+
+
+
+
+
+
+<DD>
+Create a symbolic link from
+<I>oldpath</I>
+
+to
+<I>newpath</I>
+
+ 
+<DT><B>lpwd</B>
+
+
+<DD>
+Print local working directory.
+<DT><B>
+ls</B>
+
+
+
+[-<B>1afhlnrSt </B>[<I>path</I>
+
+]
+
+
+
+
+
+]
+
+<DD>
+
+<DD>Display a remote directory listing of either
+<I>path</I>
+
+or the current directory if
+<I>path</I>
+
+is not specified.
+<I>path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+<P>
+
+The following flags are recognized and alter the behaviour of
+<B>ls</B>
+
+accordingly:
+<DL COMPACT>
+<P>
+
+<DT><B>-1</B>
+
+
+<DD>
+Produce single columnar output.
+<DT><B>-a</B>
+
+
+<DD>
+List files beginning with a dot
+(`.'
+
+)
+
+ 
+<DT><B>-f</B>
+
+
+<DD>
+Do not sort the listing.
+The default sort order is lexicographical.
+<DT><B>-h</B>
+
+
+<DD>
+When used with a long format option, use unit suffixes: Byte, Kilobyte,
+Megabyte, Gigabyte, Terabyte, Petabyte, and Exabyte in order to reduce
+the number of digits to four or fewer using powers of 2 for sizes (K=1024,
+M=1048576, etc.).
+<DT><B>-l</B>
+
+
+<DD>
+Display additional details including permissions
+and ownership information.
+<DT><B>-n</B>
+
+
+<DD>
+Produce a long listing with user and group information presented
+numerically.
+<DT><B>-r</B>
+
+
+<DD>
+Reverse the sort order of the listing.
+<DT><B>-S</B>
+
+
+<DD>
+Sort the listing by file size.
+<DT><B>-t</B>
+
+
+<DD>
+Sort the listing by last modification time.
+</DL>
+<P>
+
+<DT><B>lumask </B><I>umask</I>
+
+
+
+
+<DD>
+Set local umask to
+<I>umask</I>
+
+ 
+<DT><B>mkdir </B><I>path</I>
+
+
+
+
+<DD>
+Create remote directory specified by
+<I>path</I>
+
+ 
+<DT><B>progress</B>
+
+
+<DD>
+Toggle display of progress meter.
+<DT><B>
+put</B>
+
+
+
+[-<B>Ppr</B>
+
+]
+
+<I>local-path</I>
+
+[<I>remote-path</I>
+
+]
+
+<DD>
+
+<DD>Upload
+<I>local-path</I>
+
+and store it on the remote machine.
+If the remote path name is not specified, it is given the same name it has
+on the local machine.
+<I>local-path</I>
+
+may contain
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3)
+
+
+characters and may match multiple files.
+If it does and
+<I>remote-path</I>
+
+is specified, then
+<I>remote-path</I>
+
+must specify a directory.
+<P>
+
+If ether the
+-<B>P</B>
+
+or
+-<B>p</B>
+
+flag is specified, then full file permissions and access times are
+copied too.
+<P>
+
+If the
+-<B>r</B>
+
+flag is specified then directories will be copied recursively.
+Note that
+<B>sftp</B>
+
+
+does not follow symbolic links when performing recursive transfers.
+<DT><B>pwd</B>
+
+
+<DD>
+Display remote working directory.
+<DT><B>quit</B>
+
+
+<DD>
+Quit
+<B>sftp</B>
+
+ 
+<DT><B>rename </B><I>oldpath newpath</I>
+
+
+
+
+
+
+<DD>
+Rename remote file from
+<I>oldpath</I>
+
+to
+<I>newpath</I>
+
+ 
+<DT><B>rm </B><I>path</I>
+
+
+
+
+<DD>
+Delete remote file specified by
+<I>path</I>
+
+ 
+<DT><B>rmdir </B><I>path</I>
+
+
+
+
+<DD>
+Remove remote directory specified by
+<I>path</I>
+
+ 
+<DT><B>symlink </B><I>oldpath newpath</I>
+
+
+
+
+
+
+<DD>
+Create a symbolic link from
+<I>oldpath</I>
+
+to
+<I>newpath</I>
+
+ 
+<DT><B>version</B>
+
+
+<DD>
+Display the
+<B>sftp</B>
+
+
+protocol version.
+<DT><B>! </B><I>command</I>
+
+
+
+
+
+
+<DD>
+Execute
+<I>command</I>
+
+in local shell.
+<DT><B>!</B>
+
+
+<DD>
+Escape to local shell.
+<DT><B>?</B>
+
+
+<DD>
+Synonym for help.
+</DL>
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ftp">ftp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ls">ls</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+scp">scp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+ssh-add1,
+
+
+ssh-keygen1,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?3+glob">glob</A>(3),
+
+
+ssh_config5,
+
+
+sftp-server8,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<DL COMPACT><DT><DD>
+T. Ylonen
+S. Lehtinen
+<I>&quot;SSH File Transfer Protocol&quot;</I>
+draft-ietf-secsh-filexfer-00.txt
+January 2001
+work in progress material
+</DL>
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">INTERACTIVE COMMANDS</A><DD>
+<DT><A HREF="#lbAF">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

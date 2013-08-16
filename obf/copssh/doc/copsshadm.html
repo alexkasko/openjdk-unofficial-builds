@@ -1,0 +1,324 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Copsshadm - copSSH Admin Tool</title>
+<link rel="stylesheet" href="css1.css" type="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:" />
+</head>
+
+<body>
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#examples">EXAMPLES</a></li>
+	<li><a href="#license_registration">LICENSE/REGISTRATION</a></li>
+	<li><a href="#contact">CONTACT</a></li>
+	<li><a href="#version">VERSION</a></li>
+	<li><a href="#changelog">CHANGELOG</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>Copsshadm - copSSH Admin Tool</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>copsshadm</strong> [<strong>--command</strong> <em>command</em>] [<strong>--user</strong> <em>user</em> [<strong>--shell</strong> <em>shell</em>] [<strong>--passphrase</strong> <em>passphrase</em>] [<strong>--noremovehome</strong>] [<strong>--nohomelink</strong>] ] [<strong>--verbose</strong>] [<strong>--help</strong>]</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Copsshadm is a tool for administration of a copSSH environment. It supports a collection of functions which are needed during installation or operation.</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="item__2d_2dcommand_command"><strong>--command</strong> <em>command</em></a></strong>
+
+<dd>
+<p>Following commands are supported:</p>
+</dd>
+<dl>
+<dt><strong><a name="item_activateuser"><strong>activateuser</strong></a></strong>
+
+<dd>
+<p>Activate a user which must be specified by the option <em>--user</em>. For further customization, you can also use options <em>--shell</em>, <em>--passphrase</em>, <em>--noremovehome</em>, <em>--nohomelink</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_deactivateuser"><strong>deactivateuser</strong></a></strong>
+
+<dd>
+<p>Deactivate a user which must be specified by option <em>--user</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_setpermissions"><strong>setpermissions</strong></a></strong>
+
+<dd>
+<p>Sets a default set of permissions on the installation directory and subdirectories.</p>
+</dd>
+</li>
+<dt><strong><a name="item_stopservice"><strong>stopservice</strong></a></strong>
+
+<dd>
+<p>Stops the service if it is running.</p>
+</dd>
+</li>
+<dt><strong><a name="item_startservice"><strong>startservice</strong></a></strong>
+
+<dd>
+<p>Starts the service if it is stopped.</p>
+</dd>
+</li>
+<dt><strong><a name="item_deleteservice"><strong>deleteservice</strong></a></strong>
+
+<dd>
+<p>Deletes the service. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_setroot"><strong>setroot</strong></a></strong>
+
+<dd>
+<p>Sets cygwin root to copssh installation directory. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_deleteroot"><strong>deleteroot</strong></a></strong>
+
+<dd>
+<p>Deletes registry info about cygwin root. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_initpasswd"><strong>initpasswd</strong></a></strong>
+
+<dd>
+<p>Create initial versions of <em>/etc/passwd</em> and <em>/etc/group</em>. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_createpaths"><strong>createpaths</strong></a></strong>
+
+<dd>
+<p>Create unix paths required. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_createservice"><strong>createservice</strong></a></strong>
+
+<dd>
+<p>Creates Openssh SSHD daemon service and the service account. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_createsshdaccount"><strong>createsshdaccount</strong></a></strong>
+
+<dd>
+<p>Creates privilege separation user. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_deletesshdaccount"><strong>deletesshdaccount</strong></a></strong>
+
+<dd>
+<p>Deletes the privilege separation user. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_grantrights"><strong>grantrights</strong></a></strong>
+
+<dd>
+<p>Grant required user rights to the service account. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_removerights"><strong>removerights</strong></a></strong>
+
+<dd>
+<p>Remove user rights from the service account. <em>Installation only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_listnonactiveusers"><strong>listnonactiveusers</strong></a></strong>
+
+<dd>
+<p>Prints a list of deactivated local user. <em>User Activation Wizard only</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item_listactiveusers"><strong>listactiveusers</strong></a></strong>
+
+<dd>
+<p>Prints a list of activated users. <em>User Deactivation Wizard only</em>.</p>
+</dd>
+</li>
+</dl>
+<dt><strong><a name="item__2d_2duser_user"><strong>--user</strong> <em>user</em></a></strong>
+
+<dd>
+<p>name of the user to be activated or deactivated for copSSH. Use <em>DOMAIN</em>\<em>username</em> for domain users.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dshell_shell"><strong>--shell</strong> <em>shell</em></a></strong>
+
+<dd>
+<p>User shell for the activated user. Supported values are <em>/bin/bash</em> (default), <em>/bin/sftponly</em> or <em>/bin/false</em>.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dpassphrase_passphrase"><strong>--passphrase</strong> <em>passphrase</em></a></strong>
+
+<dd>
+<p>Passphrase for protection of the private key for Public Key Authentication (PKA). Existence of this option instructs copsshadm to create a 2048-bit RSA PKA key pair.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dnoremovehome"><strong>--noremovehome</strong></a></strong>
+
+<dd>
+<p>Don't remove user's copssh home directory if it exists.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dnohomelink"><strong>--nohomelink</strong></a></strong>
+
+<dd>
+<p>Don't create soft link/shortcut to user's windows home directory.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2ddc"><strong>--dc</strong></a></strong>
+
+<dd>
+<p>Specify an explicit domain controller for domain communication. May be useful in restricted environments.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dverbose"><strong>--verbose</strong></a></strong>
+
+<dd>
+<p>produce progress messages. Default is OFF.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2d_2dhelp"><strong>--help</strong></a></strong>
+
+<dd>
+<p>Produces this message.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="examples">EXAMPLES</a></h1>
+<pre>
+ copsshadm -c activateuser -u &quot;test user&quot; --shell /bin/sftponly --passphrase &quot;my passphrase is a bad one&quot;</pre>
+<p>Activates user <em>test user</em> with <em>/bin/sftponly</em> as shell. A 2048-bit RSA key pair will be created and the private key will be protected by the passphrase <em>my passphrase is a bad one</em>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="license_registration">LICENSE/REGISTRATION</a></h1>
+<p>
+</p>
+<hr />
+<h1><a name="contact">CONTACT</a></h1>
+<p>Feel free to contact me in case of problems, suggestions or other things.</p>
+<p>Copssh website: <a href="http://itefix.no/copssh">http://itefix.no/copssh</a>
+e-mail: <a href="mailto:post@itefix.no">post@itefix.no</a></p>
+<p>
+</p>
+<hr />
+<h1><a name="version">VERSION</a></h1>
+<p>Version 1.1.0.1, January 2008</p>
+<p>
+</p>
+<hr />
+<h1><a name="changelog">CHANGELOG</a></h1>
+<dl>
+<dt><strong><a name="item_version_1_2e1_2e0_2e1">Version 1.1.0.1</a></strong>
+
+<dd>
+<pre>
+ - Don't hide existing service accounts from XP/Vista logon screen
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e1_2e0_2e0">Version 1.1.0.0</a></strong>
+
+<dd>
+<pre>
+ - Introducing options --serviceaccount and --servicename for more flexible support for existing users
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e4_2e2">Version 1.0.4.2</a></strong>
+
+<dd>
+<pre>
+ - Better support for domain accounts
+ - introducing option --dc to be able to direct domain communication to a specific server
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e4_2e1">Version 1.0.4.1</a></strong>
+
+<dd>
+<pre>
+ - OEM char translation of group names
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e4_2e0">Version 1.0.4.0</a></strong>
+
+<dd>
+<pre>
+ - Hide the service account from welcome screen in windows XP/Vista
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e3_2e2">Version 1.0.3.2</a></strong>
+
+<dd>
+<pre>
+ - use locale to support localized administrator group name (experimental)
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e3_2e1">Version 1.0.3.1</a></strong>
+
+<dd>
+<pre>
+ - 14-char passwords for 'sshd' and 'SvcCOPSSH' accounts
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e3">Version 1.0.3</a></strong>
+
+<dd>
+<pre>
+ - Improved support for localized groups (Experimental)
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e2">Version 1.0.2</a></strong>
+
+<dd>
+<pre>
+ - Use Perl 5.8.8 with better Unicode support, Replace Administrators/Users with localized names in /etc/passwd and /etc/group (experimental)
+
+</pre>
+</dd>
+<dt><strong><a name="item_version_1_2e0_2e1">Version 1.0.1</a></strong>
+
+<dd>
+<pre>
+ - Copy template files .bash_profile, .bashrc and .inputrc during user activation
+ - create linux-style soft link as well as windows-style shortcut to user's windows home directory
+ - Three-factor passwords for user accounts (upper case, lower case, numeric &amp; special char)
+ - create additional system files ('var/log/wtmp', 'var/run/utmp')
+
+</pre>
+</dd>
+</dl>
+
+</body>
+
+</html>

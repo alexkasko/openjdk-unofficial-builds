@@ -1,0 +1,13 @@
+# If you wish to change the path for all users, it is recommended you edit
+#  /etc/bash.bashrc
+
+syspath=`/bin/cygpath -S`
+winpath=`/bin/cygpath -W`
+export PATH="/bin:$syspath:$winpath"
+export TERM=cygwin
+umask 027
+
+# Set a default prompt of: user@host and current_directory
+PS1='\[\033]0;\w\007
+\033[32m\]\u@\h \[\033[33m\w\033[0m\]
+$ '

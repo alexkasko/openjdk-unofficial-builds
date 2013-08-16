@@ -1,0 +1,6 @@
+The Cygwin version has been built using the following configure:
+
+  ./config --prefix=/usr shared no-idea no-rc5 no-mdc2
+
+The IDEA, RC5 and MDC2 algorithms are disabled due to patent and/or
+licensing issues.
