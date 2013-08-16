@@ -37,7 +37,7 @@ net start OpenSSHServer
 
 echo Creating and registering build service
 c:\obf\rkit\instsrv.exe obf_build c:\obf\rkit\srvany.exe
-regedit /s bootstrap.reg
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\obf_build\Parameters" /v Application /t reg_sz /d "C:\obf\build.bat"
 c:\obf\rkit\sc config obf_build start= demand
 
 echo Bootstrap complete
