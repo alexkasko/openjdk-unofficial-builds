@@ -51,7 +51,7 @@ set DISABLE_INTREE_EC=true
 
 rem debug settings
 rem set DEBUG_CLASSFILES=true
-rem set FULL_DEBUG_SYMBOLS=0
+set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%

@@ -49,7 +49,7 @@ ${JRE_EXECUTABLES}
         </pack>
         <pack name="OpenJDK Development Kit installation files" required="no">
             <description>OpenJDK Development Kit installation files</description>
-            <fileset dir="j2sdk-image" targetdir="$INSTALL_PATH"/>
+            <fileset dir="j2sdk-server-image" targetdir="$INSTALL_PATH"/>
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
 ${JDK_EXECUTABLES}
         </pack>

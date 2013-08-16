@@ -3,7 +3,8 @@ set -e
 
 # get installer builder dir
 INSTALLER_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-OBF_DIR="$( dirname "$IMAGE_DIR" )"
+OUB_DIR="$( dirname "$INSTALLER_DIR" )"
+OBF_DIR="$( dirname "$OUB_DIR" )"
 NEED_EXEC=false
 
 # check argument
@@ -53,8 +54,9 @@ JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
 echo "Building installer for OpenJDK image: $JDK_IMAGE"
 
 JAVA="$JDK_IMAGE"/bin/java
-VERSION=`"$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}'`
-if [ -z "$VERSION" ] ; then
+OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==1{print substr($3,2,length($3)-2)}' )"
+ICEDTEA_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
+if [ -z "$OPENJDK_VERSION" ] ; then
     echo "Error: cannot get 'java -version' from $JAVA"
     exit 1
 fi
@@ -78,7 +80,7 @@ if [ "true" == "$NEED_EXEC" ] ; then
 fi
 
 # launch izpack
-BUNDLE_NAME=openjdk-"$VERSION"-"$PLATFORM"-installer
+BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-installer
 INSTALLER_TARGET="$INSTALLER_DIR"/target/"$BUNDLE_NAME"
 rm -rf "$INSTALLER_TARGET"
 pushd "$INSTALLER_DIR" > /dev/null

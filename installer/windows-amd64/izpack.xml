@@ -47,7 +47,7 @@
         </pack>
         <pack name="OpenJDK Development Kit installation files" required="no">
             <description>OpenJDK Development Kit installation files</description>
-            <fileset dir="j2sdk-image" targetdir="$INSTALL_PATH"/>
+            <fileset dir="j2sdk-server-image" targetdir="$INSTALL_PATH"/>
             <file src="uninstall" targetdir="$INSTALL_PATH"/>
         </pack>
         <pack name="OpenJDK uninstaller files" required="yes">
@@ -117,18 +117,18 @@ Add "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/j
                         stage="postinstall"
                         keep="true">
                 <args>
-                    <arg value="\/m"/>
                     <arg value="JAVA_HOME"/>
                     <arg value="&quot;$INSTALL_PATH&quot;"/>
+                    <arg value="-m"/>
                 </args>
             </executable>
             <executable targetfile="$INSTALL_PATH/uninstall/tools/setx.exe"
                         stage="uninstall"
                         keep="true">
                 <args>
-                    <arg value="\/m"/>
                     <arg value="JAVA_HOME"/>
                     <arg value="&quot;&quot;"/>
+                    <arg value="-m"/>
                 </args>
             </executable>
             <executable targetfile="$INSTALL_PATH/uninstall/tools/pathman.cmd"
@@ -168,14 +168,14 @@ Add "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/j
               required="no"
               preselected="no">
               <description>
-Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0" with indofmation about this installation. These entries may be used by java application launchers (e.g. launch4j). Key will be added to global registry branch and may require administrator privileges. On uninstallation registry values under this key will be cleared, but key itself will be left intact.
+Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7" with information about this installation. These entries may be used by java application launchers (e.g. launch4j). Key will be added to global registry branch and may require administrator privileges. On uninstallation registry values under this key will be cleared, but key itself will be left intact.
             </description>
             <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
                         stage="postinstall"
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="JavaHome"/>
                     <arg value="\/t"/>
@@ -189,7 +189,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="JavaHome"/>
                     <arg value="\/f"/>
@@ -200,7 +200,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="RuntimeLib"/>
                     <arg value="\/t"/>
@@ -214,7 +214,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="RuntimeLib"/>
                     <arg value="\/f"/>
@@ -225,13 +225,13 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="MicroVersion"/>
                     <arg value="\/t"/>
                     <arg value="reg_dword"/>
                     <arg value="\/d"/>
-                    <arg value="40"/>
+                    <arg value="0"/>
                 </args>
             </executable>
             <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
@@ -239,7 +239,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6.0&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
                     <arg value="\/v"/>
                     <arg value="MicroVersion"/>
                     <arg value="\/f"/>
