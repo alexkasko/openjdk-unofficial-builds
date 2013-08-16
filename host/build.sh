@@ -14,9 +14,9 @@ fi
 
 # unarchive virtual machine
 echo "Unpacking VM"
-#xz -kdf "$SCRIPT_DIR"/machines/"$VM_NAME".vdi.xz
-#mv "$SCRIPT_DIR"/machines/"$VM_NAME".vdi "$SCRIPT_DIR"/target
-cp "$SCRIPT_DIR"/machines/"$VM_NAME".vdi "$SCRIPT_DIR"/target
+xz -kdf "$SCRIPT_DIR"/machines/"$VM_NAME".vdi.xz
+mv "$SCRIPT_DIR"/machines/"$VM_NAME".vdi "$SCRIPT_DIR"/target
+#cp "$SCRIPT_DIR"/machines/"$VM_NAME".vdi "$SCRIPT_DIR"/target
 
 # create vm
 VBoxManage createvm --name "$VM_NAME" --register --basefolder "$SCRIPT_DIR"/target >> "$SCRIPT_DIR"/build.log 2>&1
@@ -28,14 +28,23 @@ VBoxManage modifyvm "$VM_NAME" --macaddress1 "$VM_MACADDR" >> "$SCRIPT_DIR"/buil
 VBoxManage modifyvm "$VM_NAME" --cpus 1 >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage modifyvm "$VM_NAME" --audio none >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage modifyvm "$VM_NAME" --usb off >> "$SCRIPT_DIR"/build.log 2>&1
+VBoxManage modifyvm "$VM_NAME" --vrde on
 VBoxManage modifyvm "$VM_NAME" --ioapic "$VM_IOAPIC" >> "$SCRIPT_DIR"/build.log 2>&1
+VBoxManage modifyvm "$VM_NAME" --mouse usbtablet >> "$SCRIPT_DIR"/build.log 2>&1
+VBoxManage modifyvm "$VM_NAME" --keyboard usb >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage setextradata global GUI/SuppressMessages remindAboutAutoCapture,remindAboutMouseIntegrationOn,showRuntimeError.warning.HostAudioNotResponding,remindAboutGoingSeamless,remindAboutInputCapture,remindAboutGoingFullscreen,remindAboutMouseIntegrationOff,confirmGoingSeamless,confirmInputCapture,remindAboutPausedVMInput,confirmVMReset,confirmGoingFullscreen,remindAboutWrongColorDepth >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage storagectl "$VM_NAME" --name "IDE" --add ide >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage internalcommands sethduuid "$SCRIPT_DIR"/target/$VM_NAME.vdi >> "$SCRIPT_DIR"/build.log 2>&1
 VBoxManage storageattach "$VM_NAME" --storagectl "IDE" --port 0 --device 0 --type hdd --medium "$SCRIPT_DIR"/target/"$VM_NAME".vdi >> "$SCRIPT_DIR"/build.log 2>&1
+VBoxManage storagectl "$VM_NAME" --name "IDE" --controller "$VM_IDE_CONTROLLER"
 
 # run virtual machine
 VBoxManage startvm "$VM_NAME" --type headless >> "$SCRIPT_DIR"/build.log 2>&1
+
+if [ "startonly" == "$1" ] ; then
+    echo "VM started"
+    exit 0
+fi
 
 # wait for vm to start
 set +e
@@ -65,7 +74,7 @@ set +e
 ssh "$VM_ADDRESS" "if [ ! -f "$VM_OBF_DIR"/build_finished.flag ]; then exit 1; else exit 0; fi" > /dev/null 2>&1
 while [ $? -ne 0 ]; do
     echo "Waiting for build ..."
-    sleep 10
+    sleep 300
 ssh "$VM_ADDRESS" "if [ ! -f "$VM_OBF_DIR"/build_finished.flag ]; then exit 1; else exit 0; fi" > /dev/null 2>&1
 done
 set -e
@@ -82,14 +91,11 @@ fi
 echo "Build returned success status, copying bundles ..."
 scp -r "$VM_ADDRESS":"$VM_OBF_DIR"/dist/* "$SCRIPT_DIR"/dist
 
-# connect to VM
-#ssh $VM_ADDRESS
-
 # shutdown and unregister vm
 echo "Bundles copied, stopping VM ..."
 kill -9 $LOGGER_PID >> "$SCRIPT_DIR"/build.log 2>&1
 ssh "$VM_ADDRESS" "$VM_SHUTDOWN" >> "$SCRIPT_DIR"/build.log 2>&1 || true
-sleep 5
+sleep 15
 VBoxManage controlvm "$VM_NAME" poweroff > /dev/null 2>&1 || true
 VBoxManage unregistervm "$VM_NAME" >> "$SCRIPT_DIR"/build.log
 echo "VM unregistered"
