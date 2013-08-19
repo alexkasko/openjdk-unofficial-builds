@@ -131,6 +131,10 @@ Both `i586` and `amd64` versions of OpenJDK7 may be built using the same Windows
  * copy SDK x86_32 files to `utils/winsdk71/sdk`, [files list](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/utils/winsdk71/files.txt)
  * copy `Bin/x64` directory from SDK x64 installation to `utils/utils/winsdk71/sdk/Bin/x64` 
 
+####JDK7 compiler
+
+JDK7 is required to build OpenJDK7 with IcedTea patches. OpenJDK version or Oracle one should be installed.
+
 ####Run build
 
  * adjust `build-windows-*` script - remove `make-and-bundle.sh` launch at the bottom, uncomment simple `bash` launch
