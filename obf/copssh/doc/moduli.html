@@ -1,0 +1,209 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of MODULI</TITLE>
+</HEAD><BODY>
+<H1>MODULI</H1>
+Section: File Formats (5)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>moduli</B>
+
+ - Diffie Hellman moduli
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+The
+/etc/moduli
+
+file contains prime numbers and generators for use by 
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+in the Diffie-Hellman Group Exchange key exchange method.
+<P>
+
+New moduli may be generated with
+ssh-keygen1
+
+
+using a two-step process.
+An initial
+<I>candidate generation</I>
+
+pass, using 
+<B>ssh-keygen -G</B>
+
+ 
+calculates numbers that are likely to be useful.
+A second
+<I>primality testing</I>
+
+pass, using
+<B>ssh-keygen -T</B>
+
+provides a high degree of assurance that the numbers are prime and are
+safe for use in Diffie Hellman operations by
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+This
+<B></B>
+
+
+format is used as the output from each pass.
+<P>
+
+The file consists of newline-separated records, one per modulus,
+containing seven space separated fields.
+These fields are as follows:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>timestamp</B>
+<DD>
+The time that the modulus was last processed as YYYYMMDDHHMMSS.
+<DT><B>type</B>
+<DD>
+Decimal number specifying the internal structure of the prime modulus.
+Supported types are:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>0</B>
+<DD>
+Unknown, not tested
+<DT><B>2</B>
+<DD>
+&quot;Safe&quot; prime; (p-1)/2 is also prime.
+<DT><B>4</B>
+<DD>
+Sophie Germain; (p+1)*2 is also prime.
+</DL>
+<P>
+
+<P>
+
+Moduli candidates initially produced by
+ssh-keygen1
+
+
+are Sophie Germain primes (type 4).
+Futher primality testing with
+ssh-keygen1
+
+
+produces safe prime moduli (type 2) that are ready for use in
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+Other types are not used by OpenSSH.
+<DT><B>tests</B>
+<DD>
+Decimal number indicating the type of primality tests that the number
+has been subjected to represented as a bitmask of the following values:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>0x00</B>
+<DD>
+Not tested
+<DT><B>0x01</B>
+<DD>
+Composite number - not prime.
+<DT><B>0x02</B>
+<DD>
+Sieve of Eratosthenes
+<DT><B>0x04</B>
+<DD>
+Probabalistic Miller-Rabin primality tests.
+</DL>
+<P>
+
+<P>
+
+The
+ssh-keygen1
+
+
+moduli candidate generation uses the Sieve of Eratosthenes (flag 0x02).
+Subsequent
+ssh-keygen1
+
+
+primality tests are Miller-Rabin tests (flag 0x04).
+<DT><B>trials</B>
+<DD>
+Decimal number indicating of primaility trials that have been performed
+on the modulus.
+<DT><B>size</B>
+<DD>
+Decimal number indicating the size of the prime in bits.
+<DT><B>generator</B>
+<DD>
+The recommended generator for use with this modulus (hexadecimal).
+<DT><B>modulus</B>
+<DD>
+The modulus itself in hexadecimal.
+</DL>
+<P>
+
+<P>
+
+When performing Diffie Hellman Group Exchange,
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+first estimates the size of the modulus required to produce enough
+Diffie Hellman output to sufficiently key the selected symmetric cipher.
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+then randomly selects a modulus from
+Fa /etc/moduli
+
+that best meets the size requirement.
+<P>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+ssh-keygen1,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8),
+
+
+<DL COMPACT><DT><DD>
+<I>RFC 4419</I>
+<I>&quot;Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol&quot;</I>
+2006
+</DL>
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAD">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

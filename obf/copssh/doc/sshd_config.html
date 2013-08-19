@@ -1,0 +1,1944 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSHD_CONFIG</TITLE>
+</HEAD><BODY>
+<H1>SSHD_CONFIG</H1>
+Section: File Formats (5)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>sshd_config</B>
+
+ - OpenSSH SSH daemon configuration file
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>/etc/ssh/sshd_config</B>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+reads configuration data from
+/etc/ssh/sshd_config
+
+(or the file specified with
+-<B>f</B>
+
+on the command line).
+The file contains keyword-argument pairs, one per line.
+Lines starting with
+`#'
+
+and empty lines are interpreted as comments.
+Arguments may optionally be enclosed in double quotes
+()
+
+in order to represent arguments containing spaces.
+<P>
+
+The possible
+keywords and their meanings are as follows (note that
+keywords are case-insensitive and arguments are case-sensitive):
+<DL COMPACT>
+<P>
+
+<DT><B>AcceptEnv</B>
+
+
+<DD>
+Specifies what environment variables sent by the client will be copied into
+the session's
+<A HREF="http://localhost/cgi-bin/man/man2html?7+environ">environ</A>(7).
+
+
+See
+<B>SendEnv</B>
+
+in
+ssh_config5
+
+
+for how to configure the client.
+Note that environment passing is only supported for protocol 2.
+Variables are specified by name, which may contain the wildcard characters
+`*'
+
+and
+`?'
+
+Multiple environment variables may be separated by whitespace or spread
+across multiple
+<B>AcceptEnv</B>
+
+directives.
+Be warned that some environment variables could be used to bypass restricted
+user environments.
+For this reason, care should be taken in the use of this directive.
+The default is not to accept any environment variables.
+<DT><B>AddressFamily</B>
+
+
+<DD>
+Specifies which address family should be used by
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+Valid arguments are
+``any''
+
+ 
+``inet''
+
+(use IPv4 only), or
+``inet6''
+
+(use IPv6 only).
+The default is
+``any''
+
+ 
+<DT><B>AllowAgentForwarding</B>
+
+
+<DD>
+Specifies whether
+ssh-agent1
+
+
+forwarding is permitted.
+The default is
+``yes''
+
+ 
+Note that disabling agent forwarding does not improve security
+unless users are also denied shell access, as they can always install
+their own forwarders.
+<DT><B>AllowGroups</B>
+
+
+<DD>
+This keyword can be followed by a list of group name patterns, separated
+by spaces.
+If specified, login is allowed only for users whose primary
+group or supplementary group list matches one of the patterns.
+Only group names are valid; a numerical group ID is not recognized.
+By default, login is allowed for all groups.
+The allow/deny directives are processed in the following order:
+<B>DenyUsers</B>
+
+ 
+<B>AllowUsers</B>
+
+ 
+<B>DenyGroups</B>
+
+ 
+and finally
+<B>AllowGroups</B>
+
+ 
+<P>
+
+See
+Sx PATTERNS
+
+in
+ssh_config5
+
+
+for more information on patterns.
+<DT><B>AllowTcpForwarding</B>
+
+
+<DD>
+Specifies whether TCP forwarding is permitted.
+The default is
+``yes''
+
+ 
+Note that disabling TCP forwarding does not improve security unless
+users are also denied shell access, as they can always install their
+own forwarders.
+<DT><B>AllowUsers</B>
+
+
+<DD>
+This keyword can be followed by a list of user name patterns, separated
+by spaces.
+If specified, login is allowed only for user names that
+match one of the patterns.
+Only user names are valid; a numerical user ID is not recognized.
+By default, login is allowed for all users.
+If the pattern takes the form <A HREF="mailto:USER@HOST">USER@HOST</A> then USER and HOST
+are separately checked, restricting logins to particular
+users from particular hosts.
+The allow/deny directives are processed in the following order:
+<B>DenyUsers</B>
+
+ 
+<B>AllowUsers</B>
+
+ 
+<B>DenyGroups</B>
+
+ 
+and finally
+<B>AllowGroups</B>
+
+ 
+<P>
+
+See
+Sx PATTERNS
+
+in
+ssh_config5
+
+
+for more information on patterns.
+<DT><B>AuthorizedKeysFile</B>
+
+
+<DD>
+Specifies the file that contains the public keys that can be used
+for user authentication.
+<B>AuthorizedKeysFile</B>
+
+may contain tokens of the form %T which are substituted during connection
+setup.
+The following tokens are defined: %% is replaced by a literal '%',
+%h is replaced by the home directory of the user being authenticated, and
+%u is replaced by the username of that user.
+After expansion,
+<B>AuthorizedKeysFile</B>
+
+is taken to be an absolute path or one relative to the user's home
+directory.
+The default is
+``.ssh/authorized_keys''
+
+ 
+<DT><B>Banner</B>
+
+
+<DD>
+The contents of the specified file are sent to the remote user before
+authentication is allowed.
+If the argument is
+``none''
+
+then no banner is displayed.
+This option is only available for protocol version 2.
+By default, no banner is displayed.
+<DT><B>ChallengeResponseAuthentication</B>
+
+
+<DD>
+Specifies whether challenge-response authentication is allowed (e.g. via
+PAM or though authentication styles supported in
+login.conf5)
+
+
+The default is
+``yes''
+
+ 
+<DT><B>ChrootDirectory</B>
+
+
+<DD>
+Specifies the pathname of a directory to
+<A HREF="http://localhost/cgi-bin/man/man2html?2+chroot">chroot</A>(2)
+
+
+to after authentication.
+All components of the pathname must be root-owned directories that are
+not writable by any other user or group.
+After the chroot,
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+changes the working directory to the user's home directory.
+<P>
+
+The pathname may contain the following tokens that are expanded at runtime once
+the connecting user has been authenticated: %% is replaced by a literal '%',
+%h is replaced by the home directory of the user being authenticated, and
+%u is replaced by the username of that user.
+<P>
+
+The
+<B>ChrootDirectory</B>
+
+must contain the necessary files and directories to support the
+user's session.
+For an interactive session this requires at least a shell, typically
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sh">sh</A>(1),
+
+
+and basic
+/dev
+
+nodes such as
+<A HREF="http://localhost/cgi-bin/man/man2html?4+null">null</A>(4),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+zero">zero</A>(4),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+stdin">stdin</A>(4),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+stdout">stdout</A>(4),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+stderr">stderr</A>(4),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+arandom">arandom</A>(4)
+
+
+and
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tty">tty</A>(4)
+
+
+devices.
+For file transfer sessions using
+``sftp''
+
+ 
+no additional configuration of the environment is necessary if the
+in-process sftp server is used,
+though sessions which use logging do require
+/dev/log
+
+inside the chroot directory (see
+sftp-server8
+
+
+for details).
+<P>
+
+The default is not to
+<A HREF="http://localhost/cgi-bin/man/man2html?2+chroot">chroot</A>(2).
+
+
+<DT><B>Ciphers</B>
+
+
+<DD>
+Specifies the ciphers allowed for protocol version 2.
+Multiple ciphers must be comma-separated.
+The supported ciphers are
+``3des-cbc''
+
+ 
+``aes128-cbc''
+
+ 
+``aes192-cbc''
+
+ 
+``aes256-cbc''
+
+ 
+``aes128-ctr''
+
+ 
+``aes192-ctr''
+
+ 
+``aes256-ctr''
+
+ 
+``arcfour128''
+
+ 
+``arcfour256''
+
+ 
+``arcfour''
+
+ 
+``blowfish-cbc''
+
+ 
+and
+``cast128-cbc''
+
+ 
+The default is:
+
+<PRE>
+aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,
+aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,
+aes256-cbc,arcfour
+</PRE>
+
+<DT><B>ClientAliveCountMax</B>
+
+
+<DD>
+Sets the number of client alive messages (see below) which may be
+sent without
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+receiving any messages back from the client.
+If this threshold is reached while client alive messages are being sent,
+sshd will disconnect the client, terminating the session.
+It is important to note that the use of client alive messages is very
+different from
+<B>TCPKeepAlive</B>
+
+(below).
+The client alive messages are sent through the encrypted channel
+and therefore will not be spoofable.
+The TCP keepalive option enabled by
+<B>TCPKeepAlive</B>
+
+is spoofable.
+The client alive mechanism is valuable when the client or
+server depend on knowing when a connection has become inactive.
+<P>
+
+The default value is 3.
+If
+<B>ClientAliveInterval</B>
+
+(see below) is set to 15, and
+<B>ClientAliveCountMax</B>
+
+is left at the default, unresponsive SSH clients
+will be disconnected after approximately 45 seconds.
+This option applies to protocol version 2 only.
+<DT><B>ClientAliveInterval</B>
+
+
+<DD>
+Sets a timeout interval in seconds after which if no data has been received
+from the client,
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+will send a message through the encrypted
+channel to request a response from the client.
+The default
+is 0, indicating that these messages will not be sent to the client.
+This option applies to protocol version 2 only.
+<DT><B>Compression</B>
+
+
+<DD>
+Specifies whether compression is allowed, or delayed until
+the user has authenticated successfully.
+The argument must be
+``yes''
+
+ 
+``delayed''
+
+ 
+or
+``no''
+
+ 
+The default is
+``delayed''
+
+ 
+<DT><B>DenyGroups</B>
+
+
+<DD>
+This keyword can be followed by a list of group name patterns, separated
+by spaces.
+Login is disallowed for users whose primary group or supplementary
+group list matches one of the patterns.
+Only group names are valid; a numerical group ID is not recognized.
+By default, login is allowed for all groups.
+The allow/deny directives are processed in the following order:
+<B>DenyUsers</B>
+
+ 
+<B>AllowUsers</B>
+
+ 
+<B>DenyGroups</B>
+
+ 
+and finally
+<B>AllowGroups</B>
+
+ 
+<P>
+
+See
+Sx PATTERNS
+
+in
+ssh_config5
+
+
+for more information on patterns.
+<DT><B>DenyUsers</B>
+
+
+<DD>
+This keyword can be followed by a list of user name patterns, separated
+by spaces.
+Login is disallowed for user names that match one of the patterns.
+Only user names are valid; a numerical user ID is not recognized.
+By default, login is allowed for all users.
+If the pattern takes the form <A HREF="mailto:USER@HOST">USER@HOST</A> then USER and HOST
+are separately checked, restricting logins to particular
+users from particular hosts.
+The allow/deny directives are processed in the following order:
+<B>DenyUsers</B>
+
+ 
+<B>AllowUsers</B>
+
+ 
+<B>DenyGroups</B>
+
+ 
+and finally
+<B>AllowGroups</B>
+
+ 
+<P>
+
+See
+Sx PATTERNS
+
+in
+ssh_config5
+
+
+for more information on patterns.
+<DT><B>ForceCommand</B>
+
+
+<DD>
+Forces the execution of the command specified by
+<B>ForceCommand</B>
+
+ 
+ignoring any command supplied by the client and
+~/.ssh/rc
+
+if present.
+The command is invoked by using the user's login shell with the -c option.
+This applies to shell, command, or subsystem execution.
+It is most useful inside a
+<B>Match</B>
+
+block.
+The command originally supplied by the client is available in the
+<B>SSH_ORIGINAL_COMMAND</B>
+
+environment variable.
+Specifying a command of
+``internal-sftp''
+
+will force the use of an in-process sftp server that requires no support
+files when used with
+<B>ChrootDirectory</B>
+
+ 
+<DT><B>GatewayPorts</B>
+
+
+<DD>
+Specifies whether remote hosts are allowed to connect to ports
+forwarded for the client.
+By default,
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+binds remote port forwardings to the loopback address.
+This prevents other remote hosts from connecting to forwarded ports.
+<B>GatewayPorts</B>
+
+can be used to specify that sshd
+should allow remote port forwardings to bind to non-loopback addresses, thus
+allowing other hosts to connect.
+The argument may be
+``no''
+
+to force remote port forwardings to be available to the local host only,
+``yes''
+
+to force remote port forwardings to bind to the wildcard address, or
+``clientspecified''
+
+to allow the client to select the address to which the forwarding is bound.
+The default is
+``no''
+
+ 
+<DT><B>GSSAPIAuthentication</B>
+
+
+<DD>
+Specifies whether user authentication based on GSSAPI is allowed.
+The default is
+``no''
+
+ 
+Note that this option applies to protocol version 2 only.
+<DT><B>GSSAPICleanupCredentials</B>
+
+
+<DD>
+Specifies whether to automatically destroy the user's credentials cache
+on logout.
+The default is
+``yes''
+
+ 
+Note that this option applies to protocol version 2 only.
+<DT><B>HostbasedAuthentication</B>
+
+
+<DD>
+Specifies whether rhosts or /etc/hosts.equiv authentication together
+with successful public key client host authentication is allowed
+(host-based authentication).
+This option is similar to
+<B>RhostsRSAAuthentication</B>
+
+and applies to protocol version 2 only.
+The default is
+``no''
+
+ 
+<DT><B>HostbasedUsesNameFromPacketOnly</B>
+
+
+<DD>
+Specifies whether or not the server will attempt to perform a reverse
+name lookup when matching the name in the
+~/.shosts
+
+ 
+~/.rhosts
+
+ 
+and
+/etc/hosts.equiv
+
+files during
+<B>HostbasedAuthentication</B>
+
+ 
+A setting of
+``yes''
+
+means that
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+uses the name supplied by the client rather than
+attempting to resolve the name from the TCP connection itself.
+The default is
+``no''
+
+ 
+<DT><B>HostCertificate</B>
+
+
+<DD>
+Specifies a file containing a public host certificate.
+The certificate's public key must match a private host key already specified
+by
+<B>HostKey</B>
+
+ 
+The default behaviour of
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+is not to load any certificates.
+<DT><B>HostKey</B>
+
+
+<DD>
+Specifies a file containing a private host key
+used by SSH.
+The default is
+/etc/ssh/ssh_host_key
+
+for protocol version 1, and
+/etc/ssh/ssh_host_rsa_key
+
+and
+/etc/ssh/ssh_host_dsa_key
+
+for protocol version 2.
+Note that
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+will refuse to use a file if it is group/world-accessible.
+It is possible to have multiple host key files.
+``rsa1''
+
+keys are used for version 1 and
+``dsa''
+
+or
+``rsa''
+
+are used for version 2 of the SSH protocol.
+<DT><B>IgnoreRhosts</B>
+
+
+<DD>
+Specifies that
+.rhosts
+
+and
+.shosts
+
+files will not be used in
+<B>RhostsRSAAuthentication</B>
+
+or
+<B>HostbasedAuthentication</B>
+
+ 
+<P>
+
+/etc/hosts.equiv
+
+and
+/etc/shosts.equiv
+
+are still used.
+The default is
+``yes''
+
+ 
+<DT><B>IgnoreUserKnownHosts</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should ignore the user's
+~/.ssh/known_hosts
+
+during
+<B>RhostsRSAAuthentication</B>
+
+or
+<B>HostbasedAuthentication</B>
+
+ 
+The default is
+``no''
+
+ 
+<DT><B>KerberosAuthentication</B>
+
+
+<DD>
+Specifies whether the password provided by the user for
+<B>PasswordAuthentication</B>
+
+will be validated through the Kerberos KDC.
+To use this option, the server needs a
+Kerberos servtab which allows the verification of the KDC's identity.
+The default is
+``no''
+
+ 
+<DT><B>KerberosGetAFSToken</B>
+
+
+<DD>
+If AFS is active and the user has a Kerberos 5 TGT, attempt to acquire
+an AFS token before accessing the user's home directory.
+The default is
+``no''
+
+ 
+<DT><B>KerberosOrLocalPasswd</B>
+
+
+<DD>
+If password authentication through Kerberos fails then
+the password will be validated via any additional local mechanism
+such as
+/etc/passwd
+
+ 
+The default is
+``yes''
+
+ 
+<DT><B>KerberosTicketCleanup</B>
+
+
+<DD>
+Specifies whether to automatically destroy the user's ticket cache
+file on logout.
+The default is
+``yes''
+
+ 
+<DT><B>KeyRegenerationInterval</B>
+
+
+<DD>
+In protocol version 1, the ephemeral server key is automatically regenerated
+after this many seconds (if it has been used).
+The purpose of regeneration is to prevent
+decrypting captured sessions by later breaking into the machine and
+stealing the keys.
+The key is never stored anywhere.
+If the value is 0, the key is never regenerated.
+The default is 3600 (seconds).
+<DT><B>ListenAddress</B>
+
+
+<DD>
+Specifies the local addresses
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should listen on.
+The following forms may be used:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>ListenAddress</B>
+
+
+<DD>
+
+<I>host </I><B>| </B><I>IPv4_addr </I><B>| </B><I>IPv6_addr</I>
+
+
+
+
+
+
+
+
+
+
+<DT><B>ListenAddress</B>
+
+
+<DD>
+
+<I>host </I><B>| </B><I>IPv4_addr </I><B>: </B><I>port</I>
+
+
+
+
+
+
+
+
+
+
+<DT><B>ListenAddress</B>
+
+
+<DD>
+
+[<I>host </I><B>| </B><I>IPv6_addr : port</I>
+
+]
+
+
+
+
+
+
+
+
+</DL>
+<P>
+
+<P>
+
+If
+<I>port</I>
+
+is not specified,
+sshd will listen on the address and all prior
+<B>Port</B>
+
+options specified.
+The default is to listen on all local addresses.
+Multiple
+<B>ListenAddress</B>
+
+options are permitted.
+Additionally, any
+<B>Port</B>
+
+options must precede this option for non-port qualified addresses.
+<DT><B>LoginGraceTime</B>
+
+
+<DD>
+The server disconnects after this time if the user has not
+successfully logged in.
+If the value is 0, there is no time limit.
+The default is 120 seconds.
+<DT><B>LogLevel</B>
+
+
+<DD>
+Gives the verbosity level that is used when logging messages from
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+The possible values are:
+QUIET, FATAL, ERROR, INFO, VERBOSE, DEBUG, DEBUG1, DEBUG2, and DEBUG3.
+The default is INFO.
+DEBUG and DEBUG1 are equivalent.
+DEBUG2 and DEBUG3 each specify higher levels of debugging output.
+Logging with a DEBUG level violates the privacy of users and is not recommended.
+<DT><B>MACs </B>Specifies the available MAC (message authentication code) algorithms.
+
+
+
+
+<DD>
+The MAC algorithm is used in protocol version 2
+for data integrity protection.
+Multiple algorithms must be comma-separated.
+The default is:
+
+<BLOCKQUOTE>
+<PRE>
+hmac-md5,hmac-sha1,<A HREF="mailto:umac-64@openssh.com">umac-64@openssh.com</A>,
+hmac-ripemd160,hmac-sha1-96,hmac-md5-96
+</PRE>
+</BLOCKQUOTE>
+
+<DT><B>Match</B>
+
+
+<DD>
+Introduces a conditional block.
+If all of the criteria on the
+<B>Match</B>
+
+line are satisfied, the keywords on the following lines override those
+set in the global section of the config file, until either another
+<B>Match</B>
+
+line or the end of the file.
+<P>
+
+The arguments to
+<B>Match</B>
+
+are one or more criteria-pattern pairs.
+The available criteria are
+<B>User</B>
+
+ 
+<B>Group</B>
+
+ 
+<B>Host</B>
+
+ 
+and
+<B>Address</B>
+
+ 
+The match patterns may consist of single entries or comma-separated
+lists and may use the wildcard and negation operators described in the
+Sx PATTERNS
+
+section of
+ssh_config5.
+
+
+<P>
+
+The patterns in an
+<B>Address</B>
+
+criteria may additionally contain addresses to match in CIDR
+address/masklen format, e.g.
+``192.0.2.0/24''
+
+or
+``3ffe:ffff::/32''
+
+ 
+Note that the mask length provided must be consistent with the address -
+it is an error to specify a mask length that is too long for the address
+or one with bits set in this host portion of the address.
+For example,
+``192.0.2.0/33''
+
+and
+``192.0.2.0/8''
+
+respectively.
+<P>
+
+Only a subset of keywords may be used on the lines following a
+<B>Match</B>
+
+keyword.
+Available keywords are
+<B>AllowAgentForwarding</B>
+
+ 
+<B>AllowTcpForwarding</B>
+
+ 
+<B>Banner</B>
+
+ 
+<B>ChrootDirectory</B>
+
+ 
+<B>ForceCommand</B>
+
+ 
+<B>GatewayPorts</B>
+
+ 
+<B>GSSAPIAuthentication</B>
+
+ 
+<B>HostbasedAuthentication</B>
+
+ 
+<B>KbdInteractiveAuthentication</B>
+
+ 
+<B>KerberosAuthentication</B>
+
+ 
+<B>MaxAuthTries</B>
+
+ 
+<B>MaxSessions</B>
+
+ 
+<B>PasswordAuthentication</B>
+
+ 
+<B>PermitEmptyPasswords</B>
+
+ 
+<B>PermitOpen</B>
+
+ 
+<B>PermitRootLogin</B>
+
+ 
+<B>PubkeyAuthentication</B>
+
+ 
+<B>RhostsRSAAuthentication</B>
+
+ 
+<B>RSAAuthentication</B>
+
+ 
+<B>X11DisplayOffset</B>
+
+ 
+<B>X11Forwarding</B>
+
+and
+<B>X11UseLocalHost</B>
+
+ 
+<DT><B>MaxAuthTries</B>
+
+
+<DD>
+Specifies the maximum number of authentication attempts permitted per
+connection.
+Once the number of failures reaches half this value,
+additional failures are logged.
+The default is 6.
+<DT><B>MaxSessions</B>
+
+
+<DD>
+Specifies the maximum number of open sessions permitted per network connection.
+The default is 10.
+<DT><B>MaxStartups</B>
+
+
+<DD>
+Specifies the maximum number of concurrent unauthenticated connections to the
+SSH daemon.
+Additional connections will be dropped until authentication succeeds or the
+<B>LoginGraceTime</B>
+
+expires for a connection.
+The default is 10.
+<P>
+
+Alternatively, random early drop can be enabled by specifying
+the three colon separated values
+``start:rate:full''
+
+(e.g. &quot;10:30:60&quot;).
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+will refuse connection attempts with a probability of
+``rate/100''
+
+(30%)
+if there are currently
+``start''
+
+(10)
+unauthenticated connections.
+The probability increases linearly and all connection attempts
+are refused if the number of unauthenticated connections reaches
+``full''
+
+(60).
+<DT><B>PasswordAuthentication</B>
+
+
+<DD>
+Specifies whether password authentication is allowed.
+The default is
+``yes''
+
+ 
+<DT><B>PermitEmptyPasswords</B>
+
+
+<DD>
+When password authentication is allowed, it specifies whether the
+server allows login to accounts with empty password strings.
+The default is
+``no''
+
+ 
+<DT><B>PermitOpen</B>
+
+
+<DD>
+Specifies the destinations to which TCP port forwarding is permitted.
+The forwarding specification must be one of the following forms:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>PermitOpen</B>
+
+
+<DD>
+
+<I>host : port</I>
+
+
+<DT><B>PermitOpen</B>
+
+
+<DD>
+
+<I>IPv4_addr : port</I>
+
+
+<DT><B>PermitOpen</B>
+
+
+<DD>
+
+<I>[ IPv6_addr ] : port</I>
+
+
+</DL>
+<P>
+
+<P>
+
+Multiple forwards may be specified by separating them with whitespace.
+An argument of
+``any''
+
+can be used to remove all restrictions and permit any forwarding requests.
+By default all port forwarding requests are permitted.
+<DT><B>PermitRootLogin</B>
+
+
+<DD>
+Specifies whether root can log in using
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+The argument must be
+``yes''
+
+ 
+``without-password''
+
+ 
+``forced-commands-only''
+
+ 
+or
+``no''
+
+ 
+The default is
+``yes''
+
+ 
+<P>
+
+If this option is set to
+``without-password''
+
+ 
+password authentication is disabled for root.
+<P>
+
+If this option is set to
+``forced-commands-only''
+
+ 
+root login with public key authentication will be allowed,
+but only if the
+<I>command</I>
+
+option has been specified
+(which may be useful for taking remote backups even if root login is
+normally not allowed).
+All other authentication methods are disabled for root.
+<P>
+
+If this option is set to
+``no''
+
+ 
+root is not allowed to log in.
+<DT><B>PermitTunnel</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tun">tun</A>(4)
+
+
+device forwarding is allowed.
+The argument must be
+``yes''
+
+ 
+``point-to-point''
+
+(layer 3),
+``ethernet''
+
+(layer 2), or
+``no''
+
+ 
+Specifying
+``yes''
+
+permits both
+``point-to-point''
+
+and
+``ethernet''
+
+ 
+The default is
+``no''
+
+ 
+<DT><B>PermitUserEnvironment</B>
+
+
+<DD>
+Specifies whether
+~/.ssh/environment
+
+and
+<B>environment=</B>
+
+options in
+~/.ssh/authorized_keys
+
+are processed by
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+The default is
+``no''
+
+ 
+Enabling environment processing may enable users to bypass access
+restrictions in some configurations using mechanisms such as
+<B>LD_PRELOAD</B>
+
+ 
+<DT><B>PidFile</B>
+
+
+<DD>
+Specifies the file that contains the process ID of the
+SSH daemon.
+The default is
+/var/run/sshd.pid
+
+ 
+<DT><B>Port</B>
+
+
+<DD>
+Specifies the port number that
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+listens on.
+The default is 22.
+Multiple options of this type are permitted.
+See also
+<B>ListenAddress</B>
+
+ 
+<DT><B>PrintLastLog</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should print the date and time of the last user login when a user logs
+in interactively.
+The default is
+``yes''
+
+ 
+<DT><B>PrintMotd</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should print
+/etc/motd
+
+when a user logs in interactively.
+(On some systems it is also printed by the shell,
+/etc/profile
+
+ 
+or equivalent.)
+The default is
+``yes''
+
+ 
+<DT><B>Protocol</B>
+
+
+<DD>
+Specifies the protocol versions
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+supports.
+The possible values are
+`1'
+
+and
+`2'
+
+ 
+Multiple versions must be comma-separated.
+The default is
+`2'
+
+ 
+Note that the order of the protocol list does not indicate preference,
+because the client selects among multiple protocol versions offered
+by the server.
+Specifying
+``2,1''
+
+is identical to
+``1,2''
+
+ 
+<DT><B>PubkeyAuthentication</B>
+
+
+<DD>
+Specifies whether public key authentication is allowed.
+The default is
+``yes''
+
+ 
+Note that this option applies to protocol version 2 only.
+<DT><B>RevokedKeys</B>
+
+
+<DD>
+Specifies a list of revoked public keys.
+Keys listed in this file will be refused for public key authentication.
+Note that if this file is not readable, then public key authentication will
+be refused for all users.
+<DT><B>RhostsRSAAuthentication</B>
+
+
+<DD>
+Specifies whether rhosts or /etc/hosts.equiv authentication together
+with successful RSA host authentication is allowed.
+The default is
+``no''
+
+ 
+This option applies to protocol version 1 only.
+<DT><B>RSAAuthentication</B>
+
+
+<DD>
+Specifies whether pure RSA authentication is allowed.
+The default is
+``yes''
+
+ 
+This option applies to protocol version 1 only.
+<DT><B>ServerKeyBits</B>
+
+
+<DD>
+Defines the number of bits in the ephemeral protocol version 1 server key.
+The minimum value is 512, and the default is 1024.
+<DT><B>StrictModes</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should check file modes and ownership of the
+user's files and home directory before accepting login.
+This is normally desirable because novices sometimes accidentally leave their
+directory or files world-writable.
+The default is
+``yes''
+
+ 
+Note that this does not apply to
+<B>ChrootDirectory</B>
+
+ 
+whose permissions and ownership are checked unconditionally.
+<DT><B>Subsystem</B>
+
+
+<DD>
+Configures an external subsystem (e.g. file transfer daemon).
+Arguments should be a subsystem name and a command (with optional arguments)
+to execute upon subsystem request.
+<P>
+
+The command
+sftp-server8
+
+
+implements the
+``sftp''
+
+file transfer subsystem.
+<P>
+
+Alternately the name
+``internal-sftp''
+
+implements an in-process
+``sftp''
+
+server.
+This may simplify configurations using
+<B>ChrootDirectory</B>
+
+to force a different filesystem root on clients.
+<P>
+
+By default no subsystems are defined.
+Note that this option applies to protocol version 2 only.
+<DT><B>SyslogFacility</B>
+
+
+<DD>
+Gives the facility code that is used when logging messages from
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+The possible values are: DAEMON, USER, AUTH, LOCAL0, LOCAL1, LOCAL2,
+LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7.
+The default is AUTH.
+<DT><B>TCPKeepAlive</B>
+
+
+<DD>
+Specifies whether the system should send TCP keepalive messages to the
+other side.
+If they are sent, death of the connection or crash of one
+of the machines will be properly noticed.
+However, this means that
+connections will die if the route is down temporarily, and some people
+find it annoying.
+On the other hand, if TCP keepalives are not sent,
+sessions may hang indefinitely on the server, leaving
+``ghost''
+
+users and consuming server resources.
+<P>
+
+The default is
+``yes''
+
+(to send TCP keepalive messages), and the server will notice
+if the network goes down or the client host crashes.
+This avoids infinitely hanging sessions.
+<P>
+
+To disable TCP keepalive messages, the value should be set to
+``no''
+
+ 
+<DT><B>TrustedUserCAKeys</B>
+
+
+<DD>
+Specifies a file containing public keys of certificate authorities that are
+trusted to sign user certificates for authentication.
+Keys are listed one per line; empty lines and comments starting with
+`#'
+
+are allowed.
+If a certificate is presented for authentication and has its signing CA key
+listed in this file, then it may be used for authentication for any user
+listed in the certificate's principals list.
+Note that certificates that lack a list of principals will not be permitted
+for authentication using
+<B>TrustedUserCAKeys</B>
+
+ 
+For more details on certificates, see the
+Sx CERTIFICATES
+
+section in
+ssh-keygen1.
+
+
+<DT><B>UseDNS</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should look up the remote host name and check that
+the resolved host name for the remote IP address maps back to the
+very same IP address.
+The default is
+``yes''
+
+ 
+<DT><B>UseLogin</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?1+login">login</A>(1)
+
+
+is used for interactive login sessions.
+The default is
+``no''
+
+ 
+Note that
+<A HREF="http://localhost/cgi-bin/man/man2html?1+login">login</A>(1)
+
+
+is never used for remote command execution.
+Note also, that if this is enabled,
+<B>X11Forwarding</B>
+
+will be disabled because
+<A HREF="http://localhost/cgi-bin/man/man2html?1+login">login</A>(1)
+
+
+does not know how to handle
+<A HREF="http://localhost/cgi-bin/man/man2html?1+xauth">xauth</A>(1)
+
+
+cookies.
+If
+<B>UsePrivilegeSeparation</B>
+
+is specified, it will be disabled after authentication.
+<DT><B>UsePAM</B>
+
+
+<DD>
+Enables the Pluggable Authentication Module interface.
+If set to
+``yes''
+
+this will enable PAM authentication using
+<B>ChallengeResponseAuthentication</B>
+
+and
+<B>PasswordAuthentication</B>
+
+in addition to PAM account and session module processing for all
+authentication types.
+<P>
+
+Because PAM challenge-response authentication usually serves an equivalent
+role to password authentication, you should disable either
+<B>PasswordAuthentication</B>
+
+or
+<B>ChallengeResponseAuthentication.</B>
+
+<P>
+
+If
+<B>UsePAM</B>
+
+is enabled, you will not be able to run
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+as a non-root user.
+The default is
+``no''
+
+ 
+<DT><B>UsePrivilegeSeparation</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+separates privileges by creating an unprivileged child process
+to deal with incoming network traffic.
+After successful authentication, another process will be created that has
+the privilege of the authenticated user.
+The goal of privilege separation is to prevent privilege
+escalation by containing any corruption within the unprivileged processes.
+The default is
+``yes''
+
+ 
+<DT><B>X11DisplayOffset</B>
+
+
+<DD>
+Specifies the first display number available for
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)Ns's
+
+
+X11 forwarding.
+This prevents sshd from interfering with real X11 servers.
+The default is 10.
+<DT><B>X11Forwarding</B>
+
+
+<DD>
+Specifies whether X11 forwarding is permitted.
+The argument must be
+``yes''
+
+or
+``no''
+
+ 
+The default is
+``no''
+
+ 
+<P>
+
+When X11 forwarding is enabled, there may be additional exposure to
+the server and to client displays if the
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+proxy display is configured to listen on the wildcard address (see
+<B>X11UseLocalhost</B>
+
+below), though this is not the default.
+Additionally, the authentication spoofing and authentication data
+verification and substitution occur on the client side.
+The security risk of using X11 forwarding is that the client's X11
+display server may be exposed to attack when the SSH client requests
+forwarding (see the warnings for
+<B>ForwardX11</B>
+
+in
+ssh_config5).
+
+
+A system administrator may have a stance in which they want to
+protect clients that may expose themselves to attack by unwittingly
+requesting X11 forwarding, which can warrant a
+``no''
+
+setting.
+<P>
+
+Note that disabling X11 forwarding does not prevent users from
+forwarding X11 traffic, as users can always install their own forwarders.
+X11 forwarding is automatically disabled if
+<B>UseLogin</B>
+
+is enabled.
+<DT><B>X11UseLocalhost</B>
+
+
+<DD>
+Specifies whether
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+should bind the X11 forwarding server to the loopback address or to
+the wildcard address.
+By default,
+sshd binds the forwarding server to the loopback address and sets the
+hostname part of the
+<B>DISPLAY</B>
+
+environment variable to
+``localhost''
+
+ 
+This prevents remote hosts from connecting to the proxy display.
+However, some older X11 clients may not function with this
+configuration.
+<B>X11UseLocalhost</B>
+
+may be set to
+``no''
+
+to specify that the forwarding server should be bound to the wildcard
+address.
+The argument must be
+``yes''
+
+or
+``no''
+
+ 
+The default is
+``yes''
+
+ 
+<DT><B>XAuthLocation</B>
+
+
+<DD>
+Specifies the full pathname of the
+<A HREF="http://localhost/cgi-bin/man/man2html?1+xauth">xauth</A>(1)
+
+
+program.
+The default is
+/usr/X11R6/bin/xauth
+
+ 
+</DL>
+<P>
+
+<A NAME="lbAE">&nbsp;</A>
+<H2>TIME FORMATS</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+command-line arguments and configuration file options that specify time
+may be expressed using a sequence of the form:
+
+<I>time </I>[<I>qualifier</I>
+
+]
+
+
+
+ 
+
+where
+<I>time</I>
+
+is a positive integer value and
+<I>qualifier</I>
+
+is one of the following:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>Aq </B><B>none</B>
+
+
+
+
+<DD>
+seconds
+<DT><B>s | S</B>
+
+
+
+
+<DD>
+seconds
+<DT><B>m | M</B>
+
+
+
+
+<DD>
+minutes
+<DT><B>h | H</B>
+
+
+
+
+<DD>
+hours
+<DT><B>d | D</B>
+
+
+
+
+<DD>
+days
+<DT><B>w | W</B>
+
+
+
+
+<DD>
+weeks
+</DL>
+<P>
+
+<P>
+
+Each member of the sequence is added together to calculate
+the total time value.
+<P>
+
+Time format examples:
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>600</B>
+<DD>
+600 seconds (10 minutes)
+<DT><B>10m</B>
+<DD>
+10 minutes
+<DT><B>1h30m</B>
+<DD>
+1 hour 30 minutes (90 minutes)
+</DL>
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>/etc/ssh/sshd_config
+
+</B>
+<DD>
+Contains configuration data for
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8).
+
+
+This file should be writable by root only, but it is recommended
+(though not necessary) that it be world-readable.
+</DL>
+<P>
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAH">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by Tatu Ylonen.
+Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
+Theo de Raadt and Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+Markus Friedl contributed the support for SSH
+protocol versions 1.5 and 2.0.
+Niels Provos and Markus Friedl contributed support
+for privilege separation.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">TIME FORMATS</A><DD>
+<DT><A HREF="#lbAF">FILES</A><DD>
+<DT><A HREF="#lbAG">SEE ALSO</A><DD>
+<DT><A HREF="#lbAH">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

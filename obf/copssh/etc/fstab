@@ -1,0 +1,8 @@
+# fstab file created by ICW Base installer
+#
+# see fstab.txt in the installation directory for more information
+C:/obf/copssh / ntfs override,binary,noacl 0 0
+C:/obf/copssh/bin /usr/bin ntfs override,binary,noacl 0 0
+C:/obf/copssh/lib /usr/lib ntfs override,binary,noacl 0 0
+C:/obf/copssh/etc/terminfo /usr/share/terminfo ntfs override,binary,noacl 0 0
+none /cygdrive cygdrive binary,posix=0,user,noacl 0 0

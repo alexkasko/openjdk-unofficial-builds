@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ "$*" != "-c /bin/sftp-server" ]; then
+echo "SFTP only!"
+exit 1
+fi
+exec /bin/sftp-server

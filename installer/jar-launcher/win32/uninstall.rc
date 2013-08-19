@@ -13,12 +13,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Alex Kasko (alexkasko.com)"
             VALUE "FileDescription", "Java Uninstaller Launcher Application"
-            VALUE "FileVersion", "1.0"
+            VALUE "FileVersion", "1.0.1"
             VALUE "InternalName", "uninstall"
             VALUE "LegalCopyright", "Alex Kasko (alexkasko.com)"
             VALUE "OriginalFilename", "uninstall.exe"
             VALUE "ProductName", "Java Uninstaller Launcher"
-            VALUE "ProductVersion", "1.0"
+            VALUE "ProductVersion", "1.0.1"
         END
     END
     BLOCK "VarFileInfo"

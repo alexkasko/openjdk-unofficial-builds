@@ -1,0 +1,365 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSH-AGENT</TITLE>
+</HEAD><BODY>
+<H1>SSH-AGENT</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>ssh-agent</B>
+
+ - authentication agent
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>ssh-agent</B>
+
+[-<B>c | -s</B>
+
+
+
+
+
+]
+
+[-<B>d</B>
+
+]
+
+[-<B>a </B><I>bind_address</I>
+
+
+
+]
+
+[-<B>t </B><I>life</I>
+
+
+
+]
+
+[<I>command </I>[<I>arg ...</I>
+
+]
+
+
+
+]
+
+<BR><B>ssh-agent</B>
+
+[-<B>c | -s</B>
+
+
+
+
+
+]
+
+-<B>k</B>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>ssh-agent</B>
+
+
+is a program to hold private keys used for public key authentication
+(RSA, DSA).
+The idea is that
+<B>ssh-agent</B>
+
+
+is started in the beginning of an X-session or a login session, and
+all other windows or programs are started as clients to the ssh-agent
+program.
+Through use of environment variables the agent can be located
+and automatically used for authentication when logging in to other
+machines using
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+<P>
+
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-a </B><I>bind_address</I>
+
+
+
+
+<DD>
+Bind the agent to the
+UNIX
+socket
+<I>bind_address</I>
+
+ 
+The default is
+/tmp/ssh-XXXXXXXXXX/agent.ppid
+
+ 
+<DT><B>-c</B>
+
+
+<DD>
+Generate C-shell commands on
+<B>stdout</B>
+
+ 
+This is the default if
+<B>SHELL</B>
+
+looks like it's a csh style of shell.
+<DT><B>-d</B>
+
+
+<DD>
+Debug mode.
+When this option is specified
+<B>ssh-agent</B>
+
+
+will not fork.
+<DT><B>-k</B>
+
+
+<DD>
+Kill the current agent (given by the
+<B>SSH_AGENT_PID</B>
+
+environment variable).
+<DT><B>-s</B>
+
+
+<DD>
+Generate Bourne shell commands on
+<B>stdout</B>
+
+ 
+This is the default if
+<B>SHELL</B>
+
+does not look like it's a csh style of shell.
+<DT><B>-t </B><I>life</I>
+
+
+
+
+<DD>
+Set a default value for the maximum lifetime of identities added to the agent.
+The lifetime may be specified in seconds or in a time format specified in
+sshd_config5.
+
+
+A lifetime specified for an identity with
+ssh-add1
+
+
+overrides this value.
+Without this option the default maximum lifetime is forever.
+</DL>
+<P>
+
+<P>
+
+If a commandline is given, this is executed as a subprocess of the agent.
+When the command dies, so does the agent.
+<P>
+
+The agent initially does not have any private keys.
+Keys are added using
+ssh-add1.
+
+
+When executed without arguments,
+ssh-add1
+
+
+adds the files
+~/.ssh/id_rsa
+
+ 
+~/.ssh/id_dsa
+
+and
+~/.ssh/identity
+
+ 
+If the identity has a passphrase,
+ssh-add1
+
+
+asks for the passphrase on the terminal if it has one or from a small X11
+program if running under X11.
+If neither of these is the case then the authentication will fail.
+It then sends the identity to the agent.
+Several identities can be stored in the
+agent; the agent can automatically use any of these identities.
+<B>ssh-add -l</B>
+
+displays the identities currently held by the agent.
+<P>
+
+The idea is that the agent is run in the user's local PC, laptop, or
+terminal.
+Authentication data need not be stored on any other
+machine, and authentication passphrases never go over the network.
+However, the connection to the agent is forwarded over SSH
+remote logins, and the user can thus use the privileges given by the
+identities anywhere in the network in a secure way.
+<P>
+
+There are two main ways to get an agent set up:
+The first is that the agent starts a new subcommand into which some environment
+variables are exported, eg
+<B>ssh-agent xterm &amp;</B>
+
+ 
+The second is that the agent prints the needed shell commands (either
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sh">sh</A>(1)
+
+
+or
+<A HREF="http://localhost/cgi-bin/man/man2html?1+csh">csh</A>(1)
+
+
+syntax can be generated) which can be evaluated in the calling shell, eg
+<B>eval `ssh-agent -s`</B>
+
+for Bourne-type shells such as
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sh">sh</A>(1)
+
+
+or
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ksh">ksh</A>(1)
+
+
+and
+<B>eval `ssh-agent -c`</B>
+
+for
+<A HREF="http://localhost/cgi-bin/man/man2html?1+csh">csh</A>(1)
+
+
+and derivatives.
+<P>
+
+Later
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+looks at these variables and uses them to establish a connection to the agent.
+<P>
+
+The agent will never send a private key over its request channel.
+Instead, operations that require a private key will be performed
+by the agent, and the result will be returned to the requester.
+This way, private keys are not exposed to clients using the agent.
+<P>
+
+A
+UNIX
+socket is created and the name of this socket is stored in the
+<B>SSH_AUTH_SOCK</B>
+
+environment
+variable.
+The socket is made accessible only to the current user.
+This method is easily abused by root or another instance of the same
+user.
+<P>
+
+The
+<B>SSH_AGENT_PID</B>
+
+environment variable holds the agent's process ID.
+<P>
+
+The agent exits automatically when the command given on the command
+line terminates.
+<A NAME="lbAE">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>~/.ssh/identity
+
+</B>
+<DD>
+Contains the protocol version 1 RSA authentication identity of the user.
+<DT><B>~/.ssh/id_dsa
+
+</B>
+<DD>
+Contains the protocol version 2 DSA authentication identity of the user.
+<DT><B>~/.ssh/id_rsa
+
+</B>
+<DD>
+Contains the protocol version 2 RSA authentication identity of the user.
+<DT><B>/tmp/ssh-XXXXXXXXXX/agent.ppid
+
+</B>
+<DD>
+UNIX
+sockets used to contain the connection to the authentication agent.
+These sockets should only be readable by the owner.
+The sockets should get automatically removed when the agent exits.
+</DL>
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+ssh-add1,
+
+
+ssh-keygen1,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by Tatu Ylonen.
+Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
+Theo de Raadt and Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+Markus Friedl contributed the support for SSH
+protocol versions 1.5 and 2.0.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">FILES</A><DD>
+<DT><A HREF="#lbAF">SEE ALSO</A><DD>
+<DT><A HREF="#lbAG">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

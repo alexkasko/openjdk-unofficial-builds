@@ -1,0 +1,2595 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSH</TITLE>
+</HEAD><BODY>
+<H1>SSH</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>ssh</B>
+
+ - OpenSSH SSH client (remote login program)
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>ssh</B>
+
+[-<B>1246AaCfgKkMNnqsTtVvXxYy </B>[-<B>b </B><I>bind_address</I>
+
+
+
+]
+
+
+
+
+
+]
+
+[-<B>c </B><I>cipher_spec</I>
+
+
+
+]
+
+[-<B>D&nbsp;</B>
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port</I>
+
+
+]
+[-<B>e </B><I>escape_char</I>
+
+
+
+]
+
+[-<B>F </B><I>configfile</I>
+
+
+
+]
+
+[-<B>I </B><I>pkcs11</I>
+
+
+
+]
+
+-words
+
+[-<B>i </B><I>identity_file</I>
+
+
+
+]
+
+[-<B>L&nbsp;</B>
+
+
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port : host : hostport</I>
+
+
+]
+-words
+
+[-<B>l </B><I>login_name</I>
+
+
+
+]
+
+[-<B>m </B><I>mac_spec</I>
+
+
+
+]
+
+
+
+[-<B>O </B><I>ctl_cmd</I>
+
+
+
+]
+
+[-<B>o </B><I>option</I>
+
+
+
+]
+
+[-<B>p </B><I>port</I>
+
+
+
+]
+
+[-<B>R&nbsp;</B>
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port : host : hostport</I>
+
+
+]
+[-<B>S </B><I>ctl_path</I>
+
+
+
+]
+
+[-<B>W </B><I>host : </I><B></B><I>port</I>
+
+
+
+
+
+
+
+]
+
+[-<B>w </B><I>local_tun </I><B></B>[: <B></B><I>remote_tun </I>]
+
+
+
+
+]
+
+
+
+
+
+
+
+
+[<I>user </I><B>@ </B><I>hostname</I>
+
+
+
+]
+
+
+
+
+
+[<I>command</I>
+
+]
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>ssh</B>
+
+
+(SSH client) is a program for logging into a remote machine and for
+executing commands on a remote machine.
+It is intended to replace rlogin and rsh,
+and provide secure encrypted communications between
+two untrusted hosts over an insecure network.
+X11 connections and arbitrary TCP ports
+can also be forwarded over the secure channel.
+<P>
+
+<B>ssh</B>
+
+
+connects and logs into the specified
+<I>hostname</I>
+
+(with optional
+<I>user</I>
+
+name).
+The user must prove
+his/her identity to the remote machine using one of several methods
+depending on the protocol version used (see below).
+<P>
+
+If
+<I>command</I>
+
+is specified,
+it is executed on the remote host instead of a login shell.
+<P>
+
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-1</B>
+
+
+<DD>
+Forces
+<B>ssh</B>
+
+
+to try protocol version 1 only.
+<DT><B>-2</B>
+
+
+<DD>
+Forces
+<B>ssh</B>
+
+
+to try protocol version 2 only.
+<DT><B>-4</B>
+
+
+<DD>
+Forces
+<B>ssh</B>
+
+
+to use IPv4 addresses only.
+<DT><B>-6</B>
+
+
+<DD>
+Forces
+<B>ssh</B>
+
+
+to use IPv6 addresses only.
+<DT><B>-A</B>
+
+
+<DD>
+Enables forwarding of the authentication agent connection.
+This can also be specified on a per-host basis in a configuration file.
+<P>
+
+Agent forwarding should be enabled with caution.
+Users with the ability to bypass file permissions on the remote host
+(for the agent's
+UNIX
+socket) can access the local agent through the forwarded connection.
+An attacker cannot obtain key material from the agent,
+however they can perform operations on the keys that enable them to
+authenticate using the identities loaded into the agent.
+<DT><B>-a</B>
+
+
+<DD>
+Disables forwarding of the authentication agent connection.
+<DT><B>-b </B><I>bind_address</I>
+
+
+
+
+<DD>
+Use
+<I>bind_address</I>
+
+on the local machine as the source address
+of the connection.
+Only useful on systems with more than one address.
+<DT><B>-C</B>
+
+
+<DD>
+Requests compression of all data (including stdin, stdout, stderr, and
+data for forwarded X11 and TCP connections).
+The compression algorithm is the same used by
+<A HREF="http://localhost/cgi-bin/man/man2html?1+gzip">gzip</A>(1),
+
+
+and the
+``level''
+
+can be controlled by the
+<B>CompressionLevel</B>
+
+option for protocol version 1.
+Compression is desirable on modem lines and other
+slow connections, but will only slow down things on fast networks.
+The default value can be set on a host-by-host basis in the
+configuration files; see the
+<B>Compression</B>
+
+option.
+<DT><B>-c </B><I>cipher_spec</I>
+
+
+
+
+<DD>
+Selects the cipher specification for encrypting the session.
+<P>
+
+Protocol version 1 allows specification of a single cipher.
+The supported values are
+``3des''
+
+ 
+``blowfish''
+
+ 
+and
+``des''
+
+ 
+<I>3des</I>
+
+(triple-des) is an encrypt-decrypt-encrypt triple with three different keys.
+It is believed to be secure.
+<I>blowfish</I>
+
+is a fast block cipher; it appears very secure and is much faster than
+<I>3des</I>
+
+ 
+<I>des</I>
+
+is only supported in the
+<B>ssh</B>
+
+
+client for interoperability with legacy protocol 1 implementations
+that do not support the
+<I>3des</I>
+
+cipher.
+Its use is strongly discouraged due to cryptographic weaknesses.
+The default is
+``3des''
+
+ 
+<P>
+
+For protocol version 2,
+<I>cipher_spec</I>
+
+is a comma-separated list of ciphers
+listed in order of preference.
+See the
+<B>Ciphers</B>
+
+keyword for more information.
+<DT><B>-D 
+</B>
+
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port</I>
+
+
+<DD>
+
+<DD>Specifies a local
+``dynamic''
+
+application-level port forwarding.
+This works by allocating a socket to listen to
+<I>port</I>
+
+on the local side, optionally bound to the specified
+<I>bind_address</I>
+
+ 
+Whenever a connection is made to this port, the
+connection is forwarded over the secure channel, and the application
+protocol is then used to determine where to connect to from the
+remote machine.
+Currently the SOCKS4 and SOCKS5 protocols are supported, and
+<B>ssh</B>
+
+
+will act as a SOCKS server.
+Only root can forward privileged ports.
+Dynamic port forwardings can also be specified in the configuration file.
+<P>
+
+IPv6 addresses can be specified with an alternative syntax:
+
+
+
+[<I>bind_address </I><B>/</B>
+
+
+
+]
+
+<I>port</I>
+
+
+
+
+or by enclosing the address in square brackets.
+Only the superuser can forward privileged ports.
+By default, the local port is bound in accordance with the
+<B>GatewayPorts</B>
+
+setting.
+However, an explicit
+<I>bind_address</I>
+
+may be used to bind the connection to a specific address.
+The
+<I>bind_address</I>
+
+of
+``localhost''
+
+indicates that the listening port be bound for local use only, while an
+empty address or
+`*'
+
+indicates that the port should be available from all interfaces.
+<DT><B>-e </B><I>escape_char</I>
+
+
+
+
+<DD>
+Sets the escape character for sessions with a pty (default:
+`~'
+
+) .
+The escape character is only recognized at the beginning of a line.
+The escape character followed by a dot
+(`.'
+
+)
+
+closes the connection;
+followed by control-Z suspends the connection;
+and followed by itself sends the escape character once.
+Setting the character to
+``none''
+
+disables any escapes and makes the session fully transparent.
+<DT><B>-F </B><I>configfile</I>
+
+
+
+
+<DD>
+Specifies an alternative per-user configuration file.
+If a configuration file is given on the command line,
+the system-wide configuration file
+(/etc/ssh/ssh_config
+
+)
+
+will be ignored.
+The default for the per-user configuration file is
+~/.ssh/config
+
+ 
+<DT><B>-f</B>
+
+
+<DD>
+Requests
+<B>ssh</B>
+
+
+to go to background just before command execution.
+This is useful if
+<B>ssh</B>
+
+
+is going to ask for passwords or passphrases, but the user
+wants it in the background.
+This implies
+-<B>n</B>
+
+ 
+The recommended way to start X11 programs at a remote site is with
+something like
+<B>ssh -f host xterm</B>
+
+ 
+<P>
+
+If the
+<B>ExitOnForwardFailure</B>
+
+configuration option is set to
+``yes''
+
+ 
+then a client started with
+-<B>f</B>
+
+will wait for all remote port forwards to be successfully established
+before placing itself in the background.
+<DT><B>-g</B>
+
+
+<DD>
+Allows remote hosts to connect to local forwarded ports.
+<DT><B>-I </B><I>pkcs11</I>
+
+
+
+
+<DD>
+Specify the PKCS#11 shared library
+<B>ssh</B>
+
+
+should use to communicate with a PKCS#11 token providing the user's
+private RSA key.
+<DT><B>-i </B><I>identity_file</I>
+
+
+
+
+<DD>
+Selects a file from which the identity (private key) for
+RSA or DSA authentication is read.
+The default is
+~/.ssh/identity
+
+for protocol version 1, and
+~/.ssh/id_rsa
+
+and
+~/.ssh/id_dsa
+
+for protocol version 2.
+Identity files may also be specified on
+a per-host basis in the configuration file.
+It is possible to have multiple
+-<B>i</B>
+
+options (and multiple identities specified in
+configuration files).
+<B>ssh</B>
+
+
+will also try to load certificate information from the filename obtained
+by appending
+-cert.pub
+
+to identity filenames.
+<DT><B>-K</B>
+
+
+<DD>
+Enables GSSAPI-based authentication and forwarding (delegation) of GSSAPI
+credentials to the server.
+<DT><B>-k</B>
+
+
+<DD>
+Disables forwarding (delegation) of GSSAPI credentials to the server.
+<DT><B>-L 
+</B>
+
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port : host : hostport</I>
+
+
+<DD>
+
+<DD>Specifies that the given port on the local (client) host is to be
+forwarded to the given host and port on the remote side.
+This works by allocating a socket to listen to
+<I>port</I>
+
+on the local side, optionally bound to the specified
+<I>bind_address</I>
+
+ 
+Whenever a connection is made to this port, the
+connection is forwarded over the secure channel, and a connection is
+made to
+<I>host</I>
+
+port
+<I>hostport</I>
+
+from the remote machine.
+Port forwardings can also be specified in the configuration file.
+IPv6 addresses can be specified with an alternative syntax:
+
+
+
+[<I>bind_address </I><B>/</B>
+
+
+
+]
+
+<I>port </I><B>/ </B><I>host </I><B>/</B>
+
+
+
+
+
+
+
+<I>hostport</I>
+
+
+
+
+or by enclosing the address in square brackets.
+Only the superuser can forward privileged ports.
+By default, the local port is bound in accordance with the
+<B>GatewayPorts</B>
+
+setting.
+However, an explicit
+<I>bind_address</I>
+
+may be used to bind the connection to a specific address.
+The
+<I>bind_address</I>
+
+of
+``localhost''
+
+indicates that the listening port be bound for local use only, while an
+empty address or
+`*'
+
+indicates that the port should be available from all interfaces.
+<DT><B>-l </B><I>login_name</I>
+
+
+
+
+<DD>
+Specifies the user to log in as on the remote machine.
+This also may be specified on a per-host basis in the configuration file.
+<DT><B>-M</B>
+
+
+<DD>
+Places the
+<B>ssh</B>
+
+
+client into
+``master''
+
+mode for connection sharing.
+Multiple
+-<B>M</B>
+
+options places
+<B>ssh</B>
+
+
+into
+``master''
+
+mode with confirmation required before slave connections are accepted.
+Refer to the description of
+<B>ControlMaster</B>
+
+in
+ssh_config5
+
+
+for details.
+<DT><B>-m </B><I>mac_spec</I>
+
+
+
+
+<DD>
+Additionally, for protocol version 2 a comma-separated list of MAC
+(message authentication code) algorithms can
+be specified in order of preference.
+See the
+<B>MACs </B>keyword for more information.
+
+
+
+<DT><B>-N</B>
+
+
+<DD>
+Do not execute a remote command.
+This is useful for just forwarding ports
+(protocol version 2 only).
+<DT><B>-n</B>
+
+
+<DD>
+Redirects stdin from
+/dev/null
+
+(actually, prevents reading from stdin).
+This must be used when
+<B>ssh</B>
+
+
+is run in the background.
+A common trick is to use this to run X11 programs on a remote machine.
+For example,
+<B>ssh -n shadows.cs.hut.fi emacs</B>
+
+ 
+will start an emacs on shadows.cs.hut.fi, and the X11
+connection will be automatically forwarded over an encrypted channel.
+The
+<B>ssh</B>
+
+
+program will be put in the background.
+(This does not work if
+<B>ssh</B>
+
+
+needs to ask for a password or passphrase; see also the
+-<B>f</B>
+
+option.)
+<DT><B>-O </B><I>ctl_cmd</I>
+
+
+
+
+<DD>
+Control an active connection multiplexing master process.
+When the
+-<B>O</B>
+
+option is specified, the
+<I>ctl_cmd</I>
+
+argument is interpreted and passed to the master process.
+Valid commands are:
+``check''
+
+(check that the master process is running) and
+``exit''
+
+(request the master to exit).
+<DT><B>-o </B><I>option</I>
+
+
+
+
+<DD>
+Can be used to give options in the format used in the configuration file.
+This is useful for specifying options for which there is no separate
+command-line flag.
+For full details of the options listed below, and their possible values, see
+ssh_config5.
+
+
+<P>
+
+<DL COMPACT>
+<P>
+
+<DT><B>AddressFamily</B>
+<DD>
+<DT><B>BatchMode</B>
+<DD>
+<DT><B>BindAddress</B>
+<DD>
+<DT><B>ChallengeResponseAuthentication</B>
+<DD>
+<DT><B>CheckHostIP</B>
+<DD>
+<DT><B>Cipher</B>
+<DD>
+<DT><B>Ciphers</B>
+<DD>
+<DT><B>ClearAllForwardings</B>
+<DD>
+<DT><B>Compression</B>
+<DD>
+<DT><B>CompressionLevel</B>
+<DD>
+<DT><B>ConnectionAttempts</B>
+<DD>
+<DT><B>ConnectTimeout</B>
+<DD>
+<DT><B>ControlMaster</B>
+<DD>
+<DT><B>ControlPath</B>
+<DD>
+<DT><B>DynamicForward</B>
+<DD>
+<DT><B>EscapeChar</B>
+<DD>
+<DT><B>ExitOnForwardFailure</B>
+<DD>
+<DT><B>ForwardAgent</B>
+<DD>
+<DT><B>ForwardX11</B>
+<DD>
+<DT><B>ForwardX11Trusted</B>
+<DD>
+<DT><B>GatewayPorts</B>
+<DD>
+<DT><B>GlobalKnownHostsFile</B>
+<DD>
+<DT><B>GSSAPIAuthentication</B>
+<DD>
+<DT><B>GSSAPIDelegateCredentials</B>
+<DD>
+<DT><B>HashKnownHosts</B>
+<DD>
+<DT><B>Host</B>
+<DD>
+<DT><B>HostbasedAuthentication</B>
+<DD>
+<DT><B>HostKeyAlgorithms</B>
+<DD>
+<DT><B>HostKeyAlias</B>
+<DD>
+<DT><B>HostName</B>
+<DD>
+<DT><B>IdentityFile</B>
+<DD>
+<DT><B>IdentitiesOnly</B>
+<DD>
+<DT><B>KbdInteractiveDevices</B>
+<DD>
+<DT><B>LocalCommand</B>
+<DD>
+<DT><B>LocalForward</B>
+<DD>
+<DT><B>LogLevel</B>
+<DD>
+<DT><B>MACs </B><DT><B>NoHostAuthenticationForLocalhost</B>
+<DD>
+
+
+
+<DD>
+<DT><B>NumberOfPasswordPrompts</B>
+<DD>
+<DT><B>PasswordAuthentication</B>
+<DD>
+<DT><B>PermitLocalCommand</B>
+<DD>
+<DT><B>PKCS11Provider</B>
+<DD>
+<DT><B>Port</B>
+<DD>
+<DT><B>PreferredAuthentications</B>
+<DD>
+<DT><B>Protocol</B>
+<DD>
+<DT><B>ProxyCommand</B>
+<DD>
+<DT><B>PubkeyAuthentication</B>
+<DD>
+<DT><B>RekeyLimit</B>
+<DD>
+<DT><B>RemoteForward</B>
+<DD>
+<DT><B>RhostsRSAAuthentication</B>
+<DD>
+<DT><B>RSAAuthentication</B>
+<DD>
+<DT><B>SendEnv</B>
+<DD>
+<DT><B>ServerAliveInterval</B>
+<DD>
+<DT><B>ServerAliveCountMax</B>
+<DD>
+<DT><B>StrictHostKeyChecking</B>
+<DD>
+<DT><B>TCPKeepAlive</B>
+<DD>
+<DT><B>Tunnel</B>
+<DD>
+<DT><B>TunnelDevice</B>
+<DD>
+<DT><B>UsePrivilegedPort</B>
+<DD>
+<DT><B>User</B>
+<DD>
+<DT><B>UserKnownHostsFile</B>
+<DD>
+<DT><B>VerifyHostKeyDNS</B>
+<DD>
+<DT><B>VisualHostKey</B>
+<DD>
+<DT><B>XAuthLocation</B>
+<DD>
+</DL>
+<P>
+
+<DT><B>-p </B><I>port</I>
+
+
+
+
+<DD>
+Port to connect to on the remote host.
+This can be specified on a
+per-host basis in the configuration file.
+<DT><B>-q</B>
+
+
+<DD>
+Quiet mode.
+Causes most warning and diagnostic messages to be suppressed.
+<DT><B>-R 
+</B>
+
+
+
+
+[<I>bind_address : </I>]
+
+
+
+<I>port : host : hostport</I>
+
+
+<DD>
+
+<DD>Specifies that the given port on the remote (server) host is to be
+forwarded to the given host and port on the local side.
+This works by allocating a socket to listen to
+<I>port</I>
+
+on the remote side, and whenever a connection is made to this port, the
+connection is forwarded over the secure channel, and a connection is
+made to
+<I>host</I>
+
+port
+<I>hostport</I>
+
+from the local machine.
+<P>
+
+Port forwardings can also be specified in the configuration file.
+Privileged ports can be forwarded only when
+logging in as root on the remote machine.
+IPv6 addresses can be specified by enclosing the address in square braces or
+using an alternative syntax:
+
+
+
+[<I>bind_address </I><B>/</B>
+
+
+
+]
+
+<I>host </I><B>/ </B><I>port </I><B>/</B>
+
+
+
+
+
+
+
+<I>hostport</I>
+
+
+.
+
+<P>
+
+By default, the listening socket on the server will be bound to the loopback
+interface only.
+This may be overridden by specifying a
+<I>bind_address</I>
+
+ 
+An empty
+<I>bind_address</I>
+
+ 
+or the address
+`*'
+
+,
+indicates that the remote socket should listen on all interfaces.
+Specifying a remote
+<I>bind_address</I>
+
+will only succeed if the server's
+<B>GatewayPorts</B>
+
+option is enabled (see
+sshd_config5).
+
+
+<P>
+
+If the
+<I>port</I>
+
+argument is
+`0'
+
+,
+the listen port will be dynamically allocated on the server and reported
+to the client at run time.
+<DT><B>-S </B><I>ctl_path</I>
+
+
+
+
+<DD>
+Specifies the location of a control socket for connection sharing.
+Refer to the description of
+<B>ControlPath</B>
+
+and
+<B>ControlMaster</B>
+
+in
+ssh_config5
+
+
+for details.
+<DT><B>-s</B>
+
+
+<DD>
+May be used to request invocation of a subsystem on the remote system.
+Subsystems are a feature of the SSH2 protocol which facilitate the use
+of SSH as a secure transport for other applications (eg.
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sftp">sftp</A>(1)).
+
+
+The subsystem is specified as the remote command.
+<DT><B>-T</B>
+
+
+<DD>
+Disable pseudo-tty allocation.
+<DT><B>-t</B>
+
+
+<DD>
+Force pseudo-tty allocation.
+This can be used to execute arbitrary
+screen-based programs on a remote machine, which can be very useful,
+e.g. when implementing menu services.
+Multiple
+-<B>t</B>
+
+options force tty allocation, even if
+<B>ssh</B>
+
+
+has no local tty.
+<DT><B>-V</B>
+
+
+<DD>
+Display the version number and exit.
+<DT><B>-v</B>
+
+
+<DD>
+Verbose mode.
+Causes
+<B>ssh</B>
+
+
+to print debugging messages about its progress.
+This is helpful in
+debugging connection, authentication, and configuration problems.
+Multiple
+-<B>v</B>
+
+options increase the verbosity.
+The maximum is 3.
+<DT><B>-W </B><I>host : </I><B></B><I>port</I>
+
+
+
+
+
+
+
+
+<DD>
+Requests that standard input and output on the client be forwarded to
+<I>host</I>
+
+on
+<I>port</I>
+
+over the secure channel.
+Implies
+-<B>N</B>
+
+ 
+-<B>T</B>
+
+ 
+<B>ExitOnForwardFailure</B>
+
+and
+<B>ClearAllForwardings</B>
+
+and works with Protocol version 2 only.
+<DT><B>-w 
+</B>
+
+
+
+<I>local_tun </I><B></B>[: <B></B><I>remote_tun</I>
+
+
+
+]
+
+
+
+
+
+<DD>
+
+<DD>Requests
+tunnel
+device forwarding with the specified
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tun">tun</A>(4)
+
+
+devices between the client
+(<I>local_tun</I>
+
+)
+
+and the server
+(<I>remote_tun</I>
+
+)
+
+ 
+<P>
+
+The devices may be specified by numerical ID or the keyword
+``any''
+
+ 
+which uses the next available tunnel device.
+If
+<I>remote_tun</I>
+
+is not specified, it defaults to
+``any''
+
+ 
+See also the
+<B>Tunnel</B>
+
+and
+<B>TunnelDevice</B>
+
+directives in
+ssh_config5.
+
+
+If the
+<B>Tunnel</B>
+
+directive is unset, it is set to the default tunnel mode, which is
+``point-to-point''
+
+ 
+<DT><B>-X</B>
+
+
+<DD>
+Enables X11 forwarding.
+This can also be specified on a per-host basis in a configuration file.
+<P>
+
+X11 forwarding should be enabled with caution.
+Users with the ability to bypass file permissions on the remote host
+(for the user's X authorization database)
+can access the local X11 display through the forwarded connection.
+An attacker may then be able to perform activities such as keystroke monitoring.
+<P>
+
+For this reason, X11 forwarding is subjected to X11 SECURITY extension
+restrictions by default.
+Please refer to the
+<B>ssh</B>
+
+
+-<B>Y</B>
+
+option and the
+<B>ForwardX11Trusted</B>
+
+directive in
+ssh_config5
+
+
+for more information.
+<DT><B>-x</B>
+
+
+<DD>
+Disables X11 forwarding.
+<DT><B>-Y</B>
+
+
+<DD>
+Enables trusted X11 forwarding.
+Trusted X11 forwardings are not subjected to the X11 SECURITY extension
+controls.
+<DT><B>-y</B>
+
+
+<DD>
+Send log information using the
+<A HREF="http://localhost/cgi-bin/man/man2html?3+syslog">syslog</A>(3)
+
+
+system module.
+By default this information is sent to stderr.
+</DL>
+<P>
+
+<P>
+
+<B>ssh</B>
+
+
+may additionally obtain configuration data from
+a per-user configuration file and a system-wide configuration file.
+The file format and configuration options are described in
+ssh_config5.
+
+
+<P>
+
+<B>ssh</B>
+
+
+exits with the exit status of the remote command or with 255
+if an error occurred.
+<A NAME="lbAE">&nbsp;</A>
+<H2>AUTHENTICATION</H2>
+
+The OpenSSH SSH client supports SSH protocols 1 and 2.
+The default is to use protocol 2 only,
+though this can be changed via the
+<B>Protocol</B>
+
+option in
+ssh_config5
+
+
+or the
+-<B>1</B>
+
+and
+-<B>2</B>
+
+options (see above).
+Both protocols support similar authentication methods,
+but protocol 2 is the default since
+it provides additional mechanisms for confidentiality
+(the traffic is encrypted using AES, 3DES, Blowfish, CAST128, or Arcfour)
+and integrity (hmac-md5, hmac-sha1, umac-64, hmac-ripemd160).
+Protocol 1 lacks a strong mechanism for ensuring the
+integrity of the connection.
+<P>
+
+The methods available for authentication are:
+GSSAPI-based authentication,
+host-based authentication,
+public key authentication,
+challenge-response authentication,
+and password authentication.
+Authentication methods are tried in the order specified above,
+though protocol 2 has a configuration option to change the default order:
+<B>PreferredAuthentications</B>
+
+ 
+<P>
+
+Host-based authentication works as follows:
+If the machine the user logs in from is listed in
+/etc/hosts.equiv
+
+or
+/etc/shosts.equiv
+
+on the remote machine, and the user names are
+the same on both sides, or if the files
+~/.rhosts
+
+or
+~/.shosts
+
+exist in the user's home directory on the
+remote machine and contain a line containing the name of the client
+machine and the name of the user on that machine, the user is
+considered for login.
+Additionally, the server
+<I>must</I>
+
+be able to verify the client's
+host key (see the description of
+/etc/ssh/ssh_known_hosts
+
+and
+~/.ssh/known_hosts
+
+ 
+below)
+for login to be permitted.
+This authentication method closes security holes due to IP
+spoofing, DNS spoofing, and routing spoofing.
+[Note to the administrator:
+/etc/hosts.equiv
+
+ 
+~/.rhosts
+
+ 
+and the rlogin/rsh protocol in general, are inherently insecure and should be
+disabled if security is desired.]
+<P>
+
+Public key authentication works as follows:
+The scheme is based on public-key cryptography,
+using cryptosystems
+where encryption and decryption are done using separate keys,
+and it is unfeasible to derive the decryption key from the encryption key.
+The idea is that each user creates a public/private
+key pair for authentication purposes.
+The server knows the public key, and only the user knows the private key.
+<B>ssh</B>
+
+
+implements public key authentication protocol automatically,
+using either the RSA or DSA algorithms.
+Protocol 1 is restricted to using only RSA keys,
+but protocol 2 may use either.
+The
+Sx HISTORY
+
+section of
+<A HREF="http://localhost/cgi-bin/man/man2html?8+ssl">ssl</A>(8)
+
+
+contains a brief discussion of the two algorithms.
+<P>
+
+The file
+~/.ssh/authorized_keys
+
+lists the public keys that are permitted for logging in.
+When the user logs in, the
+<B>ssh</B>
+
+
+program tells the server which key pair it would like to use for
+authentication.
+The client proves that it has access to the private key
+and the server checks that the corresponding public key
+is authorized to accept the account.
+<P>
+
+The user creates his/her key pair by running
+ssh-keygen1.
+
+
+This stores the private key in
+~/.ssh/identity
+
+(protocol 1),
+~/.ssh/id_dsa
+
+(protocol 2 DSA),
+or
+~/.ssh/id_rsa
+
+(protocol 2 RSA)
+and stores the public key in
+~/.ssh/identity.pub
+
+(protocol 1),
+~/.ssh/id_dsa.pub
+
+(protocol 2 DSA),
+or
+~/.ssh/id_rsa.pub
+
+(protocol 2 RSA)
+in the user's home directory.
+The user should then copy the public key
+to
+~/.ssh/authorized_keys
+
+in his/her home directory on the remote machine.
+The
+authorized_keys
+
+file corresponds to the conventional
+~/.rhosts
+
+file, and has one key
+per line, though the lines can be very long.
+After this, the user can log in without giving the password.
+<P>
+
+A variation on public key authentication
+is available in the form of certificate authentication:
+instead of a set of public/private keys,
+signed certificates are used.
+This has the advantage that a single trusted certification authority
+can be used in place of many public/private keys.
+See the
+Sx CERTIFICATES
+
+section of
+ssh-keygen1
+
+
+for more information.
+<P>
+
+The most convenient way to use public key or certificate authentication
+may be with an authentication agent.
+See
+ssh-agent1
+
+
+for more information.
+<P>
+
+Challenge-response authentication works as follows:
+The server sends an arbitrary
+Qq challenge
+
+text, and prompts for a response.
+Protocol 2 allows multiple challenges and responses;
+protocol 1 is restricted to just one challenge/response.
+Examples of challenge-response authentication include
+BSD Authentication (see
+login.conf5)
+
+
+and PAM (some non-OpenBSD systems).
+<P>
+
+Finally, if other authentication methods fail,
+<B>ssh</B>
+
+
+prompts the user for a password.
+The password is sent to the remote
+host for checking; however, since all communications are encrypted,
+the password cannot be seen by someone listening on the network.
+<P>
+
+<B>ssh</B>
+
+
+automatically maintains and checks a database containing
+identification for all hosts it has ever been used with.
+Host keys are stored in
+~/.ssh/known_hosts
+
+in the user's home directory.
+Additionally, the file
+/etc/ssh/ssh_known_hosts
+
+is automatically checked for known hosts.
+Any new hosts are automatically added to the user's file.
+If a host's identification ever changes,
+<B>ssh</B>
+
+
+warns about this and disables password authentication to prevent
+server spoofing or man-in-the-middle attacks,
+which could otherwise be used to circumvent the encryption.
+The
+<B>StrictHostKeyChecking</B>
+
+option can be used to control logins to machines whose
+host key is not known or has changed.
+<P>
+
+When the user's identity has been accepted by the server, the server
+either executes the given command, or logs into the machine and gives
+the user a normal shell on the remote machine.
+All communication with
+the remote command or shell will be automatically encrypted.
+<P>
+
+If a pseudo-terminal has been allocated (normal login session), the
+user may use the escape characters noted below.
+<P>
+
+If no pseudo-tty has been allocated,
+the session is transparent and can be used to reliably transfer binary data.
+On most systems, setting the escape character to
+``none''
+
+will also make the session transparent even if a tty is used.
+<P>
+
+The session terminates when the command or shell on the remote
+machine exits and all X11 and TCP connections have been closed.
+<A NAME="lbAF">&nbsp;</A>
+<H2>ESCAPE CHARACTERS</H2>
+
+When a pseudo-terminal has been requested,
+<B>ssh</B>
+
+
+supports a number of functions through the use of an escape character.
+<P>
+
+A single tilde character can be sent as
+<B>~~</B>
+
+or by following the tilde by a character other than those described below.
+The escape character must always follow a newline to be interpreted as
+special.
+The escape character can be changed in configuration files using the
+<B>EscapeChar</B>
+
+configuration directive or on the command line by the
+-<B>e</B>
+
+option.
+<P>
+
+The supported escapes (assuming the default
+`~'
+
+)
+are:
+<DL COMPACT>
+<P>
+
+<DT><B>~.</B>
+
+
+<DD>
+Disconnect.
+<DT><B>~^Z</B>
+
+
+<DD>
+Background
+<B>.</B>
+
+<DT><B>~#</B>
+
+
+<DD>
+List forwarded connections.
+<DT><B>~&amp;</B>
+
+
+<DD>
+Background
+<B>ssh</B>
+
+
+at logout when waiting for forwarded connection / X11 sessions to terminate.
+<DT><B>~?</B>
+
+
+<DD>
+Display a list of escape characters.
+<DT><B>~B</B>
+
+
+<DD>
+Send a BREAK to the remote system
+(only useful for SSH protocol version 2 and if the peer supports it).
+<DT><B>~C</B>
+
+
+<DD>
+Open command line.
+Currently this allows the addition of port forwardings using the
+-<B>L</B>
+
+ 
+-<B>R</B>
+
+and
+-<B>D</B>
+
+options (see above).
+It also allows the cancellation of existing remote port-forwardings
+using
+
+-<B>KR </B>[<I>bind_address : port</I>
+
+]
+
+
+
+
+
+ 
+
+<B>! </B><I>command</I>
+
+
+
+
+
+allows the user to execute a local command if the
+<B>PermitLocalCommand</B>
+
+option is enabled in
+ssh_config5.
+
+
+Basic help is available, using the
+-<B>h</B>
+
+option.
+<DT><B>~R</B>
+
+
+<DD>
+Request rekeying of the connection
+(only useful for SSH protocol version 2 and if the peer supports it).
+</DL>
+<P>
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>TCP FORWARDING</H2>
+
+Forwarding of arbitrary TCP connections over the secure channel can
+be specified either on the command line or in a configuration file.
+One possible application of TCP forwarding is a secure connection to a
+mail server; another is going through firewalls.
+<P>
+
+In the example below, we look at encrypting communication between
+an IRC client and server, even though the IRC server does not directly
+support encrypted communications.
+This works as follows:
+the user connects to the remote host using
+<B>,</B>
+
+specifying a port to be used to forward connections
+to the remote server.
+After that it is possible to start the service which is to be encrypted
+on the client machine,
+connecting to the same local port,
+and
+<B>ssh</B>
+
+
+will encrypt and forward the connection.
+<P>
+
+The following example tunnels an IRC session from client machine
+``127.0.0.1''
+
+(localhost)
+to remote server
+``server.example.com''
+
+ 
+
+<PRE>
+$ ssh -f -L 1234:localhost:6667 server.example.com sleep 10
+$ irc -c '#users' -p 1234 pinky 127.0.0.1
+</PRE>
+
+<P>
+
+This tunnels a connection to IRC server
+``server.example.com''
+
+ 
+joining channel
+``#users''
+
+ 
+nickname
+``pinky''
+
+ 
+using port 1234.
+It doesn't matter which port is used,
+as long as it's greater than 1023
+(remember, only root can open sockets on privileged ports)
+and doesn't conflict with any ports already in use.
+The connection is forwarded to port 6667 on the remote server,
+since that's the standard port for IRC services.
+<P>
+
+The
+-<B>f</B>
+
+option backgrounds
+<B>ssh</B>
+
+
+and the remote command
+``sleep 10''
+
+is specified to allow an amount of time
+(10 seconds, in the example)
+to start the service which is to be tunnelled.
+If no connections are made within the time specified,
+<B>ssh</B>
+
+
+will exit.
+<A NAME="lbAH">&nbsp;</A>
+<H2>X11 FORWARDING</H2>
+
+If the
+<B>ForwardX11</B>
+
+variable is set to
+``yes''
+
+(or see the description of the
+-<B>X</B>
+
+ 
+-<B>x</B>
+
+ 
+and
+-<B>Y</B>
+
+options above)
+and the user is using X11 (the
+<B>DISPLAY</B>
+
+environment variable is set), the connection to the X11 display is
+automatically forwarded to the remote side in such a way that any X11
+programs started from the shell (or command) will go through the
+encrypted channel, and the connection to the real X server will be made
+from the local machine.
+The user should not manually set
+<B>DISPLAY</B>
+
+ 
+Forwarding of X11 connections can be
+configured on the command line or in configuration files.
+<P>
+
+The
+<B>DISPLAY</B>
+
+value set by
+<B>ssh</B>
+
+
+will point to the server machine, but with a display number greater than zero.
+This is normal, and happens because
+<B>ssh</B>
+
+
+creates a
+``proxy''
+
+X server on the server machine for forwarding the
+connections over the encrypted channel.
+<P>
+
+<B>ssh</B>
+
+
+will also automatically set up Xauthority data on the server machine.
+For this purpose, it will generate a random authorization cookie,
+store it in Xauthority on the server, and verify that any forwarded
+connections carry this cookie and replace it by the real cookie when
+the connection is opened.
+The real authentication cookie is never
+sent to the server machine (and no cookies are sent in the plain).
+<P>
+
+If the
+<B>ForwardAgent</B>
+
+variable is set to
+``yes''
+
+(or see the description of the
+-<B>A</B>
+
+and
+-<B>a</B>
+
+options above) and
+the user is using an authentication agent, the connection to the agent
+is automatically forwarded to the remote side.
+<A NAME="lbAI">&nbsp;</A>
+<H2>VERIFYING HOST KEYS</H2>
+
+When connecting to a server for the first time,
+a fingerprint of the server's public key is presented to the user
+(unless the option
+<B>StrictHostKeyChecking</B>
+
+has been disabled).
+Fingerprints can be determined using
+ssh-keygen1:
+
+
+<P>
+
+
+<BLOCKQUOTE><TT>$ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key</TT></BLOCKQUOTE>
+<P>
+
+If the fingerprint is already known, it can be matched
+and the key can be accepted or rejected.
+Because of the difficulty of comparing host keys
+just by looking at hex strings,
+there is also support to compare host keys visually,
+using
+<I>random art</I>
+
+ 
+By setting the
+<B>VisualHostKey</B>
+
+option to
+``yes''
+
+ 
+a small ASCII graphic gets displayed on every login to a server, no matter
+if the session itself is interactive or not.
+By learning the pattern a known server produces, a user can easily
+find out that the host key has changed when a completely different pattern
+is displayed.
+Because these patterns are not unambiguous however, a pattern that looks
+similar to the pattern remembered only gives a good probability that the
+host key is the same, not guaranteed proof.
+<P>
+
+To get a listing of the fingerprints along with their random art for
+all known hosts, the following command line can be used:
+<P>
+
+
+<BLOCKQUOTE><TT>$ ssh-keygen -lv -f ~/.ssh/known_hosts</TT></BLOCKQUOTE>
+<P>
+
+If the fingerprint is unknown,
+an alternative method of verification is available:
+SSH fingerprints verified by DNS.
+An additional resource record (RR),
+SSHFP,
+is added to a zonefile
+and the connecting client is able to match the fingerprint
+with that of the key presented.
+<P>
+
+In this example, we are connecting a client to a server,
+``host.example.com''
+
+ 
+The SSHFP resource records should first be added to the zonefile for
+host.example.com:
+
+<BLOCKQUOTE>
+<PRE>
+$ ssh-keygen -r host.example.com.
+</PRE>
+</BLOCKQUOTE>
+
+<P>
+
+The output lines will have to be added to the zonefile.
+To check that the zone is answering fingerprint queries:
+<P>
+
+
+<BLOCKQUOTE><TT>$ dig -t SSHFP host.example.com</TT></BLOCKQUOTE>
+<P>
+
+Finally the client connects:
+
+<BLOCKQUOTE>
+<PRE>
+$ ssh -o &quot;VerifyHostKeyDNS ask&quot; host.example.com
+[...]
+Matching host key fingerprint found in DNS.
+Are you sure you want to continue connecting (yes/no)?
+</PRE>
+</BLOCKQUOTE>
+
+<P>
+
+See the
+<B>VerifyHostKeyDNS</B>
+
+option in
+ssh_config5
+
+
+for more information.
+<A NAME="lbAJ">&nbsp;</A>
+<H2>SSH-BASED VIRTUAL PRIVATE NETWORKS</H2>
+
+<B>ssh</B>
+
+
+contains support for Virtual Private Network (VPN) tunnelling
+using the
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tun">tun</A>(4)
+
+
+network pseudo-device,
+allowing two networks to be joined securely.
+The
+sshd_config5
+
+
+configuration option
+<B>PermitTunnel</B>
+
+controls whether the server supports this,
+and at what level (layer 2 or 3 traffic).
+<P>
+
+The following example would connect client network 10.0.50.0/24
+with remote network 10.0.99.0/24 using a point-to-point connection
+from 10.1.1.1 to 10.1.1.2,
+provided that the SSH server running on the gateway to the remote network,
+at 192.168.1.15, allows it.
+<P>
+
+On the client:
+
+<BLOCKQUOTE>
+<PRE>
+# ssh -f -w 0:1 192.168.1.15 true
+# ifconfig tun0 10.1.1.1 10.1.1.2 netmask 255.255.255.252
+# route add 10.0.99.0/24 10.1.1.2
+</PRE>
+</BLOCKQUOTE>
+
+<P>
+
+On the server:
+
+<BLOCKQUOTE>
+<PRE>
+# ifconfig tun1 10.1.1.2 10.1.1.1 netmask 255.255.255.252
+# route add 10.0.50.0/24 10.1.1.1
+</PRE>
+</BLOCKQUOTE>
+
+<P>
+
+Client access may be more finely tuned via the
+/root/.ssh/authorized_keys
+
+file (see below) and the
+<B>PermitRootLogin</B>
+
+server option.
+The following entry would permit connections on
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tun">tun</A>(4)
+
+
+device 1 from user
+``jane''
+
+and on tun device 2 from user
+``john''
+
+ 
+if
+<B>PermitRootLogin</B>
+
+is set to
+``forced-commands-only''
+
+ 
+
+<PRE>
+tunnel=&quot;1&quot;,command=&quot;sh /etc/netstart tun1&quot; ssh-rsa ... jane
+tunnel=&quot;2&quot;,command=&quot;sh /etc/netstart tun2&quot; ssh-rsa ... john
+</PRE>
+
+<P>
+
+Since an SSH-based setup entails a fair amount of overhead,
+it may be more suited to temporary setups,
+such as for wireless VPNs.
+More permanent VPNs are better provided by tools such as
+<A HREF="http://localhost/cgi-bin/man/man2html?8+ipsecctl">ipsecctl</A>(8)
+
+
+and
+<A HREF="http://localhost/cgi-bin/man/man2html?8+isakmpd">isakmpd</A>(8).
+
+
+<A NAME="lbAK">&nbsp;</A>
+<H2>ENVIRONMENT</H2>
+
+<B>ssh</B>
+
+
+will normally set the following environment variables:
+<DL COMPACT>
+<P>
+
+<DT><B>DISPLAY</B>
+
+
+<DD>
+The
+<B>DISPLAY</B>
+
+variable indicates the location of the X11 server.
+It is automatically set by
+<B>ssh</B>
+
+
+to point to a value of the form
+``hostname:n''
+
+ 
+where
+``hostname''
+
+indicates the host where the shell runs, and
+`n'
+
+is an integer  1.
+<B>ssh</B>
+
+
+uses this special value to forward X11 connections over the secure
+channel.
+The user should normally not set
+<B>DISPLAY</B>
+
+explicitly, as that
+will render the X11 connection insecure (and will require the user to
+manually copy any required authorization cookies).
+<DT><B>HOME</B>
+
+
+<DD>
+Set to the path of the user's home directory.
+<DT><B>LOGNAME</B>
+
+
+<DD>
+Synonym for
+<B>USER</B>
+
+ 
+set for compatibility with systems that use this variable.
+<DT><B>MAIL</B>
+
+
+<DD>
+Set to the path of the user's mailbox.
+<DT><B>PATH</B>
+
+
+<DD>
+Set to the default
+<B>PATH</B>
+
+ 
+as specified when compiling
+<B>.</B>
+
+<DT><B>SSH_ASKPASS</B>
+
+
+<DD>
+If
+<B>ssh</B>
+
+
+needs a passphrase, it will read the passphrase from the current
+terminal if it was run from a terminal.
+If
+<B>ssh</B>
+
+
+does not have a terminal associated with it but
+<B>DISPLAY</B>
+
+and
+<B>SSH_ASKPASS</B>
+
+are set, it will execute the program specified by
+<B>SSH_ASKPASS</B>
+
+and open an X11 window to read the passphrase.
+This is particularly useful when calling
+<B>ssh</B>
+
+
+from a
+.xsession
+
+or related script.
+(Note that on some machines it
+may be necessary to redirect the input from
+/dev/null
+
+to make this work.)
+<DT><B>SSH_AUTH_SOCK</B>
+
+
+<DD>
+Identifies the path of a
+UNIX
+socket used to communicate with the agent.
+<DT><B>SSH_CONNECTION</B>
+
+
+<DD>
+Identifies the client and server ends of the connection.
+The variable contains
+four space-separated values: client IP address, client port number,
+server IP address, and server port number.
+<DT><B>SSH_ORIGINAL_COMMAND</B>
+
+
+<DD>
+This variable contains the original command line if a forced command
+is executed.
+It can be used to extract the original arguments.
+<DT><B>SSH_TTY</B>
+
+
+<DD>
+This is set to the name of the tty (path to the device) associated
+with the current shell or command.
+If the current session has no tty,
+this variable is not set.
+<DT><B>TZ</B>
+
+
+<DD>
+This variable is set to indicate the present time zone if it
+was set when the daemon was started (i.e. the daemon passes the value
+on to new connections).
+<DT><B>USER</B>
+
+
+<DD>
+Set to the name of the user logging in.
+</DL>
+<P>
+
+<P>
+
+Additionally,
+<B>ssh</B>
+
+
+reads
+~/.ssh/environment
+
+ 
+and adds lines of the format
+``VARNAME=value''
+
+to the environment if the file exists and users are allowed to
+change their environment.
+For more information, see the
+<B>PermitUserEnvironment</B>
+
+option in
+sshd_config5.
+
+
+<A NAME="lbAL">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>~/.rhosts</B>
+<DD>
+This file is used for host-based authentication (see above).
+On some machines this file may need to be
+world-readable if the user's home directory is on an NFS partition,
+because
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+reads it as root.
+Additionally, this file must be owned by the user,
+and must not have write permissions for anyone else.
+The recommended
+permission for most machines is read/write for the user, and not
+accessible by others.
+<P>
+
+<DT><B>~/.shosts</B>
+<DD>
+This file is used in exactly the same way as
+.rhosts
+
+ 
+but allows host-based authentication without permitting login with
+rlogin/rsh.
+<P>
+
+<DT><B>~/.ssh/</B>
+<DD>
+This directory is the default location for all user-specific configuration
+and authentication information.
+There is no general requirement to keep the entire contents of this directory
+secret, but the recommended permissions are read/write/execute for the user,
+and not accessible by others.
+<P>
+
+<DT><B>~/.ssh/authorized_keys</B>
+<DD>
+Lists the public keys (RSA/DSA) that can be used for logging in as this user.
+The format of this file is described in the
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+manual page.
+This file is not highly sensitive, but the recommended
+permissions are read/write for the user, and not accessible by others.
+<P>
+
+<DT><B>~/.ssh/config</B>
+<DD>
+This is the per-user configuration file.
+The file format and configuration options are described in
+ssh_config5.
+
+
+Because of the potential for abuse, this file must have strict permissions:
+read/write for the user, and not accessible by others.
+<P>
+
+<DT><B>~/.ssh/environment</B>
+<DD>
+Contains additional definitions for environment variables; see
+Sx ENVIRONMENT ,
+
+above.
+<P>
+
+<DT><B>~/.ssh/identity</B>
+<DD>
+<DT><B>~/.ssh/id_dsa</B>
+<DD>
+<DT><B>~/.ssh/id_rsa</B>
+<DD>
+Contains the private key for authentication.
+These files
+contain sensitive data and should be readable by the user but not
+accessible by others (read/write/execute).
+<B>ssh</B>
+
+
+will simply ignore a private key file if it is accessible by others.
+It is possible to specify a passphrase when
+generating the key which will be used to encrypt the
+sensitive part of this file using 3DES.
+<P>
+
+<DT><B>~/.ssh/identity.pub</B>
+<DD>
+<DT><B>~/.ssh/id_dsa.pub</B>
+<DD>
+<DT><B>~/.ssh/id_rsa.pub</B>
+<DD>
+Contains the public key for authentication.
+These files are not
+sensitive and can (but need not) be readable by anyone.
+<P>
+
+<DT><B>~/.ssh/known_hosts</B>
+<DD>
+Contains a list of host keys for all hosts the user has logged into
+that are not already in the systemwide list of known host keys.
+See
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+for further details of the format of this file.
+<P>
+
+<DT><B>~/.ssh/rc</B>
+<DD>
+Commands in this file are executed by
+<B>ssh</B>
+
+
+when the user logs in, just before the user's shell (or command) is
+started.
+See the
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+manual page for more information.
+<P>
+
+<DT><B>/etc/hosts.equiv</B>
+<DD>
+This file is for host-based authentication (see above).
+It should only be writable by root.
+<P>
+
+<DT><B>/etc/shosts.equiv</B>
+<DD>
+This file is used in exactly the same way as
+hosts.equiv
+
+ 
+but allows host-based authentication without permitting login with
+rlogin/rsh.
+<P>
+
+<DT><B>/etc/ssh/ssh_config
+
+</B>
+<DD>
+Systemwide configuration file.
+The file format and configuration options are described in
+ssh_config5.
+
+
+<P>
+
+<DT><B>/etc/ssh/ssh_host_key</B>
+<DD>
+<DT><B>/etc/ssh/ssh_host_dsa_key</B>
+<DD>
+<DT><B>/etc/ssh/ssh_host_rsa_key</B>
+<DD>
+These three files contain the private parts of the host keys
+and are used for host-based authentication.
+If protocol version 1 is used,
+<B>ssh</B>
+
+
+must be setuid root, since the host key is readable only by root.
+For protocol version 2,
+<B>ssh</B>
+
+
+uses
+ssh-keysign8
+
+
+to access the host keys,
+eliminating the requirement that
+<B>ssh</B>
+
+
+be setuid root when host-based authentication is used.
+By default
+<B>ssh</B>
+
+
+is not setuid root.
+<P>
+
+<DT><B>/etc/ssh/ssh_known_hosts</B>
+<DD>
+Systemwide list of known host keys.
+This file should be prepared by the
+system administrator to contain the public host keys of all machines in the
+organization.
+It should be world-readable.
+See
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+for further details of the format of this file.
+<P>
+
+<DT><B>/etc/ssh/sshrc</B>
+<DD>
+Commands in this file are executed by
+<B>ssh</B>
+
+
+when the user logs in, just before the user's shell (or command) is started.
+See the
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+manual page for more information.
+</DL>
+<P>
+
+<A NAME="lbAM">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+scp">scp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sftp">sftp</A>(1),
+
+
+ssh-add1,
+
+
+ssh-agent1,
+
+
+ssh-keygen1,
+
+
+ssh-keyscan1,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?4+tun">tun</A>(4),
+
+
+hosts.equiv5,
+
+
+ssh_config5,
+
+
+ssh-keysign8,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<DL COMPACT><DT><DD>
+<I>RFC 4250</I>
+<I>&quot;The Secure Shell (SSH) Protocol Assigned Numbers&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4251</I>
+<I>&quot;The Secure Shell (SSH) Protocol Architecture&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4252</I>
+<I>&quot;The Secure Shell (SSH) Authentication Protocol&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4253</I>
+<I>&quot;The Secure Shell (SSH) Transport Layer Protocol&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4254</I>
+<I>&quot;The Secure Shell (SSH) Connection Protocol&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4255</I>
+<I>&quot;Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4256</I>
+<I>&quot;Generic Message Exchange Authentication for the Secure Shell Protocol (SSH)&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4335</I>
+<I>&quot;The Secure Shell (SSH) Session Channel Break Extension&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4344</I>
+<I>&quot;The Secure Shell (SSH) Transport Layer Encryption Modes&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4345</I>
+<I>&quot;Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4419</I>
+<I>&quot;Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>RFC 4716</I>
+<I>&quot;The Secure Shell (SSH) Public Key File Format&quot;</I>
+2006
+</DL>
+
+<DL COMPACT><DT><DD>
+<I>&quot;Hash Visualization: a New Technique to improve Real-World Security&quot;</I>
+A. Perrig
+D. Song
+1999
+&quot;International Workshop on Cryptographic Techniques and E-Commerce (CrypTEC '99)&quot;
+</DL>
+
+<A NAME="lbAN">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+OpenSSH is a derivative of the original and free
+ssh 1.2.12 release by Tatu Ylonen.
+Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos,
+Theo de Raadt and Dug Song
+removed many bugs, re-added newer features and
+created OpenSSH.
+Markus Friedl contributed the support for SSH
+protocol versions 1.5 and 2.0.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">AUTHENTICATION</A><DD>
+<DT><A HREF="#lbAF">ESCAPE CHARACTERS</A><DD>
+<DT><A HREF="#lbAG">TCP FORWARDING</A><DD>
+<DT><A HREF="#lbAH">X11 FORWARDING</A><DD>
+<DT><A HREF="#lbAI">VERIFYING HOST KEYS</A><DD>
+<DT><A HREF="#lbAJ">SSH-BASED VIRTUAL PRIVATE NETWORKS</A><DD>
+<DT><A HREF="#lbAK">ENVIRONMENT</A><DD>
+<DT><A HREF="#lbAL">FILES</A><DD>
+<DT><A HREF="#lbAM">SEE ALSO</A><DD>
+<DT><A HREF="#lbAN">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

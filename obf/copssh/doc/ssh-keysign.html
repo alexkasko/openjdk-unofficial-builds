@@ -1,0 +1,149 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSH-KEYSIGN</TITLE>
+</HEAD><BODY>
+<H1>SSH-KEYSIGN</H1>
+Section: Maintenance Commands (8)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>ssh-keysign</B>
+
+ - ssh helper program for host-based authentication
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B></B>
+
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B></B>
+
+
+is used by
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+to access the local host keys and generate the digital signature
+required during host-based authentication with SSH protocol version 2.
+<P>
+
+<B></B>
+
+
+is disabled by default and can only be enabled in the
+global client configuration file
+/etc/ssh/ssh_config
+
+by setting
+<B>EnableSSHKeysign</B>
+
+to
+``yes''
+
+ 
+<P>
+
+<B></B>
+
+
+is not intended to be invoked by the user, but from
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1).
+
+
+See
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1)
+
+
+and
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+for more information about host-based authentication.
+<A NAME="lbAE">&nbsp;</A>
+<H2>FILES</H2>
+
+<DL COMPACT>
+<P>
+
+<DT><B>/etc/ssh/ssh_config
+
+</B>
+<DD>
+Controls whether
+<B></B>
+
+
+is enabled.
+<DT><B>/etc/ssh/ssh_host_dsa_key, /etc/ssh/ssh_host_rsa_key
+
+</B>
+<DD>
+These files contain the private parts of the host keys used to
+generate the digital signature.
+They should be owned by root, readable only by root, and not
+accessible to others.
+Since they are readable only by root,
+<B></B>
+
+
+must be set-uid root if host-based authentication is used.
+</DL>
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+ssh-keygen1,
+
+
+ssh_config5,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>HISTORY</H2>
+
+<B></B>
+
+
+first appeared in
+Ox 3.2 .
+
+<A NAME="lbAH">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+An Markus Friedl Aq <A HREF="mailto:markus@openbsd.org">markus@openbsd.org</A>
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">FILES</A><DD>
+<DT><A HREF="#lbAF">SEE ALSO</A><DD>
+<DT><A HREF="#lbAG">HISTORY</A><DD>
+<DT><A HREF="#lbAH">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:45 GMT, March 09, 2010
+</BODY>
+</HTML>

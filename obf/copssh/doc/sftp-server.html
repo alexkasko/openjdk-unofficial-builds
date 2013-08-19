@@ -1,0 +1,235 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SFTP-SERVER</TITLE>
+</HEAD><BODY>
+<H1>SFTP-SERVER</H1>
+Section: Maintenance Commands (8)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>sftp-server</B>
+
+ - SFTP server subsystem
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>sftp-server</B>
+
+[-<B>ehR</B>
+
+]
+
+[-<B>f </B><I>log_facility</I>
+
+
+
+]
+
+[-<B>l </B><I>log_level</I>
+
+
+
+]
+
+[-<B>u </B><I>umask</I>
+
+
+
+]
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<B>sftp-server</B>
+
+
+is a program that speaks the server side of SFTP protocol
+to stdout and expects client requests from stdin.
+<B>sftp-server</B>
+
+
+is not intended to be called directly, but from
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+using the
+<B>Subsystem</B>
+
+option.
+<P>
+
+Command-line flags to
+<B>sftp-server</B>
+
+
+should be specified in the
+<B>Subsystem</B>
+
+declaration.
+See
+sshd_config5
+
+
+for more information.
+<P>
+
+Valid options are:
+<DL COMPACT>
+<P>
+
+<DT><B>-e</B>
+
+
+<DD>
+Causes
+<B>sftp-server</B>
+
+
+to print logging information to stderr instead of syslog for debugging.
+<DT><B>-f </B><I>log_facility</I>
+
+
+
+
+<DD>
+Specifies the facility code that is used when logging messages from
+<B>.</B>
+
+The possible values are: DAEMON, USER, AUTH, LOCAL0, LOCAL1, LOCAL2,
+LOCAL3, LOCAL4, LOCAL5, LOCAL6, LOCAL7.
+The default is AUTH.
+<DT><B>-h</B>
+
+
+<DD>
+Displays
+<B>sftp-server</B>
+
+
+usage information.
+<DT><B>-l </B><I>log_level</I>
+
+
+
+
+<DD>
+Specifies which messages will be logged by
+<B>.</B>
+
+The possible values are:
+QUIET, FATAL, ERROR, INFO, VERBOSE, DEBUG, DEBUG1, DEBUG2, and DEBUG3.
+INFO and VERBOSE log transactions that
+<B>sftp-server</B>
+
+
+performs on behalf of the client.
+DEBUG and DEBUG1 are equivalent.
+DEBUG2 and DEBUG3 each specify higher levels of debugging output.
+The default is ERROR.
+<DT><B>-R</B>
+
+
+<DD>
+Places this instance of
+<B>sftp-server</B>
+
+
+into a read-only mode.
+Attempts to open files for writing, as well as other operations that change
+the state of the filesystem, will be denied.
+<DT><B>-u </B><I>umask</I>
+
+
+
+
+<DD>
+Sets an explicit
+<A HREF="http://localhost/cgi-bin/man/man2html?2+umask">umask</A>(2)
+
+
+to be applied to newly-created files and directories, instead of the
+user's default mask.
+</DL>
+<P>
+
+<P>
+
+For logging to work,
+<B>sftp-server</B>
+
+
+must be able to access
+/dev/log
+
+ 
+Use of
+<B>sftp-server</B>
+
+
+in a chroot configuration therefore requires that
+<A HREF="http://localhost/cgi-bin/man/man2html?8+syslogd">syslogd</A>(8)
+
+
+establish a logging socket inside the chroot directory.
+<A NAME="lbAE">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+sftp">sftp</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+sshd_config5,
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<DL COMPACT><DT><DD>
+T. Ylonen
+S. Lehtinen
+<I>&quot;SSH File Transfer Protocol&quot;</I>
+draft-ietf-secsh-filexfer-00.txt
+January 2001
+work in progress material
+</DL>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>HISTORY</H2>
+
+<B>sftp-server</B>
+
+
+first appeared in
+Ox 2.8 .
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+An Markus Friedl Aq <A HREF="mailto:markus@openbsd.org">markus@openbsd.org</A>
+
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">SEE ALSO</A><DD>
+<DT><A HREF="#lbAF">HISTORY</A><DD>
+<DT><A HREF="#lbAG">AUTHORS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>

@@ -1,0 +1,347 @@
+Content-type: text/html
+
+<HTML><HEAD><TITLE>Manpage of SSH-KEYSCAN</TITLE>
+</HEAD><BODY>
+<H1>SSH-KEYSCAN</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="http://localhost/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+<BR>BSD mandoc<BR>
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+
+
+<B>ssh-keyscan</B>
+
+ - gather ssh public keys
+
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>ssh-keyscan</B>
+
+-words
+
+[-<B>46Hv </B>[-<B>f </B><I>file</I>
+
+
+
+]
+
+
+
+
+
+]
+
+[-<B>p </B><I>port</I>
+
+
+
+]
+
+[-<B>T </B><I>timeout</I>
+
+
+
+]
+
+[-<B>t </B><I>type</I>
+
+
+
+]
+
+[<I>host | addrlist namelist</I>
+
+]
+
+<I>...</I>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+
+
+<B>ssh-keyscan</B>
+
+
+is a utility for gathering the public ssh host keys of a number of
+hosts.
+It was designed to aid in building and verifying
+ssh_known_hosts
+
+files.
+<B>ssh-keyscan</B>
+
+
+provides a minimal interface suitable for use by shell and perl
+scripts.
+<P>
+
+<B>ssh-keyscan</B>
+
+
+uses non-blocking socket I/O to contact as many hosts as possible in
+parallel, so it is very efficient.
+The keys from a domain of 1,000
+hosts can be collected in tens of seconds, even when some of those
+hosts are down or do not run ssh.
+For scanning, one does not need
+login access to the machines that are being scanned, nor does the
+scanning process involve any encryption.
+<P>
+
+The options are as follows:
+<DL COMPACT>
+<P>
+
+<DT><B>-4</B>
+
+
+<DD>
+Forces
+<B>ssh-keyscan</B>
+
+
+to use IPv4 addresses only.
+<DT><B>-6</B>
+
+
+<DD>
+Forces
+<B>ssh-keyscan</B>
+
+
+to use IPv6 addresses only.
+<DT><B>-f </B><I>file</I>
+
+
+
+
+<DD>
+Read hosts or
+addrlist namelist
+
+pairs from this file, one per line.
+If
+-
+
+is supplied instead of a filename,
+<B>ssh-keyscan</B>
+
+
+will read hosts or
+addrlist namelist
+
+pairs from the standard input.
+<DT><B>-H</B>
+
+
+<DD>
+Hash all hostnames and addresses in the output.
+Hashed names may be used normally by
+<B>ssh</B>
+
+and
+<B>sshd</B>
+
+ 
+but they do not reveal identifying information should the file's contents
+be disclosed.
+<DT><B>-p </B><I>port</I>
+
+
+
+
+<DD>
+Port to connect to on the remote host.
+<DT><B>-T </B><I>timeout</I>
+
+
+
+
+<DD>
+Set the timeout for connection attempts.
+If
+timeout
+
+seconds have elapsed since a connection was initiated to a host or since the
+last time anything was read from that host, then the connection is
+closed and the host in question considered unavailable.
+Default is 5 seconds.
+<DT><B>-t </B><I>type</I>
+
+
+
+
+<DD>
+Specifies the type of the key to fetch from the scanned hosts.
+The possible values are
+``rsa1''
+
+for protocol version 1 and
+``rsa''
+
+or
+``dsa''
+
+for protocol version 2.
+Multiple values may be specified by separating them with commas.
+The default is
+``rsa''
+
+ 
+<DT><B>-v</B>
+
+
+<DD>
+Verbose mode.
+Causes
+<B>ssh-keyscan</B>
+
+
+to print debugging messages about its progress.
+</DL>
+<P>
+
+<A NAME="lbAE">&nbsp;</A>
+<H2>SECURITY</H2>
+
+If an ssh_known_hosts file is constructed using
+<B>ssh-keyscan</B>
+
+
+without verifying the keys, users will be vulnerable to
+<I>man in the middle</I>
+
+attacks.
+On the other hand, if the security model allows such a risk,
+<B>ssh-keyscan</B>
+
+
+can help in the detection of tampered keyfiles or man in the middle
+attacks which have begun after the ssh_known_hosts file was created.
+<A NAME="lbAF">&nbsp;</A>
+<H2>FILES</H2>
+
+Input format:
+
+
+<PRE>
+1.2.3.4,1.2.4.4 name.my.domain,name,n.my.domain,n,1.2.3.4,1.2.4.4
+</PRE>
+
+<P>
+
+Output format for rsa1 keys:
+
+
+<PRE>
+host-or-namelist bits exponent modulus
+</PRE>
+
+<P>
+
+Output format for rsa and dsa keys:
+
+
+<PRE>
+host-or-namelist keytype base64-encoded-key
+</PRE>
+
+<P>
+
+Where
+keytype
+
+is either
+``ssh-rsa''
+
+or
+``ssh-dss''
+
+ 
+<P>
+
+/etc/ssh/ssh_known_hosts
+
+<A NAME="lbAG">&nbsp;</A>
+<H2>EXAMPLES</H2>
+
+Print the
+rsa
+
+host key for machine
+hostname
+
+ 
+
+<PRE>
+$ ssh-keyscan hostname
+</PRE>
+
+<P>
+
+Find all hosts from the file
+ssh_hosts
+
+which have new or different keys from those in the sorted file
+ssh_known_hosts
+
+ 
+
+<PRE>
+$ ssh-keyscan -t rsa,dsa -f ssh_hosts | \
+        sort -u - ssh_known_hosts | diff ssh_known_hosts -
+</PRE>
+
+<A NAME="lbAH">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<A HREF="http://localhost/cgi-bin/man/man2html?1+ssh">ssh</A>(1),
+
+
+<A HREF="http://localhost/cgi-bin/man/man2html?8+sshd">sshd</A>(8)
+
+
+<A NAME="lbAI">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+An -nosplit
+
+An David Mazieres Aq <A HREF="mailto:dm@lcs.mit.edu">dm@lcs.mit.edu</A>
+
+wrote the initial version, and
+An Wayne Davison Aq <A HREF="mailto:wayned@users.sourceforge.net">wayned@users.sourceforge.net</A>
+
+added support for protocol version 2.
+<A NAME="lbAJ">&nbsp;</A>
+<H2>BUGS</H2>
+
+It generates &quot;Connection closed by remote host&quot; messages on the consoles
+of all the machines it scans if the server is older than version 2.9.
+This is because it opens a connection to the ssh port, reads the public
+key, and drops the connection as soon as it gets the key.
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">SECURITY</A><DD>
+<DT><A HREF="#lbAF">FILES</A><DD>
+<DT><A HREF="#lbAG">EXAMPLES</A><DD>
+<DT><A HREF="#lbAH">SEE ALSO</A><DD>
+<DT><A HREF="#lbAI">AUTHORS</A><DD>
+<DT><A HREF="#lbAJ">BUGS</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="http://localhost/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 21:43:44 GMT, March 09, 2010
+</BODY>
+</HTML>
