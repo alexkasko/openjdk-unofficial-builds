@@ -20,6 +20,7 @@ OpenJDK unofficial installers for Windows, Linux and Mac OS X
   * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip), [sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip.sha256)
   * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip), [sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip.sha256)
 
+Older downloads may be found at the bottom of the page.
 
 ###Other OpenJDK builds
 
@@ -30,7 +31,7 @@ OpenJDK unofficial installers for Windows, Linux and Mac OS X
 Downloads description
 ---------------------
 
-_Note: description represents information about current builds (on the top of the page). For previous builds (on the bottom of the page) please see description, linked near them_
+_Note: description represents information about current builds (on the top of the page). For previous builds (at the bottom of the page) please see description, linked near them_
 
 ###Source code
 
