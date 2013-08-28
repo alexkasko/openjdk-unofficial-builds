@@ -50,8 +50,8 @@ set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
 set DISABLE_INTREE_EC=true 
 
 rem debug settings
-rem set DEBUG_CLASSFILES=true
-set FULL_DEBUG_SYMBOLS=0
+set DEBUG_CLASSFILES=true
+rem set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%

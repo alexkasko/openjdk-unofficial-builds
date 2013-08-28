@@ -57,7 +57,7 @@ if [ -z "$OPENJDK_VERSION" ] ; then
 fi
 
 # pack image 
-IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-image
+IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-debug-image
 WORK_DIR="$IMAGE_DIR"/target
 if [ ! -d "$WORK_DIR" ]; then
     mkdir "$WORK_DIR"
@@ -73,7 +73,7 @@ popd > /dev/null
 if [ "macosx-x86_64" == "$PLATFORM" ] ; then 
     # pack bundle
     JDK_BUNDLE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-bundle
-    BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-bundle
+    BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-debug-bundle
     CURDIR=`pwd`
     pushd "$WORK_DIR" > /dev/null
     cp -r "$JDK_BUNDLE" .
