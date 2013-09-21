@@ -40,18 +40,17 @@ rem other variables
 set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=u40-unofficial
-set BUILD_NUMBER=b1
+set BUILD_NUMBER=b43
 
 rem icedtea specific
-set USE_SYSTEM_GCONF=true
-set USE_SYSTEM_GIO=true
-set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk7.jar
-set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
-set DISABLE_INTREE_EC=true 
+rem set USE_SYSTEM_GCONF=true
+rem set USE_SYSTEM_GIO=true
+rem set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk7.jar
+rem set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
+rem set DISABLE_INTREE_EC=true 
 
 rem debug settings
-set DEBUG_CLASSFILES=true
-rem set FULL_DEBUG_SYMBOLS=0
+set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%
@@ -82,3 +81,9 @@ rem pause > nul
 
 rem start obf build
 bash %SCRIPT_DIR%/make-and-bundle.sh
+
+rem debug build settings
+set FULL_DEBUG_SYMBOLS=1
+set DEBUG_CLASSFILES=true
+
+bash %SCRIPT_DIR%/make-and-bundle.sh -d -f

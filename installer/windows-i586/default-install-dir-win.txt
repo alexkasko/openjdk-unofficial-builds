@@ -1,1 +1,1 @@
-$USER_HOME\openjdk_1.7.0_u40_2.4.1
+$USER_HOME\openjdk_1.7.0_u40
