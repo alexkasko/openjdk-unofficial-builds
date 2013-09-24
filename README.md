@@ -1,24 +1,43 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
-###OpenJDK 7 update 40 (IcedTea 2.4.1) downloads
+###OpenJDK 7 update 40 build 43 downloads
 
  * **Windows:**
-  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-installer.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-installer.zip.sha256))
-  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-debug-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-debug-image.zip.sha256))
-  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-installer.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-installer.zip.sha256))
-  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-debug-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-debug-image.zip.sha256))
+  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-i586-installer.zip.sha256))
+  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-i586-debug-image.zip.sha256))
+  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-amd64-installer.zip.sha256))
+  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-windows-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-windows-amd64-debug-image.zip.sha256))
 
  * **Mac OS X:**
-  * [x86_64 bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-bundle.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-bundle.zip.sha256)), [debug bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-bundle.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-bundle.zip.sha256))
-  * [x86_64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-installer.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-installer.zip.sha256))
-  * [x86_64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-image.zip.sha256))
+  * [x86_64 bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-macosx-x86_64-bundle.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-macosx-x86_64-bundle.zip.sha256)), [debug bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-macosx-x86_64-debug-bundle.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-macosx-x86_64-debug-bundle.zip.sha256))
+  * [x86_64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-macosx-x86_64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-macosx-x86_64-installer.zip.sha256))
+  * [x86_64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-macosx-x86_64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-macosx-x86_64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-macosx-x86_64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-macosx-x86_64-debug-image.zip.sha256))
 
  * **Linux:**
-  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-installer.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-installer.zip.sha256))
-  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-debug-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-debug-image.zip.sha256))
-  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip.sha256)) 
-  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip) ([sha256](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip.sha256))
+  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-installer.zip.sha256))
+  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-debug-image.zip.sha256))
+  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-installer.zip.sha256)) 
+  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-debug-image.zip.sha256))
+
+###OpenJDK 7 update 40 build 31 (IcedTea 2.4.1) downloads
+
+ * **Windows:**
+  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-installer.zip.sha256))
+  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-i586-debug-image.zip.sha256))
+  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-installer.zip.sha256))
+  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-windows-amd64-debug-image.zip.sha256))
+
+ * **Mac OS X:**
+  * [x86_64 bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-bundle.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-bundle.zip.sha256)), [debug bundle](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-bundle.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-bundle.zip.sha256))
+  * [x86_64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-installer.zip.sha256))
+  * [x86_64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-macosx-x86_64-debug-image.zip.sha256))
+
+ * **Linux:**
+  * [i586 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-installer.zip.sha256))
+  * [i586 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-i586-debug-image.zip.sha256))
+  * [amd64 installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip.sha256)) 
+  * [amd64 zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip.sha256)), [debug zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds-mercurial/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip.sha256))
 
 Older downloads may be found at the bottom of the page.
 
@@ -35,7 +54,9 @@ _Note: description represents information about current builds (on the top of th
 
 ###Source code
 
-Binaries were built from [OpenJDK7](http://openjdk.java.net/projects/jdk7u/) source code with [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) patches.
+OpenJDK binaries were built from [openjdk-7u40-fcs-src-b43-26_aug_2013.zip](http://www.java.net/download/openjdk/jdk7u40/promoted/b43/openjdk-7u40-fcs-src-b43-26_aug_2013.zip) sources (direct link). Additional [patch](http://hg.openjdk.java.net/hsx/hotspot-rt/hotspot/rev/195ff07bc7f6) was applied only for Mac OS X builds, [bug entry](https://bugs.openjdk.java.net/browse/JDK-8021771).
+
+IcedTea binaries were built from [OpenJDK7](http://openjdk.java.net/projects/jdk7u/) source code with [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) patches.
 
  * [IcedTea 2.4.1 source release announcement](http://blog.fuseyism.com/index.php/2013/07/08/security-icedtea-2-4-1-for-openjdk-7-released/)
  * [sources on github](https://github.com/alexkasko/openjdk-icedtea7)
@@ -69,7 +90,7 @@ These builds use unlimited cryptography policy files by default.
 
 ###Debug symbols
 
-Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info.
+Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info. Mac OS X builds do not support native debug symbols - [bug entry](https://bugs.openjdk.java.net/browse/JDK-7165611), [additional info](http://mail.openjdk.java.net/pipermail/build-dev/2012-October/006881.html)
 
 ###Installers
 
@@ -225,7 +246,7 @@ Other sources and binaries in this repository (cygwin, freetype etc.) are releas
 Previous downloads
 ------------------
 
-See project descreption corresponding to these downloads [here](https://github.com/alexkasko/openjdk-unofficial-builds/blob/5617d5d4a77a8da83b6e8de31e825969c256875e/README.md)
+See project description corresponding to these downloads [here](https://github.com/alexkasko/openjdk-unofficial-builds/blob/5617d5d4a77a8da83b6e8de31e825969c256875e/README.md).
 
 ###Windows downloads
 
@@ -262,16 +283,20 @@ See project descreption corresponding to these downloads [here](https://github.c
 Changelog
 ---------
 
-*2013-08-28*
+**2013-09-25**
+
+ * `7u40` builds
+
+**2013-08-28**
 
  * debug builds for `7u40 2.4.1`
 
-*2013-08-19*
+**2013-08-19**
 
  * `7u40 2.4.1` released
 
  * fully automated builds
 
-*2012-12-08*
+**2012-12-08**
 
  * initial public version
