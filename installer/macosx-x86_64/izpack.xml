@@ -2,7 +2,7 @@
 <installation version="1.0">
     <info>
         <appname>OpenJDK 7 u40 unofficial macosx-x86_64</appname>
-        <appversion>build 43</appversion>
+        <appversion>(IcedTea 2.4.2)</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
