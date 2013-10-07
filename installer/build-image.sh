@@ -56,35 +56,41 @@ pushd "$SRC_DIR_RELATIVE" > /dev/null
 SRC_DIR="$( pwd )"
 popd > /dev/null
 
+if [ "true" == "$IS_DEBUG" ] ; then
+    BUILD_OUT_DIR=build.debug
+else
+    BUILD_OUT_DIR=build
+fi
+
 # search for jdk image
-if [ -d "$SRC_DIR"/build/windows-i586 ] ; then
+if [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/windows-i586 ] ; then
     PLATFORM=windows-i586
     ZIP=""$OBF_DIR"/zip/zip -qr"
-elif [ -d "$SRC_DIR"/build/windows-amd64 ] ; then
+elif [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/windows-amd64 ] ; then
     PLATFORM=windows-amd64
     ZIP=""$OBF_DIR"/zip/zip -qr"
-elif [ -d "$SRC_DIR"/build/linux-i586 ] ; then
+elif [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/linux-i586 ] ; then
     PLATFORM=linux-i586
     ZIP="zip -qry"
-elif [ -d "$SRC_DIR"/build/linux-amd64 ] ; then
+elif [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/linux-amd64 ] ; then
     PLATFORM=linux-amd64
     ZIP="zip -qry"
-elif [ -d "$SRC_DIR"/build/macosx-x86_64 ] ; then
+elif [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/macosx-x86_64 ] ; then
     PLATFORM=macosx-x86_64
     ZIP="zip -qry"
-    if [ ! -d "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image ] ; then
+    if [ ! -d "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image ] ; then
         # prepare server image
-        cp -r "$SRC_DIR"/build/"$PLATFORM"/j2sdk-image "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
-        rm -rf "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image/demo
-        rm -rf "$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image/sample
+        cp -r "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-image "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
+        rm -rf "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image/demo
+        rm -rf "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image/sample
     fi
 else
-    echo "Error: OpenJDK binaries not found in $SRC_DIR/build"
+    echo "Error: OpenJDK binaries not found in $SRC_DIR/"$BUILD_OUT_DIR""
     exit 1
 fi
 
 # extract version
-JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
+JDK_IMAGE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
 
 echo "Packing OpenJDK image: $JDK_IMAGE"
 
@@ -126,7 +132,7 @@ popd > /dev/null
 
 if [ "macosx-x86_64" == "$PLATFORM" ] ; then 
     # pack bundle
-    JDK_BUNDLE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-bundle
+    JDK_BUNDLE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-bundle
     if [ "true" == "$IS_ICEDTEA" ] ; then
         if [ "true" == "$IS_DEBUG" ] ; then
             BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-debug-bundle

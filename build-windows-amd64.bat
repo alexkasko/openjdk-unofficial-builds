@@ -85,5 +85,6 @@ bash %SCRIPT_DIR%/make-and-bundle.sh -i
 rem debug build settings
 set FULL_DEBUG_SYMBOLS=1
 set DEBUG_CLASSFILES=true
+set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
 
 bash %SCRIPT_DIR%/make-and-bundle.sh -i -d -f

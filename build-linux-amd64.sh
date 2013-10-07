@@ -25,5 +25,6 @@ export DISABLE_INTREE_EC=true
 
 export FULL_DEBUG_SYMBOLS=1
 export DEBUG_CLASSFILES=true
+export ALT_OUTPUTDIR="$OUB_DIR"/../openjdk/build.debug/linux-amd64/
 
 "$OUB_DIR"/make-and-bundle.sh -i -d -f
