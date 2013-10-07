@@ -48,9 +48,6 @@ done
 
 echo "Starting make" >> "$LOG_FILE"
 cd "$OBF_DIR"/openjdk
-
-make clean >> "$LOG_FILE" 2>&1
-rm -rf build
 make >> "$LOG_FILE" 2>&1
 if [ $? -ne 0 ] ; then
     echo "Build aborted with error on 'make'" >> "$LOG_FILE"

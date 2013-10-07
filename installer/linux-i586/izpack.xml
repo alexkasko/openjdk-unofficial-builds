@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 7 u40 unofficial linux-i586</appname>
-        <appversion>(IcedTea 2.4.2)</appversion>
+        <appname>OpenJDK 6 unofficial linux-i586</appname>
+        <appversion>build 28</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 

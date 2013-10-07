@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 7 u40 unofficial windows-amd64</appname>
-        <appversion>(IcedTea 2.4.2)</appversion>
+        <appname>OpenJDK 6 unofficial windows-amd64</appname>
+        <appversion>build 28</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 
@@ -168,14 +168,14 @@ Add "JAVA_HOME" environment variable and append "JAVA_HOME/bin" and "JAVA_HOME/j
               required="no"
               preselected="no">
               <description>
-Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7" with information about this installation. These entries may be used by java application launchers (e.g. launch4j). Key will be added to global registry branch and may require administrator privileges. On uninstallation registry values under this key will be cleared, but key itself will be left intact.
+Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6" with information about this installation. These entries may be used by java application launchers (e.g. launch4j). Key will be added to global registry branch and may require administrator privileges. On uninstallation registry values under this key will be cleared, but key itself will be left intact.
             </description>
             <executable targetfile="${ENV[WINDIR]}/system32/reg.exe"
                         stage="postinstall"
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="JavaHome"/>
                     <arg value="\/t"/>
@@ -189,7 +189,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="JavaHome"/>
                     <arg value="\/f"/>
@@ -200,7 +200,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="RuntimeLib"/>
                     <arg value="\/t"/>
@@ -214,7 +214,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="RuntimeLib"/>
                     <arg value="\/f"/>
@@ -225,7 +225,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="add"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="MicroVersion"/>
                     <arg value="\/t"/>
@@ -239,7 +239,7 @@ Add registry key "HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/
                         keep="true">
                 <args>
                     <arg value="delete"/>
-                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.7&quot;"/>
+                    <arg value="&quot;HKEY_LOCAL_MACHINE/Software/JavaSoft/Java Runtime Environment/1.6&quot;"/>
                     <arg value="\/v"/>
                     <arg value="MicroVersion"/>
                     <arg value="\/f"/>

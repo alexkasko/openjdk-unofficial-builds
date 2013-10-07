@@ -89,7 +89,7 @@ JDK_IMAGE="$SRC_DIR"/build/"$PLATFORM"/j2sdk-server-image
 echo "Building installer for OpenJDK image: $JDK_IMAGE"
 
 JAVA="$JDK_IMAGE"/bin/java
-OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==1{print substr($3,2,length($3)-2)}' )"
+OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
 if [ "true" == "$IS_ICEDTEA" ] ; then
     ICEDTEA_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
 fi    
