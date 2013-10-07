@@ -1,6 +1,16 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
+###OpenJDK 6 build 28
+
+ * **Windows downloads:**
+  * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-debug-image.zip.sha256))   
+  * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-debug-image.zip.sha256))
+  
+ * **Linux downloads:**  
+  * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-debug-image.zip.sha256))
+  * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-debug-image.zip.sha256))
+
 ###OpenJDK 7 update 40 build 43
 
  * **Windows downloads:**
@@ -42,9 +52,11 @@ _Note: description represents information about current builds (on the top of th
 
 ###Source code
 
-OpenJDK binaries were built from [openjdk-7u40-fcs-src-b43-26_aug_2013.zip](http://www.java.net/download/openjdk/jdk7u40/promoted/b43/openjdk-7u40-fcs-src-b43-26_aug_2013.zip) sources (direct link). Additional [patch](http://hg.openjdk.java.net/hsx/hotspot-rt/hotspot/rev/195ff07bc7f6) was applied only for Mac OS X builds, [bug entry](https://bugs.openjdk.java.net/browse/JDK-8021771).
+OpenJDK 6 binaries were built from [openjdk-6-src-b28-04_oct_2013.tar.gz](https://java.net/projects/openjdk6/downloads/download/openjdk-6-src-b28-04_oct_2013.tar.gz) with this [patch for unlimited cryptography](http://icedtea.classpath.org/hg/icedtea6/file/73058db81e91/patches/clean-crypto.patch) (recommended by OpenJDK maintainers - [maillist thread](http://mail.openjdk.java.net/pipermail/jdk6-dev/2013-October/003087.html)).
 
-IcedTea binaries were built from [OpenJDK7](http://openjdk.java.net/projects/jdk7u/) source code with [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) patches:
+OpenJDK 7 binaries were built from [openjdk-7u40-fcs-src-b43-26_aug_2013.zip](http://www.java.net/download/openjdk/jdk7u40/promoted/b43/openjdk-7u40-fcs-src-b43-26_aug_2013.zip) sources (direct link). Additional [patch](http://hg.openjdk.java.net/hsx/hotspot-rt/hotspot/rev/195ff07bc7f6) was applied only for Mac OS X builds, [bug entry](https://bugs.openjdk.java.net/browse/JDK-8021771).
+
+IcedTea 7 binaries were built from [OpenJDK7](http://openjdk.java.net/projects/jdk7u/) source code with [IcedTea](http://icedtea.classpath.org/wiki/Main_Page) patches:
 
  * [IcedTea 2.4.2 source release announcement](http://blog.fuseyism.com/index.php/2013/09/23/icedtea-2-4-2-released/)
  * [sources on github](https://github.com/alexkasko/openjdk-icedtea7)
@@ -52,9 +64,16 @@ IcedTea binaries were built from [OpenJDK7](http://openjdk.java.net/projects/jdk
 
 ###Build platforms 
 
-OpenJDK project has "minimum build environments" (MBE) that should generate most-compatible binaries - [OpenJDK7 MBE](http://hg.openjdk.java.net/jdk7/build/raw-file/tip/README-builds.html#MBE), [Mac OS X MBE](https://wikis.oracle.com/display/OpenJDK/Mac+OS+X+Port#MacOSXPort-Minimumrequirementstorun).
+OpenJDK project has "minimum build environments" (MBE) that should generate most-compatible binaries - [OpenJDK6 MBE](http://hg.openjdk.java.net/jdk6/jdk6/raw-file/tip/README-builds.html#MBE), [OpenJDK7 MBE](http://hg.openjdk.java.net/jdk7/build/raw-file/tip/README-builds.html#MBE), [Mac OS X MBE](https://wikis.oracle.com/display/OpenJDK/Mac+OS+X+Port#MacOSXPort-Minimumrequirementstorun).
 
-Build environments used for these binaries:
+Build environments used for OpenJDK6:
+
+ * *windows-i586*: Windows 2000 and Microsoft Visual Studio .NET 2003 (MBE)
+ * *windows-amd64*: Windows Server 2003 Enterprise x64 Edition and Microsoft Platform SDK April 2005 (MBE)
+ * *linux-i586*: Debian 5.0 Lenny and GCC 4.3.2 (MBE)
+ * *linux-amd64*: Debian 5.0 Lenny and GCC 4.3.2 (MBE)
+
+Build environments used for OpenJDK7:
 
  * *windows-i586*: Windows XP SP3 and Windows 7.1 SDK (MBE - 7.1 SDK has the same compilers as VS2010)
  * *windows-amd64*: Windows Server 2003 Enterprise x64 Edition and Windows 7.1 SDK (MBE)
@@ -74,11 +93,15 @@ OpenJDK source code contains empty `cacerts` file, that may cause troubles worki
 
 ###Unlimited cryptography
 
-These builds use unlimited cryptography policy files by default.
+All current builds use unlimited cryptography by default.
 
 ###Debug symbols
 
-Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info. Mac OS X builds do not support native debug symbols - [bug entry](https://bugs.openjdk.java.net/browse/JDK-7165611), [additional info](http://mail.openjdk.java.net/pipermail/build-dev/2012-October/006881.html)
+Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info. 
+
+Mac OS X builds do not support native debug symbols - [bug entry](https://bugs.openjdk.java.net/browse/JDK-7165611), [additional info](http://mail.openjdk.java.net/pipermail/build-dev/2012-October/006881.html).
+
+For OpenJDK6 all Windows builds contain native debug symbols and all Linux builds does not contain ones. Classfiles debug symbols are included in all `-debug-image` builds.
 
 ###Installers
 
@@ -98,6 +121,9 @@ ZIP downloads (`*-image.zip` files) contain zipped JDK files (contents of `j2sdk
 
 Mac OS X downloads additionally contain application bundle (`*-bundle.zip`) and [installation script](https://wiki.openjdk.java.net/display/MacOSXPort/Main#Main-4.Install) for local user install.
 
+###OpenJDK6 fonts on Linux
+
+On Linux default OpenJDK6 fonts on Swing forms may be ugly. To change default fonts you may go to `jre/lib` directory and copy `fontconfig.<DistroName>.properties.src` to `fontconfig.properties` and adjust it as you like. More info about fontconfig - [link](http://docs.oracle.com/javase/6/docs/technotes/guides/intl/fontconfig.html).
 
 Build Process (manual builds)
 -----------------------------
@@ -233,6 +259,10 @@ Other sources and binaries in this repository (cygwin, freetype etc.) are releas
 
 Changelog
 ---------
+
+**2013-10-07**
+
+ * `6 B28` builds
 
 **2013-09-26**
 
