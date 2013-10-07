@@ -8,23 +8,21 @@ OBF_DIR="$( dirname "$OUB_DIR" )"
 
 # options
 IS_DEBUG=
-IS_ICEDTEA=
 SRC_DIR_RELATIVE=
 
 usage()
 {
 cat << EOF
-usage: $0 [-d -i] -s openjdk_src_dir
+usage: $0 [-d] -s openjdk_src_dir
 
 options:
     -d  debug build
-    -i  icedtea build
     -s  openjdk source dir
     -h  show this message
 EOF
 }
 
-while getopts "hdis:" OPTION
+while getopts "hds:" OPTION
 do
     case $OPTION in
         h)
@@ -33,9 +31,6 @@ do
             ;;
         d)
             IS_DEBUG="true"
-            ;;
-        i)
-            IS_ICEDTEA="true"
             ;;
         s)
             SRC_DIR_RELATIVE=$OPTARG
@@ -96,28 +91,17 @@ echo "Packing OpenJDK image: $JDK_IMAGE"
 
 JAVA="$JDK_IMAGE"/bin/java
 OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==1{print substr($3,2,length($3)-2)}' )"
-if [ "true" == "$IS_ICEDTEA" ] ; then
-    ICEDTEA_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
-fi    
 if [ -z "$OPENJDK_VERSION" ] ; then
     echo "Error: cannot get 'java -version' from $JAVA"
     exit 1
 fi
 
 # pack image 
-if [ "true" == "$IS_ICEDTEA" ] ; then
-    if [ "true" == "$IS_DEBUG" ] ; then
-        IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-debug-image
-    else
-        IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-image
-    fi
+if [ "true" == "$IS_DEBUG" ] ; then
+    IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-debug-image
 else
-    if [ "true" == "$IS_DEBUG" ] ; then
-        IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-debug-image
-    else
-        IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-image
-    fi
-fi    
+    IMAGE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-image
+fi
 WORK_DIR="$IMAGE_DIR"/target
 if [ ! -d "$WORK_DIR" ]; then
     mkdir "$WORK_DIR"
@@ -133,19 +117,11 @@ popd > /dev/null
 if [ "macosx-x86_64" == "$PLATFORM" ] ; then 
     # pack bundle
     JDK_BUNDLE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-bundle
-    if [ "true" == "$IS_ICEDTEA" ] ; then
-        if [ "true" == "$IS_DEBUG" ] ; then
-            BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-debug-bundle
-        else
-            BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-bundle
-        fi
+    if [ "true" == "$IS_DEBUG" ] ; then
+        BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-debug-bundle
     else
-        if [ "true" == "$IS_DEBUG" ] ; then
-            BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-debug-bundle
-        else
-            BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-bundle
-        fi
-    fi    
+        BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-bundle
+    fi
     CURDIR=`pwd`
     pushd "$WORK_DIR" > /dev/null
     cp -r "$JDK_BUNDLE" .

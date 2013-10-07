@@ -29,28 +29,16 @@ set ALT_FREETYPE_HEADERS_PATH=%LIBS_DIR%/freetype/include
 set ALT_MSVCRNN_DLL_PATH=%LIBS_DIR%/msvcr/7_64
 set ALT_DXSDK_PATH=%LIBS_DIR%/directx
 set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
-rem set ALT_PARALLEL_COMPILE_JOBS=1
-rem set HOTSPOT_BUILD_JOBS=1
 
 rem other openjdk variables
-rem set ALLOW_DOWNLOADS=true
+set UNLIMITED_CRYPTO=true
+set MILESTONE=u40-unofficial
+set BUILD_NUMBER=b43
+set FULL_DEBUG_SYMBOLS=0
 rem set NO_DOCS=true
 
 rem other variables
-set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
-set MILESTONE=u40-unofficial
-set BUILD_NUMBER=b60
-
-rem icedtea specific
-set USE_SYSTEM_GCONF=true
-set USE_SYSTEM_GIO=true
-set RHINO_JAR=%LIBS_DIR%/rhino/rhino-jdk7.jar
-set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
-set DISABLE_INTREE_EC=true 
-
-rem debug settings
-set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
 set WINDOWSSDKDIR=%WINSDK%
@@ -62,10 +50,6 @@ set TARGET_CPU=x64
 set CURRENT_CPU=x64
 set PlatformToolset=Windows7.1SDK
 set TARGET_PLATFORM=XP
-rem set PROCESSOR_ARCHITECTURE=x86
-rem set PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH
-rem set APPVER=5.01
-rem set CommandPromptType=Native
 set LIB=%VS%/VC/Lib/amd64;%WINSDK%/Lib/x64
 set LIBPATH=%VS%/VC/Lib/amd64
 set PATH=%PATH_PREPEND%;%VS%/Common7/IDE;%VS%/Common7/Tools;%VS%/VC/Bin/x86_amd64;%VS%/VC/Bin;%VS%/VC/Bin/VCPackages;%WINSDK%/Bin;C:/WINDOWS/System32;C:/WINDOWS;C:/WINDOWS/System32/wbem;%MAKE_HOME%;%CYGWIN_HOME%/bin;%BOOTJDK_HOME%/bin;%ANT_HOME%/bin;%LIBS_DIR%/msvcr/7_64;%LIBS_DIR%/msvcr/7_32;%VS%/Common7/IDE
@@ -80,11 +64,11 @@ rem echo Press any key to close window ...
 rem pause > nul
 
 rem start obf build
-bash %SCRIPT_DIR%/make-and-bundle.sh -i
+bash %SCRIPT_DIR%/make-and-bundle.sh
 
 rem debug build settings
 set FULL_DEBUG_SYMBOLS=1
 set DEBUG_CLASSFILES=true
 set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
 
-bash %SCRIPT_DIR%/make-and-bundle.sh -i -d -f
+bash %SCRIPT_DIR%/make-and-bundle.sh -d -f
