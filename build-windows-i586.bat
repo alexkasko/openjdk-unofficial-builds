@@ -39,8 +39,8 @@ rem set NO_DOCS=true
 rem other variables
 set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
-set MILESTONE=u40-unofficial
-set BUILD_NUMBER=b60
+set MILESTONE=u45-unofficial
+set BUILD_NUMBER=b31
 
 rem icedtea specific
 set USE_SYSTEM_GCONF=true
