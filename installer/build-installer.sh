@@ -7,10 +7,45 @@ OUB_DIR="$( dirname "$INSTALLER_DIR" )"
 OBF_DIR="$( dirname "$OUB_DIR" )"
 NEED_EXEC=false
 
+# options
+IS_ICEDTEA=
+SRC_DIR_RELATIVE=
+
+usage()
+{
+cat << EOF
+usage: $0 [-i] -s openjdk_src_dir
+
+options:
+    -i  icedtea build
+    -s  openjdk source dir
+    -h  show this message
+EOF
+}
+
+while getopts "his:" OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit
+            ;;
+        i)
+            IS_ICEDTEA="true"
+            ;;
+        s)
+            SRC_DIR_RELATIVE=$OPTARG
+            ;;
+        ?)
+            usage
+            exit
+            ;;
+    esac
+done
+
 # check argument
-SRC_DIR_RELATIVE=$1
-if [ "x$SRC_DIR_RELATIVE" = "x" ] ; then
-    echo "Error: OpenJDK sources directry must be provided as script argument"
+if [ "x$SRC_DIR_RELATIVE" == "x" ] ; then
+    echo "Error: OpenJDK sources directry must be provided as '-s' argument"
     exit 1
 fi
 pushd "$SRC_DIR_RELATIVE" > /dev/null
@@ -55,7 +90,9 @@ echo "Building installer for OpenJDK image: $JDK_IMAGE"
 
 JAVA="$JDK_IMAGE"/bin/java
 OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==1{print substr($3,2,length($3)-2)}' )"
-ICEDTEA_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
+if [ "true" == "$IS_ICEDTEA" ] ; then
+    ICEDTEA_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
+fi    
 if [ -z "$OPENJDK_VERSION" ] ; then
     echo "Error: cannot get 'java -version' from $JAVA"
     exit 1
@@ -80,7 +117,11 @@ if [ "true" == "$NEED_EXEC" ] ; then
 fi
 
 # launch izpack
-BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-installer
+if [ "true" == "$IS_ICEDTEA" ] ; then
+    BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-icedtea-"$ICEDTEA_VERSION"-"$PLATFORM"-installer
+else
+    BUNDLE_NAME=openjdk-"$OPENJDK_VERSION"-"$PLATFORM"-installer
+fi    
 INSTALLER_TARGET="$INSTALLER_DIR"/target/"$BUNDLE_NAME"
 rm -rf "$INSTALLER_TARGET"
 pushd "$INSTALLER_DIR" > /dev/null

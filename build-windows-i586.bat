@@ -40,7 +40,7 @@ rem other variables
 set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=u40-unofficial
-set BUILD_NUMBER=b1
+set BUILD_NUMBER=b60
 
 rem icedtea specific
 set USE_SYSTEM_GCONF=true
@@ -50,7 +50,6 @@ set FT2_CFLAGS=-I$(FREETYPE_HEADERS_PATH) -I$(FREETYPE_HEADERS_PATH)/freetype2
 set DISABLE_INTREE_EC=true 
 
 rem debug settings
-rem set DEBUG_CLASSFILES=true
 set FULL_DEBUG_SYMBOLS=0
 
 rem set compiler environment manually
@@ -81,4 +80,11 @@ rem echo Press any key to close window ...
 rem pause > nul
 
 rem start obf build
-bash %SCRIPT_DIR%/make-and-bundle.sh
+bash %SCRIPT_DIR%/make-and-bundle.sh -i
+
+rem debug build settings
+set FULL_DEBUG_SYMBOLS=1
+set DEBUG_CLASSFILES=true
+set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-i586/
+
+bash %SCRIPT_DIR%/make-and-bundle.sh -i -d -f
