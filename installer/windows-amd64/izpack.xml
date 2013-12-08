@@ -2,7 +2,7 @@
 <installation version="1.0">
     <info>
         <appname>OpenJDK 6 unofficial windows-amd64</appname>
-        <appversion>build 28</appversion>
+        <appversion>build 29</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 

@@ -43,7 +43,7 @@ rem other variables
 rem set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b28
+set BUILD_NUMBER=b29
 set STATIC_CXX=true
 
 rem set compiler environment
@@ -57,10 +57,15 @@ rem bash
 rem echo Press any key to close window ...
 rem pause > nul
 
+set BUILD_FLAVOR=product
+set FULL_DEBUG_SYMBOLS=0
+
 rem start obf build
 bash %SCRIPT_DIR%/make-and-bundle.sh
 
 rem debug build settings
+set BUILD_FLAVOR=debug
+set FULL_DEBUG_SYMBOLS=1
 set DEBUG_CLASSFILES=true
 set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-i586/
 
