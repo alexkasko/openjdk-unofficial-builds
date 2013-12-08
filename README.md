@@ -1,19 +1,10 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
-###VIRUS ALERT:
-  **Following download files were infected by the [virus](http://www.securelist.com/en/descriptions/old20627):**
-
- * openjdk-1.6.0-unofficial-b28-windows-i586-installer.zip
- * openjdk-1.6.0-unofficial-b28-windows-i586-image.zip
- * openjdk-1.6.0-unofficial-b28-windows-i586-debug-image.zip
-
-**All other downloads seems to be clean. I'll recheck all build platforms before publishing following builds. My apologies to Windows users.**
-
 ###OpenJDK 6 build 28
 
-
  * **Windows downloads:**
+  * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-i586-debug-image.zip.sha256))   
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-windows-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-windows-amd64-debug-image.zip.sha256))
   
  * **Linux downloads:**  
@@ -142,6 +133,10 @@ Mac OS X downloads additionally contain application bundle (`*-bundle.zip`) and 
 ###OpenJDK6 fonts on Linux
 
 On Linux default OpenJDK6 fonts on Swing forms may be ugly. To change default fonts you may go to `jre/lib` directory and copy `fontconfig.<DistroName>.properties.src` to `fontconfig.properties` and adjust it as you like. More info about fontconfig - [link](http://docs.oracle.com/javase/6/docs/technotes/guides/intl/fontconfig.html).
+
+###Malware threats
+
+All builds are checked with antivirus software before publishing. I also recommend building them yourself. 
 
 Build Process (manual builds)
 -----------------------------
