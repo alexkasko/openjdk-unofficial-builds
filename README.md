@@ -273,6 +273,10 @@ Other sources and binaries in this repository (cygwin, freetype etc.) are releas
 Changelog
 ---------
 
+**2013-12-09**
+
+ * `6 B29` builds
+
 **2013-10-23**
 
  * `7u45 2.4.3` builds
