@@ -35,13 +35,12 @@ set ALT_DXSDK_PATH=%LIBS_DIR%/directx
 set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
 
 rem other openjdk variables
-set ALLOW_DOWNLOADS=false
 rem set NO_DOCS=true
 
 rem other variables
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b29
+set BUILD_NUMBER=b30
 set STATIC_CXX=true
 
 rem set compiler environment
