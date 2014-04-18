@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    FreeType convenience functions to handle glyphs (body).              */
 /*                                                                         */
-/*  Copyright 1996-2001, 2002, 2003, 2004, 2005, 2007, 2008, 2010 by       */
+/*  Copyright 1996-2005, 2007, 2008, 2010, 2012, 2013 by                   */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -29,6 +29,8 @@
 
 
 #include <ft2build.h>
+#include FT_INTERNAL_DEBUG_H
+
 #include FT_GLYPH_H
 #include FT_OUTLINE_H
 #include FT_BITMAP_H
@@ -65,7 +67,7 @@
 
     if ( slot->format != FT_GLYPH_FORMAT_BITMAP )
     {
-      error = FT_Err_Invalid_Glyph_Format;
+      error = FT_THROW( Invalid_Glyph_Format );
       goto Exit;
     }
 
@@ -166,7 +168,7 @@
     /* check format in glyph slot */
     if ( slot->format != FT_GLYPH_FORMAT_OUTLINE )
     {
-      error = FT_Err_Invalid_Glyph_Format;
+      error = FT_THROW( Invalid_Glyph_Format );
       goto Exit;
     }
 
@@ -314,7 +316,7 @@
     /* check arguments */
     if ( !target )
     {
-      error = FT_Err_Invalid_Argument;
+      error = FT_THROW( Invalid_Argument );
       goto Exit;
     }
 
@@ -322,7 +324,7 @@
 
     if ( !source || !source->clazz )
     {
-      error = FT_Err_Invalid_Argument;
+      error = FT_THROW( Invalid_Argument );
       goto Exit;
     }
 
@@ -361,12 +363,12 @@
 
 
     if ( !slot )
-      return FT_Err_Invalid_Slot_Handle;
+      return FT_THROW( Invalid_Slot_Handle );
 
     library = slot->library;
 
     if ( !aglyph )
-      return FT_Err_Invalid_Argument;
+      return FT_THROW( Invalid_Argument );
 
     /* if it is a bitmap, that's easy :-) */
     if ( slot->format == FT_GLYPH_FORMAT_BITMAP )
@@ -388,7 +390,7 @@
 
     if ( !clazz )
     {
-      error = FT_Err_Invalid_Glyph_Format;
+      error = FT_THROW( Invalid_Glyph_Format );
       goto Exit;
     }
 
@@ -422,15 +424,16 @@
                       FT_Matrix*  matrix,
                       FT_Vector*  delta )
   {
-    const FT_Glyph_Class*  clazz;
-    FT_Error               error = FT_Err_Ok;
+    FT_Error  error = FT_Err_Ok;
 
 
     if ( !glyph || !glyph->clazz )
-      error = FT_Err_Invalid_Argument;
+      error = FT_THROW( Invalid_Argument );
     else
     {
-      clazz = glyph->clazz;
+      const FT_Glyph_Class*  clazz = glyph->clazz;
+
+
       if ( clazz->glyph_transform )
       {
         /* transform glyph image */
@@ -441,7 +444,7 @@
           FT_Vector_Transform( &glyph->advance, matrix );
       }
       else
-        error = FT_Err_Invalid_Glyph_Format;
+        error = FT_THROW( Invalid_Glyph_Format );
     }
     return error;
   }
@@ -464,38 +467,33 @@
 
     if ( !glyph || !glyph->clazz )
       return;
-    else
+
+    clazz = glyph->clazz;
+    if ( !clazz->glyph_bbox )
+      return;
+
+    /* retrieve bbox in 26.6 coordinates */
+    clazz->glyph_bbox( glyph, acbox );
+
+    /* perform grid fitting if needed */
+    if ( bbox_mode == FT_GLYPH_BBOX_GRIDFIT ||
+         bbox_mode == FT_GLYPH_BBOX_PIXELS  )
     {
-      clazz = glyph->clazz;
-      if ( !clazz->glyph_bbox )
-        return;
-      else
-      {
-        /* retrieve bbox in 26.6 coordinates */
-        clazz->glyph_bbox( glyph, acbox );
-
-        /* perform grid fitting if needed */
-        if ( bbox_mode == FT_GLYPH_BBOX_GRIDFIT ||
-             bbox_mode == FT_GLYPH_BBOX_PIXELS  )
-        {
-          acbox->xMin = FT_PIX_FLOOR( acbox->xMin );
-          acbox->yMin = FT_PIX_FLOOR( acbox->yMin );
-          acbox->xMax = FT_PIX_CEIL( acbox->xMax );
-          acbox->yMax = FT_PIX_CEIL( acbox->yMax );
-        }
-
-        /* convert to integer pixels if needed */
-        if ( bbox_mode == FT_GLYPH_BBOX_TRUNCATE ||
-             bbox_mode == FT_GLYPH_BBOX_PIXELS   )
-        {
-          acbox->xMin >>= 6;
-          acbox->yMin >>= 6;
-          acbox->xMax >>= 6;
-          acbox->yMax >>= 6;
-        }
-      }
+      acbox->xMin = FT_PIX_FLOOR( acbox->xMin );
+      acbox->yMin = FT_PIX_FLOOR( acbox->yMin );
+      acbox->xMax = FT_PIX_CEIL( acbox->xMax );
+      acbox->yMax = FT_PIX_CEIL( acbox->yMax );
     }
-    return;
+
+    /* convert to integer pixels if needed */
+    if ( bbox_mode == FT_GLYPH_BBOX_TRUNCATE ||
+         bbox_mode == FT_GLYPH_BBOX_PIXELS   )
+    {
+      acbox->xMin >>= 6;
+      acbox->yMin >>= 6;
+      acbox->xMax >>= 6;
+      acbox->yMax >>= 6;
+    }
   }
 
 
@@ -510,7 +508,7 @@
     FT_GlyphSlotRec           dummy;
     FT_GlyphSlot_InternalRec  dummy_internal;
     FT_Error                  error = FT_Err_Ok;
-    FT_Glyph                  glyph;
+    FT_Glyph                  b, glyph;
     FT_BitmapGlyph            bitmap = NULL;
     const FT_Glyph_Class*     clazz;
 
@@ -547,10 +545,10 @@
     dummy.format   = clazz->glyph_format;
 
     /* create result bitmap glyph */
-    error = ft_new_glyph( library, FT_BITMAP_GLYPH_CLASS_GET,
-                          (FT_Glyph*)(void*)&bitmap );
+    error = ft_new_glyph( library, FT_BITMAP_GLYPH_CLASS_GET, &b );
     if ( error )
       goto Exit;
+    bitmap = (FT_BitmapGlyph)b;
 
 #if 1
     /* if `origin' is set, translate the glyph image */
@@ -600,7 +598,7 @@
     return error;
 
   Bad:
-    error = FT_Err_Invalid_Argument;
+    error = FT_THROW( Invalid_Argument );
     goto Exit;
   }
 

@@ -4,7 +4,7 @@
 /*                                                                         */
 /*    FreeType initialization layer (body).                                */
 /*                                                                         */
-/*  Copyright 1996-2001, 2002, 2005, 2007, 2009, 2012 by                   */
+/*  Copyright 1996-2002, 2005, 2007, 2009, 2012, 2013 by                   */
 /*  David Turner, Robert Wilhelm, and Werner Lemberg.                      */
 /*                                                                         */
 /*  This file is part of the FreeType project, and may only be used,       */
@@ -23,8 +23,8 @@
   /*  FT_Add_Default_Modules():                                            */
   /*     This function is used to add the set of default modules to a      */
   /*     fresh new library object.  The set is taken from the header file  */
-  /*     `freetype/config/ftmodule.h'.  See the document `FreeType 2.0     */
-  /*     Build System' for more information.                               */
+  /*     `config/ftmodule.h'.  See the document `FreeType 2.0 Build        */
+  /*     System' for more information.                                     */
   /*                                                                       */
   /*  FT_Init_FreeType():                                                  */
   /*     This function creates a system object for the current platform,   */
@@ -156,7 +156,7 @@
   {
     FT_Error           error;
     FT_Memory          memory;
-    FT_Module_Class*  *classes;
+    FT_Module_Class*  *classes = NULL;
     FT_Module_Class*   clazz;
     FT_UInt            i;
     BasePIC*           pic_container = (BasePIC*)library->pic_container.base;
@@ -166,7 +166,7 @@
 
     pic_container->default_module_classes = 0;
 
-    if ( FT_ALLOC( classes, sizeof ( FT_Module_Class* ) * 
+    if ( FT_ALLOC( classes, sizeof ( FT_Module_Class* ) *
                               ( FT_NUM_MODULE_CLASSES + 1 ) ) )
       return error;
 
@@ -242,7 +242,7 @@
     if ( !memory )
     {
       FT_ERROR(( "FT_Init_FreeType: cannot find memory manager\n" ));
-      return FT_Err_Unimplemented_Feature;
+      return FT_THROW( Unimplemented_Feature );
     }
 
     /* build a library out of it, then fill it with the set of */
