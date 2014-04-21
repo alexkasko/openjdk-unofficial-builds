@@ -84,11 +84,14 @@ else
     exit 1
 fi
 
-# extract version
 JDK_IMAGE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
 
 echo "Packing OpenJDK image: $JDK_IMAGE"
 
+# fonts
+cp -r "$IMAGE_DIR"/fonts "$JDK_IMAGE"/jre/lib
+
+# extract version
 JAVA="$JDK_IMAGE"/bin/java
 OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==1{print substr($3,2,length($3)-2)}' )"
 if [ -z "$OPENJDK_VERSION" ] ; then
