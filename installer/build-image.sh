@@ -87,11 +87,17 @@ if [ ! -d "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image ] ; then
     rm -rf "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image/sample
 fi
 
-# extract version
 JDK_IMAGE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
+# fonts
+JRE_LIB="$JDK_IMAGE"/jre/lib
+cp -r "$IMAGE_DIR"/fonts "$JRE_LIB"
+if [ -f "$JRE_LIB"/fontconfig.Ubuntu.properties.src] ; then
+    cp "$JRE_LIB"/fontconfig.Ubuntu.properties.src "$JRE_LIB"/fontconfig.properties
+fi
 
 echo "Packing OpenJDK image: $JDK_IMAGE"
 
+# extract version
 JAVA="$JDK_IMAGE"/bin/java
 OPENJDK_VERSION="$( "$JAVA" -version 2>&1 | awk 'NR==2{print substr($5,0,length($5)-1)}' )"
 if [ "true" == "$IS_ICEDTEA" ] ; then
