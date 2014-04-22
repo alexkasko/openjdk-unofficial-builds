@@ -91,7 +91,7 @@ JDK_IMAGE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
 # fonts
 JRE_LIB="$JDK_IMAGE"/jre/lib
 cp -r "$IMAGE_DIR"/fonts "$JRE_LIB"
-if [ -f "$JRE_LIB"/fontconfig.Ubuntu.properties.src] ; then
+if [ -f "$JRE_LIB"/fontconfig.Ubuntu.properties.src ] ; then
     cp "$JRE_LIB"/fontconfig.Ubuntu.properties.src "$JRE_LIB"/fontconfig.properties
 fi
 

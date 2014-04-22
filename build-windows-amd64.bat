@@ -40,7 +40,7 @@ rem set NO_DOCS=true
 rem other variables
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b30
+set BUILD_NUMBER=b31
 set STATIC_CXX=true
 
 rem set compiler environment

@@ -1,1 +1,1 @@
-$USER_HOME\openjdk_1.6.0_b30_64
+$USER_HOME\openjdk_1.6.0_b31_64

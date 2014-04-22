@@ -11,7 +11,7 @@ export PATH=$ANT_HOME/bin:$PATH
 export ALT_CACERTS_FILE="$OUB_DIR"/libs/cacerts/cacerts
 export ALT_BOOTDIR=/usr/lib/jvm/java-6-openjdk
 export MILESTONE=unofficial
-export BUILD_NUMBER=b30
+export BUILD_NUMBER=b31
 
 export BUILD_FLAVOR=product
 export FULL_DEBUG_SYMBOLS=0

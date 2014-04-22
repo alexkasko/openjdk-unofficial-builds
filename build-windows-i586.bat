@@ -42,7 +42,7 @@ rem other variables
 rem set UNLIMITED_CRYPTO=true
 set CYGWIN=nodosfilewarning
 set MILESTONE=unofficial
-set BUILD_NUMBER=b30
+set BUILD_NUMBER=b31
 set STATIC_CXX=true
 
 rem set compiler environment
