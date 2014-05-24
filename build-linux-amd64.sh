@@ -16,12 +16,12 @@ export BUILD_NUMBER=b43
 export STATIC_CXX=true
 export UNLIMITED_CRYPTO=true
 export FULL_DEBUG_SYMBOLS=0
-#export NO_DOCS=true
+export NO_DOCS=true
 
-"$OUB_DIR"/make-and-bundle.sh
+"$OUB_DIR"/make-and-bundle.sh -f
 
-export FULL_DEBUG_SYMBOLS=1
-export DEBUG_CLASSFILES=true
-export ALT_OUTPUTDIR="$OUB_DIR"/../openjdk/build.debug/linux-amd64/
+# export FULL_DEBUG_SYMBOLS=1
+# export DEBUG_CLASSFILES=true
+# export ALT_OUTPUTDIR="$OUB_DIR"/../openjdk/build.debug/linux-amd64/
 
-"$OUB_DIR"/make-and-bundle.sh -d -f
+# "$OUB_DIR"/make-and-bundle.sh -d -f

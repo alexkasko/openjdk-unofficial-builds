@@ -35,7 +35,7 @@ set UNLIMITED_CRYPTO=true
 set MILESTONE=u40-unofficial
 set BUILD_NUMBER=b43
 set FULL_DEBUG_SYMBOLS=0
-rem set NO_DOCS=true
+set NO_DOCS=true
 
 rem other variables
 set CYGWIN=nodosfilewarning
@@ -64,11 +64,11 @@ rem echo Press any key to close window ...
 rem pause > nul
 
 rem start obf build
-bash %SCRIPT_DIR%/make-and-bundle.sh
+bash %SCRIPT_DIR%/make-and-bundle.sh -f
 
 rem debug build settings
-set FULL_DEBUG_SYMBOLS=1
-set DEBUG_CLASSFILES=true
-set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
+rem set FULL_DEBUG_SYMBOLS=1
+rem set DEBUG_CLASSFILES=true
+rem set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
 
-bash %SCRIPT_DIR%/make-and-bundle.sh -d -f
+rem bash %SCRIPT_DIR%/make-and-bundle.sh -d -f
