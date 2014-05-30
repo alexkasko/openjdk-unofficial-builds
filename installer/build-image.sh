@@ -75,7 +75,7 @@ elif [ -d "$SRC_DIR"/"$BUILD_OUT_DIR"/macosx-x86_64 ] ; then
     ZIP="zip -qry"
     if [ ! -d "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image ] ; then
         # prepare server image
-        cp -r "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-image "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
+        cp -a "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-image "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
         rm -rf "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image/demo
         rm -rf "$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image/sample
     fi
@@ -89,7 +89,7 @@ JDK_IMAGE="$SRC_DIR"/"$BUILD_OUT_DIR"/"$PLATFORM"/j2sdk-server-image
 echo "Packing OpenJDK image: $JDK_IMAGE"
 
 # fonts
-cp -r "$IMAGE_DIR"/fonts "$JDK_IMAGE"/jre/lib
+cp -a "$IMAGE_DIR"/fonts "$JDK_IMAGE"/jre/lib
 
 # extract version
 JAVA="$JDK_IMAGE"/bin/java
@@ -111,7 +111,7 @@ if [ ! -d "$WORK_DIR" ]; then
 fi
 CURDIR=`pwd`
 pushd "$WORK_DIR" > /dev/null
-cp -r "$JDK_IMAGE" .
+cp -a "$JDK_IMAGE" .
 mv j2sdk-server-image "$IMAGE_NAME"
 $ZIP "$IMAGE_NAME".zip "$IMAGE_NAME"
 mv "$IMAGE_NAME".zip "$CURDIR"
@@ -127,10 +127,12 @@ if [ "macosx-x86_64" == "$PLATFORM" ] ; then
     fi
     CURDIR=`pwd`
     pushd "$WORK_DIR" > /dev/null
-    cp -r "$JDK_BUNDLE" .
+    cp -a "$JDK_BUNDLE" .
     mv j2sdk-server-bundle "$BUNDLE_NAME"
     cp "$OBF_DIR"/oub/installer/macosx-x86_64/install_bundle.sh "$BUNDLE_NAME"
-    $ZIP "$BUNDLE_NAME".zip "$BUNDLE_NAME" 
+    # fonts
+    cp -a "$IMAGE_DIR"/fonts "$BUNDLE_NAME"/jdk1.7.0.jdk/Contents/Home/jre/lib
+    $ZIP "$BUNDLE_NAME".zip "$BUNDLE_NAME"
     mv "$BUNDLE_NAME".zip "$CURDIR"
     popd > /dev/null
 fi

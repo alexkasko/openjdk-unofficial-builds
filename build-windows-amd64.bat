@@ -32,8 +32,8 @@ set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
 
 rem other openjdk variables
 set UNLIMITED_CRYPTO=true
-set MILESTONE=u55-unofficial
-set BUILD_NUMBER=b31
+set MILESTONE=u60-unofficial
+set BUILD_NUMBER=b30
 set FULL_DEBUG_SYMBOLS=0
 set NO_DOCS=true
 
@@ -64,11 +64,11 @@ rem echo Press any key to close window ...
 rem pause > nul
 
 rem start obf build
-bash %SCRIPT_DIR%/make-and-bundle.sh -f
+bash %SCRIPT_DIR%/make-and-bundle.sh
 
 rem debug build settings
-rem set FULL_DEBUG_SYMBOLS=1
-rem set DEBUG_CLASSFILES=true
-rem set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
+set FULL_DEBUG_SYMBOLS=1
+set DEBUG_CLASSFILES=true
+set ALT_OUTPUTDIR=%SCRIPT_DIR%/../openjdk/build.debug/windows-amd64/
 
-rem bash %SCRIPT_DIR%/make-and-bundle.sh -d -f
+bash %SCRIPT_DIR%/make-and-bundle.sh -d -f
