@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <installation version="1.0">
     <info>
-        <appname>OpenJDK 7 u60 unofficial macosx-x86_64</appname>
-        <appversion>build 30</appversion>
+        <appname>OpenJDK 7 u80 unofficial macosx-x86_64</appname>
+        <appversion>build 32</appversion>
         <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
     </info>
 

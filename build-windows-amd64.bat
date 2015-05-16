@@ -32,8 +32,8 @@ set ALT_CACERTS_FILE=%LIBS_DIR%/cacerts/cacerts
 
 rem other openjdk variables
 set UNLIMITED_CRYPTO=true
-set MILESTONE=u60-unofficial
-set BUILD_NUMBER=b30
+set MILESTONE=u80-unofficial
+set BUILD_NUMBER=b32
 set FULL_DEBUG_SYMBOLS=0
 set NO_DOCS=true
 
