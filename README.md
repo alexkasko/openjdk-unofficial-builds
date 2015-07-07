@@ -66,6 +66,10 @@ OpenJDK source code contains empty `cacerts` file, that may cause troubles worki
 
 All builds use unlimited cryptography by default.
 
+###JavaScript support
+
+OpenJDK supports scripting languages through [JSR 223](https://www.jcp.org/en/jsr/detail?id=223) specification. But [Mozilla Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) is not a part of OpenJDK and these builds don't bundle out-the-box implementation for "JavaScript" engine for `javax.script`. To use JavaScript with these builds please see [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/24#issuecomment-119137729) for details.
+
 ###Debug symbols
 
 Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info. 
