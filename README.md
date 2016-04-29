@@ -5,7 +5,9 @@ OpenJDK unofficial installers for Windows, Linux and Mac OS X
 
 This project is discontinued.
 
-Up-to-date OpenJDK 8 binaries for Windows x86_64 are available in [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild) GitHub project. Some details can be found in this [issue about jdk8](https://github.com/alexkasko/openjdk-unofficial-builds/issues/17#issuecomment-209065341).
+Up-to-date OpenJDK 8 binaries for Windows x86_64 are available in [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild) GitHub project.
+
+Some details can be found in this [issue about jdk8](https://github.com/alexkasko/openjdk-unofficial-builds/issues/17#issuecomment-209065341).
 
 ###OpenJDK 7 update 80 build 32
 
