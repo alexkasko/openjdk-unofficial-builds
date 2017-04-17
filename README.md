@@ -1,7 +1,7 @@
 OpenJDK unofficial installers for Windows, Linux and Mac OS X
 =============================================================
 
-###Project discontinued
+### Project discontinued
 
 This project is discontinued.
 
@@ -9,7 +9,7 @@ Up-to-date OpenJDK 8 binaries for Windows x86_64 are available in [ojdkbuild](ht
 
 Some details can be found in this [issue about jdk8](https://github.com/alexkasko/openjdk-unofficial-builds/issues/17#issuecomment-209065341).
 
-###OpenJDK 7 update 80 build 32
+### OpenJDK 7 update 80 build 32
 
  * **Windows downloads:**
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u80-unofficial-windows-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u80/openjdk-1.7.0-u80-unofficial-windows-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u80-unofficial-windows-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u80/openjdk-1.7.0-u80-unofficial-windows-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u80-unofficial-windows-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u80/openjdk-1.7.0-u80-unofficial-windows-i586-debug-image.zip.sha256))  
@@ -24,7 +24,7 @@ Some details can be found in this [issue about jdk8](https://github.com/alexkask
 
 Older downloads may be found at the bottom of the page.
 
-###Mailing list
+### Mailing list
 
 For questions about these builds you may use the mailing list:
 
@@ -32,7 +32,7 @@ For questions about these builds you may use the mailing list:
  * subscribe address: `openjdk-unofficial-builds+subscribe@googlegroups.com`
  * archives: [link](https://groups.google.com/forum/#!forum/openjdk-unofficial-builds)
 
-###Other OpenJDK builds
+### Other OpenJDK builds
 
  * [OpenSCG installers](http://openscg.com/se/openjdk/archive.jsp)
  * [obuildfactory github project](https://github.com/hgomez/obuildfactory/wiki)
@@ -44,11 +44,11 @@ Downloads description
 
 _Note: description represents information about current builds (on the top of the page). For previous builds (at the bottom of the page) please see description, linked near them_
 
-###Source code
+### Source code
 
 OpenJDK 7 binaries were built from the `jdk7u80-b32` of [official OpenJDK 7 Update Releases repositories forest](http://hg.openjdk.java.net/jdk7u/jdk7u/).
 
-###Build platforms 
+### Build platforms 
 
 OpenJDK project has "minimum build environments" (MBE) that should generate most-compatible binaries - [OpenJDK7 MBE](http://hg.openjdk.java.net/jdk7/build/raw-file/tip/README-builds.html#MBE), [Mac OS X MBE](https://wikis.oracle.com/display/OpenJDK/Mac+OS+X+Port#MacOSXPort-Minimumrequirementstorun).
 
@@ -60,25 +60,25 @@ Build environments used for OpenJDK7:
  * *linux-i586*: Debian 5.0 Lenny and GCC 4.3.2 (MBE)
  * *linux-amd64*: Debian 5.0 Lenny and GCC 4.3.2 (MBE)
 
-###FreeType
+### FreeType
 
 On Linux and Mac OS X system prebuilt freetype libraries are used. On windows, [libraries](https://github.com/alexkasko/openjdk-unofficial-builds/tree/master/libs/freetype/dist) (`.dll` and `.lib`) were built from version `2.5.3` as release-multithreaded using the same compilers as openjdk itself.
 
 Simple [header patch](https://github.com/alexkasko/openjdk-unofficial-builds/commit/b468582cceecaadb77d4070660474d1d408b2fbf#L2R91) was applied for all builds.
 
-###CA certificates
+### CA certificates
 
 OpenJDK source code contains empty `cacerts` file, that may cause troubles working with HTTPS ([trustAnchors error](http://stackoverflow.com/questions/6784463/error-trustanchors-parameter-must-be-non-empty)). These builds contain [cacerts](https://github.com/alexkasko/openjdk-unofficial-builds/tree/master/libs/cacerts) file generated with [script from obuildfactory project](https://github.com/hgomez/obuildfactory/blob/master/openjdk7/macosx/build.sh#L31).
 
-###Unlimited cryptography
+### Unlimited cryptography
 
 All builds use unlimited cryptography by default.
 
-###JavaScript support
+### JavaScript support
 
 OpenJDK supports scripting languages through [JSR 223](https://www.jcp.org/en/jsr/detail?id=223) specification. But [Mozilla Rhino](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino) is not a part of OpenJDK and these builds don't bundle out-the-box implementation for "JavaScript" engine for `javax.script`. To use JavaScript with these builds please see [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/24#issuecomment-119137729) for details.
 
-###Debug symbols
+### Debug symbols
 
 Debug builds are included as additional downloads for all "zip" and "bundle" downloads. They contain debug symbols for native binaries and for java classes. See [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/3) for additional info. 
 
@@ -86,36 +86,36 @@ Mac OS X builds do not support native debug symbols - [bug entry](https://bugs.o
 
 For OpenJDK6 all Windows builds contain native debug symbols and all Linux builds does not contain ones. Classfiles debug symbols are included in all `-debug-image` builds.
 
-###Installers
+### Installers
 
 Installers were built using [IzPack](http://izpack.org/) installer. Installers contain JDK files (JRE may be installed separately) and uninstallers. Installers for all platforms contain exactly the same content: `jre` directory, izpack's `install.jar` and `install` executable launcher. With default settings installers do not require administrator privileges.
 
 Installers may add `JAVA_HOME` environment variable and adjust user `PATH` variable on all platforms. On Windows global `PATH` variable and Windows Registry are also supported (see [this issue](https://github.com/alexkasko/openjdk-unofficial-builds/issues/7)) but may require administrator privileges.
 
-###Native launchers
+### Native launchers
 
 `install` and `uninstall` native launchers (with `.exe` on windows) were built using [jar-launcher](https://github.com/alexkasko/jar-launcher). They run `install.jar` and `uninstall.jar` using bundled JRE.
 
-###Zip images
+### Zip images
 
 ZIP downloads (`*-image.zip` files) contain zipped JDK files (contents of `j2sdk-server-image`).
 
-###Mac OS X application bundle
+### Mac OS X application bundle
 
 Mac OS X downloads additionally contain application bundle (`*-bundle.zip`) and [installation script](https://wiki.openjdk.java.net/display/MacOSXPort/Main#Main-4.Install) for local user install.
 
-###Fonts
+### Fonts
 
 [DejaVu fonts](http://dejavu-fonts.org/wiki/Main_Page) are included with all builds.
 
-###Malware threats
+### Malware threats
 
 All builds are checked with antivirus software before publishing. I also recommend building them yourself for safety. 
 
 Build Process (manual builds)
 -----------------------------
 
-###Linux and Mac OS X builds
+### Linux and Mac OS X builds
 
 Linux and Mac builds are quite easy:
 
@@ -124,7 +124,7 @@ Linux and Mac builds are quite easy:
  * set environment variables base on `build-linux-*` or `build-macosx-x86_64.sh` files (comment out script launch at the bottom)
  * go to openjdk sources root and run `make`
 
-###Windows builds
+### Windows builds
 
 Windows build is more comlicated than linux and mac ones. It is described in [official build doc](http://hg.openjdk.java.net/jdk7/build/raw-file/tip/README-builds.html#windows).
 
@@ -132,7 +132,7 @@ This git repository contains [tools](https://github.com/alexkasko/openjdk-unoffi
 
 Microsoft compiler toolchains and DirectX SDK cannot be distributed on github because of legal reasons, so some prerequisites installation required.
 
-####DirectX libraries
+#### DirectX libraries
 
 Microsoft DirectX 9.0 SDK (Summer 2004) is used in all windows builds. It was available on [microsoft.com](http://www.microsoft.com/en-us/download/details.aspx?id=21416) (I've dowload it there in November 2012), but it may be not available now. It may be found online on other sites. File details:
 
@@ -142,7 +142,7 @@ Microsoft DirectX 9.0 SDK (Summer 2004) is used in all windows builds. It was av
   
 After installation DirectX files should be put into `libs/directx` directory, [files list](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/libs/directx/files.txt).
 
-####Microsoft compilers
+#### Microsoft compilers
 
 OpenJDK7 `i586` builds should work on 32-bit Windows XP and later, `amd64` builds - on 64-bit Windows 2003 and later.
 
@@ -154,11 +154,11 @@ Both `i586` and `amd64` versions of OpenJDK7 may be built using the same Windows
  * copy SDK x86_32 files to `utils/winsdk71/sdk`, [files list](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/utils/winsdk71/files.txt)
  * copy `Bin/x64` directory from SDK x64 installation to `utils/utils/winsdk71/sdk/Bin/x64` 
 
-####JDK7 compiler
+#### JDK7 compiler
 
 JDK7 is required to build OpenJDK7 with IcedTea patches. OpenJDK version or Oracle one should be installed.
 
-####Run build
+#### Run build
 
  * adjust `build-windows-*` script - remove `make-and-bundle.sh` launch at the bottom, uncomment simple `bash` launch
  * launch `build-windows-*` script
@@ -166,7 +166,7 @@ JDK7 is required to build OpenJDK7 with IcedTea patches. OpenJDK version or Orac
  * run `chmod -R 777 .` to fix source files permissions (not always required, see [this thread](http://mail.openjdk.java.net/pipermail/build-infra-dev/2012-November/002414.html))
  * run `make`
  
-###Create installer  
+### Create installer  
 
 To create IzPack installer for newly built `j2sdk-server-image` run this command from the same Cygwin console:
 
@@ -182,7 +182,7 @@ Build Process (auto builds)
 
 _Note: auto build setup is complex, if you have troubles with it, please write to [mailing list](https://github.com/alexkasko/openjdk-unofficial-builds#mailing-list)._
 
-###Host environment
+### Host environment
 
 Linux or mac should be used as a host:
 
@@ -193,7 +193,7 @@ Linux or mac should be used as a host:
  * copy openjdk sources to host directory as `openjdk.zip`
  * copy this project sources to host directory as `oub.zip` (directx and microsoft compilers should be added to source tree beforehand, as listed [above](#build-process-manual-builds))
 
-###Virtual machines
+### Virtual machines
 
 _Note: it may be not legal to use Mac OS X guest on non-mac hosts - [SO link](http://stackoverflow.com/a/39247/314015)_
 
@@ -207,7 +207,7 @@ _Note: it may be not legal to use Mac OS X guest on non-mac hosts - [SO link](ht
  * upload jdk7 into guest as `/home/obf/jdk7` (`c:\obf\jdk7` on windows)
  * put prepared virtual machine hard disks into `machines` directory as `xz` archive
 
-###Run build
+### Run build
 
 To run build for a single platform use:
 
@@ -224,7 +224,7 @@ Output also will be tailed to console.
 
 Distributions will be placed into `dist` host directory.
 
-###Build process under the hood
+### Build process under the hood
 
  * decompress VM image
  * create VirtualBox VM over unpacked image and run guest instance
@@ -299,7 +299,7 @@ Changelog
 Previous downloads
 ------------------
 
-###OpenJDK 6 build 31
+### OpenJDK 6 build 31
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/ab18b9b9345d92fe4ff6908ad5e56d605c7aa887/README.md) corresponding to this version.
 
@@ -311,7 +311,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-i586-debug-image.zip.sha256))
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b31-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b31/openjdk-1.6.0-unofficial-b31-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 7 update 60 build 30
+### OpenJDK 7 update 60 build 30
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/ab18b9b9345d92fe4ff6908ad5e56d605c7aa887/README.md) corresponding to this version.
 
@@ -326,7 +326,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-i586-debug-image.zip.sha256)) 
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u60-unofficial-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u60/openjdk-1.7.0-u60-unofficial-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 7 update 45 build 31 (IcedTea 2.4.3)
+### OpenJDK 7 update 45 build 31 (IcedTea 2.4.3)
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/e80f7ed4c07288efa1339a0b0c4bae8de1838ae4/README.md) corresponding to this version.
 
@@ -341,7 +341,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-i586-debug-image.zip.sha256))
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u45_2.4.3/openjdk-1.7.0-u45-unofficial-icedtea-2.4.3-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 7 update 40 build 43
+### OpenJDK 7 update 40 build 43
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/e80f7ed4c07288efa1339a0b0c4bae8de1838ae4/README.md) corresponding to this version.
 
@@ -356,7 +356,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-i586-debug-image.zip.sha256)) 
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40/openjdk-1.7.0-u40-unofficial-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 6 build 30
+### OpenJDK 6 build 30
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/e80f7ed4c07288efa1339a0b0c4bae8de1838ae4/README.md) corresponding to this version.
 
@@ -368,7 +368,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-i586-debug-image.zip.sha256))
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b30-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b30/openjdk-1.6.0-unofficial-b30-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 6 build 29
+### OpenJDK 6 build 29
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/46b5966d75a7ba4d71bd755f64953490409052c2/README.md) corresponding to this version.
 
@@ -380,7 +380,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-i586-debug-image.zip.sha256))
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b29-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b29/openjdk-1.6.0-unofficial-b29-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 6 build 28
+### OpenJDK 6 build 28
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/62f2c4d78034a2510d61f78dff9f46c1fc16e327/README.md) corresponding to this version.
 
@@ -392,7 +392,7 @@ Previous downloads
   * i586: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-i586-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-i586-debug-image.zip.sha256))
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.6.0-unofficial-b28-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/6b28/openjdk-1.6.0-unofficial-b28-linux-amd64-debug-image.zip.sha256))
 
-###OpenJDK 7 update 40 build 60 (IcedTea 2.4.2)
+### OpenJDK 7 update 40 build 60 (IcedTea 2.4.2)
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/ffc30cd9874cac805326a7fe9bdc79d584f288a3/README.md) corresponding to this version.
 
@@ -408,7 +408,7 @@ Previous downloads
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.2/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.2/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.2/openjdk-1.7.0-u40-unofficial-icedtea-2.4.2-linux-amd64-debug-image.zip.sha256))
 
 
-###OpenJDK 7 update 40 build 31 (IcedTea 2.4.1)
+### OpenJDK 7 update 40 build 31 (IcedTea 2.4.1)
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/3622d30fef137678513c01b22c6f470eb5f279d5/README.md) corresponding to this version.
 
@@ -424,7 +424,7 @@ Previous downloads
   * amd64: [installer](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-installer.zip.sha256)), [zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-image.zip.sha256)), [debug_zip](https://bitbucket.org/alexkasko/openjdk-unofficial-builds/downloads/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u40_2.4.1/openjdk-1.7.0-u40-unofficial-icedtea-2.4.1-linux-amd64-debug-image.zip.sha256))
 
 
-###OpenJDK 7 update 6 build 24
+### OpenJDK 7 update 6 build 24
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/5617d5d4a77a8da83b6e8de31e825969c256875e/README.md) corresponding to this version.  
    
@@ -439,7 +439,7 @@ Previous downloads
   * i586: [installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-i586.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u6/openjdk-1.7.0-u6-unofficial-b24-linux-i586.zip.sha256)), [zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-i586-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u6/openjdk-1.7.0-u6-unofficial-b24-linux-i586-image.zip.sha256)) 
   * amd64: [installer](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-amd64.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u6/openjdk-1.7.0-u6-unofficial-b24-linux-amd64.zip.sha256)), [zip](https://github.com/downloads/alexkasko/openjdk-unofficial-builds/openjdk-1.7.0-u6-unofficial-b24-linux-amd64-image.zip) ([sha256](https://github.com/alexkasko/openjdk-unofficial-builds/blob/master/checksums/7u6/openjdk-1.7.0-u6-unofficial-b24-linux-amd64-image.zip.sha256))
   
-###OpenJDK 6 build 27
+### OpenJDK 6 build 27
 
 [Description](https://github.com/alexkasko/openjdk-unofficial-builds/blob/5617d5d4a77a8da83b6e8de31e825969c256875e/README.md) corresponding to this version.
 
